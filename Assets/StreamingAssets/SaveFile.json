@@ -1,0 +1,45 @@
+{
+    "PlayerName": "Name",
+    "StarsCollected": 0,
+    "CoinsCollected": 0,
+    "MusicVolume": 1.0,
+    "SFXVolume": 1.0,
+    "AutoRetryEnabled": true,
+    "AutoCheckpointsEnabled": true,
+    "ProgressBarEnabled": true,
+    "ShowPercentEnabled": true,
+    "PlayerColor1": {
+        "r": 0.4784314036369324,
+        "g": 0.9686275124549866,
+        "b": 0.003921568859368563
+    },
+    "PlayerColor2": {
+        "r": 0.01568627916276455,
+        "g": 0.9529411792755127,
+        "b": 0.9686275124549866
+    },
+    "IconData": [
+        {
+            "Gamemode": 0,
+            "Index": 0
+        },
+        {
+            "Gamemode": 1,
+            "Index": 0
+        }
+    ],
+    "LevelData": [
+        {
+            "Name": "This is a very cool level",
+            "NormalPercent": 0.2448374330997467,
+            "PracticePercent": 0.0,
+            "GottenCoins": [
+                false,
+                false,
+                false
+            ],
+            "TotalAttempts": 7,
+            "TotalJumps": 119
+        }
+    ]
+}
