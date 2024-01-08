@@ -55,7 +55,7 @@
         },
         {
             "Name": "Back On Track",
-            "NormalPercent": 0.0,
+            "NormalPercent": 0.020999513566493989,
             "PracticePercent": 0.0,
             "GottenCoins": [
                 false,
@@ -63,7 +63,7 @@
                 false
             ],
             "TotalAttempts": 0,
-            "TotalJumps": 4
+            "TotalJumps": 35
         }
     ]
 }
