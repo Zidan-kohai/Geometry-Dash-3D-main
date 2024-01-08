@@ -39,7 +39,7 @@
                 false
             ],
             "TotalAttempts": 0,
-            "TotalJumps": 158
+            "TotalJumps": 283
         },
         {
             "Name": "Cant Let Go",
@@ -55,7 +55,7 @@
         },
         {
             "Name": "Back On Track",
-            "NormalPercent": 0.0,
+            "NormalPercent": 0.02124088816344738,
             "PracticePercent": 0.0,
             "GottenCoins": [
                 false,
@@ -63,7 +63,7 @@
                 false
             ],
             "TotalAttempts": 0,
-            "TotalJumps": 89
+            "TotalJumps": 169
         },
         {
             "Name": "Polargeist",

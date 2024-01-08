@@ -51,6 +51,8 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text winMenuAttemptText;
         [SerializeField] private TMP_Text winMenuJumpText;
         [SerializeField] private TMP_Text winMenuTimeText;
+        [SerializeField] private TMP_Text goldText;
+        [SerializeField] private TMP_Text diamondText;
 
         [Space]
         [SerializeField] private Button winRestartButton;
@@ -140,6 +142,7 @@ namespace GD3D.Player
                 }
             );
 
+            PlayerMain.Instance.OnWin += ShowWinMenu;
             // Destroy the newly created object because we have no use out of it anymore
             Destroy(obj);
         }
@@ -200,41 +203,41 @@ namespace GD3D.Player
             _respawnSizeEaseID = ease.ID;
         }
 
-        //private void ShowWinMenuMenu()
-        //{
-        //    // Disable the pause menu so you can't pause
-        //    PauseMenu.CanPause = false;
-        //    PauseMenu.CanPause = false;
+        private void ShowWinMenu()
+        {
+            // Disable the pause menu so you can't pause
+            PauseMenu.CanPause = false;
 
-        //    // Set objects on the respawn menu
-        //    winMenuAttemptText.text = attemptText.text;
-        //    winMenuAttemptText.text = attemptText.text;
-        //    winMenuAttemptText.text = attemptText.text;
+            // Set objects on the respawn menu
+            winMenuAttemptText.text = attemptText.text;
 
-        //    winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
+            winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
-        //    // Use TimeSpan here to format the text to look nice :)
-        //    TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-        //    loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            // Use TimeSpan here to format the text to look nice :)
+            TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+            winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-        //    // Enable respawn menu
-        //    winMenu.SetActive(true);
+            goldText.text =$"Gold: {Convert.ToInt32(PlayerMain.TimeSpentPlaying)}";
+            diamondText.text = $"Diamond: 0";
+            // Enable win menu
+            winMenu.SetActive(true);
 
-        //    // Try remove ease object
-        //    //EasingManager.TryRemoveEaseObject(_respawnSizeEaseID);
+            // Try remove ease object
+            EasingManager.TryRemoveEaseObject(_respawnSizeEaseID);
 
-        //    // Set the respawn menu scale to 0
-        //    //_respawnMenuTransform.localScale = Vector3.zero;
+            // Set the respawn menu scale to 0
+            _respawnMenuTransform.localScale = Vector3.zero;
 
-        //    // Create new scale easing
-        //    //EaseObject ease = _respawnMenuTransform.EaseScale(_respawnMenuStartSize, 1);
+            // Create new scale easing
+            EaseObject ease = _respawnMenuTransform.EaseScale(_respawnMenuStartSize, 1);
 
-        //    // Set ease settings
-        //    //ease.SetSettings(respawnMenuEaseSettings);
 
-        //    // Set ease ID
-        //    //_respawnSizeEaseID = ease.ID;
-        //}
+            // Set ease settings
+            ease.SetSettings(respawnMenuEaseSettings);
+
+            // Set ease ID
+            _respawnSizeEaseID = ease.ID;
+        }
 
         /// <summary>
         /// Transitions to the main menu.

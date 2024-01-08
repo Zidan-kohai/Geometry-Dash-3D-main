@@ -10,7 +10,7 @@ namespace GD3D
     {
         void Start()
         {
-            PlayerMain.Instance.OnWin += ShowMenu;
+            //PlayerMain.Instance.OnWin += ShowMenu;
         }
 
         private void ShowMenu()
