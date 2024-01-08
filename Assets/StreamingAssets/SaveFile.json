@@ -51,7 +51,19 @@
                 false
             ],
             "TotalAttempts": 0,
-            "TotalJumps": 24
+            "TotalJumps": 27
+        },
+        {
+            "Name": "Back On Track",
+            "NormalPercent": 0.0,
+            "PracticePercent": 0.0,
+            "GottenCoins": [
+                false,
+                false,
+                false
+            ],
+            "TotalAttempts": 0,
+            "TotalJumps": 4
         }
     ]
 }
