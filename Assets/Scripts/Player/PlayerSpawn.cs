@@ -38,6 +38,9 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text loseMenuJumpText;
         [SerializeField] private TMP_Text loseMenuTimeText;
 
+        [Space]
+        [SerializeField] private Button loseRestartButton;
+        [SerializeField] private Button loseQuitButton;
 
         [Header("Win Menu")]
         [SerializeField] private GameObject winMenu;
@@ -49,8 +52,9 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text winMenuTimeText;
 
         [Space]
-        [SerializeField] private Button respawnButton;
-        [SerializeField] private Button quitButton;
+        [SerializeField] private Button winRestartButton;
+        [SerializeField] private Button winQuitButton;
+        [SerializeField] private Button winNextLevelButton;
 
         private UIClickable[] _respawnMenuUIClickables;
 
@@ -91,8 +95,11 @@ namespace GD3D.Player
 
             loseMenuLevelName.text = LevelData.Instance.LevelName;
 
-            respawnButton.onClick.AddListener(Respawn);
-            quitButton.onClick.AddListener(QuitToMenu);
+            loseRestartButton.onClick.AddListener(Respawn);
+            loseQuitButton.onClick.AddListener(QuitToMenu);
+
+            winRestartButton.onClick.AddListener(Respawn);
+            winQuitButton.onClick.AddListener(QuitToMenu);
 
             loseMenu.SetActive(false);
             winMenu.SetActive(false);
@@ -328,6 +335,7 @@ namespace GD3D.Player
 
             // Disable the respawn menu and new best popups
             loseMenu.SetActive(false);
+            winMenu.SetActive(false);   
             newBestPopup.SetActive(false);
 
             // Stop the scaling of all the UI Clickables on the respawn menu
