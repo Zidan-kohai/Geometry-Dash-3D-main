@@ -104,7 +104,8 @@ namespace GD3D.Audio
 #endif
 
             // Subscribe to events
-            _player.OnDeath += OnDeath;
+            _player.OnDeath += OnEndLevel;
+            _player.OnWin += OnEndLevel;
             _player.OnRespawn += OnRespawn;
             _source.Play();
 
@@ -204,7 +205,7 @@ namespace GD3D.Audio
             _source.Stop();
         }
 
-        private void OnDeath()
+        private void OnEndLevel()
         {
             // Only stop the music if we are not in practice mode
             if (!InPracticeMode)

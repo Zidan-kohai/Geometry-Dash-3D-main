@@ -40,7 +40,8 @@ namespace GD3D.Player
             _cam = CameraBehaviour.Instance;
 
             // Subscribe to events
-            player.OnDeath += OnDeath;
+            player.OnDeath += OnEndLevel;
+            player.OnWin += OnEndLevel;
             player.OnRespawn += OnRespawn;
         }
 
@@ -62,7 +63,7 @@ namespace GD3D.Player
             s_instance._cam.Shake(strength, frequency, length);
         }
 
-        private void OnDeath()
+        private void OnEndLevel()
         {
             // Shake the camera
             Shake(1, 30, 0.5f);

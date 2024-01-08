@@ -39,7 +39,19 @@
                 false
             ],
             "TotalAttempts": 7,
-            "TotalJumps": 119
+            "TotalJumps": 139
+        },
+        {
+            "Name": "Stereo Madness",
+            "NormalPercent": 0.0,
+            "PracticePercent": 0.0,
+            "GottenCoins": [
+                false,
+                false,
+                false
+            ],
+            "TotalAttempts": 0,
+            "TotalJumps": 24
         }
     ]
 }

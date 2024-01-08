@@ -31,12 +31,12 @@ namespace GD3D.Player
         [SerializeField] private EaseSettings respawnMenuEaseSettings;
 
         [Space]
-        [SerializeField] private TMP_Text respawnMenuLevelName;
-        [SerializeField] private TMP_Text respawnMenuAttemptText;
-        [SerializeField] private Slider respawnMenuProgressBar;
-        [SerializeField] private TMP_Text respawnMenuProgressPercent;
-        [SerializeField] private TMP_Text respawnMenuJumpText;
-        [SerializeField] private TMP_Text respawnMenuTimeText;
+        [SerializeField] private TMP_Text loseMenuLevelName;
+        [SerializeField] private TMP_Text loseMenuAttemptText;
+        [SerializeField] private Slider loseMenuProgressBar;
+        [SerializeField] private TMP_Text loseMenuProgressPercent;
+        [SerializeField] private TMP_Text loseMenuJumpText;
+        [SerializeField] private TMP_Text loseMenuTimeText;
 
 
         [Header("Win Menu")]
@@ -89,7 +89,7 @@ namespace GD3D.Player
             _respawnMenuTransform = loseMenu.transform;
             _respawnMenuStartSize = _respawnMenuTransform.localScale;
 
-            respawnMenuLevelName.text = LevelData.Instance.LevelName;
+            loseMenuLevelName.text = LevelData.Instance.LevelName;
 
             respawnButton.onClick.AddListener(Respawn);
             quitButton.onClick.AddListener(QuitToMenu);
@@ -160,16 +160,16 @@ namespace GD3D.Player
             PauseMenu.CanPause = false;
 
             // Set objects on the respawn menu
-            respawnMenuAttemptText.text = attemptText.text;
+            loseMenuAttemptText.text = attemptText.text;
 
-            respawnMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
+            loseMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
             // Use TimeSpan here to format the text to look nice :)
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-            respawnMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            respawnMenuProgressBar.normalizedValue = ProgressBar.Percent;
-            respawnMenuProgressPercent.text = ProgressBar.PercentString;
+            loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
+            loseMenuProgressPercent.text = ProgressBar.PercentString;
 
             // Enable respawn menu
             loseMenu.SetActive(true);
@@ -202,7 +202,7 @@ namespace GD3D.Player
 
             // Use TimeSpan here to format the text to look nice :)
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-            respawnMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
             // Enable respawn menu
             winMenu.SetActive(true);

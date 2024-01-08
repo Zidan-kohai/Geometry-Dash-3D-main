@@ -38,7 +38,8 @@ namespace GD3D.Objects
             PlayerMain player = PlayerMain.Instance;
 
             // Subscribe to events
-            player.OnDeath += OnDeath;
+            player.OnDeath += OnEndLevel;
+            player.OnWin += OnEndLevel; 
             player.OnRespawn += OnRespawn;
         }
 
@@ -47,7 +48,7 @@ namespace GD3D.Objects
 
         }
 
-        private void OnDeath()
+        private void OnEndLevel()
         {
             // Clear all the IDs on death
             ClearIDs();

@@ -274,6 +274,13 @@ namespace GD3D.Player
             OnDeath?.Invoke();
         }
 
+        public void InvokeWinEvent()
+        {
+            player.IsDead = true;
+
+            OnWin?.Invoke();
+        }
+
         /// <summary>
         /// Invokes the OnRespawn event cuz player.OnRespawn?.Invoke() won't work outside of this script.
         /// </summary>

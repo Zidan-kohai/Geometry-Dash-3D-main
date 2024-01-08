@@ -16,7 +16,7 @@ namespace GD3D
         private void ShowMenu()
         { 
             gameObject.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
 }
