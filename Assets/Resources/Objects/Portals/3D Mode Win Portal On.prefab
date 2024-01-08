@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4094594255735623314}
   - component: {fileID: 4094594255735623317}
   - component: {fileID: 4094594255735623316}
-  m_Layer: 0
-  m_Name: 3D Mode Portal On
+  m_Layer: 8
+  m_Name: 3D Mode Win Portal On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094594255735623315}
-  m_LocalRotation: {x: 0, y: 0.70848536, z: 0, w: 0.70572555}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7084877, z: 0, w: 0.7057232}
   m_LocalPosition: {x: 61.168037, y: 4, z: -0.5002411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,8 +36,7 @@ Transform:
   - {fileID: 4033989601187345879}
   - {fileID: 2038751340153375279}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.224, z: 0}
 --- !u!114 &4094594255735623314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   mesh: {fileID: 4094594256736278813}
   particles: {fileID: 2861531109430172892}
   materialIndex: 1
-  enable3DMode: 1
+  enable3DMode: 0
   easeSettings:
     Time: 0.5
     EaseData:
@@ -81,14 +81,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
-  Distance: 0
+  Distance: 155.8
   ZOffset: 0
   YRotationOffset: 0
   justCreated: 0
-  subcribed: 0
-  oldDistance: 210.34
-  oldZOffset: 0.5
-  oldPos: {x: 61.168037, y: 4, z: -0.5002411}
+  subcribed: 1
+  oldDistance: 155.8
+  oldZOffset: 0
+  oldPos: {x: 5.800009, y: 5.06, z: 0}
 --- !u!65 &4094594255735623316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97,9 +97,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094594255735623315}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 2.75, y: 4.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4094594256736278812
@@ -113,7 +121,7 @@ GameObject:
   - component: {fileID: 4094594256736278815}
   - component: {fileID: 4094594256736278814}
   - component: {fileID: 4094594256736278813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,13 +135,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094594256736278812}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4094594255735623319}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 180}
 --- !u!33 &4094594256736278814
 MeshFilter:
@@ -191,6 +199,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4094594255735623319}
     m_Modifications:
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
@@ -241,7 +250,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Sucking Particles
       objectReference: {fileID: 0}
+    - target: {fileID: 3727218570854948115, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237382843999799005, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
 --- !u!199 &2861531109430172892 stripped
 ParticleSystemRenderer:
@@ -258,6 +278,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4094594255735623319}
     m_Modifications:
     - target: {fileID: 3151613431718136713, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
@@ -308,7 +329,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Enter Effect
       objectReference: {fileID: 0}
+    - target: {fileID: 3151613431718136715, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
 --- !u!4 &2038751340153375279 stripped
 Transform:

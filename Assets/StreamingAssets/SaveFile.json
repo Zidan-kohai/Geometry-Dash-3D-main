@@ -21,7 +21,7 @@
     "IconData": [
         {
             "Gamemode": 0,
-            "Index": 0
+            "Index": 1
         },
         {
             "Gamemode": 1,
@@ -30,19 +30,19 @@
     ],
     "LevelData": [
         {
-            "Name": "This is a very cool level",
-            "NormalPercent": 0.2448374330997467,
+            "Name": "Stereo Madness",
+            "NormalPercent": 0.0,
             "PracticePercent": 0.0,
             "GottenCoins": [
                 false,
                 false,
                 false
             ],
-            "TotalAttempts": 7,
-            "TotalJumps": 139
+            "TotalAttempts": 0,
+            "TotalJumps": 158
         },
         {
-            "Name": "Stereo Madness",
+            "Name": "Cant Let Go",
             "NormalPercent": 0.0,
             "PracticePercent": 0.0,
             "GottenCoins": [
@@ -55,7 +55,7 @@
         },
         {
             "Name": "Back On Track",
-            "NormalPercent": 0.021965010091662408,
+            "NormalPercent": 0.0,
             "PracticePercent": 0.0,
             "GottenCoins": [
                 false,
@@ -63,7 +63,31 @@
                 false
             ],
             "TotalAttempts": 0,
-            "TotalJumps": 44
+            "TotalJumps": 89
+        },
+        {
+            "Name": "Polargeist",
+            "NormalPercent": 0.0,
+            "PracticePercent": 0.0,
+            "GottenCoins": [
+                false,
+                false,
+                false
+            ],
+            "TotalAttempts": 0,
+            "TotalJumps": 36
+        },
+        {
+            "Name": "Dry Out",
+            "NormalPercent": 0.0,
+            "PracticePercent": 0.0,
+            "GottenCoins": [
+                false,
+                false,
+                false
+            ],
+            "TotalAttempts": 0,
+            "TotalJumps": 5
         }
     ]
 }

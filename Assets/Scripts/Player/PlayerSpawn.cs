@@ -7,6 +7,7 @@ using GD3D.ObjectPooling;
 using GD3D.Easing;
 using GD3D.Level;
 using GD3D.UI;
+using UnityEngine.SceneManagement;
 
 namespace GD3D.Player
 {
@@ -100,6 +101,7 @@ namespace GD3D.Player
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
+            winNextLevelButton.onClick.AddListener(nextScene);
 
             loseMenu.SetActive(false);
             winMenu.SetActive(false);
@@ -190,6 +192,7 @@ namespace GD3D.Player
             // Create new scale easing
             EaseObject ease = _respawnMenuTransform.EaseScale(_respawnMenuStartSize, 1);
 
+
             // Set ease settings
             ease.SetSettings(respawnMenuEaseSettings);
 
@@ -197,38 +200,41 @@ namespace GD3D.Player
             _respawnSizeEaseID = ease.ID;
         }
 
-        private void ShowWinMenuMenu()
-        {
-            // Disable the pause menu so you can't pause
-            PauseMenu.CanPause = false;
+        //private void ShowWinMenuMenu()
+        //{
+        //    // Disable the pause menu so you can't pause
+        //    PauseMenu.CanPause = false;
+        //    PauseMenu.CanPause = false;
 
-            // Set objects on the respawn menu
-            winMenuAttemptText.text = attemptText.text;
+        //    // Set objects on the respawn menu
+        //    winMenuAttemptText.text = attemptText.text;
+        //    winMenuAttemptText.text = attemptText.text;
+        //    winMenuAttemptText.text = attemptText.text;
 
-            winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
+        //    winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
-            // Use TimeSpan here to format the text to look nice :)
-            TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-            loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+        //    // Use TimeSpan here to format the text to look nice :)
+        //    TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+        //    loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            // Enable respawn menu
-            winMenu.SetActive(true);
+        //    // Enable respawn menu
+        //    winMenu.SetActive(true);
 
-            // Try remove ease object
-            //EasingManager.TryRemoveEaseObject(_respawnSizeEaseID);
+        //    // Try remove ease object
+        //    //EasingManager.TryRemoveEaseObject(_respawnSizeEaseID);
 
-            // Set the respawn menu scale to 0
-            //_respawnMenuTransform.localScale = Vector3.zero;
+        //    // Set the respawn menu scale to 0
+        //    //_respawnMenuTransform.localScale = Vector3.zero;
 
-            // Create new scale easing
-            //EaseObject ease = _respawnMenuTransform.EaseScale(_respawnMenuStartSize, 1);
+        //    // Create new scale easing
+        //    //EaseObject ease = _respawnMenuTransform.EaseScale(_respawnMenuStartSize, 1);
 
-            // Set ease settings
-            //ease.SetSettings(respawnMenuEaseSettings);
+        //    // Set ease settings
+        //    //ease.SetSettings(respawnMenuEaseSettings);
 
-            // Set ease ID
-            //_respawnSizeEaseID = ease.ID;
-        }
+        //    // Set ease ID
+        //    //_respawnSizeEaseID = ease.ID;
+        //}
 
         /// <summary>
         /// Transitions to the main menu.
@@ -283,6 +289,15 @@ namespace GD3D.Player
         }
         #endregion
 
+
+        ///<summary>
+        ///is called on win for next scene
+        ///</summary>
+        
+        private void nextScene()
+        {
+            Transition.TransitionToNextScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         /// <summary>
         /// Is called when the player dies.
         /// </summary>

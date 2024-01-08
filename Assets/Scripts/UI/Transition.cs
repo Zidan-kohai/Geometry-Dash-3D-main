@@ -111,6 +111,22 @@ namespace GD3D.UI
             return ease;
         }
 
+        public static EaseObject TransitionToNextScene(int index)
+        {
+            EaseObject ease = TransitionToScene(index);
+
+            // Reset timeScale on complete
+            ease.SetOnComplete((obj) =>
+            {
+                Time.timeScale = 1;
+            });
+
+            // Play quit to menu sound effect
+            Audio.SoundManager.PlaySound("Quit To Menu", 1);
+
+            return ease;
+        }
+
         /// <summary>
         /// Transitions to black and then changes the scene.
         /// </summary>

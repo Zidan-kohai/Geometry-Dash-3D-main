@@ -1164,65 +1164,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1866463216509239810, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2038751340153375277, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623314, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: enable3DMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623315, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_Name
       value: 3D Mode Portal (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623315, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: Distance
-      value: 155.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: oldPos.x
-      value: 5.800009
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: oldPos.y
-      value: 5.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: oldPos.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: subcribed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: oldZOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: oldDistance
-      value: 155.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623317, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: pathCreator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.800009
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1259,14 +1207,6 @@ PrefabInstance:
     - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4094594256736278812, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5633693875161586124, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

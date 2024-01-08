@@ -38,7 +38,7 @@ namespace GD3D
             Vector3 targetPos = transform.InverseTransformPoint(suckPoint.transform.position);
 
             // Get particles
-            _particleSystem.GetParticles(_particles);
+            //particleSystem.GetParticles(_particles);
 
             // Modify the particles
             int particleLength = _particles.Length;
