@@ -255,12 +255,20 @@ namespace GD3D
         #region Saving Icons
         private Dictionary<Gamemode, int> _equippedIconIndex = null;
 
-        [SerializeField]
-        private Dictionary<Gamemode, List<int>> _buyedIconIndex = new Dictionary<Gamemode, List<int>>() 
+        public MyDictionary myDictionary = new MyDictionary()
         {
-            { Gamemode.cube, new List<int>() },
-            { Gamemode.ship, new List<int>() }
+            gamemode = new List<Gamemode>() { Gamemode.cube, Gamemode.ship },
+            cubeIndex = new List<int>(),
+            shipIndex = new List<int>()
         };
+
+        [Serializable]
+        public class MyDictionary
+        {
+            public List<Gamemode> gamemode;
+            public List<int> cubeIndex;
+            public List<int> shipIndex;
+        }
 
         /// <summary>
         /// Will return the index of the currently equipped icon of the given <paramref name="gamemode"/>.
@@ -280,12 +288,26 @@ namespace GD3D
         }
         public bool IsBuyedIconIndex(Gamemode gamemode, int index)
         {
-            return _buyedIconIndex[gamemode].Contains(index);
+            if (gamemode == Gamemode.cube)
+            {
+                return myDictionary.cubeIndex.Contains(index);
+            }
+            else
+            {
+                return myDictionary.shipIndex.Contains(index);
+            }
         }
 
         public void SaveBuyedIconIndex(Gamemode gamemode, int index)
         {
-            _buyedIconIndex[gamemode].Add(index);
+            if (gamemode == Gamemode.cube)
+            {
+                myDictionary.cubeIndex.Add(index);
+            }
+            else
+            {
+                myDictionary.shipIndex.Add(index);
+            }
 
             SaveData.Save();
         }
