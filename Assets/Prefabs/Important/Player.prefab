@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 156881054928147421}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.67, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalScale: {x: 0.48887202, y: 0.48887202, z: 0.48887202}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8224552818122614386}
@@ -15415,6 +15415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9997c91b156d1479895643725dbfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8224552817121300470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15455,19 +15458,24 @@ MonoBehaviour:
       Type: 6
       EaseRate: 1.32
     CompleteMode: 0
-  respawnMenuLevelName: {fileID: 0}
-  respawnMenuAttemptText: {fileID: 0}
-  respawnMenuProgressBar: {fileID: 0}
-  respawnMenuProgressPercent: {fileID: 0}
-  respawnMenuJumpText: {fileID: 0}
-  respawnMenuTimeText: {fileID: 0}
+  loseMenuLevelName: {fileID: 0}
+  loseMenuAttemptText: {fileID: 0}
+  loseMenuProgressBar: {fileID: 0}
+  loseMenuProgressPercent: {fileID: 0}
+  loseMenuJumpText: {fileID: 0}
+  loseMenuTimeText: {fileID: 0}
+  loseRestartButton: {fileID: 0}
+  loseQuitButton: {fileID: 0}
   winMenu: {fileID: 0}
   winMenuLevelName: {fileID: 0}
   winMenuAttemptText: {fileID: 0}
   winMenuJumpText: {fileID: 0}
   winMenuTimeText: {fileID: 0}
-  respawnButton: {fileID: 0}
-  quitButton: {fileID: 0}
+  goldText: {fileID: 0}
+  diamondText: {fileID: 0}
+  winRestartButton: {fileID: 0}
+  winQuitButton: {fileID: 0}
+  winNextLevelButton: {fileID: 0}
   newBestPopup: {fileID: 0}
   newBestPercentText: {fileID: 0}
   newBestShowEaseSettings:

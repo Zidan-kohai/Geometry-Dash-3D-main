@@ -256,6 +256,7 @@ namespace GD3D.GDCamera
             {
                 _targetPosition.x = Target.position.x;
                 _targetPosition.z = Target.position.z;
+
             }
 
             _position.x = _targetPosition.x;
@@ -263,6 +264,7 @@ namespace GD3D.GDCamera
 
             // Set position
             _transform.position = _position + offset + _shakeOffset;
+            transform.rotation = Quaternion.Euler(rotation);
         }
 
         private void FixedUpdate()
