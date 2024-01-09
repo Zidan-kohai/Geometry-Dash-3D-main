@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using GD3D.Level;
 using GD3D.Player;
+using Unity.Plastic.Newtonsoft.Json;
 
 namespace GD3D
 {
@@ -134,7 +135,7 @@ namespace GD3D
             }
 
             // Convert save file to json
-            string jsonText = JsonUtility.ToJson(SaveFile, true);
+            string jsonText = JsonConvert.SerializeObject(SaveFile);
 
             // Write the json into a file
             File.WriteAllText(_saveFilePath, jsonText);
@@ -163,7 +164,7 @@ namespace GD3D
             // Try to convert the JSON text into a SaveFile object
             try
             {
-                SaveFile = JsonUtility.FromJson<SaveFile>(jsonText);
+                SaveFile = JsonConvert.DeserializeObject<SaveFile>(jsonText);
             }
             // If it fails, throw error only in editor, otherwise return
             catch (Exception)
@@ -237,6 +238,8 @@ namespace GD3D
         public string PlayerName = DEFAULT_PLAYER_NAME;
         public int StarsCollected = 0;
         public int CoinsCollected = 0;
+        public int GoldCoinsCollected = 0;
+        public int DiamondCoinsCollected = 0;
 
         public float MusicVolume = 1;
         public float SFXVolume = 1;
@@ -251,6 +254,13 @@ namespace GD3D
 
         #region Saving Icons
         private Dictionary<Gamemode, int> _equippedIconIndex = null;
+
+        [SerializeField]
+        private Dictionary<Gamemode, List<int>> _buyedIconIndex = new Dictionary<Gamemode, List<int>>() 
+        {
+            { Gamemode.cube, new List<int>() },
+            { Gamemode.ship, new List<int>() }
+        };
 
         /// <summary>
         /// Will return the index of the currently equipped icon of the given <paramref name="gamemode"/>.
@@ -268,30 +278,44 @@ namespace GD3D
             IconData[(int)gamemode].Index = index;
             _equippedIconIndex[gamemode] = index;
         }
+        public bool IsBuyedIconIndex(Gamemode gamemode, int index)
+        {
+            return _buyedIconIndex[gamemode].Contains(index);
+        }
+
+        public void SaveBuyedIconIndex(Gamemode gamemode, int index)
+        {
+            _buyedIconIndex[gamemode].Add(index);
+
+            SaveData.Save();
+        }
+
+
+
 
         private void TryCreateDictionary(Gamemode gamemode)
-        {
-            // Check if our dictionary is null
-            if (_equippedIconIndex == null)
             {
-                // If so, then we will create a new dictionary for getting the equipped icon
-                _equippedIconIndex = new Dictionary<Gamemode, int>();
-
-                // We will now populate the dictionary by looping through our icon data list
-                foreach (IconSaveData icon in IconData)
+                // Check if our dictionary is null
+                if (_equippedIconIndex == null)
                 {
-                    _equippedIconIndex.Add(icon.Gamemode, icon.Index);
+                    // If so, then we will create a new dictionary for getting the equipped icon
+                    _equippedIconIndex = new Dictionary<Gamemode, int>();
+
+                    // We will now populate the dictionary by looping through our icon data list
+                    foreach (IconSaveData icon in IconData)
+                    {
+                        _equippedIconIndex.Add(icon.Gamemode, icon.Index);
+                    }
+                }
+
+                // Check if the gamemode doesn't exist in the dictionary
+                if (!_equippedIconIndex.ContainsKey(gamemode))
+                {
+                    // If it doesn't exist, then we will create a new entry in the dictionary with the default value
+                    _equippedIconIndex.Add(gamemode, 0);
+                    IconData.Add(new IconSaveData(gamemode, 0));
                 }
             }
-
-            // Check if the gamemode doesn't exist in the dictionary
-            if (!_equippedIconIndex.ContainsKey(gamemode))
-            {
-                // If it doesn't exist, then we will create a new entry in the dictionary with the default value
-                _equippedIconIndex.Add(gamemode, 0);
-                IconData.Add(new IconSaveData(gamemode, 0));
-            }
-        }
 
         public List<IconSaveData> IconData = new List<IconSaveData>();
 

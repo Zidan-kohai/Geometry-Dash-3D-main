@@ -219,6 +219,10 @@ namespace GD3D.Player
 
             goldText.text =$"Gold: {Convert.ToInt32(PlayerMain.TimeSpentPlaying)}";
             diamondText.text = $"Diamond: 0";
+
+            SaveData.SaveFile.GoldCoinsCollected = Convert.ToInt32(PlayerMain.TimeSpentPlaying);
+            SaveData.SaveFile.DiamondCoinsCollected = 0;
+
             // Enable win menu
             winMenu.SetActive(true);
 

@@ -11,6 +11,7 @@ using GD3D.CustomInput;
 using QuickOutline;
 using Outline = QuickOutline.Outline;
 using PlasticGui;
+using System.Linq;
 
 namespace GD3D.UI
 {
@@ -118,6 +119,9 @@ namespace GD3D.UI
 
             _startSpinSpeed = spinSpeed;
 
+            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
+            goldcoinText.text = goldCoin.ToString();
+
             //-- Create all the icon buttons for every gamemode
 
             // Create dictionaries from the iconButtonData
@@ -162,7 +166,8 @@ namespace GD3D.UI
                     GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[iconData.Gamemode]);
 
                     TextMeshProUGUI costText = newButton.GetComponentInChildren<TextMeshProUGUI>();
-                    if(cost != 0)
+
+                    if(cost != 0 && !SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, index))
                     {
                         costText.gameObject.SetActive(true);
                         costText.text = cost.ToString();
@@ -180,9 +185,17 @@ namespace GD3D.UI
 
                     newButton.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        if(!buttonCost.TryBuy(goldCoin)) return;
+                        if (!SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
+                        {
+                            if (!buttonCost.TryBuy(goldCoin)) return;
 
-                        goldCoin = buttonCost.buy(goldCoin);
+                            SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
+
+                            goldCoin = buttonCost.buy(goldCoin);
+                            goldcoinText.text = goldCoin.ToString();
+                            costText.enabled = false;
+                        }
+
 
                         _savefile.SetEquippedIcon(iconData.Gamemode, thisIndex);
 
@@ -397,6 +410,7 @@ namespace GD3D.UI
             // Update mesh for the model on our currently open category
             _iconModels[_categoryOpen][PlayerIcons.GetIconIndex(_categoryOpen)].SetActive(true);
         }
+
 
         private void OnApplicationQuit()
         {

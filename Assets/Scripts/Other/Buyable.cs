@@ -29,6 +29,7 @@ namespace GD3D
 
         public int buy(int coin)
         {
+            SaveData.SaveFile.GoldCoinsCollected = coin - cost;
             return coin - cost;
         }
     }
