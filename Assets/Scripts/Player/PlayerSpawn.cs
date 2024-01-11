@@ -38,6 +38,8 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text loseMenuProgressPercent;
         [SerializeField] private TMP_Text loseMenuJumpText;
         [SerializeField] private TMP_Text loseMenuTimeText;
+        [SerializeField] private TMP_Text loseGoldText;
+        [SerializeField] private TMP_Text loseDiamondText;
 
         [Space]
         [SerializeField] private Button loseRestartButton;
@@ -51,8 +53,8 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text winMenuAttemptText;
         [SerializeField] private TMP_Text winMenuJumpText;
         [SerializeField] private TMP_Text winMenuTimeText;
-        [SerializeField] private TMP_Text goldText;
-        [SerializeField] private TMP_Text diamondText;
+        [SerializeField] private TMP_Text winGoldText;
+        [SerializeField] private TMP_Text winDiamondText;
 
         [Space]
         [SerializeField] private Button winRestartButton;
@@ -186,6 +188,12 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
+            loseGoldText.text = (PlayerMain.TimesJumped * 10).ToString();
+            loseDiamondText.text = "0";
+
+            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + Convert.ToInt32(loseGoldText.text);
+            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + Convert.ToInt32(loseDiamondText.text);
+
             loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
             loseMenuProgressPercent.text = ProgressBar.PercentString;
 
@@ -223,8 +231,8 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            goldText.text =$"{50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
-            diamondText.text = $"0";
+            winGoldText.text =$"{50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
+            winDiamondText.text = $"0";
 
             SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
             SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + 0;
