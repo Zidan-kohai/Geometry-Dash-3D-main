@@ -83,7 +83,7 @@ namespace GD3D.UI
             _levelOffset = GetScrollOffsetPos();
 
             // Set the level color to the first levels color
-            Color col = levels[s_scrollIndex].LevelBackgroundColor;
+            Color col = levels[0].LevelBackgroundColor;
             LevelColors.ChangeColor(LevelColors.ColorType.background, col);
             LevelColors.ChangeColor(LevelColors.ColorType.ground, col);
 
@@ -96,14 +96,14 @@ namespace GD3D.UI
             Transform dotTransform = dotTemplate.transform;
 
             // Create new arrays which we will fill later
-            _dots = new Image[levels.Length + 1];
-            _levelTransforms = new Transform[levels.Length + 1];
+            _dots = new Image[levels.Length];
+            _levelTransforms = new Transform[levels.Length];
 
             RectTransform dotRect = (RectTransform)dotTransform;
             float spacePerDot = (dotRect.rect.width + dotSpacing) * _scaleFactor;
             float totalDotSize = spacePerDot * (float)(_dots.Length - 1);
 
-            _length = levels.Length + 1;
+            _length = levels.Length;
 
             // Clone multiple copies of the level object to populate the level select
             // Also create the coming soon screen that will be on the end of the level select screen
@@ -128,12 +128,12 @@ namespace GD3D.UI
                     newLevel.LevelData = levelData;
                 }
                 // Set the coming soon screen if we are out of range, this means that this screen will be the last object in the array
-                else
-                {
-                    comingSoonScreen.transform.position = levelPos;
+                //else
+                //{
+                //    comingSoonScreen.transform.position = levelPos;
 
-                    _levelTransforms[i] = comingSoonScreen.transform;
-                }
+                //    _levelTransforms[i] = comingSoonScreen.transform;
+                //}
 
                 // Also create a dot for the level
                 Vector3 dotPos = dotTransform.position;
@@ -161,11 +161,11 @@ namespace GD3D.UI
 
             // Create a clone of the coming soon screen and place it at index -1
             // This coming soon screen will be used so that we can infinitely loop around the coming soon screens seamlessly
-            Vector3 comingSoonPos = levelTransform.position;
-            comingSoonPos.x = GetScrollPos(-1);
+            //Vector3 comingSoonPos = levelTransform.position;
+            //comingSoonPos.x = GetScrollPos(-1);
 
-            GameObject comingSoonClone = Instantiate(comingSoonScreen, comingSoonPos, Quaternion.identity, comingSoonScreen.transform.parent);
-            _comingSoonStartScreen = comingSoonClone.transform;
+            //GameObject comingSoonClone = Instantiate(comingSoonScreen, comingSoonPos, Quaternion.identity, comingSoonScreen.transform.parent);
+            //_comingSoonStartScreen = comingSoonClone.transform;
 
             // Hide the level stats screen
             levelStatsMenu.localScale = Vector3.zero;
@@ -240,7 +240,7 @@ namespace GD3D.UI
             }
 
             // Update position of all levels and the 2 coming soon screens
-            for (int i = -1; i < _levelTransforms.Length; i++)
+            for (int i = 0; i < _levelTransforms.Length; i++)
             {
                 // First coming soon screen will be chosen if the index is -1
                 Transform level = i == -1 ? _comingSoonStartScreen : _levelTransforms[i];
