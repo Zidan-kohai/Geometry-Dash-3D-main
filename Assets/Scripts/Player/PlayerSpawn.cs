@@ -223,11 +223,11 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            goldText.text =$"Gold: {Convert.ToInt32(PlayerMain.TimeSpentPlaying)}";
+            goldText.text =$"Gold: {50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
             diamondText.text = $"Diamond: 0";
 
-            SaveData.SaveFile.GoldCoinsCollected = Convert.ToInt32(PlayerMain.TimeSpentPlaying);
-            SaveData.SaveFile.DiamondCoinsCollected = 0;
+            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
+            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + 0;
 
             // Enable win menu
             winMenu.SetActive(true);
