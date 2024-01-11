@@ -13,6 +13,7 @@ using Outline = QuickOutline.Outline;
 using PlasticGui;
 using System.Linq;
 using UnityEngine.Events;
+using System.Security.Cryptography;
 
 namespace GD3D.UI
 {
@@ -267,6 +268,11 @@ namespace GD3D.UI
             }
         }
 
+        public void ChangeGoldCoin()
+        {
+            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
+            goldcoinText.text = goldCoin.ToString();
+        }
         private void ShowColorChoose()
         {
             ColorChoosePanel.SetActive(true);

@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace GD3D
 {
     public class Buyable : MonoBehaviour
     {
-        private int cost;
+        [SerializeField] private int cost;
+
+        private TextMeshProUGUI textMeshPro;
+
+
+        private void Start()
+        {
+            textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+        }
         public int Cost 
         { 
             get 
@@ -29,6 +38,9 @@ namespace GD3D
 
         public int buy(int coin)
         {
+            if (textMeshPro != null)
+                textMeshPro.gameObject.SetActive(false);
+
             SaveData.SaveFile.GoldCoinsCollected = coin - cost;
             return coin - cost;
         }

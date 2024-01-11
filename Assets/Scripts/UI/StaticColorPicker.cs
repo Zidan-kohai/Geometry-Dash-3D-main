@@ -12,6 +12,7 @@ namespace GD3D
     {
         private Button button;
         private bool isSelect = false;
+        public Buyable buyable;
 
         [Tooltip("Get Color from image")]
         [SerializeField] private Image image;
@@ -23,6 +24,7 @@ namespace GD3D
         {
             button = GetComponent<Button>();
             image = GetComponent<Image>();
+            buyable = GetComponent<Buyable>();
         }
 
         private void Start()
@@ -32,7 +34,11 @@ namespace GD3D
 
         private void ChangePlayerColor()
         {
-            if (isSelect) return;
+            if (isSelect || !buyable.TryBuy(SaveData.SaveFile.GoldCoinsCollected)) return;
+
+            isSelect = true;
+
+            buyable.buy(SaveData.SaveFile.GoldCoinsCollected);
 
             if (whitchColorChange == WhitchColor.Color1)
             {
@@ -42,6 +48,8 @@ namespace GD3D
             {
                 iconKit.UpdatePlayerColor2(image.color);
             }
+
+            iconKit.ChangeGoldCoin();
         }
 
 
