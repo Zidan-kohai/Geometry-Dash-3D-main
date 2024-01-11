@@ -56,7 +56,7 @@ namespace GD3D.Level
             if (_player != null)
             {
                 _player.OnDeath += OnDeath;
-                _player.OnDeath += SaveLevelData;
+                //_player.OnDeath += SaveLevelData;
             }
         }
 
@@ -89,6 +89,8 @@ namespace GD3D.Level
             }
 
             _oldPercentString = ProgressBar.PercentString;
+
+            SaveLevelData();
         }
 
         /// <summary>
@@ -99,6 +101,8 @@ namespace GD3D.Level
             // Set the level data values
             levelData.NormalPercent = NormalPercent;
             levelData.PracticePercent = PracticePercent;
+
+            SaveData.Save();
         }
     }
 }

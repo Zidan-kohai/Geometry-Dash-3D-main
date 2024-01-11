@@ -88,7 +88,7 @@ namespace GD3D.Player
         public override void Start()
         {
             base.Start();
-            _currentAttempt = SaveData.CurrentLevelData.TotalAttempts;
+            _currentAttempt = SaveData.CurrentLevelData.TotalAttempts + 1;
             // Set the save file
             _saveFile = SaveData.SaveFile;
 
@@ -126,6 +126,7 @@ namespace GD3D.Player
 
             // Subscribe to the OnDeath event
             //player.OnDeath += OnDeath;
+
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
             // Setup the respawnRing obj by creating a copy and setting the copy
@@ -253,6 +254,10 @@ namespace GD3D.Player
         /// </summary>
         public void QuitToMenu()
         {
+            _currentAttempt++;
+            SaveData.CurrentLevelData.TotalAttempts++;
+            SaveData.Save();
+
             Transition.TransitionToLastActiveMenu();
         }
         #endregion
@@ -308,6 +313,10 @@ namespace GD3D.Player
         
         private void nextScene()
         {
+            _currentAttempt++;
+            SaveData.CurrentLevelData.TotalAttempts++;
+            SaveData.Save();
+
             Transition.TransitionToNextScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         /// <summary>
@@ -388,6 +397,9 @@ namespace GD3D.Player
 
             // Set attempt text
             attemptText.text = $"Attempt  {_currentAttempt}";
+            // Reset jumps and time because they are static
+            PlayerMain.TimesJumped = 0;
+            PlayerMain.TimeSpentPlaying = 0;
 
             // Start the respawn coroutine
             Coroutine coroutine = StartCoroutine(RespawnCouroutine());

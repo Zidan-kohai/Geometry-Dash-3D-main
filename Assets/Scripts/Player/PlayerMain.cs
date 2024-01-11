@@ -117,7 +117,6 @@ namespace GD3D.Player
             //mouseOverCol = GetChildComponent<Collider>();
 
             GetPlayerScripts();
-
         }
 
         /// <summary>
