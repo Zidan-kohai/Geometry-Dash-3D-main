@@ -88,9 +88,13 @@ namespace GD3D.Player
         public override void Start()
         {
             base.Start();
-
+            _currentAttempt = SaveData.CurrentLevelData.TotalAttempts;
             // Set the save file
             _saveFile = SaveData.SaveFile;
+
+            attemptText.text = $"Attempt  {_currentAttempt}";
+            loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
+            winMenuAttemptText.text = $"Attempt  {_currentAttempt}";
 
             // Setup respawn menu
             _respawnMenuTransform = loseMenu.transform;
@@ -143,6 +147,7 @@ namespace GD3D.Player
             );
 
             PlayerMain.Instance.OnWin += ShowWinMenu;
+            PlayerMain.Instance.OnDeath += ShowLoseMenu;
             // Destroy the newly created object because we have no use out of it anymore
             Destroy(obj);
         }
@@ -166,7 +171,7 @@ namespace GD3D.Player
         /// <summary>
         /// Makes the respawn menu appear with a scale easing.
         /// </summary>
-        private void ShowRespawnMenu()
+        private void ShowLoseMenu()
         {
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
@@ -329,7 +334,7 @@ namespace GD3D.Player
             else
             {
                 // Bring up the respawn menu after 1 second if auto retry is disabled
-                coroutine = Helpers.TimerSeconds(this, 1, ShowRespawnMenu);
+                coroutine = Helpers.TimerSeconds(this, 1, ShowLoseMenu);
             }
 
             StartRespawnCouroutine(coroutine);
@@ -355,6 +360,9 @@ namespace GD3D.Player
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 
+            _currentAttempt++;
+            SaveData.CurrentLevelData.TotalAttempts++;
+            SaveData.Save();
             // Disable the respawn menu and new best popups
             loseMenu.SetActive(false);
             winMenu.SetActive(false);   
