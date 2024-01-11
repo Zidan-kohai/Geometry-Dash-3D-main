@@ -12,6 +12,7 @@ using QuickOutline;
 using Outline = QuickOutline.Outline;
 using PlasticGui;
 using System.Linq;
+using UnityEngine.Events;
 
 namespace GD3D.UI
 {
@@ -75,6 +76,15 @@ namespace GD3D.UI
         private UnityEngine.Camera _cam;
 
         private Key _quitKey;
+
+
+        [Space]
+        [SerializeField] private Button _colorChoose;
+        [SerializeField] private Button _playerChoose;
+
+        [Space]
+        [SerializeField] private GameObject PlayerChoosePanel;
+        [SerializeField] private GameObject ColorChoosePanel;
 
         private void Awake()
         {
@@ -230,6 +240,10 @@ namespace GD3D.UI
 
                 // Destroy template button
                 Destroy(_iconButtonTemplates[iconData.Gamemode]);
+
+
+                _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
+                _colorChoose.onClick.AddListener(ShowColorChoose);
             }
 
             UpdateIconSelection();
@@ -251,6 +265,18 @@ namespace GD3D.UI
                     outline.OutlineColor = Color.black;
                 }
             }
+        }
+
+        private void ShowColorChoose()
+        {
+            ColorChoosePanel.SetActive(true);
+            PlayerChoosePanel.SetActive(false);
+        }
+
+        private void ShowPlayerChoosePanel()
+        {
+            ColorChoosePanel.SetActive(false);
+            PlayerChoosePanel.SetActive(true);
         }
 
         private void OnSceneUnloaded(Scene scene)
@@ -420,7 +446,7 @@ namespace GD3D.UI
         /// <summary>
         /// Updates the first player color in both the save file and player model.
         /// </summary>
-        private void UpdatePlayerColor1(Color newColor)
+        public void UpdatePlayerColor1(Color newColor)
         {
             _savefile.PlayerColor1 = newColor;
 
@@ -430,7 +456,7 @@ namespace GD3D.UI
         /// <summary>
         /// Updates the second player color in both the save file and player model.
         /// </summary>
-        private void UpdatePlayerColor2(Color newColor)
+        public void UpdatePlayerColor2(Color newColor)
         {
             _savefile.PlayerColor2 = newColor;
 
