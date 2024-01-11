@@ -270,6 +270,8 @@ namespace GD3D
             public List<int> shipIndex;
         }
 
+        public List<ColorNoAlpha> BuyedColor1 = new List<ColorNoAlpha>();
+        public List<ColorNoAlpha> BuyedColor2 = new List<ColorNoAlpha>();
         /// <summary>
         /// Will return the index of the currently equipped icon of the given <paramref name="gamemode"/>.
         /// </summary>
@@ -316,28 +318,28 @@ namespace GD3D
 
 
         private void TryCreateDictionary(Gamemode gamemode)
+        {
+            // Check if our dictionary is null
+            if (_equippedIconIndex == null)
             {
-                // Check if our dictionary is null
-                if (_equippedIconIndex == null)
-                {
-                    // If so, then we will create a new dictionary for getting the equipped icon
-                    _equippedIconIndex = new Dictionary<Gamemode, int>();
+                // If so, then we will create a new dictionary for getting the equipped icon
+                _equippedIconIndex = new Dictionary<Gamemode, int>();
 
-                    // We will now populate the dictionary by looping through our icon data list
-                    foreach (IconSaveData icon in IconData)
-                    {
-                        _equippedIconIndex.Add(icon.Gamemode, icon.Index);
-                    }
-                }
-
-                // Check if the gamemode doesn't exist in the dictionary
-                if (!_equippedIconIndex.ContainsKey(gamemode))
+                // We will now populate the dictionary by looping through our icon data list
+                foreach (IconSaveData icon in IconData)
                 {
-                    // If it doesn't exist, then we will create a new entry in the dictionary with the default value
-                    _equippedIconIndex.Add(gamemode, 0);
-                    IconData.Add(new IconSaveData(gamemode, 0));
+                    _equippedIconIndex.Add(icon.Gamemode, icon.Index);
                 }
             }
+
+            // Check if the gamemode doesn't exist in the dictionary
+            if (!_equippedIconIndex.ContainsKey(gamemode))
+            {
+                // If it doesn't exist, then we will create a new entry in the dictionary with the default value
+                _equippedIconIndex.Add(gamemode, 0);
+                IconData.Add(new IconSaveData(gamemode, 0));
+            }
+        }
 
         public List<IconSaveData> IconData = new List<IconSaveData>();
 

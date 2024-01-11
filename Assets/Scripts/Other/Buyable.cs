@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace GD3D
@@ -9,9 +10,8 @@ namespace GD3D
     {
         [SerializeField] private int cost;
 
-        private TextMeshProUGUI textMeshPro;
-
-
+        [SerializeField] private TextMeshProUGUI textMeshPro;
+        public bool IsBuyed = false;
         private void Start()
         {
             textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
@@ -42,7 +42,23 @@ namespace GD3D
                 textMeshPro.gameObject.SetActive(false);
 
             SaveData.SaveFile.GoldCoinsCollected = coin - cost;
+            IsBuyed = true;
+
             return coin - cost;
+        }
+
+        public void buyed()
+        {
+            if (textMeshPro != null)
+            {
+                textMeshPro.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log(gameObject.name);
+            }
+
+            IsBuyed = true;
         }
     }
 }
