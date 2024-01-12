@@ -23,6 +23,11 @@ namespace GD3D
         [SerializeField] private Transform baseFloor;
         [SerializeField] private Collider baseFloorHitbox;
 
+        
+        [Space]
+        [Header("Obstacle")]
+        [SerializeField] private List<Renderer> obstaclleRenderers = new List<Renderer>();
+
         private float _floorStartY;
 
         private Transform _roof;
@@ -117,8 +122,16 @@ namespace GD3D
 
             LevelColors.GetColorData(LevelColors.ColorType.ground)
                 .RenderMaterialData.Add(
-                new LevelColors.RendererMaterialData(renderer, 0, true)
+                    new LevelColors.RendererMaterialData(renderer, 0, true)
             );
+
+            foreach (Renderer rend in obstaclleRenderers)
+            {
+                LevelColors.GetColorData(LevelColors.ColorType.ground)
+                    .RenderMaterialData.Add(
+                        new LevelColors.RendererMaterialData(rend, 0, true)
+                );
+            }
 
             // Subscribe to events
             PlayerMain.Instance.OnRespawn += OnRespawn;
