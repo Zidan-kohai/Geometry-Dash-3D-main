@@ -74,6 +74,9 @@ namespace GD3D.Player
         private Key placeKey;
         private Key removeKey;
 
+        private bool checkPointTouching;
+        [SerializeField] private LayerMask _checkPointLayer;
+
         /// <summary>
         /// Returns the latest placed checkpoint in the checkpoints list. <para/>
         /// Will return null if there are no checkpoints placed.
@@ -127,39 +130,56 @@ namespace GD3D.Player
             base.Update();
 
             // Return if we are not in practice mode or if the game is paused
-            if (!InPracticeMode || PauseMenu.IsPaused)
+            if (PauseMenu.IsPaused)
             {
                 return;
             }
 
-            // Place checkpoint crystal if the place key was pressed and we are not dead
-            if (!player.IsDead && placeKey.Pressed(PressMode.down))
+            Collider[] checkpointColliders = Physics.OverlapBox(transform.position, transform.localScale / 2 + (Vector3.one / 15), transform.rotation, _checkPointLayer, QueryTriggerInteraction.Collide);
+
+            checkPointTouching = checkpointColliders.Length >= 1;
+
+            if(checkPointTouching)
             {
-                PlaceCheckpointCrystal();
+                Checkpoint newCheckPoint = new Checkpoint();
+                newCheckPoint.SetCheckpoint();
+
+                Checkpoints.Add(newCheckPoint);
+
+                foreach (Collider collider in checkpointColliders)
+                {
+                    Destroy(collider.gameObject);
+                }
             }
 
-            // Check if we have auto checkpoints and are not dead
-            if (!player.IsDead && _saveFile.AutoCheckpointsEnabled)
-            {
-                AutoCheckpointUpdate();
-            }
+            //// Place checkpoint crystal if the place key was pressed and we are not dead
+            //if (!player.IsDead && placeKey.Pressed(PressMode.down))
+            //{
+            //    PlaceCheckpointCrystal();
+            //}
 
-            // Get the length of the checkpoint
-            int checkpointCount = Checkpoints.Count;
+            //// Check if we have auto checkpoints and are not dead
+            //if (!player.IsDead && _saveFile.AutoCheckpointsEnabled)
+            //{
+            //    AutoCheckpointUpdate();
+            //}
 
-            // Remove checkpoint crystal if the remove key was pressed and if there is more than 0 crystals existing
-            if (checkpointCount > 0 && removeKey.Pressed(PressMode.down))
-            {
-                int index = checkpointCount - 1;
+            //// Get the length of the checkpoint
+            //int checkpointCount = Checkpoints.Count;
 
-                // Get the latest placed checkpoint and remove it
-                Checkpoints.RemoveAt(index);
+            //// Remove checkpoint crystal if the remove key was pressed and if there is more than 0 crystals existing
+            //if (checkpointCount > 0 && removeKey.Pressed(PressMode.down))
+            //{
+            //    int index = checkpointCount - 1;
 
-                // Destroy checkpoint crystal as well
-                Destroy(CheckpointCrystals[index]);
+            //    // Get the latest placed checkpoint and remove it
+            //    Checkpoints.RemoveAt(index);
 
-                CheckpointCrystals.RemoveAt(index);
-            }
+            //    // Destroy checkpoint crystal as well
+            //    Destroy(CheckpointCrystals[index]);
+
+            //    CheckpointCrystals.RemoveAt(index);
+            //}
         }
 
         /// <summary>

@@ -40,6 +40,7 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text loseMenuTimeText;
         [SerializeField] private TMP_Text loseGoldText;
         [SerializeField] private TMP_Text loseDiamondText;
+        [SerializeField] private Button loseReviveButton;
 
         [Space]
         [SerializeField] private Button loseRestartButton;
@@ -106,6 +107,7 @@ namespace GD3D.Player
 
             loseRestartButton.onClick.AddListener(Respawn);
             loseQuitButton.onClick.AddListener(QuitToMenu);
+            loseReviveButton.onClick.AddListener(Revive);
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
@@ -372,6 +374,8 @@ namespace GD3D.Player
         /// <summary>
         /// Respawns the player.
         /// </summary>
+        /// 
+        #region Respawn
         public void Respawn()
         {
             // Enable the pause menu so you can pause again
@@ -416,7 +420,40 @@ namespace GD3D.Player
             // Ignore input for this moment so the player won't instantly jump when respawning
             player.IgnoreInput();
         }
-            
+
+        public void Revive()
+        {
+            // Enable the pause menu so you can pause again
+            PauseMenu.CanPause = true;
+
+            // Disable the respawn menu and new best popups
+            loseMenu.SetActive(false);
+            winMenu.SetActive(false);
+            newBestPopup.SetActive(false);
+
+            // Stop the scaling of all the UI Clickables on the respawn menu
+            foreach (UIClickable clickable in _respawnMenuUIClickables)
+            {
+                clickable.StopScaling();
+            }
+
+            Checkpoint checkpoint = _practiceMode.LatestCheckpoint;
+            checkpoint?.OnLoaded();
+
+
+            // Invoke respawn event
+            player.InvokeRespawnEvent(true, checkpoint);
+
+
+            // Start the respawn coroutine
+            Coroutine coroutine = StartCoroutine(RespawnCouroutine());
+            StartRespawnCouroutine(coroutine);
+
+            // Ignore input for this moment so the player won't instantly jump when respawning
+            player.IgnoreInput();
+        }
+
+        #endregion
         /// <summary>
         /// Makes the player flash on/off and spawn respawn rings 3 times.
         /// </summary>
