@@ -292,12 +292,12 @@ namespace GD3D.Player
             {
                 // Reset transform
                 transform.position = StartPos;
-                transform.localScale = StartScale;
+                transform.localScale = StartScale;  
                 transform.rotation = StartRotation;
 
                 PlayerPracticeMode.Instance.TurnOnCheckPoints();
             }
-            else
+            else 
             {
                 // Set to practice 
                 transform.position = checkpoint.PlayerPosition;
