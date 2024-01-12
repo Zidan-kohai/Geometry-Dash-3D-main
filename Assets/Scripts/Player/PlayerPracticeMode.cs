@@ -4,6 +4,7 @@ using UnityEngine;
 using GD3D.Audio;
 using GD3D.CustomInput;
 using GD3D.UI;
+using JetBrains.Annotations;
 
 namespace GD3D.Player
 {
@@ -68,6 +69,7 @@ namespace GD3D.Player
         [SerializeField] private GameObject checkpointCrystal;
 
         public List<Checkpoint> Checkpoints = new List<Checkpoint>();
+        private List<Collider> checkedcheckpointColliders = new List<Collider>();
         private List<GameObject> CheckpointCrystals = new List<GameObject>();
 
         //-- Input
@@ -148,7 +150,8 @@ namespace GD3D.Player
 
                 foreach (Collider collider in checkpointColliders)
                 {
-                    Destroy(collider.gameObject);
+                    checkedcheckpointColliders.Add(collider);
+                    collider.enabled = false;
                 }
             }
 
@@ -182,6 +185,16 @@ namespace GD3D.Player
             //}
         }
 
+
+        public void TurnOnCheckPoints()
+        {
+            foreach(Collider col in checkedcheckpointColliders)
+            {
+                col.enabled = true;
+            }
+
+            Checkpoints.Clear();
+        }
         /// <summary>
         /// Places a checkpoint crystal
         /// </summary>

@@ -286,7 +286,7 @@ namespace GD3D.Player
         public void InvokeRespawnEvent(bool inPracticeMode, Checkpoint checkpoint)
         {
             player.IsDead = false;
-
+            
             // Check if we are not in practice mode
             if (!inPracticeMode)
             {
@@ -294,6 +294,8 @@ namespace GD3D.Player
                 transform.position = StartPos;
                 transform.localScale = StartScale;
                 transform.rotation = StartRotation;
+
+                PlayerPracticeMode.Instance.TurnOnCheckPoints();
             }
             else
             {

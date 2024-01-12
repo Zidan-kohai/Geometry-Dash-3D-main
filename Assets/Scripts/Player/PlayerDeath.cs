@@ -19,9 +19,8 @@ namespace GD3D.Player
         [SerializeField] private int poolSize = 2;
         private ObjectPool<PoolObject> _pool;
 
-
-        private float immortalityTime = 3f;
-        private float spendFromImmortality = 3f;
+        [SerializeField] private float immortalityTime;
+        private bool deathable = false;
 
 
         [Space]
@@ -87,7 +86,10 @@ namespace GD3D.Player
 
 
             player.OnRespawn += OnRespawn;
+
+            StartCoroutine("CanDeath");
         }
+
 
         private Color GetPlayerColor(float a)
         {
@@ -102,11 +104,10 @@ namespace GD3D.Player
             base.Update();
 
             // Detect if the player is touching deadly stuff
-            if (spendFromImmortality >= immortalityTime)
-            {
-                _touchingDeath = Physics.OverlapBox(transform.position, transform.localScale / 2 + (Vector3.one / 15), transform.rotation, deathLayer).Length >= 1;
-                
-            }
+            if (!deathable) return;
+
+
+            _touchingDeath = Physics.OverlapBox(transform.position, transform.localScale / 2 + (Vector3.one / 15), transform.rotation, deathLayer).Length >= 1;
 
             // Die if we are touching death stuff
             if (_touchingDeath)
@@ -122,16 +123,24 @@ namespace GD3D.Player
                 Die();
             }
 #endif
-            spendFromImmortality += Time.deltaTime;
         }
 
 
         private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
         {
-            spendFromImmortality = 0f;
+            deathable = false;
             _touchingDeath = false;
+
+            StartCoroutine("CanDeath");
         }
 
+
+        IEnumerator CanDeath()
+        {
+            yield return new WaitForSeconds(immortalityTime);
+
+            deathable = true;
+        }
         /// <summary>
         /// Makes the player explode, plays the death sound effect, disables the mesh and respawns the player afterwards.
         /// </summary>
