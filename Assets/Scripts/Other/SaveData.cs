@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using GD3D.Level;
 using GD3D.Player;
-using Unity.Plastic.Newtonsoft.Json;
 
 namespace GD3D
 {
@@ -135,7 +134,7 @@ namespace GD3D
             }
 
             // Convert save file to json
-            string jsonText = JsonConvert.SerializeObject(SaveFile);
+            string jsonText = JsonUtility.ToJson(SaveFile);
 
             // Write the json into a file
             File.WriteAllText(_saveFilePath, jsonText);
@@ -164,7 +163,7 @@ namespace GD3D
             // Try to convert the JSON text into a SaveFile object
             try
             {
-                SaveFile = JsonConvert.DeserializeObject<SaveFile>(jsonText);
+                SaveFile = JsonUtility.FromJson<SaveFile>(jsonText);
             }
             // If it fails, throw error only in editor, otherwise return
             catch (Exception)

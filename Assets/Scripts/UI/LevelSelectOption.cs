@@ -69,6 +69,7 @@ namespace GD3D.UI
             if(LevelData.IsOpen || LevelData.LevelBuildIndex == 4 || LevelData.LevelBuildIndex == 5)
             {
                 openButtonPanel.gameObject.SetActive(false);
+                LevelData.IsOpen = true;
             }
             else if(LevelData.LevelBuildIndex == 6 || LevelData.LevelBuildIndex == 7)
             {

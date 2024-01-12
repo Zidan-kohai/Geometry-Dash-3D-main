@@ -9,7 +9,7 @@ namespace UnityEditor.Audio
 	/// </summary>
 	public static class AudioUtility
 	{
-		private static Assembly unityEditorAssembly => typeof(AudioImporter).Assembly;
+		private static Assembly unityEditorAssembly => typeof(AudioImporter).Assembly; 
 		private static Type audioUtilClass => unityEditorAssembly.GetType("UnityEditor.AudioUtil");
 
 		private static MethodInfo GetMethod(string name)
