@@ -24,6 +24,9 @@ namespace GD3D.UI
         [SerializeField] private Button buttonOpen2;
         [SerializeField] private TMP_Text buttonOpen1Text;
         [SerializeField] private TMP_Text buttonOpen2Text;
+        [Space]
+        [SerializeField] private GameObject lacksMoneyPopup;
+
 
         [SerializeField] private TMP_Text levelNameText;
         [SerializeField] private TMP_Text starAmountText;
@@ -117,7 +120,11 @@ namespace GD3D.UI
 
         public void OpenLevelByGold()
         {
-            if (LevelData.cost > SaveData.SaveFile.GoldCoinsCollected) return;
+            if (LevelData.cost > SaveData.SaveFile.GoldCoinsCollected)
+            {
+                lacksMoneyPopup.SetActive(true);
+                return;
+            }
 
             SaveData.SaveFile.GoldCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
@@ -129,7 +136,11 @@ namespace GD3D.UI
 
         public void OpenLevelByDiamond()
         {
-            if (LevelData.cost > SaveData.SaveFile.DiamondCoinsCollected) return;
+            if (LevelData.cost > SaveData.SaveFile.DiamondCoinsCollected)
+            {
+                lacksMoneyPopup.SetActive(true);
+                return;
+            }
 
             SaveData.SaveFile.DiamondCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;

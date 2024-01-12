@@ -14374,7 +14374,7 @@ PrefabInstance:
       objectReference: {fileID: 457430460781732770}
     - target: {fileID: 6350841099429941773, guid: 45bbb9963d9e2b1468db5cd22124d886, type: 3}
       propertyPath: obstaclleRenderers.Array.size
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 6350841099429941773, guid: 45bbb9963d9e2b1468db5cd22124d886, type: 3}
       propertyPath: obstaclleRenderers.Array.data[0]
@@ -14580,6 +14580,10 @@ PrefabInstance:
       propertyPath: obstaclleRenderers.Array.data[50]
       value: 
       objectReference: {fileID: 34910486}
+    - target: {fileID: 6350841099429941773, guid: 45bbb9963d9e2b1468db5cd22124d886, type: 3}
+      propertyPath: obstaclleRenderers.Array.data[51]
+      value: 
+      objectReference: {fileID: 1473787759}
     - target: {fileID: 6350841099429941774, guid: 45bbb9963d9e2b1468db5cd22124d886, type: 3}
       propertyPath: m_Name
       value: Border Manager

@@ -3860,6 +3860,7 @@ MonoBehaviour:
   buttonOpen2: {fileID: 840482479}
   buttonOpen1Text: {fileID: 1332893251}
   buttonOpen2Text: {fileID: 1701612397}
+  lacksMoneyPopup: {fileID: 1828121858}
   levelNameText: {fileID: 900590854}
   starAmountText: {fileID: 1228100876}
   DifficultyFace: {fileID: 1676854947}
