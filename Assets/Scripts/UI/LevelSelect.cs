@@ -117,7 +117,7 @@ namespace GD3D.UI
                 {
                     // Get the level data
                     LevelData levelData = levels[i];
-
+                    levelData.IsOpen = SaveData.SaveFile.GetLevelData(levelData.LevelName).isOpen;
                     // Create a new level
                     LevelSelectOption newLevel = Instantiate(levelTemplate, levelPos, levelTransform.rotation, levelTransform.parent).GetComponent<LevelSelectOption>();
                     _levelTransforms[i] = newLevel.transform;

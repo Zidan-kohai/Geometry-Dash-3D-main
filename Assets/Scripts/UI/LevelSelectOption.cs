@@ -120,6 +120,7 @@ namespace GD3D.UI
 
             SaveData.SaveFile.GoldCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
+            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -131,6 +132,7 @@ namespace GD3D.UI
 
             SaveData.SaveFile.DiamondCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
+            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -140,12 +142,14 @@ namespace GD3D.UI
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
+            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
         }
 
         public void OpenLevelByInApp()
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
+            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
         }
     }
 }

@@ -405,6 +405,7 @@ namespace GD3D
         {
             public string Name = "null";
 
+            public bool isOpen;
             public bool CompletedLevel => NormalPercent >= 1;
             public bool CompletedLevelPractice => PracticePercent >= 1;
 
