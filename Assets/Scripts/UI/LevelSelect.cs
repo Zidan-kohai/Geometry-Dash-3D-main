@@ -83,7 +83,7 @@ namespace GD3D.UI
             _levelOffset = GetScrollOffsetPos();
 
             // Set the level color to the first levels color
-            Color col = levels[0].LevelBackgroundColor;
+            Color col = levels[s_scrollIndex].LevelBackgroundColor;
             LevelColors.ChangeColor(LevelColors.ColorType.background, col);
             LevelColors.ChangeColor(LevelColors.ColorType.ground, col);
 
