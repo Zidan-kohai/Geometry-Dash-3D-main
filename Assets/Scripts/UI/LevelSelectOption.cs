@@ -19,6 +19,12 @@ namespace GD3D.UI
         private string _levelName;
 
         [Header("Objects")]
+        [SerializeField] private GameObject openButtonPanel;
+        [SerializeField] private Button buttonOpen1;
+        [SerializeField] private Button buttonOpen2;
+        [SerializeField] private TMP_Text buttonOpen1Text;
+        [SerializeField] private TMP_Text buttonOpen2Text;
+
         [SerializeField] private TMP_Text levelNameText;
         [SerializeField] private TMP_Text starAmountText;
         public Image DifficultyFace;
@@ -59,6 +65,28 @@ namespace GD3D.UI
                 normalProgressText.text = ProgressBar.ToPercent(levelSave.NormalPercent);
                 practiceProgressText.text = ProgressBar.ToPercent(levelSave.PracticePercent);
             }
+
+            if(LevelData.IsOpen || LevelData.LevelBuildIndex == 4 || LevelData.LevelBuildIndex == 5)
+            {
+                openButtonPanel.gameObject.SetActive(false);
+            }
+            else if(LevelData.LevelBuildIndex == 6 || LevelData.LevelBuildIndex == 7)
+            {
+                buttonOpen1Text.text = "Open by viewing ads";
+                buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
+
+                buttonOpen1.onClick.AddListener(OpenLevelByShowReward);
+                buttonOpen2.onClick.AddListener(OpenLevelByGold);
+            }
+            else if (LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
+            {
+                buttonOpen1Text.text = "Open by In app";
+                buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
+
+                buttonOpen1.onClick.AddListener(OpenLevelByInApp);
+                buttonOpen2.onClick.AddListener(OpenLevelByDiamond);
+            }
+
         }
 
         private void Update()
@@ -71,7 +99,7 @@ namespace GD3D.UI
         /// </summary>
         public void PlayLevel()
         {
-            if (Transition.IsTransitioning)
+            if (Transition.IsTransitioning || !LevelData.IsOpen)
             {
                 return;
             }
@@ -83,6 +111,41 @@ namespace GD3D.UI
 
             // Play sound effect
             SoundManager.PlaySound("Play Level", 1);
+        }
+
+
+        public void OpenLevelByGold()
+        {
+            if (LevelData.cost > SaveData.SaveFile.GoldCoinsCollected) return;
+
+            SaveData.SaveFile.GoldCoinsCollected -= LevelData.cost;
+            LevelData.IsOpen = true;
+            SaveData.Save();
+
+            openButtonPanel.SetActive(false);
+        }
+
+        public void OpenLevelByDiamond()
+        {
+            if (LevelData.cost > SaveData.SaveFile.DiamondCoinsCollected) return;
+
+            SaveData.SaveFile.DiamondCoinsCollected -= LevelData.cost;
+            LevelData.IsOpen = true;
+            SaveData.Save();
+
+            openButtonPanel.SetActive(false);
+        }
+
+        public void OpenLevelByShowReward()
+        {
+            openButtonPanel.SetActive(false);
+            LevelData.IsOpen = true;
+        }
+
+        public void OpenLevelByInApp()
+        {
+            openButtonPanel.SetActive(false);
+            LevelData.IsOpen = true;
         }
     }
 }

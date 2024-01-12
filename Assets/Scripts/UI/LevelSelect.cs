@@ -549,6 +549,8 @@ namespace GD3D.UI
             public string LevelName;
             public int StartAwarded;
             public Sprite DifficultyFace;
+            public bool IsOpen;
+            public int cost;
 
             [Space]
             public Color LevelBackgroundColor;

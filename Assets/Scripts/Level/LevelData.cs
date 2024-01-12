@@ -22,6 +22,8 @@ namespace GD3D.Level
 
         [Header("Data")]
         public string LevelName;
+        public bool IsOpen;
+        public int cost;
 
         public float NormalPercent;
         public float PracticePercent;
