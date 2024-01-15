@@ -41,7 +41,8 @@ namespace GD3D.UI
 
         [SerializeField] private TMP_Text starsText;
         [SerializeField] private TMP_Text coinsText;
-        [SerializeField] private TMP_Text goldcoinText;
+        [SerializeField] private TMP_Text goldCoinText;
+        [SerializeField] private TMP_Text diamondCoinText;
 
         [Header("Colors")]
         [SerializeField] private PlayerColors playerColors;
@@ -122,7 +123,7 @@ namespace GD3D.UI
 
             starsText.text = _savefile.StarsCollected.ToString();
             coinsText.text = _savefile.CoinsCollected.ToString();
-
+            diamondCoinText.text = _savefile.DiamondCoinsCollected.ToString();
             // Set start variables
             _startRot = modelParent.localRotation.eulerAngles;
             _targetRot = _startRot;
@@ -130,7 +131,7 @@ namespace GD3D.UI
             _startSpinSpeed = spinSpeed;
 
             goldCoin = SaveData.SaveFile.GoldCoinsCollected;
-            goldcoinText.text = goldCoin.ToString();
+            goldCoinText.text = goldCoin.ToString();
 
             //-- Create all the icon buttons for every gamemode
 
@@ -202,7 +203,7 @@ namespace GD3D.UI
                             SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
 
                             goldCoin = buttonCost.buyForFold(goldCoin);
-                            goldcoinText.text = goldCoin.ToString();
+                            goldCoinText.text = goldCoin.ToString();
                             costText.enabled = false;
                         }
 
@@ -270,7 +271,7 @@ namespace GD3D.UI
         public void ChangeGoldCoin()
         {
             goldCoin = SaveData.SaveFile.GoldCoinsCollected;
-            goldcoinText.text = goldCoin.ToString();
+            goldCoinText.text = goldCoin.ToString();
         }
         private void ShowColorChoose()
         {

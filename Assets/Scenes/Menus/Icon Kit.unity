@@ -7191,7 +7191,8 @@ MonoBehaviour:
   goldCoin: 6
   starsText: {fileID: 633974564}
   coinsText: {fileID: 1973365726}
-  goldcoinText: {fileID: 2029990811}
+  goldCoinText: {fileID: 2029990811}
+  diamondCoinText: {fileID: 596556160}
   playerColors: {fileID: 745326431}
   colorPicker1: {fileID: 866883106}
   colorPicker2: {fileID: 261360033}
