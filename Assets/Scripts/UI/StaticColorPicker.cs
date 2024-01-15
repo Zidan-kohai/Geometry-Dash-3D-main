@@ -13,6 +13,8 @@ namespace GD3D
         private static Color SelectedColor1;
         private static Color SelectedColor2;
         public Buyable buyable;
+        public bool isOpened;
+
 
         [Tooltip("Get Color from image")]
         [SerializeField] private Image image;
@@ -31,6 +33,11 @@ namespace GD3D
         {
             button.onClick.AddListener(ChangePlayerColor);
             
+            if(isOpened)
+            {
+                buyable.buyed();
+            }
+
             switch(whitchColorChange)
             {
                 case WhitchColor.Color1:
@@ -56,7 +63,7 @@ namespace GD3D
                     break;
             }
 
-            if (!buyable.TryBuy(SaveData.SaveFile.GoldCoinsCollected)) return;
+            if (!buyable.TryBuy(SaveData.SaveFile.GoldCoinsCollected) && !buyable.IsBuyed) return;
 
             if (!buyable.IsBuyed)
             {
