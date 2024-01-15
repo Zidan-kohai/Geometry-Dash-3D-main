@@ -63,11 +63,11 @@ namespace GD3D
                     break;
             }
 
-            if (!buyable.TryBuy(SaveData.SaveFile.GoldCoinsCollected) && !buyable.IsBuyed) return;
+            if (!buyable.TryBuyForGold(SaveData.SaveFile.GoldCoinsCollected) && !buyable.IsBuyed) return;
 
             if (!buyable.IsBuyed)
             {
-                buyable.buy(SaveData.SaveFile.GoldCoinsCollected);
+                buyable.buyForFold(SaveData.SaveFile.GoldCoinsCollected);
                 
                 switch(whitchColorChange)
                 {

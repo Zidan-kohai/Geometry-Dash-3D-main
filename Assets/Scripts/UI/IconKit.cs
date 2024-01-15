@@ -197,11 +197,11 @@ namespace GD3D.UI
                     {
                         if (!SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
                         {
-                            if (!buttonCost.TryBuy(goldCoin)) return;
+                            if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
                             SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
 
-                            goldCoin = buttonCost.buy(goldCoin);
+                            goldCoin = buttonCost.buyForFold(goldCoin);
                             goldcoinText.text = goldCoin.ToString();
                             costText.enabled = false;
                         }

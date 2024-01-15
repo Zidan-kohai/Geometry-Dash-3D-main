@@ -11,6 +11,8 @@ namespace GD3D
         [SerializeField] private int cost;
 
         [SerializeField] private TextMeshProUGUI textMeshPro;
+        [SerializeField] private GameObject lacksMoney;
+
         public bool IsBuyed = false;
         private void Start()
         {
@@ -29,14 +31,18 @@ namespace GD3D
             }
         }
 
-        public bool TryBuy(int Coin)
+        public bool TryBuyForGold(int Coin)
         {
-            if (Coin < cost) return false;
+            if (Coin < cost)
+            {
+                lacksMoney.SetActive(true);
+                return false;
+            }
 
             return true;
         }
 
-        public int buy(int coin)
+        public int buyForFold(int coin)
         {
             if (textMeshPro != null)
                 textMeshPro.gameObject.SetActive(false);
