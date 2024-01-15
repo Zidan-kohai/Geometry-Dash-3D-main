@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
-using QuickOutline;
 
 namespace GD3D.Objects
 {
@@ -22,13 +21,11 @@ namespace GD3D.Objects
         [SerializeField] private float textureTiling;
 
         [Header("Outline")]
-        [SerializeField] private Outline.Mode outlineMode = Outline.Mode.OutlineVisible;
         [SerializeField] private Color outlineColor = Color.white;
 
         [Range(0, 10)]
         [SerializeField] private float outlineWidth = 10;
 
-        private Outline _outline;
 
         private AttachToPath _attachToPath;
         private MeshFilter _meshFilter;
@@ -74,12 +71,6 @@ namespace GD3D.Objects
             GenerateMesh();
 
             UpdateTexture();
-
-            // Add outline
-            _outline = gameObject.AddComponent<Outline>();
-            _outline.OutlineMode = outlineMode;
-            _outline.OutlineColor = outlineColor;
-            _outline.OutlineWidth = outlineWidth;
         }
 
         private void UpdateTexture()

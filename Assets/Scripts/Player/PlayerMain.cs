@@ -117,6 +117,8 @@ namespace GD3D.Player
             //mouseOverCol = GetChildComponent<Collider>();
 
             GetPlayerScripts();
+
+           // Application.targetFrameRate = 45;
         }
 
         /// <summary>

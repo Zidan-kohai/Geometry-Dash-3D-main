@@ -310,7 +310,6 @@ namespace GD3D
                 myDictionary.shipIndex.Add(index);
             }
 
-            SaveData.Save();
         }
 
 

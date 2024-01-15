@@ -8,8 +8,6 @@ using TMPro;
 using GD3D.Player;
 using GD3D.Easing;
 using GD3D.CustomInput;
-using QuickOutline;
-using Outline = QuickOutline.Outline;
 using System.Linq;
 using UnityEngine.Events;
 using System.Security.Cryptography;
@@ -202,6 +200,8 @@ namespace GD3D.UI
 
                             SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
 
+                            SaveData.Save();
+
                             goldCoin = buttonCost.buyForFold(goldCoin);
                             goldCoinText.text = goldCoin.ToString();
                             costText.enabled = false;
@@ -257,7 +257,7 @@ namespace GD3D.UI
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
             // Loop through all icon models and add an outline to them since QuickOutline apparently only works if it's added and can't be reset manually
-            foreach (var pair in _iconModels)
+           /* foreach (var pair in _iconModels)
             {
                 foreach (GameObject obj in pair.Value)
                 {
@@ -265,7 +265,7 @@ namespace GD3D.UI
                     outline.OutlineWidth = 10;
                     outline.OutlineColor = Color.black;
                 }
-            }
+            }*/
         }
 
         public void ChangeGoldCoin()
@@ -512,6 +512,11 @@ namespace GD3D.UI
             }
 
             Transition.TransitionToScene(index);
+
+            if(index == 0)
+            {
+                Geekplay.Instance.ShowInterstitialAd();
+            }
         }
 
         [Serializable]

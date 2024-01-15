@@ -84,6 +84,7 @@ namespace GD3D.Player
         private Coroutine _currentRespawnCoroutine;
         private SaveFile _saveFile;
         private PlayerPracticeMode _practiceMode;
+        private int gameCount;
 
         /// <summary>
         /// Start is called before the first frame update.
@@ -155,6 +156,8 @@ namespace GD3D.Player
             PlayerMain.Instance.OnDeath += ShowLoseMenu;
             // Destroy the newly created object because we have no use out of it anymore
             Destroy(obj);
+
+            gameCount = 0;
         }
 
         private void OnEaseObjectRemove(long id)
@@ -217,6 +220,14 @@ namespace GD3D.Player
 
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
+
+            StartCoroutine(ShowADV());
+
+
+            if (gameCount >= 3)
+            {
+                Geekplay.Instance.RateGameFunc();
+            }
         }
 
         private void ShowWinMenu()
@@ -257,6 +268,21 @@ namespace GD3D.Player
 
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
+
+            StartCoroutine(ShowADV());
+
+
+            if (gameCount >= 3)
+            {
+                Geekplay.Instance.RateGameFunc();
+            }
+        }
+
+        IEnumerator ShowADV()
+        {
+            yield return new WaitForSeconds(2);
+
+            Geekplay.Instance.ShowInterstitialAd();
         }
 
         /// <summary>
@@ -419,6 +445,8 @@ namespace GD3D.Player
 
             // Ignore input for this moment so the player won't instantly jump when respawning
             player.IgnoreInput();
+
+            gameCount++;
         }
 
         public void Revive()

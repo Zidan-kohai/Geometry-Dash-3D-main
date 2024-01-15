@@ -52,6 +52,7 @@ namespace GD3D.Player
 
             // Subscribe to events
             player.OnClick += OnClickKey;
+
         }
 
         /// <summary>
