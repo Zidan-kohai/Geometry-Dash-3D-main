@@ -15716,10 +15716,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7991846982060889947}
     m_Modifications:
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300449, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300450, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300451, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300451, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: regularGravityLines
       value: 
       objectReference: {fileID: 3982864557831906430}
+    - target: {fileID: 8224552817121300452, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300452, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: _checkPointLayer.m_Bits
       value: 512
@@ -15772,6 +15792,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300469, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300471, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300472, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300473, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300473, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: pathCreator
       value: 
@@ -15784,6 +15824,14 @@ PrefabInstance:
       propertyPath: enter3DModeParticles
       value: 
       objectReference: {fileID: 3982864557831906429}
+    - target: {fileID: 8224552817121300474, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300476, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300476, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: deathLayer.m_Bits
       value: 256
@@ -15800,6 +15848,10 @@ PrefabInstance:
       propertyPath: loseMenu
       value: 
       objectReference: {fileID: 212135190665953098}
+    - target: {fileID: 8224552817121300477, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300477, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: quitButton
       value: 
@@ -15931,6 +15983,14 @@ PrefabInstance:
     - target: {fileID: 8224552817121300477, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: respawnMenuProgressPercent
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300478, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300479, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

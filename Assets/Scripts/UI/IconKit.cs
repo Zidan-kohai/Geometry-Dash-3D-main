@@ -300,84 +300,84 @@ namespace GD3D.UI
             }
 
             // Detect if the mouse was pressed down
-            if (Input.GetMouseButtonDown(0) && !_doMouseRotation)
-            {
-                // Send a ray from the mouse position
-                Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+            //if (Input.GetMouseButtonDown(0) && !_doMouseRotation)
+            //{
+            //    // Send a ray from the mouse position
+            //    Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
 
-                // Check if the ray hit the modelLayer
-                if (Physics.Raycast(ray, Mathf.Infinity, modelLayer))
-                {
-                    CancelInvoke(nameof(StopMouseSpin));
-                    
-                    // If so, then we begin doing mouse rotation
-                    _doMouseRotation = true;
+            //    // Check if the ray hit the modelLayer
+            //    if (Physics.Raycast(ray, Mathf.Infinity, modelLayer))
+            //    {
+            //        CancelInvoke(nameof(StopMouseSpin));
 
-                    // Stop the current stopMouseSpinEase (if it exists)
-                    if (EasingManager.TryRemoveEaseObject(_stopMouseSpinEaseID))
-                    {
-                        _stopMouseSpinEaseID = null;
-                    }
+            //        // If so, then we begin doing mouse rotation
+            //        _doMouseRotation = true;
 
-                    // Stop the current spinSpeedEase (if it exists)
-                    if (EasingManager.TryRemoveEaseObject(_spinSpeedEaseID))
-                    {
-                        _spinSpeedEaseID = null;
-                    }
-                }
-            }
-            // Detect if the mouse button was released
-            else if (Input.GetMouseButtonUp(0) && _doMouseRotation)
-            {
-                _doMouseRotation = false;
+            //        // Stop the current stopMouseSpinEase (if it exists)
+            //        if (EasingManager.TryRemoveEaseObject(_stopMouseSpinEaseID))
+            //        {
+            //            _stopMouseSpinEaseID = null;
+            //        }
 
-                EaseObject ease = new EaseObject(1);
+            //        // Stop the current spinSpeedEase (if it exists)
+            //        if (EasingManager.TryRemoveEaseObject(_spinSpeedEaseID))
+            //        {
+            //            _spinSpeedEaseID = null;
+            //        }
+            //    }
+            //}
+            //// Detect if the mouse button was released
+            //else if (Input.GetMouseButtonUp(0) && _doMouseRotation)
+            //{
+            //    _doMouseRotation = false;
 
-                ease.OnUpdate = (obj) =>
-                {
-                    spinSpeed = obj.GetValue(0, _startSpinSpeed);
-                };
+            //    EaseObject ease = new EaseObject(1);
 
-                _spinSpeedEaseID = ease.ID;
+            //    ease.OnUpdate = (obj) =>
+            //    {
+            //        spinSpeed = obj.GetValue(0, _startSpinSpeed);
+            //    };
 
-                // If so, then stop doing mouse rotation
-                Invoke(nameof(StopMouseSpin), 0.5f);
-            }
+            //    _spinSpeedEaseID = ease.ID;
 
-            if (_doMouseRotation)
-            {
-                _targetRot.z += -Input.GetAxis("Mouse X") * mouseSpinSpeed * Time.deltaTime;
-                _targetRot.x += Input.GetAxis("Mouse Y") * mouseSpinSpeed * Time.deltaTime;
+            //    // If so, then stop doing mouse rotation
+            //    Invoke(nameof(StopMouseSpin), 0.5f);
+            //}
 
-                _targetRot.z %= 360;
-                _targetRot.x %= 360;
-            }
-            else
-            {
-                _targetRot.z += spinSpeed * Time.deltaTime;
-                _targetRot.z %= 360;
-            }
+            //if (_doMouseRotation)
+            //{
+            //    _targetRot.z += -Input.GetAxis("Mouse X") * mouseSpinSpeed * Time.deltaTime;
+            //    _targetRot.x += Input.GetAxis("Mouse Y") * mouseSpinSpeed * Time.deltaTime;
+
+            //    _targetRot.z %= 360;
+            //    _targetRot.x %= 360;
+            //}
+            //else
+            //{
+            _targetRot.z += spinSpeed * Time.deltaTime;
+            _targetRot.z %= 360;
+            //}
 
             modelParent.localRotation = Quaternion.Euler(_targetRot);
         }
 
-        private void StopMouseSpin()
-        {
-            EaseObject ease = stopMouseSpinEase.CreateEase();
+        //private void StopMouseSpin()
+        //{
+        //    EaseObject ease = stopMouseSpinEase.CreateEase();
 
-            float startX = _targetRot.x;
-            float startY = _targetRot.y;
+        //    float startX = _targetRot.x;
+        //    float startY = _targetRot.y;
 
-            // Set on update
-            ease.OnUpdate = (obj) =>
-            {
-                _targetRot.x = obj.GetValue(startX, _startRot.x);
-                _targetRot.y = obj.GetValue(startY, _startRot.y);
-            };
+        //    // Set on update
+        //    ease.OnUpdate = (obj) =>
+        //    {
+        //        _targetRot.x = obj.GetValue(startX, _startRot.x);
+        //        _targetRot.y = obj.GetValue(startY, _startRot.y);
+        //    };
 
-            // Set ID
-            _stopMouseSpinEaseID = ease.ID;
-        }
+        //    // Set ID
+        //    _stopMouseSpinEaseID = ease.ID;
+        //}
 
         private void OnEaseObjectRemove(long id)
         {
