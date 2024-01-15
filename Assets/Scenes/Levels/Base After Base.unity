@@ -237,6 +237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 7587149975106239275, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7831111279264902313, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_Name
       value: Reverse Gravity Portal (1)
@@ -1972,6 +1976,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 4271641312316549483, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
       propertyPath: m_Name
       value: Cube Portal
@@ -2014,6 +2026,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4271641312316549487, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202498811798912491, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2263,6 +2279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 3149870562128099068, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5222700603774725459, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
       propertyPath: m_Name
       value: Normal Gravity Portal
@@ -5883,6 +5903,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 4033989601187345879, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033989601187345879, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623315, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_Name
       value: 3D Mode Win Portal On
@@ -5925,6 +5953,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451605110470908435, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -6584,6 +6616,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 1205826098817044431, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1360889956772589013, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
       propertyPath: m_Name
       value: Ship Portal
@@ -6627,6 +6663,14 @@ PrefabInstance:
     - target: {fileID: 1360889956772589014, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.62
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10128,6 +10172,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 7587149975106239275, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7831111279264902313, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_Name
       value: Reverse Gravity Portal
@@ -17090,6 +17138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1980497633}
     m_Modifications:
+    - target: {fileID: 3149870562128099068, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5222700603774725459, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
       propertyPath: m_Name
       value: Normal Gravity Portal (1)

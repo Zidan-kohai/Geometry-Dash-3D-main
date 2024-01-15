@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831111278986586734}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7831111279264902317}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 180}
 --- !u!33 &7831111278986586732
 MeshFilter:
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -108,15 +110,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831111279264902313}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7831111278986586733}
   - {fileID: 1519570603569616111}
   - {fileID: 6982189548865156854}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7831111279264902316
 MonoBehaviour:
@@ -130,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf7a4cfede2ca3489d8cb614606b0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   multiTrigger: 0
   spawnEffect: {fileID: 138105246185650974}
   flashTime: 0.5
@@ -156,8 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   Distance: 0
-  zOffset: 0
-  yRotationOffset: 0
+  ZOffset: 0
+  YRotationOffset: 0
   justCreated: 0
   subcribed: 0
   oldDistance: 230
@@ -171,9 +175,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831111279264902313}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 2.75, y: 4.5, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &627049969640095273
@@ -181,6 +193,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7831111279264902317}
     m_Modifications:
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
@@ -189,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -197,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -231,16 +244,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Sucking Particles
       objectReference: {fileID: 0}
+    - target: {fileID: 7059746545536795906, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
---- !u!4 &1519570603569616111 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
-  m_PrefabInstance: {fileID: 627049969640095273}
-  m_PrefabAsset: {fileID: 0}
 --- !u!199 &385961708059901412 stripped
 ParticleSystemRenderer:
   m_CorrespondingSourceObject: {fileID: 1002205402248577997, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
+  m_PrefabInstance: {fileID: 627049969640095273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1519570603569616111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2136152947610200774, guid: 7dfabb69b47b57641b5f44e3ee08f9c6, type: 3}
   m_PrefabInstance: {fileID: 627049969640095273}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5429511361873165695
@@ -248,6 +268,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7831111279264902317}
     m_Modifications:
     - target: {fileID: 3151613431718136713, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
@@ -299,14 +320,17 @@ PrefabInstance:
       value: Portal Enter Effect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
---- !u!4 &6982189548865156854 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3151613431718136713, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
-  m_PrefabInstance: {fileID: 5429511361873165695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &138105246185650974 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5382885863240156769, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
+  m_PrefabInstance: {fileID: 5429511361873165695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6982189548865156854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3151613431718136713, guid: 8232bf31620d6214b8ae01ad4cc8c06e, type: 3}
   m_PrefabInstance: {fileID: 5429511361873165695}
   m_PrefabAsset: {fileID: 0}
