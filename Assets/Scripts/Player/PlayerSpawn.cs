@@ -82,7 +82,7 @@ namespace GD3D.Player
 
         //-- Other
         private Coroutine _currentRespawnCoroutine;
-        private SaveFile _saveFile;
+        private PlayerData _saveFile;
         private PlayerPracticeMode _practiceMode;
         private int gameCount;
 
@@ -94,7 +94,7 @@ namespace GD3D.Player
             base.Start();
             _currentAttempt = SaveData.CurrentLevelData.TotalAttempts + 1;
             // Set the save file
-            _saveFile = SaveData.SaveFile;
+            _saveFile = SaveData.PlayerData;
 
             attemptText.text = $"Attempt  {_currentAttempt}";
             loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
@@ -108,7 +108,9 @@ namespace GD3D.Player
 
             loseRestartButton.onClick.AddListener(Respawn);
             loseQuitButton.onClick.AddListener(QuitToMenu);
-            loseReviveButton.onClick.AddListener(Revive);
+            loseReviveButton.onClick.AddListener(BeforeRevive);
+
+            //Geekplay.Instance.SubscribeOnReward();
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
@@ -196,8 +198,8 @@ namespace GD3D.Player
             loseGoldText.text = (PlayerMain.TimesJumped * 10).ToString();
             loseDiamondText.text = "0";
 
-            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + Convert.ToInt32(loseGoldText.text);
-            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + Convert.ToInt32(loseDiamondText.text);
+            SaveData.PlayerData.GoldCoinsCollected = SaveData.PlayerData.GoldCoinsCollected + Convert.ToInt32(loseGoldText.text);
+            SaveData.PlayerData.DiamondCoinsCollected = SaveData.PlayerData.DiamondCoinsCollected + Convert.ToInt32(loseDiamondText.text);
 
             loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
             loseMenuProgressPercent.text = ProgressBar.PercentString;
@@ -247,8 +249,8 @@ namespace GD3D.Player
             winGoldText.text =$"{50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
             winDiamondText.text = $"0";
 
-            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
-            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + 0;
+            SaveData.PlayerData.GoldCoinsCollected = SaveData.PlayerData.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
+            SaveData.PlayerData.DiamondCoinsCollected = SaveData.PlayerData.DiamondCoinsCollected + 0;
 
             // Enable win menu
             winMenu.SetActive(true);
@@ -449,8 +451,14 @@ namespace GD3D.Player
             gameCount++;
         }
 
+        public void BeforeRevive()
+        {
+            Geekplay.Instance.ShowRewardedAd("Revive");
+        }
+
         public void Revive()
         {
+
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 

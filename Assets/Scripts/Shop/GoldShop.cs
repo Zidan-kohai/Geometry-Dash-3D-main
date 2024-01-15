@@ -8,12 +8,12 @@ namespace GD3D
     {
         public void addGold(int count)
         {
-            SaveData.SaveFile.GoldCoinsCollected += count;
+            SaveData.PlayerData.GoldCoinsCollected += count;
             SaveData.Save();
         }
         public void addDiamond(int count)
         {
-            SaveData.SaveFile.DiamondCoinsCollected += count;
+            SaveData.PlayerData.DiamondCoinsCollected += count;
             SaveData.Save();
         }
 

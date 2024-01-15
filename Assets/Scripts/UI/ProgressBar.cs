@@ -34,7 +34,7 @@ namespace GD3D.UI
         public static string PercentString;
 
         //-- Other stuff
-        private SaveFile _saveFile;
+        private PlayerData _saveFile;
 
         private void Awake()
         {
@@ -60,7 +60,7 @@ namespace GD3D.UI
             PercentString = "0%";
 
             // Get save file
-            _saveFile = SaveData.SaveFile;
+            _saveFile = SaveData.PlayerData;
 
             UpdateToggles();
         }

@@ -35,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Cant Let Go.unity
     guid: 5fd62fc13f78c624e8ff14ffe9ee0643
-  - enabled: 0
-    path: Assets/Scenes/Level Test.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

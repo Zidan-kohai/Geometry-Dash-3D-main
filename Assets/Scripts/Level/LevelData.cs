@@ -31,7 +31,7 @@ namespace GD3D.Level
         //-- Instance references
         private PlayerMain _player;
 
-        private SaveFile.LevelSaveData levelData => SaveData.CurrentLevelData;
+        private PlayerData.LevelSaveData levelData => SaveData.CurrentLevelData;
 
         private string _oldPercentString;
 

@@ -57,7 +57,7 @@ namespace GD3D.Player
         }
 
         //-- Auto Checkpoints
-        private SaveFile _saveFile;
+        private PlayerData _saveFile;
 
         [SerializeField] private float timeBtwAutoCheckpoint = 1;
 
@@ -115,7 +115,7 @@ namespace GD3D.Player
             removeKey = PlayerInput.GetKey("Remove Checkpoint Crystal");
 
             // Set auto checkpoint variables
-            _saveFile = SaveData.SaveFile;
+            _saveFile = SaveData.PlayerData;
             _gamemodeHandler = player.GamemodeHandler;
 
             _autoCheckpointTimer = timeBtwAutoCheckpoint;

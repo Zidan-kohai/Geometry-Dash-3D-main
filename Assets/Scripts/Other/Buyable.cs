@@ -47,7 +47,7 @@ namespace GD3D
             if (textMeshPro != null)
                 textMeshPro.gameObject.SetActive(false);
 
-            SaveData.SaveFile.GoldCoinsCollected = coin - cost;
+            SaveData.PlayerData.GoldCoinsCollected = coin - cost;
             IsBuyed = true;
 
             return coin - cost;

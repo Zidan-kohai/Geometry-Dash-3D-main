@@ -49,8 +49,8 @@ namespace GD3D.UI
             DifficultyFace.sprite = LevelData.DifficultyFace;
 
             // Update the progress bars with data from the JSON save file
-            SaveFile.LevelSaveData levelSave = null;
-            levelSave = SaveData.SaveFile.LevelData.FirstOrDefault((levelData) => levelData.Name == _levelName);
+            PlayerData.LevelSaveData levelSave = null;
+            levelSave = SaveData.PlayerData.LevelData.FirstOrDefault((levelData) => levelData.Name == _levelName);
 
             if (levelSave == null)
             {
@@ -120,15 +120,15 @@ namespace GD3D.UI
 
         public void OpenLevelByGold()
         {
-            if (LevelData.cost > SaveData.SaveFile.GoldCoinsCollected)
+            if (LevelData.cost > SaveData.PlayerData.GoldCoinsCollected)
             {
                 lacksMoneyPopup.SetActive(true);
                 return;
             }
 
-            SaveData.SaveFile.GoldCoinsCollected -= LevelData.cost;
+            SaveData.PlayerData.GoldCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
-            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
+            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -136,15 +136,15 @@ namespace GD3D.UI
 
         public void OpenLevelByDiamond()
         {
-            if (LevelData.cost > SaveData.SaveFile.DiamondCoinsCollected)
+            if (LevelData.cost > SaveData.PlayerData.DiamondCoinsCollected)
             {
                 lacksMoneyPopup.SetActive(true);
                 return;
             }
 
-            SaveData.SaveFile.DiamondCoinsCollected -= LevelData.cost;
+            SaveData.PlayerData.DiamondCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
-            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
+            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -154,14 +154,14 @@ namespace GD3D.UI
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
-            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
+            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
         }
 
         public void OpenLevelByInApp()
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
-            SaveData.SaveFile.GetLevelData(LevelData.LevelName).isOpen = true;
+            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
         }
     }
 }

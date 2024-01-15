@@ -71,7 +71,7 @@ namespace GD3D.UI
         private Vector3 _targetRot;
         private Vector3 _startRot;
 
-        private SaveFile _savefile;
+        private PlayerData _savefile;
         private UnityEngine.Camera _cam;
 
         private Key _quitKey;
@@ -102,7 +102,7 @@ namespace GD3D.UI
             _cam = Helpers.Camera;
 
             // Cache the current save file class
-            _savefile = SaveData.SaveFile;
+            _savefile = SaveData.PlayerData;
 
             // Set color picker colors to the colors stored in the save file
             colorPicker1.SetColor(_savefile.PlayerColor1);
@@ -128,7 +128,7 @@ namespace GD3D.UI
 
             _startSpinSpeed = spinSpeed;
 
-            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
+            goldCoin = SaveData.PlayerData.GoldCoinsCollected;
             goldCoinText.text = goldCoin.ToString();
 
             //-- Create all the icon buttons for every gamemode
@@ -176,7 +176,7 @@ namespace GD3D.UI
 
                     TextMeshProUGUI costText = newButton.GetComponentInChildren<TextMeshProUGUI>();
 
-                    if(cost != 0 && !SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, index))
+                    if(cost != 0 && !SaveData.PlayerData.IsBuyedIconIndex(iconData.Gamemode, index))
                     {
                         costText.gameObject.SetActive(true);
                         costText.text = cost.ToString();
@@ -194,11 +194,11 @@ namespace GD3D.UI
 
                     newButton.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        if (!SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
+                        if (!SaveData.PlayerData.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
                         {
                             if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
-                            SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
+                            SaveData.PlayerData.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
 
                             SaveData.Save();
 
@@ -270,7 +270,7 @@ namespace GD3D.UI
 
         public void ChangeGoldCoin()
         {
-            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
+            goldCoin = SaveData.PlayerData.GoldCoinsCollected;
             goldCoinText.text = goldCoin.ToString();
         }
         private void ShowColorChoose()

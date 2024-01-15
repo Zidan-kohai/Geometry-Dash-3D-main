@@ -64,6 +64,16 @@ public class Geekplay : MonoBehaviour
 
     //РЕКЛАМА
 
+    public void SubscribeOnReward(string idOrTags ,UnityEvent action)
+    {
+        for(int i = 0; i < rewardsList.Length; i++)
+        {
+            if (idOrTags == rewardsList[i].rewardName)
+            {
+                //rewardsList[i].rewardEvent += action;
+            }
+        }
+    }
 
     private void Start()
     {
@@ -359,7 +369,6 @@ public class Geekplay : MonoBehaviour
         PlayerData = JsonUtility.FromJson<PlayerData>(value);
         Debug.Log("LOAD " + JsonUtility.ToJson(PlayerData));
     }
-
 
     //АВТОМАТИЧЕСКАЯ СМЕНА ПЛАТФОРМЫ
     public void ChangePlatform(string dom)
