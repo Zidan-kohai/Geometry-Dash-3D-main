@@ -1738,11 +1738,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1736944177}
+  - {fileID: 2079921361}
+  - {fileID: 1617438259}
   - {fileID: 890262392}
   - {fileID: 1613183441}
-  - {fileID: 1736944177}
-  - {fileID: 1617438259}
-  - {fileID: 2079921361}
   - {fileID: 1086032003}
   - {fileID: 988302822}
   - {fileID: 294277195}
@@ -2359,11 +2359,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 961289871}
+  - {fileID: 778153222}
+  - {fileID: 642148605}
   - {fileID: 53773705}
   - {fileID: 1761637790}
-  - {fileID: 961289871}
-  - {fileID: 642148605}
-  - {fileID: 778153222}
   - {fileID: 785513675}
   - {fileID: 1900165900}
   - {fileID: 567866994}
