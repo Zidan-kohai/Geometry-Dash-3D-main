@@ -21,7 +21,7 @@ namespace GD3D.Audio
 
         [Header("Important Stuff")]
         [SerializeField] private AudioClip song;
-        [SerializeField] private AudioSource practiceMusicSource;
+        //[SerializeField] private AudioSource practiceMusicSource;
 
         [Header("BPM")]
         [SerializeField] private float bpm = 160;
@@ -120,15 +120,15 @@ namespace GD3D.Audio
         private void OnPauseMenuOpen()
         {
             // Change source depending on if we are in practice mode or not
-            AudioSource source = InPracticeMode ? practiceMusicSource : _source;
-            source.Pause();
+            //AudioSource source = InPracticeMode ? practiceMusicSource : _source;
+            //source.Pause();
         }
 
         private void OnPauseMenuClose()
         {
             // Change source depending on if we are in practice mode or not
-            AudioSource source = InPracticeMode ? practiceMusicSource : _source;
-            source.Play();
+            //AudioSource source = InPracticeMode ? practiceMusicSource : _source;
+            //source.Play();
         }
         #endregion
 
@@ -139,13 +139,13 @@ namespace GD3D.Audio
         {
             if (enable)
             {
-                Instance.practiceMusicSource.Play();
-                Instance.Stop();
+                //Instance.practiceMusicSource.Play();
+                //Instance.Stop();
             }
             else
             {
-                Instance.practiceMusicSource.Stop();
-                Instance._source.Play();
+                //Instance.practiceMusicSource.Stop();
+                //Instance._source.Play();
             }
         }
 

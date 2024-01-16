@@ -85,6 +85,9 @@ namespace GD3D.UI
         [SerializeField] private GameObject PlayerChoosePanel;
         [SerializeField] private GameObject ColorChoosePanel;
 
+        [Space]
+        [SerializeField] private Button getGoldByReward1;
+        [SerializeField] private Button getGoldByReward2;
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -92,6 +95,20 @@ namespace GD3D.UI
 
         private void Start()
         {
+            getGoldByReward1.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
+
+            });
+
+            getGoldByReward2.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
+
+            });
+
+            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", GetGold);
+            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeGoldCoin);
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.iconKit;
 
@@ -266,6 +283,11 @@ namespace GD3D.UI
                     outline.OutlineColor = Color.black;
                 }
             }*/
+        }
+
+        private void GetGold()
+        {
+            SaveData.PlayerData.GoldCoinsCollected += 5000;
         }
 
         public void ChangeGoldCoin()

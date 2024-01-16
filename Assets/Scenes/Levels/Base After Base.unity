@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 3
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 44f8d8125785f06479b80da8150688b6, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2846,6 +2846,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3411478982947766870, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411478982947766870, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3563673638668307874, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2910,6 +2918,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1463566368}
+    - target: {fileID: 5155017993631018642, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 218c57339a3496a4a9394e82d7bd1467, type: 3}
     - target: {fileID: 5755878689078528094, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: baseFloor
       value: 
@@ -3359,6 +3371,8 @@ PrefabInstance:
     - {fileID: 7514643813766619405, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     - {fileID: 6329176731041872512, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     - {fileID: 3353624547428462285, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+    - {fileID: 1167287667950926431, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+    - {fileID: 5809358238784222520, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1450525745523801441, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       insertIndex: -1

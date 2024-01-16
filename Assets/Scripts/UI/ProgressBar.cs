@@ -50,7 +50,7 @@ namespace GD3D.UI
             _playerMovement = _player.Movement;
 
             // Temporary end distance
-            endDistance = 910;
+            endDistance = 1010;
             print("Reminder to fix this end distance thing");
 
 

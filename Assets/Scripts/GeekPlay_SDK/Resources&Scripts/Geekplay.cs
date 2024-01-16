@@ -64,13 +64,13 @@ public class Geekplay : MonoBehaviour
 
     //РЕКЛАМА
 
-    public void SubscribeOnReward(string idOrTags ,UnityEvent action)
+    public void SubscribeOnReward(string idOrTags , UnityAction action)
     {
         for(int i = 0; i < rewardsList.Length; i++)
         {
             if (idOrTags == rewardsList[i].rewardName)
             {
-                //rewardsList[i].rewardEvent += action;
+                rewardsList[i].rewardEvent.AddListener(action);
             }
         }
     }

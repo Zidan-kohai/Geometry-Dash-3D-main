@@ -79,7 +79,19 @@ namespace GD3D.UI
                 buttonOpen1Text.text = "Open by viewing ads";
                 buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
 
-                buttonOpen1.onClick.AddListener(OpenLevelByShowReward);
+                if (LevelData.LevelBuildIndex == 6)
+                {
+
+                    buttonOpen1.onClick.AddListener(BeforeOpenLevel3ByShowReward);
+                    Geekplay.Instance.SubscribeOnReward("OpenLevel3", OpenLevelByShowReward);
+                }
+
+                if (LevelData.LevelBuildIndex == 7)
+                {
+                    buttonOpen1.onClick.AddListener(BeforeOpenLevel4ByShowReward);
+                    Geekplay.Instance.SubscribeOnReward("OpenLevel4", OpenLevelByShowReward);
+                }
+
                 buttonOpen2.onClick.AddListener(OpenLevelByGold);
             }
             else if (LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
@@ -114,7 +126,7 @@ namespace GD3D.UI
             MainMenuMusic.StopInstance();
 
             // Play sound effect
-            SoundManager.PlaySound("Play Level", 1);
+            //SoundManager.PlaySound("Play Level", 1);
         }
 
 
@@ -148,6 +160,16 @@ namespace GD3D.UI
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
+        }
+
+        public void BeforeOpenLevel3ByShowReward()
+        {
+            Geekplay.Instance.ShowRewardedAd("OpenLevel3");
+        }
+
+        public void BeforeOpenLevel4ByShowReward()
+        {
+            Geekplay.Instance.ShowRewardedAd("OpenLevel4");
         }
 
         public void OpenLevelByShowReward()

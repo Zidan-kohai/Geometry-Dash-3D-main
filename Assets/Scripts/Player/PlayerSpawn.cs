@@ -110,7 +110,7 @@ namespace GD3D.Player
             loseQuitButton.onClick.AddListener(QuitToMenu);
             loseReviveButton.onClick.AddListener(BeforeRevive);
 
-            //Geekplay.Instance.SubscribeOnReward();
+            Geekplay.Instance.SubscribeOnReward("Revive", Revive);
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
@@ -183,6 +183,7 @@ namespace GD3D.Player
         /// </summary>
         private void ShowLoseMenu()
         {
+
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
 
@@ -198,8 +199,7 @@ namespace GD3D.Player
             loseGoldText.text = (PlayerMain.TimesJumped * 10).ToString();
             loseDiamondText.text = "0";
 
-            SaveData.PlayerData.GoldCoinsCollected = SaveData.PlayerData.GoldCoinsCollected + Convert.ToInt32(loseGoldText.text);
-            SaveData.PlayerData.DiamondCoinsCollected = SaveData.PlayerData.DiamondCoinsCollected + Convert.ToInt32(loseDiamondText.text);
+            SaveData.Save();
 
             loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
             loseMenuProgressPercent.text = ProgressBar.PercentString;
@@ -234,6 +234,10 @@ namespace GD3D.Player
 
         private void ShowWinMenu()
         {
+            SaveData.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent);
+
+            Geekplay.Instance.Leaderboard("Points", SaveData.PlayerData.LeaderboardPointds);
+
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
 
@@ -246,11 +250,48 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            winGoldText.text =$"{50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
-            winDiamondText.text = $"0";
+            
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    winGoldText.text = $"{12500}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 12500;
+                    SaveData.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 5:
+                    winGoldText.text = $"{18000}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 18000;
+                    SaveData.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 6:
+                    winGoldText.text = $"{24000}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 24000;
+                    SaveData.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 7:
+                    winGoldText.text = $"{30000}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 30000;
+                    SaveData.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 8:
+                    winGoldText.text = $"{40000}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 40000;
+                    SaveData.PlayerData.DiamondCoinsCollected += (int)ProgressBar.Percent * 10;
+                    break;
+                case 9:
+                    winGoldText.text = $"{50000}";
+                    winDiamondText.text = $"0";
+                    SaveData.PlayerData.GoldCoinsCollected += 50000;
+                    SaveData.PlayerData.DiamondCoinsCollected += (int)ProgressBar.Percent * 10;
+                    break;
+            }
 
-            SaveData.PlayerData.GoldCoinsCollected = SaveData.PlayerData.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
-            SaveData.PlayerData.DiamondCoinsCollected = SaveData.PlayerData.DiamondCoinsCollected + 0;
+            SaveData.Save();
 
             // Enable win menu
             winMenu.SetActive(true);
@@ -406,6 +447,10 @@ namespace GD3D.Player
         #region Respawn
         public void Respawn()
         {
+            SaveData.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+
+            Geekplay.Instance.Leaderboard("Points", SaveData.PlayerData.LeaderboardPointds);
+
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 
@@ -438,6 +483,7 @@ namespace GD3D.Player
             // Set attempt text
             attemptText.text = $"Attempt  {_currentAttempt}";
             // Reset jumps and time because they are static
+
             PlayerMain.TimesJumped = 0;
             PlayerMain.TimeSpentPlaying = 0;
 
@@ -458,7 +504,6 @@ namespace GD3D.Player
 
         public void Revive()
         {
-
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 

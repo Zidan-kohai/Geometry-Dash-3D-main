@@ -17,6 +17,7 @@ public class PlayerData
     public int CoinsCollected = 0;
     public int GoldCoinsCollected = 0;
     public int DiamondCoinsCollected = 0;
+    public int LeaderboardPointds = 0;
 
     public float MusicVolume = 1;
     public float SFXVolume = 1;

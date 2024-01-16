@@ -63,24 +63,25 @@ namespace GD3D
                     break;
             }
 
-            if (!buyable.TryBuyForGold(SaveData.PlayerData.GoldCoinsCollected) && !buyable.IsBuyed) return;
 
             if (!buyable.IsBuyed)
             {
-                buyable.buyForFold(SaveData.PlayerData.GoldCoinsCollected);
-                
-                switch(whitchColorChange)
-                {
-                    case WhitchColor.Color1:
-                        SaveData.PlayerData.BuyedColor1.Add(image.color);
-                        break;
-                    case WhitchColor.Color2:
-                        SaveData.PlayerData.BuyedColor2.Add(image.color);
-                        break;
-                }
+                if (!buyable.TryBuyForGold(SaveData.PlayerData.GoldCoinsCollected)) return;
 
-                SaveData.Save();
+                buyable.buyForFold(SaveData.PlayerData.GoldCoinsCollected);
             }
+
+            switch (whitchColorChange)
+            {
+                case WhitchColor.Color1:
+                    SaveData.PlayerData.BuyedColor1.Add(image.color);
+                    break;
+                case WhitchColor.Color2:
+                    SaveData.PlayerData.BuyedColor2.Add(image.color);
+                    break;
+            }
+
+            SaveData.Save();
 
             if (whitchColorChange == WhitchColor.Color1)
             {
