@@ -183,8 +183,8 @@ namespace GD3D.Audio
 
                 int sampleStart = Mathf.CeilToInt(samplesPerSecond * time * frequencyMultiplier);
 
-                AudioUtility.StopAllPreviewClips();
-                AudioUtility.PlayPreviewClip(_source.clip, sampleStart);
+                //AudioUtility.StopAllPreviewClips();
+                //AudioUtility.PlayPreviewClip(_source.clip, sampleStart);
                 return;
             }
 #endif
@@ -198,7 +198,7 @@ namespace GD3D.Audio
 #if UNITY_EDITOR
             if (!Application.isPlaying)
             {
-                AudioUtility.StopAllPreviewClips();
+                //AudioUtility.StopAllPreviewClips();
             }
 #endif
 
@@ -333,25 +333,25 @@ namespace GD3D.Audio
         private void OnDrawGizmos()
         {
             // Do not draw music line if no music is playing
-            if (!AudioUtility.IsPreviewClipPlaying())
-            {
-                return;
-            }
+            //if (!AudioUtility.IsPreviewClipPlaying())
+            //{
+            //    return;
+            //}
 
             // Set the music color
-            Color musicColor = Color.green;
-            musicColor.a = 0.5f;
+        //    Color musicColor = Color.green;
+        //    musicColor.a = 0.5f;
 
-            Gizmos.color = musicColor;
+        //    Gizmos.color = musicColor;
 
-            // Draw music line
-            float musicTime = AudioUtility.GetPreviewClipPosition();
+        //    // Draw music line
+        //    float musicTime = AudioUtility.GetPreviewClipPosition();
 
-            float distance = GetDistanceFromMusicTime(musicTime);
+        //    float distance = GetDistanceFromMusicTime(musicTime);
 
-            Vector3 musicPos = Path.GetPointAtDistance(distance, EndOfPathInstruction.Stop);
+        //    Vector3 musicPos = Path.GetPointAtDistance(distance, EndOfPathInstruction.Stop);
 
-            PlaceBottomTopLine(musicPos);
+        //    PlaceBottomTopLine(musicPos);
         }
 
         private void PlaceBottomTopLine(Vector3 pos)
@@ -447,14 +447,14 @@ namespace GD3D.Audio
                 if (GUILayout.Button("Follow Song Line"))
                 {
                     // Calculate distance using music time
-                    float musicTime = AudioUtility.GetPreviewClipPosition();
-                    float dist = musicPlayer.GetDistanceFromMusicTime(musicTime);
+                    //float musicTime = AudioUtility.GetPreviewClipPosition();
+                    //float dist = musicPlayer.GetDistanceFromMusicTime(musicTime);
 
-                    // Calculate position using distance
-                    Vector3 pos = path.GetPointAtDistance(dist, EndOfPathInstruction.Stop);
+                    //// Calculate position using distance
+                    //Vector3 pos = path.GetPointAtDistance(dist, EndOfPathInstruction.Stop);
 
-                    // Make the camera look at the position on the path
-                    SceneView.lastActiveSceneView.LookAt(pos);
+                    //// Make the camera look at the position on the path
+                    //SceneView.lastActiveSceneView.LookAt(pos);
                 }
             }
 
@@ -483,7 +483,7 @@ namespace GD3D.Audio
 
         private static void Update()
         {
-            PreviewClipPlaying = AudioUtility.IsPreviewClipPlaying();
+            //PreviewClipPlaying = AudioUtility.IsPreviewClipPlaying();
 
             // Constantly repaint the scene if the song is playing so the line won't have janky movement
             if (PreviewClipPlaying)

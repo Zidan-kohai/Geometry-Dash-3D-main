@@ -13,7 +13,7 @@ var plugin = {
   /////YANDEX//////
     GameReady : function()
     {
-        gameReady();
+        ysdk.features.LoadingAPI.ready();
     },
 
     IsMobile : function()

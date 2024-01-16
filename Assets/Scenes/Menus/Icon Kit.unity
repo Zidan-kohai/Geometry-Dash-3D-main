@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641186, b: 0.5748154, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657803, g: 0.49641252, b: 0.574816, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8346,6 +8346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8138587181028059007, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10505,6 +10509,10 @@ PrefabInstance:
     - target: {fileID: 8640320174684988092, guid: 791a58f56c4b5954a8b22509edae1833, type: 3}
       propertyPath: m_Name
       value: Sound Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8640320174684988092, guid: 791a58f56c4b5954a8b22509edae1833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8640320174684988094, guid: 791a58f56c4b5954a8b22509edae1833, type: 3}
       propertyPath: m_RootOrder

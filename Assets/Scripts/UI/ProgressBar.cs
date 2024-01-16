@@ -44,13 +44,15 @@ namespace GD3D.UI
 
         private void Start()
         {
-            // Temporary end distance
-            endDistance = MusicPlayer.Instance.EndDistance;
-            print("Reminder to fix this end distance thing");
 
             // Get instances
             _player = PlayerMain.Instance;
             _playerMovement = _player.Movement;
+
+            // Temporary end distance
+            endDistance = 910;
+            print("Reminder to fix this end distance thing");
+
 
             // Color the progress bar texture according to player color 1
             progressBarTexture.color = _player.PlayerColor1;

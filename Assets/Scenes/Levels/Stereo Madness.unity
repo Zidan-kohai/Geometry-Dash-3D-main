@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15326,7 +15326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 637544031475749949, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 637544031616298647, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15352,9 +15352,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 637544032275371060, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 959793378048047702, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1472211920422452436, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15422,11 +15426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912719224668533091, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4912719224668533091, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6558544768674620297, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16096,6 +16100,10 @@ PrefabInstance:
     - target: {fileID: 8774517706988900754, guid: 5b536bc54784fd74e934111c26c739d2, type: 3}
       propertyPath: m_Name
       value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774517706988900754, guid: 5b536bc54784fd74e934111c26c739d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

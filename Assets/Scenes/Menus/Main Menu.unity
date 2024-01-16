@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -630,8 +630,34 @@ MonoBehaviour:
   mobile: 0
   SoundOn: 1
   PlayerData:
-    money: 0
     lastBuy: 
+    PlayerName: Name
+    StarsCollected: 0
+    CoinsCollected: 0
+    GoldCoinsCollected: 0
+    DiamondCoinsCollected: 0
+    MusicVolume: 1
+    SFXVolume: 1
+    AutoRetryEnabled: 1
+    AutoCheckpointsEnabled: 1
+    ProgressBarEnabled: 1
+    ShowPercentEnabled: 1
+    PlayerColor1:
+      r: 0.4784314
+      g: 0.9686275
+      b: 0.003921569
+    PlayerColor2:
+      r: 0.01568628
+      g: 0.9529412
+      b: 0.9686275
+    myDictionary:
+      gamemode: 0000000001000000
+      cubeIndex: 
+      shipIndex: 
+    BuyedColor1: []
+    BuyedColor2: []
+    IconData: []
+    LevelData: []
   rewardsList:
   - rewardName: Revive
     rewardEvent:
@@ -646,7 +672,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   purchasesList: []
-  Platform: 0
+  Platform: 1
   gameArterPrefab: {fileID: 0}
   leaderboardBtn: {fileID: 0}
 --- !u!43 &421468798
@@ -2070,6 +2096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8640320174684988092, guid: 791a58f56c4b5954a8b22509edae1833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8640320174684988094, guid: 791a58f56c4b5954a8b22509edae1833, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -3424,6 +3454,10 @@ PrefabInstance:
     - target: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
       propertyPath: m_Name
       value: Main Menu Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8138587181028059007, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
       propertyPath: m_RootOrder
