@@ -62,7 +62,7 @@ namespace GD3D.UI
             PercentString = "0%";
 
             // Get save file
-            _saveFile = SaveData.PlayerData;
+            _saveFile = Geekplay.Instance.PlayerData;
 
             UpdateToggles();
         }

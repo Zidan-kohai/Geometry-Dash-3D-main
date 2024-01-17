@@ -95,7 +95,7 @@ namespace GD3D.UI
             _UIClickables = GetComponentsInChildren<UIClickable>();
 
             // Get save file
-            _saveFile = SaveData.PlayerData;
+            _saveFile = Geekplay.Instance.PlayerData;
 
             // Disable practice UI
             practiceUI.SetActive(false);

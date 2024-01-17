@@ -28,16 +28,16 @@ namespace GD3D
         //-- Static variables
         private static bool s_subscribedToEvents;
 
-        //-- File
-        public static PlayerData PlayerData = new PlayerData();
-        public static PlayerData.LevelSaveData CurrentLevelData = null;
+        ////-- File
+        //public static PlayerData PlayerData = new PlayerData();
+        //public static PlayerData.LevelSaveData CurrentLevelData = null;
 
         /// <summary>
         /// Returns whether we are allowed to save or not. Currently saving is only disabled when playing in WebGL.
         /// </summary>
         public static bool CanSave => Application.platform != RuntimePlatform.WebGLPlayer;
 
-        private void Awake()
+        private void Start()
         {
             if (Instance == null)
             {
@@ -80,14 +80,17 @@ namespace GD3D
                 // This bool makes sure we only subscribe once
                 s_subscribedToEvents = true;
             }
+
+            SetMixerVolume(Geekplay.Instance.PlayerData.MusicVolume, "Music Volume");
+            SetMixerVolume(Geekplay.Instance.PlayerData.SFXVolume, "SFX Volume");
         }
 
-        private void Start()
+       /* private void Start()
         {
             // Must call this in start because otherwise it won't work idk
             SetMixerVolume(PlayerData.MusicVolume, "Music Volume");
             SetMixerVolume(PlayerData.SFXVolume, "SFX Volume");
-        }
+        }*/
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
         {
@@ -117,7 +120,7 @@ namespace GD3D
             if (levelData != null)
             {
                 // Get the level data for this level using the level name and cache it in a static variable so any script can reach it
-                CurrentLevelData = PlayerData.GetLevelData(levelData.LevelName);
+                Geekplay.Instance.CurrentLevelData = Geekplay.Instance.PlayerData.GetLevelData(levelData.LevelName);
             }
         }
 
@@ -138,9 +141,11 @@ namespace GD3D
 
             //// Write the json into a file
             //File.WriteAllText(_saveFilePath, jsonText);
-
+            //Geekplay.Instance.PlayerData = PlayerData;
+            Debug.Log(JsonUtility.ToJson(Geekplay.Instance.PlayerData));
             Geekplay.Instance.Save();   
         }
+
 
         /// <summary>
         /// Sets this <see cref="SaveData"/> current file data to the save file.
@@ -160,46 +165,46 @@ namespace GD3D
             //            }
 
             //            // Read the text from the file
-            string jsonText = File.ReadAllText(_saveFilePath);
+            //string jsonText = File.ReadAllText(_saveFilePath);
 
             // Try to convert the JSON text into a SaveFile object
-            try
-            {
-                PlayerData = JsonUtility.FromJson<PlayerData>(jsonText);
-            }
-            // If it fails, throw error only in editor, otherwise return
-            catch (Exception)
-            {
-#if UNITY_EDITOR
-                throw;
-#else
-                return;
-#endif
-            }
+//            try
+//            {
+//                PlayerData = JsonUtility.FromJson<PlayerData>(jsonText);
+//            }
+//            // If it fails, throw error only in editor, otherwise return
+//            catch (Exception)
+//            {
+//#if UNITY_EDITOR
+//                throw;
+//#else
+//                return;
+//#endif
+//            }
 
-            PlayerData = Geekplay.Instance.PlayerData;
+            //PlayerData = Geekplay.Instance.PlayerData;
 
             // Fix some saved values that are illegal
-            if (string.IsNullOrEmpty(PlayerData.PlayerName)) PlayerData.PlayerName = PlayerData.DEFAULT_PLAYER_NAME;
-            if (PlayerData.PlayerName.Length > PlayerData.PLAYER_NAME_MAX_LENGTH) PlayerData.PlayerName = PlayerData.PlayerName.Substring(0, PlayerData.PLAYER_NAME_MAX_LENGTH);
+            if (string.IsNullOrEmpty(Geekplay.Instance.PlayerData.PlayerName)) Geekplay.Instance.PlayerData.PlayerName = PlayerData.DEFAULT_PLAYER_NAME;
+            if (Geekplay.Instance.PlayerData.PlayerName.Length > PlayerData.PLAYER_NAME_MAX_LENGTH) Geekplay.Instance.PlayerData.PlayerName = Geekplay.Instance.PlayerData.PlayerName.Substring(0, PlayerData.PLAYER_NAME_MAX_LENGTH);
 
-            if (PlayerData.StarsCollected < 0) PlayerData.StarsCollected = 0;
-            if (PlayerData.CoinsCollected < 0) PlayerData.CoinsCollected = 0;
+            if (Geekplay.Instance.PlayerData.StarsCollected < 0) Geekplay.Instance.PlayerData.StarsCollected = 0;
+            if (Geekplay.Instance.PlayerData.CoinsCollected < 0) Geekplay.Instance.PlayerData.CoinsCollected = 0;
 
-            PlayerData.SFXVolume = Mathf.Clamp01(PlayerData.SFXVolume);
-            PlayerData.MusicVolume = Mathf.Clamp01(PlayerData.MusicVolume);
+            Geekplay.Instance.PlayerData.SFXVolume = Mathf.Clamp01(Geekplay.Instance.PlayerData.SFXVolume);
+            Geekplay.Instance.PlayerData.MusicVolume = Mathf.Clamp01(Geekplay.Instance.PlayerData.MusicVolume);
 
             // Clamp all icon data indexes between 0 and their index max length from the PlayerIcons script
             if (PlayerIcons.MeshDataDictionary != null)
             {
-                foreach (var icon in PlayerData.IconData)
+                foreach (var icon in Geekplay.Instance.PlayerData.IconData)
                 {
                     icon.Index = Mathf.Clamp(icon.Index, 0, PlayerIcons.GetIndexMaxLength(icon.Gamemode));
                 }
             }
 
             // Fix some saved values in each level that could be illegal
-            foreach (var level in PlayerData.LevelData)
+            foreach (var level in Geekplay.Instance.PlayerData.LevelData)
             {
                 level.NormalPercent = Mathf.Clamp01(level.NormalPercent);
                 level.PracticePercent = Mathf.Clamp01(level.PracticePercent);

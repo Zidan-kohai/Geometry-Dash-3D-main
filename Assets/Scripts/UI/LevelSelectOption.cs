@@ -50,7 +50,7 @@ namespace GD3D.UI
 
             // Update the progress bars with data from the JSON save file
             PlayerData.LevelSaveData levelSave = null;
-            levelSave = SaveData.PlayerData.LevelData.FirstOrDefault((levelData) => levelData.Name == _levelName);
+            levelSave = Geekplay.Instance.PlayerData.LevelData.FirstOrDefault((levelData) => levelData.Name == _levelName);
 
             if (levelSave == null)
             {
@@ -132,15 +132,15 @@ namespace GD3D.UI
 
         public void OpenLevelByGold()
         {
-            if (LevelData.cost > SaveData.PlayerData.GoldCoinsCollected)
+            if (LevelData.cost > Geekplay.Instance.PlayerData.GoldCoinsCollected)
             {
                 lacksMoneyPopup.SetActive(true);
                 return;
             }
 
-            SaveData.PlayerData.GoldCoinsCollected -= LevelData.cost;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
-            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
+            Geekplay.Instance.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -148,15 +148,15 @@ namespace GD3D.UI
 
         public void OpenLevelByDiamond()
         {
-            if (LevelData.cost > SaveData.PlayerData.DiamondCoinsCollected)
+            if (LevelData.cost > Geekplay.Instance.PlayerData.DiamondCoinsCollected)
             {
-                lacksMoneyPopup.SetActive(true);
+                GoldShop.Instance.LacksMoney.SetActive(true);
                 return;
             }
 
-            SaveData.PlayerData.DiamondCoinsCollected -= LevelData.cost;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected -= LevelData.cost;
             LevelData.IsOpen = true;
-            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
+            Geekplay.Instance.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
@@ -176,14 +176,14 @@ namespace GD3D.UI
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
-            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
+            Geekplay.Instance.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
         }
 
         public void OpenLevelByInApp()
         {
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
-            SaveData.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
+            Geekplay.Instance.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
         }
     }
 }

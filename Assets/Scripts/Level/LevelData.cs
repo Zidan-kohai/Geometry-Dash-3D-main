@@ -31,7 +31,7 @@ namespace GD3D.Level
         //-- Instance references
         private PlayerMain _player;
 
-        private PlayerData.LevelSaveData levelData => SaveData.CurrentLevelData;
+        private PlayerData.LevelSaveData levelData => Geekplay.Instance.CurrentLevelData;
 
         private string _oldPercentString;
 

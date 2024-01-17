@@ -36,6 +36,7 @@ namespace GD3D.UI
 
         [Space]
         [SerializeField] private int goldCoin;
+        [SerializeField] private int diamondCoin;
 
         [SerializeField] private TMP_Text starsText;
         [SerializeField] private TMP_Text coinsText;
@@ -86,8 +87,7 @@ namespace GD3D.UI
         [SerializeField] private GameObject ColorChoosePanel;
 
         [Space]
-        [SerializeField] private Button getGoldByReward1;
-        [SerializeField] private Button getGoldByReward2;
+        [SerializeField] private Button getGoldByReward;
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -95,20 +95,23 @@ namespace GD3D.UI
 
         private void Start()
         {
-            getGoldByReward1.onClick.AddListener(() =>
+            getGoldByReward.onClick.AddListener(() =>
             {
                 Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
 
             });
 
-            getGoldByReward2.onClick.AddListener(() =>
+            GoldShop.Instance.GetGoldByReward.onClick.AddListener(() =>
             {
                 Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
 
             });
 
             Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", GetGold);
-            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeGoldCoin);
+            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeCoin);
+
+            GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
+
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.iconKit;
 
@@ -119,7 +122,7 @@ namespace GD3D.UI
             _cam = Helpers.Camera;
 
             // Cache the current save file class
-            _savefile = SaveData.PlayerData;
+            _savefile = Geekplay.Instance.PlayerData;
 
             // Set color picker colors to the colors stored in the save file
             colorPicker1.SetColor(_savefile.PlayerColor1);
@@ -145,7 +148,7 @@ namespace GD3D.UI
 
             _startSpinSpeed = spinSpeed;
 
-            goldCoin = SaveData.PlayerData.GoldCoinsCollected;
+            goldCoin = Geekplay.Instance.PlayerData.GoldCoinsCollected;
             goldCoinText.text = goldCoin.ToString();
 
             //-- Create all the icon buttons for every gamemode
@@ -193,7 +196,7 @@ namespace GD3D.UI
 
                     TextMeshProUGUI costText = newButton.GetComponentInChildren<TextMeshProUGUI>();
 
-                    if(cost != 0 && !SaveData.PlayerData.IsBuyedIconIndex(iconData.Gamemode, index))
+                    if(cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(iconData.Gamemode, index))
                     {
                         costText.gameObject.SetActive(true);
                         costText.text = cost.ToString();
@@ -211,13 +214,13 @@ namespace GD3D.UI
 
                     newButton.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        if (!SaveData.PlayerData.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
+                        if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
                         {
                             if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
-                            SaveData.PlayerData.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
+                            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
 
-                            SaveData.Save();
+                            Geekplay.Instance.Save();
 
                             goldCoin = buttonCost.buyForFold(goldCoin);
                             goldCoinText.text = goldCoin.ToString();
@@ -287,13 +290,16 @@ namespace GD3D.UI
 
         private void GetGold()
         {
-            SaveData.PlayerData.GoldCoinsCollected += 5000;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += 5000;
         }
 
-        public void ChangeGoldCoin()
+        public void ChangeCoin()
         {
-            goldCoin = SaveData.PlayerData.GoldCoinsCollected;
+            goldCoin = Geekplay.Instance.PlayerData.GoldCoinsCollected;
             goldCoinText.text = goldCoin.ToString();
+
+            diamondCoin = Geekplay.Instance.PlayerData.DiamondCoinsCollected;
+            diamondCoinText.text = diamondCoin.ToString();
         }
         private void ShowColorChoose()
         {

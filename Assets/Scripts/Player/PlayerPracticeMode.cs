@@ -115,7 +115,7 @@ namespace GD3D.Player
             removeKey = PlayerInput.GetKey("Remove Checkpoint Crystal");
 
             // Set auto checkpoint variables
-            _saveFile = SaveData.PlayerData;
+            _saveFile = Geekplay.Instance.PlayerData;
             _gamemodeHandler = player.GamemodeHandler;
 
             _autoCheckpointTimer = timeBtwAutoCheckpoint;

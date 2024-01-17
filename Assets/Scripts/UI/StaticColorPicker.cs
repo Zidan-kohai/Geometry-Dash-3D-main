@@ -41,11 +41,11 @@ namespace GD3D
             switch(whitchColorChange)
             {
                 case WhitchColor.Color1:
-                    if (SaveData.PlayerData.BuyedColor1.Contains(image.color))
+                    if (Geekplay.Instance.PlayerData.BuyedColor1.Contains(image.color))
                         buyable.buyed();
                     break;
                 case WhitchColor.Color2:
-                    if (SaveData.PlayerData.BuyedColor2.Contains(image.color))
+                    if (Geekplay.Instance.PlayerData.BuyedColor2.Contains(image.color))
                         buyable.buyed();
                     break;
             }
@@ -66,18 +66,18 @@ namespace GD3D
 
             if (!buyable.IsBuyed)
             {
-                if (!buyable.TryBuyForGold(SaveData.PlayerData.GoldCoinsCollected)) return;
+                if (!buyable.TryBuyForGold(Geekplay.Instance.PlayerData.GoldCoinsCollected)) return;
 
-                buyable.buyForFold(SaveData.PlayerData.GoldCoinsCollected);
+                buyable.buyForFold(Geekplay.Instance.PlayerData.GoldCoinsCollected);
             }
 
             switch (whitchColorChange)
             {
                 case WhitchColor.Color1:
-                    SaveData.PlayerData.BuyedColor1.Add(image.color);
+                    Geekplay.Instance.PlayerData.BuyedColor1.Add(image.color);
                     break;
                 case WhitchColor.Color2:
-                    SaveData.PlayerData.BuyedColor2.Add(image.color);
+                    Geekplay.Instance.PlayerData.BuyedColor2.Add(image.color);
                     break;
             }
 
@@ -95,7 +95,7 @@ namespace GD3D
             }
 
 
-            iconKit.ChangeGoldCoin();
+            iconKit.ChangeCoin();
         }
 
 

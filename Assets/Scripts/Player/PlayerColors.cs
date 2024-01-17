@@ -39,8 +39,8 @@ namespace GD3D.Player
         {
             base.Awake();
 
-            Color1 = SaveData.PlayerData.PlayerColor1;
-            Color2 = SaveData.PlayerData.PlayerColor2;
+            Color1 = Geekplay.Instance.PlayerData.PlayerColor1;
+            Color2 = Geekplay.Instance.PlayerData.PlayerColor2;
 
             _startColor1 = Color1;
             _startColor2 = Color2;

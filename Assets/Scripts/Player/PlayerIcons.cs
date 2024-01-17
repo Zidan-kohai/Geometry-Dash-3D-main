@@ -40,7 +40,7 @@ namespace GD3D.Player
         /// </summary>
         public static int GetIconIndex(Gamemode gamemode)
         {
-            return SaveData.PlayerData.GetEquippedIconIndex(gamemode);
+            return Geekplay.Instance.PlayerData.GetEquippedIconIndex(gamemode);
         }
 
         /// <summary>

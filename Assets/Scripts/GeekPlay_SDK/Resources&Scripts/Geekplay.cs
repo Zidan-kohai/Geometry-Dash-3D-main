@@ -8,6 +8,7 @@ using TMPro;
 using UnityEngine.UI;
 using CrazyGames;
 using GamePix;
+using GD3D;
 
 [System.Serializable]
 public class Rewards
@@ -43,6 +44,7 @@ public class Geekplay : MonoBehaviour
     public bool mobile; //Устройство игрока мобильное?
     public bool SoundOn = true; //Звук включен?
     public PlayerData PlayerData; //сохраняемые данные
+    public PlayerData.LevelSaveData CurrentLevelData = null;
     [SerializeField] private Rewards[] rewardsList; //список ревардов
     [SerializeField] private Purchases[] purchasesList; //список покупок
 
@@ -332,8 +334,6 @@ public class Geekplay : MonoBehaviour
     {
         string jsonString = "";
 
-
-
         switch (Platform)
         {
             case Platform.Editor:
@@ -344,6 +344,7 @@ public class Geekplay : MonoBehaviour
             case Platform.Yandex:
                 jsonString = JsonUtility.ToJson(PlayerData);
                 Utils.SaveExtern(jsonString);
+                Debug.Log("SAVE: " + jsonString);
                 break;
             case Platform.VK:
                 if (wasLoad == false)

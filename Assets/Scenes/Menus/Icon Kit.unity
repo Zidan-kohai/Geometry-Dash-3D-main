@@ -756,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 553003563}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!1 &57708710
 GameObject:
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 456197621}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &82407642
 MonoBehaviour:
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 457217391}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &172916747
 MonoBehaviour:
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1874510711}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &294277197
 MonoBehaviour:
@@ -3828,7 +3828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 772568356}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &340304907
 MonoBehaviour:
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 707301051}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &355401178
 MonoBehaviour:
@@ -4140,7 +4140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1561912536}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &391576374
 MonoBehaviour:
@@ -4430,7 +4430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 269653235}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &421883093
 MonoBehaviour:
@@ -5114,7 +5114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1085408908}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &466842602
 MonoBehaviour:
@@ -5345,7 +5345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 574255298}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &490166680
 MonoBehaviour:
@@ -5830,7 +5830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 32971297}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &567866996
 MonoBehaviour:
@@ -6524,7 +6524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 392046622}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &642148607
 MonoBehaviour:
@@ -6680,7 +6680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 848040689}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &651542302
 MonoBehaviour:
@@ -7190,6 +7190,7 @@ MonoBehaviour:
     TemplateButton: {fileID: 294737010}
   nameInputField: {fileID: 835616645}
   goldCoin: 6
+  diamondCoin: 0
   starsText: {fileID: 633974564}
   coinsText: {fileID: 1973365726}
   goldCoinText: {fileID: 2029990811}
@@ -7214,8 +7215,7 @@ MonoBehaviour:
   _playerChoose: {fileID: 274989463}
   PlayerChoosePanel: {fileID: 1583753947}
   ColorChoosePanel: {fileID: 942008719}
-  getGoldByReward1: {fileID: 1226703251}
-  getGoldByReward2: {fileID: 928782253}
+  getGoldByReward: {fileID: 1226703251}
 --- !u!1 &707301049
 GameObject:
   m_ObjectHideFlags: 0
@@ -7405,7 +7405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 2057745550}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &742551399
 MonoBehaviour:
@@ -8005,7 +8005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1045449113}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &778153224
 MonoBehaviour:
@@ -8236,7 +8236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1222435040}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &785513677
 MonoBehaviour:
@@ -8461,7 +8461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1268844899}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &820464739
 MonoBehaviour:
@@ -8660,7 +8660,6 @@ RectTransform:
   - {fileID: 780971169}
   - {fileID: 699386636}
   - {fileID: 305661274}
-  - {fileID: 928782251}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9001,7 +9000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 5822889}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &849962629
 MonoBehaviour:
@@ -9173,7 +9172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1864147600}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &890262394
 MonoBehaviour:
@@ -9366,332 +9365,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &928782250
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 824876461}
-    m_Modifications:
-    - target: {fileID: 18671775851648212, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 18671775851648212, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 18671775851648212, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 18671775851648212, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 589249539482083776, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 589249539482083776, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 589249539482083776, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 589249539482083776, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 831696632323291838, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 831696632323291838, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 831696632323291838, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 831696632323291838, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 864619247163845807, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 864619247163845807, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 864619247163845807, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 864619247163845807, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022920341916844556, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_Name
-      value: Out Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483483136934061873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483483136934061873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483483136934061873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4483483136934061873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973281410997614289, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973281410997614289, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973281410997614289, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973281410997614289, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973281410997614289, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5264797591261247311, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545102291084844783, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545102291084844783, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545102291084844783, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5545102291084844783, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871666907487338622, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871666907487338622, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871666907487338622, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871666907487338622, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637570240563445873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637570240563445873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637570240563445873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6637570240563445873, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7275472060517795717, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849029953771743988, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849029953771743988, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849029953771743988, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849029953771743988, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225785936729443175, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225785936729443175, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225785936729443175, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225785936729443175, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8225785936729443175, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134317071273898805, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134317071273898805, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134317071273898805, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134317071273898805, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
---- !u!224 &928782251 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-  m_PrefabInstance: {fileID: 928782250}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &928782252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7275472060517795717, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-  m_PrefabInstance: {fileID: 928782250}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &928782253 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8950268652620525529, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-  m_PrefabInstance: {fileID: 928782250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &942008719
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,7 +9493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 451318100}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &961289873
 MonoBehaviour:
@@ -9976,7 +9649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1015017519}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &988302824
 MonoBehaviour:
@@ -10705,7 +10378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 57708712}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1086032005
 MonoBehaviour:
@@ -11215,7 +10888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1694853683}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1121549560
 MonoBehaviour:
@@ -11994,7 +11667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 676800774}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1362352125
 MonoBehaviour:
@@ -12765,7 +12438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   textMeshPro: {fileID: 0}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!1 &1436867855
 GameObject:
@@ -14184,7 +13857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 263300331}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1585981942
 MonoBehaviour:
@@ -14340,7 +14013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1105186417}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1613183443
 MonoBehaviour:
@@ -14496,7 +14169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 2081115819}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1617438261
 MonoBehaviour:
@@ -14652,7 +14325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1366182493}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1626709515
 MonoBehaviour:
@@ -14845,7 +14518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1807362607}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1678423069
 MonoBehaviour:
@@ -15283,7 +14956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1877705102}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1709524064
 MonoBehaviour:
@@ -15603,7 +15276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1416326139}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1736944179
 MonoBehaviour:
@@ -15858,7 +15531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1463263085}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!1001 &1768329827
 PrefabInstance:
@@ -16153,7 +15826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 653981985}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1777505844
 MonoBehaviour:
@@ -16443,7 +16116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 2079665092}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1807744582
 MonoBehaviour:
@@ -16729,7 +16402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 556069819}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1845776517
 MonoBehaviour:
@@ -17371,7 +17044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1158482622}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1884212207
 MonoBehaviour:
@@ -17527,7 +17200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1905144472}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &1900165902
 MonoBehaviour:
@@ -18428,7 +18101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 59172386}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &2079921363
 MonoBehaviour:
@@ -18898,7 +18571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 1459168044}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &2132670722
 MonoBehaviour:
@@ -19054,7 +18727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   textMeshPro: {fileID: 993068840}
-  lacksMoney: {fileID: 928782252}
+  lacksMoney: {fileID: 0}
   IsBuyed: 0
 --- !u!114 &2137567956
 MonoBehaviour:
