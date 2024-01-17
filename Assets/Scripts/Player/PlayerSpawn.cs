@@ -8,7 +8,6 @@ using GD3D.Easing;
 using GD3D.Level;
 using GD3D.UI;
 using UnityEngine.SceneManagement;
-using Codice.CM.Client.Gui;
 
 namespace GD3D.Player
 {
@@ -27,7 +26,7 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text attemptText;
         private int _currentAttempt = 1;
         public int CurrentAttemp => _currentAttempt;
-
+            
         [Header("Lose Menu")]
         [SerializeField] private GameObject loseMenu;
         [SerializeField] private EaseSettings respawnMenuEaseSettings;

@@ -284,7 +284,7 @@ namespace GD3D.UI
                     costIndex++;
                 }
 
-
+                costIndex = 0;
                 templateModel.SetActive(false);
 
                 // Destroy template button
