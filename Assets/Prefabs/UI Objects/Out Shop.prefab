@@ -544,9 +544,9 @@ RectTransform:
   - {fileID: 769359924408182940}
   m_Father: {fileID: 758912948892740392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6555271813250223585
@@ -633,14 +633,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6761285876530048736}
         m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: addDiamond
-        m_Mode: 3
+        m_MethodName: SubscribeToPurchase
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
           m_FloatArgument: 0
-          m_StringArgument: gold10000
+          m_StringArgument: diamond100
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7361419465292141309
@@ -842,9 +842,9 @@ RectTransform:
   - {fileID: 3119524553362095082}
   m_Father: {fileID: 4973281410997614289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3326960833456143473
@@ -1644,6 +1644,7 @@ MonoBehaviour:
       m_Calls: []
   GetGoldByReward: {fileID: 8950268652620525529}
   LacksMoney: {fileID: 7275472060517795717}
+  Shop: {fileID: 5264797591261247311}
 --- !u!223 &5269523493836741008
 Canvas:
   m_ObjectHideFlags: 0
@@ -3246,9 +3247,9 @@ RectTransform:
   - {fileID: 4269154149784042660}
   m_Father: {fileID: 4973281410997614289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 957.60004, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6308201366045004082
@@ -3471,9 +3472,9 @@ RectTransform:
   - {fileID: 6640269187454506996}
   m_Father: {fileID: 4973281410997614289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 419.2, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1809350762309957386
@@ -3831,9 +3832,9 @@ RectTransform:
   - {fileID: 5528395168477516062}
   m_Father: {fileID: 758912948892740392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 419.2, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2865656153714893755
@@ -3920,14 +3921,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6761285876530048736}
         m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: addDiamond
-        m_Mode: 3
+        m_MethodName: SubscribeToPurchase
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 250
           m_FloatArgument: 0
-          m_StringArgument: gold25000
+          m_StringArgument: diamond250
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &5197891832465111677
@@ -3983,10 +3984,10 @@ RectTransform:
   - {fileID: 5556234359492659689}
   m_Father: {fileID: 33591805438885021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 250}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 693, y: -133.75}
+  m_SizeDelta: {x: 1386, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3951354609661350397
 CanvasRenderer:
@@ -4294,7 +4295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9055710367727749481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4586,9 +4587,9 @@ RectTransform:
   - {fileID: 6176881145306905113}
   m_Father: {fileID: 758912948892740392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 688.4, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6793713590112584373
@@ -4675,14 +4676,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6761285876530048736}
         m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: addDiamond
-        m_Mode: 3
+        m_MethodName: SubscribeToPurchase
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 500
           m_FloatArgument: 0
-          m_StringArgument: gold50000
+          m_StringArgument: diamond500
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2754376889205191374
@@ -5007,9 +5008,9 @@ RectTransform:
   - {fileID: 5924810837656067534}
   m_Father: {fileID: 758912948892740392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1226.8, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7326463099609765666
@@ -5096,14 +5097,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6761285876530048736}
         m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: addDiamond
-        m_Mode: 3
+        m_MethodName: SubscribeToPurchase
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1500
           m_FloatArgument: 0
-          m_StringArgument: gold150000
+          m_StringArgument: diamond1500
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6281430213738151900
@@ -5427,9 +5428,9 @@ RectTransform:
   - {fileID: 1549714693849766161}
   m_Father: {fileID: 4973281410997614289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1226.8, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8974921124368689161
@@ -5924,10 +5925,10 @@ RectTransform:
   - {fileID: 4990773406179604833}
   m_Father: {fileID: 33591805438885021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 250}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 693, y: -406.25}
+  m_SizeDelta: {x: 1386, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &890376735218721235
 CanvasRenderer:
@@ -6359,9 +6360,9 @@ RectTransform:
   - {fileID: 7911785255353216336}
   m_Father: {fileID: 758912948892740392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 957.60004, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2603683133640598695
@@ -6448,14 +6449,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6761285876530048736}
         m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: addDiamond
-        m_Mode: 3
+        m_MethodName: SubscribeToPurchase
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1000
           m_FloatArgument: 0
-          m_StringArgument: gold100000
+          m_StringArgument: diamond1000
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2969085406825807791
@@ -6509,9 +6510,9 @@ RectTransform:
   - {fileID: 3339271152618679783}
   m_Father: {fileID: 4973281410997614289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 688.4, y: -125}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7413839203270793463

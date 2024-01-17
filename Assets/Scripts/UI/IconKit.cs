@@ -288,6 +288,11 @@ namespace GD3D.UI
             }*/
         }
 
+
+        public void kiti(string kitiName)
+        {
+            Geekplay.Instance.RealBuyItem(kitiName);
+        }
         private void GetGold()
         {
             Geekplay.Instance.PlayerData.GoldCoinsCollected += 5000;

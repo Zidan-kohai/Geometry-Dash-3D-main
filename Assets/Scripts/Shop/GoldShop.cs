@@ -14,6 +14,8 @@ namespace GD3D
         public UnityEvent GetPurchase;
         public Button GetGoldByReward;
         public GameObject LacksMoney;
+        public GameObject Shop;
+
         private void Start()
         {
             if(Instance != null)

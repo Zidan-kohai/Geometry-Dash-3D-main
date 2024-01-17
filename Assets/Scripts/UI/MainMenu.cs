@@ -67,7 +67,7 @@ namespace GD3D.UI
             // Get the quit key
             _quitKey = Player.PlayerInput.GetKey("Escape");
 
-            kiti1Button.onClick.AddListener(() =>
+            /*kiti1Button.onClick.AddListener(() =>
             {
                 Geekplay.Instance.RealBuyItem("kiti1");
             });
@@ -77,12 +77,21 @@ namespace GD3D.UI
                 Geekplay.Instance.RealBuyItem("kiti2");
             });
 
-            kiti2Button.onClick.AddListener(() =>
+            kiti3Button.onClick.AddListener(() =>
             {
-                Geekplay.Instance.RealBuyItem("kiti2");
-            });
+                Geekplay.Instance.RealBuyItem("kiti3");
+            });*/
         }
 
+        public void Kiti(string kitiName)
+        {
+            Geekplay.Instance.RealBuyItem(kitiName);
+        }
+
+        public void ShowShop()
+        {
+            GoldShop.Instance.Shop.SetActive(true);
+        }
         //private void Update()
         //{
         //    // If the pause key is pressed, open the quit menu

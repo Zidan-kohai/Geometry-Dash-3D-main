@@ -8,6 +8,7 @@ using GD3D.Easing;
 using GD3D.Level;
 using GD3D.UI;
 using UnityEngine.SceneManagement;
+using Codice.CM.Client.Gui;
 
 namespace GD3D.Player
 {
@@ -62,6 +63,9 @@ namespace GD3D.Player
         [SerializeField] private Button winQuitButton;
         [SerializeField] private Button winNextLevelButton;
 
+        private int goldReward = 0;
+        private int diamondReward = 0;
+
         private UIClickable[] _respawnMenuUIClickables;
 
         private long? _respawnSizeEaseID = null;
@@ -92,6 +96,7 @@ namespace GD3D.Player
         public override void Start()
         {
             base.Start();
+            loseDiamondText.text = $"{0}";
             _currentAttempt = Geekplay.Instance.CurrentLevelData.TotalAttempts + 1;
             // Set the save file
             _saveFile = Geekplay.Instance.PlayerData;
@@ -197,10 +202,32 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            loseGoldText.text = (PlayerMain.TimesJumped * 10).ToString();
-            loseDiamondText.text = "0";
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 100).ToString();
+                    break;
+                case 5:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 150).ToString();
+                    break;
+                case 6:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 200).ToString();
+                    break;
+                case 7:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 250).ToString();
+                    break;
+                case 8:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 300).ToString();
+                    loseDiamondText.text = (Convert.ToInt32(ProgressBar.Percent) * 10).ToString();
+                    break;
+                case 9:
+                    loseDiamondText.text = (Convert.ToInt32(ProgressBar.Percent) * 10).ToString();
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 350).ToString();
+                    break;
+            }
 
-            SaveData.Save();
+            goldReward = Convert.ToInt32(loseGoldText.text);
+            diamondReward = Convert.ToInt32(loseDiamondText.text);
 
             loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
             loseMenuProgressPercent.text = ProgressBar.PercentString;
@@ -312,6 +339,9 @@ namespace GD3D.Player
                     break;
             }
 
+            goldReward = Convert.ToInt32(winGoldText.text);
+            diamondReward = Convert.ToInt32(winDiamondText.text);
+
             SaveData.Save();
 
             // Enable win menu
@@ -356,8 +386,8 @@ namespace GD3D.Player
         {
             _currentAttempt++;
             Geekplay.Instance.CurrentLevelData.TotalAttempts++;
-            Geekplay.Instance.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
-            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += diamondReward;
 
 
             switch (SceneManager.GetActiveScene().buildIndex)
@@ -530,8 +560,8 @@ namespace GD3D.Player
             _currentAttempt++;
             Geekplay.Instance.CurrentLevelData.TotalAttempts++;
 
-            Geekplay.Instance.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
-            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += diamondReward;
 
             SaveData.Save();
             // Disable the respawn menu and new best popups
