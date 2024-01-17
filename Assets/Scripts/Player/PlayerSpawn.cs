@@ -235,7 +235,27 @@ namespace GD3D.Player
 
         private void ShowWinMenu()
         {
-            Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent);
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+                    break;
+                case 5:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 200);
+                    break;
+                case 6:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 300);
+                    break;
+                case 7:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 400);
+                    break;
+                case 8:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 500);
+                    break;
+                case 9:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 600);
+                    break;
+            }
 
             Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
@@ -339,7 +359,34 @@ namespace GD3D.Player
             Geekplay.Instance.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
             Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
 
+
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+                    break;
+                case 5:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 200);
+                    break;
+                case 6:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 300);
+                    break;
+                case 7:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 400);
+                    break;
+                case 8:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 500);
+                    break;
+                case 9:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 600);
+                    break;
+            }
+
+
             SaveData.Save();
+
+
+            Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
             Transition.TransitionToLastActiveMenu();
         }
@@ -398,8 +445,6 @@ namespace GD3D.Player
         {
             _currentAttempt++;
             Geekplay.Instance.CurrentLevelData.TotalAttempts++;
-            Geekplay.Instance.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
-            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
 
             SaveData.Save();
 
