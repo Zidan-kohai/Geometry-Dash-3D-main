@@ -64,6 +64,7 @@ public class Geekplay : MonoBehaviour
     private bool canAd;
     string colorDebug = "yellow"; //Цвет Дебага
 
+
     //РЕКЛАМА
 
     public void SubscribeOnReward(string idOrTags , UnityAction action)
