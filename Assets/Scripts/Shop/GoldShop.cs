@@ -21,6 +21,7 @@ namespace GD3D
             if(Instance != null)
             {
                 Destroy(gameObject);
+                return;
             }
 
             Instance = this;

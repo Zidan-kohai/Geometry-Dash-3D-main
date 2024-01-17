@@ -1156,7 +1156,7 @@ MonoBehaviour:
     purchaseEvent:
       m_PersistentCalls:
         m_Calls: []
-  Platform: 0
+  Platform: 1
   gameArterPrefab: {fileID: 0}
   leaderboardBtn: {fileID: 0}
 --- !u!1 &357787073
