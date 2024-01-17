@@ -7510,6 +7510,129 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Gamemode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[4].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 5e16a3c3bcd60c348976ae6c7375b06d, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[5].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: c526ea88c6da7af4b84ca734e0feac57, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[6].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: b1368b32908bb2249af0cc929bf680b8, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[7].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 26d86972e0a315248a69e9ddcab43f10, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[8].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 8c2f89b51846e1d48b6e1bb5f5593e35, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[9].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 727738a0098da6942bc36d6c3dd709b9, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[0].Mesh
+      value: 
+      objectReference: {fileID: -2532674419269209151, guid: 0b43c84022c68a84a84339ec7367ebec, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[1].Mesh
+      value: 
+      objectReference: {fileID: 7771681601715929034, guid: b6451b7a209ec364293272ea5b8bdf65, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[2].Mesh
+      value: 
+      objectReference: {fileID: 2927968814190601404, guid: 5fe28a4f603433c4995ae98c1e11c834, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[3].Mesh
+      value: 
+      objectReference: {fileID: 944696844918605244, guid: cf9aece9a4d0eba4e93ffa2f3cc70940, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[4].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 5e16a3c3bcd60c348976ae6c7375b06d, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[5].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: c526ea88c6da7af4b84ca734e0feac57, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[6].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: b1368b32908bb2249af0cc929bf680b8, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[7].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 26d86972e0a315248a69e9ddcab43f10, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[8].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 8c2f89b51846e1d48b6e1bb5f5593e35, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[9].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 727738a0098da6942bc36d6c3dd709b9, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[10].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 9b9ab5409d6f15a44acc802f9e6e3566, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[11].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: c9e3a30697fb7594d8f41b1a738e051f, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[12].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 7db74b5cbc5fdb248be9a1d5d9c81e12, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[13].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: bd02cbcd29f2477489c782e5a2201c72, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[14].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 34c3cfe78cd023145b67f946057e59e7, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[10].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 9b9ab5409d6f15a44acc802f9e6e3566, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[11].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: c9e3a30697fb7594d8f41b1a738e051f, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[12].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 7db74b5cbc5fdb248be9a1d5d9c81e12, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[13].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: bd02cbcd29f2477489c782e5a2201c72, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[1].Meshes.Array.data[14].Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: 34c3cfe78cd023145b67f946057e59e7, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 8224552817121300467, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: m_Name
       value: Disabled Player

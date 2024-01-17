@@ -550,7 +550,307 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 239227512}
+=======
+  m_GameObject: {fileID: 321639237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f52fbbe831174c3d8a435bfb785c320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 
+  mobile: 0
+  SoundOn: 1
+  PlayerData:
+    lastBuy: 
+    PlayerName: Name
+    StarsCollected: 0
+    CoinsCollected: 0
+    GoldCoinsCollected: 0
+    DiamondCoinsCollected: 0
+    LeaderboardPointds: 0
+    MusicVolume: 1
+    SFXVolume: 1
+    AutoRetryEnabled: 1
+    AutoCheckpointsEnabled: 1
+    ProgressBarEnabled: 1
+    ShowPercentEnabled: 1
+    PlayerColor1:
+      r: 0.4784314
+      g: 0.9686275
+      b: 0.003921569
+    PlayerColor2:
+      r: 0.01568628
+      g: 0.9529412
+      b: 0.9686275
+    myDictionary:
+      gamemode: 0000000001000000
+      cubeIndex: 
+      shipIndex: 
+    BuyedColor1: []
+    BuyedColor2: []
+    IconData: []
+    LevelData: []
+  CurrentLevelData:
+    Name: 
+    isOpen: 0
+    NormalPercent: 0
+    PracticePercent: 0
+    GottenCoins: 
+    TotalAttempts: 0
+    TotalJumps: 0
+  rewardsList:
+  - rewardName: Revive
+    rewardEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - rewardName: GetFiveGoldCoin
+    rewardEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - rewardName: OpenLevel3
+    rewardEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - rewardName: OpenLevel4
+    rewardEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  purchasesList:
+  - itemName: gold10000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addGold
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 10000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: gold25000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addGold
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 25000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: gold50000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addGold
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: gold100000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addGold
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: gold150000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addGold
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 150000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: diamond100
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addDiamond
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: diamond250
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addDiamond
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 250
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: diamond500
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addDiamond
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 500
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: diamond1000
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addDiamond
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1000
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: diamond1500
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 621367532}
+          m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
+          m_MethodName: addDiamond
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1500
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - itemName: kiti1
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: kiti2
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: kiti3
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: kiti4
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: openLevel5
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: openLevel6
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  Platform: 0
+  gameArterPrefab: {fileID: 0}
+  leaderboardBtn: {fileID: 0}
+--- !u!1 &357787073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357787074}
+  - component: {fileID: 357787076}
+  - component: {fileID: 357787075}
+  m_Layer: 5
+  m_Name: Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357787074
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357787073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 303745369}
+  m_Father: {fileID: 36758472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 70}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &357787075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357787073}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
