@@ -335,8 +335,10 @@ namespace GD3D.Player
         {
             _currentAttempt++;
             SaveData.CurrentLevelData.TotalAttempts++;
-            SaveData.Save();
+            SaveData.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
+            SaveData.PlayerData.DiamondCoinsCollected += 0;
 
+            SaveData.Save();
             Transition.TransitionToLastActiveMenu();
         }
         #endregion
@@ -394,6 +396,9 @@ namespace GD3D.Player
         {
             _currentAttempt++;
             SaveData.CurrentLevelData.TotalAttempts++;
+            SaveData.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
+            SaveData.PlayerData.DiamondCoinsCollected += 0;
+
             SaveData.Save();
 
             Transition.TransitionToNextScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -444,10 +449,12 @@ namespace GD3D.Player
         /// Respawns the player.
         /// </summary>
         /// 
+
         #region Respawn
         public void Respawn()
         {
             SaveData.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+
 
             Geekplay.Instance.Leaderboard("Points", SaveData.PlayerData.LeaderboardPointds);
 
@@ -456,6 +463,10 @@ namespace GD3D.Player
 
             _currentAttempt++;
             SaveData.CurrentLevelData.TotalAttempts++;
+
+            SaveData.PlayerData.GoldCoinsCollected += PlayerMain.TimesJumped * 10;
+            SaveData.PlayerData.DiamondCoinsCollected += 0;
+
             SaveData.Save();
             // Disable the respawn menu and new best popups
             loseMenu.SetActive(false);
