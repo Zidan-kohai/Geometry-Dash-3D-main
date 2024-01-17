@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 50
   m_LinearFogEnd: 200
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1.7778668, g: 1.9791348, b: 2.3704891, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 3
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
+  m_Sun: {fileID: 27019214}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -294,6 +294,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7831111279264902317, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
   m_PrefabInstance: {fileID: 17313636}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &27019214 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3411478982947766870, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 275714900}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &29361903
 PrefabInstance:
