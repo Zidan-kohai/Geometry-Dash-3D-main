@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using GD3D.Level;
 using GD3D.Player;
+using UnityEditor;
 
 namespace GD3D
 {
@@ -42,7 +43,6 @@ namespace GD3D
             {
                 // Set the instance
                 Instance = this;
-
                 transform.SetParent(null);
 
                 DontDestroyOnLoad(gameObject);
@@ -177,6 +177,8 @@ namespace GD3D
 #endif
             }
 
+            PlayerData = Geekplay.Instance.PlayerData;
+
             // Fix some saved values that are illegal
             if (string.IsNullOrEmpty(PlayerData.PlayerName)) PlayerData.PlayerName = PlayerData.DEFAULT_PLAYER_NAME;
             if (PlayerData.PlayerName.Length > PlayerData.PLAYER_NAME_MAX_LENGTH) PlayerData.PlayerName = PlayerData.PlayerName.Substring(0, PlayerData.PLAYER_NAME_MAX_LENGTH);
@@ -207,6 +209,8 @@ namespace GD3D
 
                 if (level.GottenCoins.Length != 3) level.GottenCoins = new bool[] { false, false, false };
             }
+
+
         }
 
         /// <summary>
