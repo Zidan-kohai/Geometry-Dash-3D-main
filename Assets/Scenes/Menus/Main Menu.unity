@@ -1072,6 +1072,14 @@ MonoBehaviour:
     purchaseEvent:
       m_PersistentCalls:
         m_Calls: []
+  - itemName: openLevel5
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - itemName: openLevel6
+    purchaseEvent:
+      m_PersistentCalls:
+        m_Calls: []
   Platform: 0
   gameArterPrefab: {fileID: 0}
   leaderboardBtn: {fileID: 0}

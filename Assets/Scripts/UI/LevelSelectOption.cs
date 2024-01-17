@@ -24,8 +24,6 @@ namespace GD3D.UI
         [SerializeField] private Button buttonOpen2;
         [SerializeField] private TMP_Text buttonOpen1Text;
         [SerializeField] private TMP_Text buttonOpen2Text;
-        [Space]
-        [SerializeField] private GameObject lacksMoneyPopup;
 
 
         [SerializeField] private TMP_Text levelNameText;
@@ -99,8 +97,18 @@ namespace GD3D.UI
                 buttonOpen1Text.text = "Open by In app";
                 buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
 
-                buttonOpen1.onClick.AddListener(OpenLevelByInApp);
                 buttonOpen2.onClick.AddListener(OpenLevelByDiamond);
+                
+                if(LevelData.LevelBuildIndex == 8)
+                {
+                    buttonOpen1.onClick.AddListener(OpenLevel5ByInApp);
+                    Geekplay.Instance.SubscribeOnPurchase("openLevel5",OpenLevelByInApp);
+                }
+                else
+                {
+                    buttonOpen1.onClick.AddListener(OpenLevel6ByInApp);
+                    Geekplay.Instance.SubscribeOnPurchase("openLevel6", OpenLevelByInApp);
+                }
             }
 
         }
@@ -134,7 +142,7 @@ namespace GD3D.UI
         {
             if (LevelData.cost > Geekplay.Instance.PlayerData.GoldCoinsCollected)
             {
-                lacksMoneyPopup.SetActive(true);
+                GoldShop.Instance.LacksMoney.SetActive(true);
                 return;
             }
 
@@ -177,6 +185,16 @@ namespace GD3D.UI
             openButtonPanel.SetActive(false);
             LevelData.IsOpen = true;
             Geekplay.Instance.PlayerData.GetLevelData(LevelData.LevelName).isOpen = true;
+        }
+
+        public void OpenLevel5ByInApp()
+        {
+            Geekplay.Instance.RealBuyItem("openLevel5");
+        }
+
+        public void OpenLevel6ByInApp()
+        {
+            Geekplay.Instance.RealBuyItem("openLevel6");
         }
 
         public void OpenLevelByInApp()

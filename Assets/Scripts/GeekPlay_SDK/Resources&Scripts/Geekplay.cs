@@ -77,6 +77,17 @@ public class Geekplay : MonoBehaviour
         }
     }
 
+    public void SubscribeOnPurchase(string idOrTags, UnityAction action)
+    {
+        for (int i = 0; i < purchasesList.Length; i++)
+        {
+            if (idOrTags == purchasesList[i].itemName)
+            {
+                purchasesList[i].purchaseEvent.AddListener(action);
+            }
+        }
+    }
+
     private void Start()
     {
         GameReady();
