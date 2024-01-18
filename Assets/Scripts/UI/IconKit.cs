@@ -11,6 +11,7 @@ using GD3D.CustomInput;
 using System.Linq;
 using UnityEngine.Events;
 using System.Security.Cryptography;
+using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 namespace GD3D.UI
 {
@@ -44,7 +45,8 @@ namespace GD3D.UI
         private Dictionary<Gamemode, IconButtonData> _iconButtonDataDictionary = new Dictionary<Gamemode, IconButtonData>();
         private Dictionary<Gamemode, Image> _iconCategoryButtons = new Dictionary<Gamemode, Image>();
         private Dictionary<Gamemode, Transform> _iconButtonParents = new Dictionary<Gamemode, Transform>();
-        private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
+        public List<GameObject> CubeButtons;
+        //private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtons = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconModels = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtonsSelected = new Dictionary<Gamemode, List<GameObject>>();
@@ -176,7 +178,7 @@ namespace GD3D.UI
             {
                 _iconButtonDataDictionary.Add(buttonData.Gamemode, buttonData);
                 _iconButtonParents.Add(buttonData.Gamemode, buttonData.Parent);
-                _iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
+                //_iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
                 _iconButtons.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconModels.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconButtonsSelected.Add(buttonData.Gamemode, new List<GameObject>());
@@ -197,27 +199,27 @@ namespace GD3D.UI
             UpdateIconCategory();
 
             // Loop through every gamemodes icon data
-            foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
-            {
-                GameObject buttonTemplate = _iconButtonTemplates[iconData.Gamemode];
-                GameObject templateModel = _iconButtonDataDictionary[iconData.Gamemode].TemplateModel.gameObject;
+            //foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
+            //{
+                //GameObject buttonTemplate = _iconButtonTemplates[Gamemode.cube];
+                GameObject templateModel = _iconButtonDataDictionary[Gamemode.cube].TemplateModel.gameObject;
 
                 // Create an integer which will be used to keep track of our current index in the next foreach loop
 
                 int costIndex = 0;
                 // Loop through all mesh data in the icon data
-                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in iconData.Meshes)
+                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
                 {
                     // Create a clone of the template button
-                    GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[iconData.Gamemode]);
+                    //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
 
-                    TextMeshProUGUI costText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+                    TextMeshProUGUI costText = CubeButtons[costIndex].GetComponentInChildren<TextMeshProUGUI>();
 
-                    Buyable buttonCost = newButton.GetComponent<Buyable>();
+                    Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
 
-                    if (iconData.Gamemode == Gamemode.cube)
-                    {
-                        if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(iconData.Gamemode, costIndex))
+                    //if (iconData.Gamemode == Gamemode.cube)
+                    //{
+                        if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, costIndex))
                         {
                             costText.gameObject.SetActive(true);
                             costText.text = costList[costIndex].cost.ToString();
@@ -237,17 +239,17 @@ namespace GD3D.UI
 
                         buttonCost.Cost = costList[costIndex].cost;
 
-                    }
+                    //}
 
                     int thisIndex = costIndex;
 
-                    newButton.GetComponent<Button>().onClick.AddListener(() =>
+                    CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
+                        if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
                         {
                             if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
-                            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
+                            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
 
                             Geekplay.Instance.Save();
 
@@ -255,31 +257,29 @@ namespace GD3D.UI
                             goldCoinText.text = goldCoin.ToString();
                             costText.enabled = false;
                         }
+                        _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
-
-                        _savefile.SetEquippedIcon(iconData.Gamemode, thisIndex);
-
-                        UpdateIconSelection();
+                        UpdateIconSelection(Gamemode.cube);
 
                     });
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
 
-                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[iconData.Gamemode][costIndex].Mesh;
+                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[Gamemode.cube][costIndex].Mesh;
 
-                    _iconModels[iconData.Gamemode].Add(iconModel);
+                    _iconModels[Gamemode.cube].Add(iconModel);
 
                     // Get the "Selected" image on the button
-                    GameObject selectedObj = newButton.transform.Find("Selected").gameObject;
+                    GameObject selectedObj = CubeButtons[costIndex].transform.Find("Selected").gameObject;
 
                     // Set the mesh for the button
-                    MeshFilter meshFilter = newButton.GetComponentInChildren<MeshFilter>();
+                    MeshFilter meshFilter = CubeButtons[costIndex].GetComponentInChildren<MeshFilter>();
 
                     meshFilter.mesh = meshData.Mesh;
 
                     // Add the newly created button and selected image to the dictionary
-                    _iconButtons[iconData.Gamemode].Add(newButton);
-                    _iconButtonsSelected[iconData.Gamemode].Add(selectedObj);
+                    _iconButtons[Gamemode.cube].Add(CubeButtons[costIndex]);
+                    _iconButtonsSelected[Gamemode.cube].Add(selectedObj);
 
                     costIndex++;
                 }
@@ -288,15 +288,15 @@ namespace GD3D.UI
                 templateModel.SetActive(false);
 
                 // Destroy template button
-                Destroy(_iconButtonTemplates[iconData.Gamemode]);
+                //Destroy(_iconButtonTemplates[Gamemode.cube]);
 
 
                 _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
                 _colorChoose.onClick.AddListener(ShowColorChoose);
 
-            }
+            //}
 
-            UpdateIconSelection();
+            UpdateIconSelection(Gamemode.cube);
 
             // Destroy template category button
             Destroy(templateCategoryButton.gameObject);
@@ -491,6 +491,31 @@ namespace GD3D.UI
 
                     index++;
                 }
+            }
+
+            foreach (var pair in _iconModels)
+            {
+                foreach (GameObject obj in pair.Value)
+                {
+                    obj.SetActive(false);
+                }
+            }
+
+            // Update mesh for the model on our currently open category
+            _iconModels[_categoryOpen][PlayerIcons.GetIconIndex(_categoryOpen)].SetActive(true);
+        }
+
+        private void UpdateIconSelection(Gamemode gamemode)
+        {
+            int index = 0;
+
+            foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
+            {
+                bool isEquipped = _savefile.GetEquippedIconIndex(gamemode) == index;
+
+                _iconButtonsSelected[gamemode][index].SetActive(isEquipped);
+
+                index++;
             }
 
             foreach (var pair in _iconModels)

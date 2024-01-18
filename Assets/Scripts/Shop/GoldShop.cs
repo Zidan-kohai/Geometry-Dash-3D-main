@@ -51,22 +51,26 @@ namespace GD3D
         }
         public void GetKiti1()
         {
-            Debug.Log("get Kiti 1");
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 3;
         }
 
         public void GetKiti2()
         {
-            Debug.Log("get Kiti 2");
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += 25000;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 250;
+            //дать набор
+
         }
 
         public void GetKiti3()
         {
-            Debug.Log("get Kiti 3");
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += 15000;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += 3500;
         }
 
         public void GetKiti4()
         {
-            Debug.Log("get Kiti 4");
+            //дать все цвета и наборы
         }
     }
 }

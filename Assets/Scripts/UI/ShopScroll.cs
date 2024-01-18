@@ -11,7 +11,7 @@ namespace GD3D
         [SerializeField] private GameObject content;
         [SerializeField] private int scrollCount;
 
-
+        [SerializeField] private List<GameObject> Panels;
 
         private float animationVelocity;
         private int currentScrollIndex = 1;
@@ -35,6 +35,34 @@ namespace GD3D
             StartCoroutine(Scroll(1));
 
             currentScrollIndex--;
+        }
+
+        public void Next()
+        {
+            currentScrollIndex = currentScrollIndex + 1 > scrollCount ? scrollCount : currentScrollIndex + 1;
+
+            for(int i = 0; i < Panels.Count; i++)
+            {
+                Panels[i].SetActive(false);
+                if(currentScrollIndex - 1 == i)
+                {
+                    Panels[i].SetActive(true);
+                }
+            }
+        }
+
+        public void back()
+        {
+            currentScrollIndex = currentScrollIndex - 1 < 1 ? 1 : currentScrollIndex - 1;
+
+            for (int i = 0; i < Panels.Count; i++)
+            {
+                Panels[i].SetActive(false);
+                if (currentScrollIndex - 1 == i)
+                {
+                    Panels[i].SetActive(true);
+                }
+            }
         }
 
         private IEnumerator Scroll(int direction)
