@@ -18,6 +18,10 @@ public class PlayerData
     public int GoldCoinsCollected = 0;
     public int DiamondCoinsCollected = 0;
     public int LeaderboardPointds = 0;
+    public bool IsbyedKiti1 = false;
+    public bool IsbyedKiti2 = false;
+    public bool IsbyedKiti3 = false;
+    public bool IsbyedKiti4 = false;
 
     public float MusicVolume = 1;
     public float SFXVolume = 1;

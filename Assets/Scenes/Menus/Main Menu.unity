@@ -924,6 +924,10 @@ MonoBehaviour:
     GoldCoinsCollected: 0
     DiamondCoinsCollected: 0
     LeaderboardPointds: 0
+    IsbyedKiti1: 0
+    IsbyedKiti2: 0
+    IsbyedKiti3: 0
+    IsbyedKiti4: 0
     MusicVolume: 1
     SFXVolume: 1
     AutoRetryEnabled: 1

@@ -52,12 +52,14 @@ namespace GD3D
         public void GetKiti1()
         {
             Geekplay.Instance.PlayerData.DiamondCoinsCollected += 3;
+            Geekplay.Instance.PlayerData.IsbyedKiti1 = true;
         }
 
         public void GetKiti2()
         {
             Geekplay.Instance.PlayerData.GoldCoinsCollected += 25000;
             Geekplay.Instance.PlayerData.DiamondCoinsCollected += 250;
+            Geekplay.Instance.PlayerData.IsbyedKiti2 = true;
             //дать набор
 
         }
@@ -66,10 +68,12 @@ namespace GD3D
         {
             Geekplay.Instance.PlayerData.GoldCoinsCollected += 15000;
             Geekplay.Instance.PlayerData.DiamondCoinsCollected += 3500;
+            Geekplay.Instance.PlayerData.IsbyedKiti3 = true;
         }
 
         public void GetKiti4()
         {
+            Geekplay.Instance.PlayerData.IsbyedKiti4 = true;
             //дать все цвета и наборы
         }
     }

@@ -16,6 +16,11 @@ namespace GD3D
         private void Start()
         {
             textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+
+            if(Geekplay.Instance.PlayerData.IsbyedKiti4)
+            {
+                buyed();
+            }
         }
         public int Cost 
         { 

@@ -46,7 +46,7 @@ namespace GD3D.UI
         private Dictionary<Gamemode, Image> _iconCategoryButtons = new Dictionary<Gamemode, Image>();
         private Dictionary<Gamemode, Transform> _iconButtonParents = new Dictionary<Gamemode, Transform>();
         public List<GameObject> CubeButtons;
-        //private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
+        private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtons = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconModels = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtonsSelected = new Dictionary<Gamemode, List<GameObject>>();
@@ -178,7 +178,7 @@ namespace GD3D.UI
             {
                 _iconButtonDataDictionary.Add(buttonData.Gamemode, buttonData);
                 _iconButtonParents.Add(buttonData.Gamemode, buttonData.Parent);
-                //_iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
+                _iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
                 _iconButtons.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconModels.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconButtonsSelected.Add(buttonData.Gamemode, new List<GameObject>());
@@ -198,17 +198,17 @@ namespace GD3D.UI
 
             UpdateIconCategory();
 
-            // Loop through every gamemodes icon data
-            //foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
-            //{
-                //GameObject buttonTemplate = _iconButtonTemplates[Gamemode.cube];
-                GameObject templateModel = _iconButtonDataDictionary[Gamemode.cube].TemplateModel.gameObject;
+            //Loop through every gamemodes icon data
+            foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
+            {
+                GameObject buttonTemplate = _iconButtonTemplates[iconData.Gamemode];
+                GameObject templateModel = _iconButtonDataDictionary[iconData.Gamemode].TemplateModel.gameObject;
 
                 // Create an integer which will be used to keep track of our current index in the next foreach loop
 
                 int costIndex = 0;
                 // Loop through all mesh data in the icon data
-                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
+                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in iconData.Meshes)
                 {
                     // Create a clone of the template button
                     //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
@@ -217,12 +217,12 @@ namespace GD3D.UI
 
                     Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
 
-                    //if (iconData.Gamemode == Gamemode.cube)
-                    //{
+                    if (iconData.Gamemode == Gamemode.cube)
+                    {
                         if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, costIndex))
                         {
-                            costText.gameObject.SetActive(true);
-                            costText.text = costList[costIndex].cost.ToString();
+                            if (costText == null) return;
+                            
                             if (costList[costIndex].unit == CubeCost.Unit.Gold)
                             {
                                 costText.gameObject.GetComponentInChildren<Image>().sprite = GoldIcon;
@@ -232,42 +232,44 @@ namespace GD3D.UI
                                 costText.gameObject.GetComponentInChildren<Image>().sprite = DiamondIcon;
                             }
                         }
-                        else
+                        else if(costText != null)
                         {
                             costText.gameObject.SetActive(false);
                         }
 
                         buttonCost.Cost = costList[costIndex].cost;
 
-                    //}
+                        int thisIndex = costIndex;
 
-                    int thisIndex = costIndex;
-
-                    CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
-                    {
-                        if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
+                        CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
                         {
-                            if (!buttonCost.TryBuyForGold(goldCoin)) return;
+                            if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
+                            {
+                                if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
-                            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
+                                Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
 
-                            Geekplay.Instance.Save();
+                                Geekplay.Instance.Save();
 
-                            goldCoin = buttonCost.buyForFold(goldCoin);
-                            goldCoinText.text = goldCoin.ToString();
-                            costText.enabled = false;
-                        }
-                        _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
+                                goldCoin = buttonCost.buyForFold(goldCoin);
+                                goldCoinText.text = goldCoin.ToString();
+                                costText.enabled = false;
+                            }
+                            _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
-                        UpdateIconSelection(Gamemode.cube);
+                            UpdateIconSelection(Gamemode.cube);
 
-                    });
+                        });
+                    }
+
+
+                    
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
 
-                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[Gamemode.cube][costIndex].Mesh;
+                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[iconData.Gamemode][costIndex].Mesh;
 
-                    _iconModels[Gamemode.cube].Add(iconModel);
+                    _iconModels[iconData.Gamemode].Add(iconModel);
 
                     // Get the "Selected" image on the button
                     GameObject selectedObj = CubeButtons[costIndex].transform.Find("Selected").gameObject;
@@ -278,8 +280,8 @@ namespace GD3D.UI
                     meshFilter.mesh = meshData.Mesh;
 
                     // Add the newly created button and selected image to the dictionary
-                    _iconButtons[Gamemode.cube].Add(CubeButtons[costIndex]);
-                    _iconButtonsSelected[Gamemode.cube].Add(selectedObj);
+                    _iconButtons[iconData.Gamemode].Add(CubeButtons[costIndex]);
+                    _iconButtonsSelected[iconData.Gamemode].Add(selectedObj);
 
                     costIndex++;
                 }
@@ -294,7 +296,7 @@ namespace GD3D.UI
                 _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
                 _colorChoose.onClick.AddListener(ShowColorChoose);
 
-            //}
+            }
 
             UpdateIconSelection(Gamemode.cube);
 
