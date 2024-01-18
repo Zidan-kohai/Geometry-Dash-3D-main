@@ -217,10 +217,10 @@ namespace GD3D.Player
                     break;
                 case 8:
                     loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 300).ToString();
-                    loseDiamondText.text = (Convert.ToInt32(ProgressBar.Percent) * 10).ToString();
+                    loseDiamondText.text = Convert.ToInt32(ProgressBar.Percent * 10).ToString();
                     break;
                 case 9:
-                    loseDiamondText.text = (Convert.ToInt32(ProgressBar.Percent) * 10).ToString();
+                    loseDiamondText.text = Convert.ToInt32(ProgressBar.Percent * 10).ToString();
                     loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 350).ToString();
                     break;
             }
