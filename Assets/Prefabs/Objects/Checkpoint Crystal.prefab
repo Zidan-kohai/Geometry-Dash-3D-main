@@ -106,6 +106,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pulse Antenna Big
       objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842243, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: bf269bdd43a2b7744ae7483a7203e382, type: 3}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7104221
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7037758
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096248466004842244, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.461
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4158206876744493137, guid: ade50121abcaf4244be87df3d22ef2e0, type: 3}
     m_RemovedGameObjects: []

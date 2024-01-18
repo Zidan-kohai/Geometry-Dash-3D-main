@@ -18,13 +18,14 @@ namespace GD3D.UI
         public LevelSelect.LevelData LevelData;
         private string _levelName;
 
+
         [Header("Objects")]
         [SerializeField] private GameObject openButtonPanel;
         [SerializeField] private Button buttonOpen1;
         [SerializeField] private Button buttonOpen2;
         [SerializeField] private TMP_Text buttonOpen1Text;
         [SerializeField] private TMP_Text buttonOpen2Text;
-
+        [SerializeField] private GameObject VideoIcon;
 
         [SerializeField] private TMP_Text levelNameText;
         [SerializeField] private TMP_Text starAmountText;
@@ -37,7 +38,7 @@ namespace GD3D.UI
         [Space]
         [SerializeField] private TMP_Text normalProgressText;
         [SerializeField] private TMP_Text practiceProgressText;
-
+        [SerializeField] private GameObject isGiveDiamond;
         private void Start()
         {
             _levelName = LevelData.LevelName;
@@ -76,6 +77,7 @@ namespace GD3D.UI
             {
                 buttonOpen1Text.text = "Open by viewing ads";
                 buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
+                VideoIcon.SetActive(true);
 
                 if (LevelData.LevelBuildIndex == 6)
                 {
@@ -111,6 +113,11 @@ namespace GD3D.UI
                 }
             }
 
+
+            if(LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
+            {
+                isGiveDiamond.SetActive(true);
+            }
         }
 
         private void Update()

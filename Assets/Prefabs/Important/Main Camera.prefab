@@ -14944,6 +14944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b567a0879ee650445a9311d1cab48af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainAudio: {fileID: 3795971454604070981}
   DeathClip: {fileID: 2857797825532305286}
   WinClip: {fileID: 9022220969330215216}
 --- !u!82 &3795971454604070981

@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (9)
@@ -3844,6 +3848,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal
@@ -4418,6 +4426,10 @@ PrefabInstance:
     - target: {fileID: 4881334876295575743, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Size.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7299021388460169548, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5258,6 +5270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (8)
@@ -8891,6 +8907,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (4)
@@ -9020,6 +9040,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (2)
@@ -9153,6 +9177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (10)
@@ -12186,6 +12214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (7)
@@ -13553,6 +13585,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (6)
@@ -17406,6 +17442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 7299021386865986305, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (1)
@@ -19231,7 +19271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3933301821786723137, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 4932312265973416679, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_Mesh
@@ -19446,13 +19486,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3573296165556998466}
     - target: {fileID: 6107262553681131405, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: doubleAwardButton
+      value: 
+      objectReference: {fileID: 3573296165556998467}
+    - target: {fileID: 6107262553681131405, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: loseRestartButton
       value: 
       objectReference: {fileID: 3573296165556998465}
     - target: {fileID: 6107262553681131405, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: winNextLevelButton
       value: 
-      objectReference: {fileID: 3573296165556998467}
+      objectReference: {fileID: 0}
     - target: {fileID: 6107262553681131412, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: _checkPointLayer.m_Bits
       value: 512
@@ -19568,7 +19612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &3573296165556998467 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7852984881618470636, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9147485650491327106, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
   m_PrefabInstance: {fileID: 3573296165556998462}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -51,7 +51,6 @@ namespace GD3D.Player
 
         [Space]
         [SerializeField] private TMP_Text winMenuLevelName;
-        [SerializeField] private TMP_Text winMenuAttemptText;
         [SerializeField] private TMP_Text winMenuJumpText;
         [SerializeField] private TMP_Text winMenuTimeText;
         [SerializeField] private TMP_Text winGoldText;
@@ -60,7 +59,7 @@ namespace GD3D.Player
         [Space]
         [SerializeField] private Button winRestartButton;
         [SerializeField] private Button winQuitButton;
-        [SerializeField] private Button winNextLevelButton;
+        [SerializeField] private Button doubleAwardButton;
 
         private int goldReward = 0;
         private int diamondReward = 0;
@@ -102,7 +101,6 @@ namespace GD3D.Player
 
             attemptText.text = $"Attempt  {_currentAttempt}";
             loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
-            winMenuAttemptText.text = $"Attempt  {_currentAttempt}";
 
             // Setup respawn menu
             _respawnMenuTransform = loseMenu.transform;
@@ -118,7 +116,11 @@ namespace GD3D.Player
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
-            winNextLevelButton.onClick.AddListener(nextScene);
+            doubleAwardButton.onClick.AddListener(() => {
+                Geekplay.Instance.ShowRewardedAd("doubleAward");
+            });
+
+            Geekplay.Instance.SubscribeOnReward("doubleAward", OnDoubleAward);
 
             loseMenu.SetActive(false);
             winMenu.SetActive(false);
@@ -166,6 +168,21 @@ namespace GD3D.Player
             gameCount = 0;
         }
 
+        private void OnDoubleAward()
+        {
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += diamondReward;
+
+
+            goldReward *= 2;
+            diamondReward *= 2;
+
+            winGoldText.text = goldReward.ToString();
+            winDiamondText.text = diamondReward.ToString();
+
+            doubleAwardButton.gameObject.SetActive(false);
+        }
+
         private void OnEaseObjectRemove(long id)
         {
             // Set respawn size ease ID to null if the respawn size ease got removed
@@ -188,6 +205,8 @@ namespace GD3D.Player
         /// </summary>
         private void ShowLoseMenu()
         {
+
+            SoundManager.Instance.StopMainAudio();
 
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
@@ -289,7 +308,6 @@ namespace GD3D.Player
             PauseMenu.CanPause = false;
 
             // Set objects on the respawn menu
-            winMenuAttemptText.text = attemptText.text;
 
             winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
@@ -415,9 +433,13 @@ namespace GD3D.Player
             SaveData.Save();
 
 
+
+            AudioListener.volume = 1;
+
             Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
             Transition.TransitionToLastActiveMenu();
+
         }
         #endregion
 
@@ -601,6 +623,9 @@ namespace GD3D.Player
             player.IgnoreInput();
 
             gameCount++;
+
+
+            SoundManager.Instance.PlayMainAudio();
         }
 
         public void BeforeRevive()
@@ -638,6 +663,9 @@ namespace GD3D.Player
 
             // Ignore input for this moment so the player won't instantly jump when respawning
             player.IgnoreInput();
+
+
+            SoundManager.Instance.PlayMainAudio();
         }
 
         #endregion
