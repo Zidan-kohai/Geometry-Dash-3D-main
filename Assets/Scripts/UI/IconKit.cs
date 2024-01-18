@@ -108,6 +108,10 @@ namespace GD3D.UI
 
         [Space]
         [SerializeField] private Button getGoldByReward;
+
+        [Space]
+        [SerializeField] private Button kiti4Button;
+        [SerializeField] private GameObject kiti4Buyed;
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -125,6 +129,13 @@ namespace GD3D.UI
             {
                 Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
 
+            });
+
+            Geekplay.Instance.SubscribeOnPurchase("kiti4", () =>
+            {
+                kiti4Button.interactable = false;
+                kiti4Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti4Buyed.SetActive(true);
             });
 
             Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", GetGold);

@@ -34,6 +34,10 @@ namespace GD3D.UI
         [SerializeField] private Button kiti2Button;
         [SerializeField] private Button kiti3Button;
 
+        [SerializeField] private GameObject kiti1Buyed;
+        [SerializeField] private GameObject kiti2Buyed;
+        [SerializeField] private GameObject kiti3Buyed;
+
         private Key _quitKey;
 
         private void Awake()
@@ -48,6 +52,49 @@ namespace GD3D.UI
             // Make the darkness overlay disappear
             darknessOverlay.color = Color.clear;
             darknessOverlay.raycastTarget = false;
+
+            if(Geekplay.Instance.PlayerData.IsbyedKiti1)
+            {
+                kiti1Button.interactable = false;
+                kiti1Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti1Buyed.gameObject.SetActive(true);
+            }
+
+            if (Geekplay.Instance.PlayerData.IsbyedKiti2)
+            {
+                kiti2Button.interactable = false;
+                kiti2Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti2Buyed.gameObject.SetActive(true);
+            }
+
+            if (Geekplay.Instance.PlayerData.IsbyedKiti3)
+            {
+                kiti3Button.interactable = false;
+                kiti3Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti3Buyed.gameObject.SetActive(true);
+            }
+
+
+            Geekplay.Instance.SubscribeOnPurchase("kiti1", () =>
+            {
+                kiti1Button.interactable = false;
+                kiti1Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti1Buyed.gameObject.SetActive(true);
+            });
+
+            Geekplay.Instance.SubscribeOnPurchase("kiti2", () =>
+            {
+                kiti2Button.interactable = false;
+                kiti2Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti2Buyed.gameObject.SetActive(true);
+            });
+
+            Geekplay.Instance.SubscribeOnPurchase("kiti3", () =>
+            {
+                kiti3Button.interactable = false;
+                kiti3Button.gameObject.GetComponent<Animator>().enabled = false;
+                kiti3Buyed.gameObject.SetActive(true);
+            });
         }
 
         private void Start()
