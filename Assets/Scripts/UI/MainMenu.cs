@@ -29,6 +29,11 @@ namespace GD3D.UI
         private long? _currentMenuPopupEaseID = null;
         private long? _currentDarknessOverlayEaseID = null;
 
+
+        [SerializeField] private Button kiti1Button;
+        [SerializeField] private Button kiti2Button;
+        [SerializeField] private Button kiti3Button;
+
         private Key _quitKey;
 
         private void Awake()
@@ -61,8 +66,32 @@ namespace GD3D.UI
 
             // Get the quit key
             _quitKey = Player.PlayerInput.GetKey("Escape");
+
+            /*kiti1Button.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.RealBuyItem("kiti1");
+            });
+
+            kiti2Button.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.RealBuyItem("kiti2");
+            });
+
+            kiti3Button.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.RealBuyItem("kiti3");
+            });*/
         }
 
+        public void Kiti(string kitiName)
+        {
+            Geekplay.Instance.RealBuyItem(kitiName);
+        }
+
+        public void ShowShop()
+        {
+            GoldShop.Instance.Shop.SetActive(true);
+        }
         //private void Update()
         //{
         //    // If the pause key is pressed, open the quit menu

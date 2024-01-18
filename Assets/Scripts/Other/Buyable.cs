@@ -11,7 +11,6 @@ namespace GD3D
         [SerializeField] private int cost;
 
         [SerializeField] private TextMeshProUGUI textMeshPro;
-        [SerializeField] private GameObject lacksMoney;
 
         public bool IsBuyed = false;
         private void Start()
@@ -35,7 +34,7 @@ namespace GD3D
         {
             if (Coin < cost)
             {
-                lacksMoney.SetActive(true);
+                GoldShop.Instance.LacksMoney.SetActive(true);
                 return false;
             }
 
@@ -47,7 +46,7 @@ namespace GD3D
             if (textMeshPro != null)
                 textMeshPro.gameObject.SetActive(false);
 
-            SaveData.SaveFile.GoldCoinsCollected = coin - cost;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected = coin - cost;
             IsBuyed = true;
 
             return coin - cost;

@@ -69,7 +69,7 @@ namespace GD3D.UI
 
         //-- Other stuff
         private Key _pauseKey;
-        private SaveFile _saveFile;
+        private PlayerData _saveFile;
 
         private void Awake()
         {
@@ -95,7 +95,7 @@ namespace GD3D.UI
             _UIClickables = GetComponentsInChildren<UIClickable>();
 
             // Get save file
-            _saveFile = SaveData.SaveFile;
+            _saveFile = Geekplay.Instance.PlayerData;
 
             // Disable practice UI
             practiceUI.SetActive(false);

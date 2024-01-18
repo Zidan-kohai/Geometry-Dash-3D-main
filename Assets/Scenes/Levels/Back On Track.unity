@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 50
   m_LinearFogEnd: 200
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 2, g: 2, b: 2, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientIntensity: 3
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 48ba39a553c36884ab8c8c7205e65a1a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -134,10 +134,6 @@ PrefabInstance:
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,11 +477,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -543,11 +548,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -663,6 +677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 129.69
@@ -703,7 +721,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -724,6 +743,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -765,7 +788,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -783,6 +807,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1747928591}
     m_Modifications:
+    - target: {fileID: 3149870562128099068, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5222700603774725459, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
       propertyPath: m_Name
       value: Normal Gravity Portal
@@ -836,10 +864,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6335147731357292856, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
-      propertyPath: m_LocalPosition.z
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6335147731357292856, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.78
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5222700603774725549, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1176,11 +1209,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (31)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1201,6 +1243,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (04)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,7 +1288,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1437,11 +1484,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1604,6 +1660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 761.18
@@ -1644,7 +1704,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1719,6 +1780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 80.20575
@@ -1759,7 +1824,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1780,6 +1846,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1821,7 +1891,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1949,6 +2020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 220
@@ -1989,7 +2064,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2047,11 +2123,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2130,6 +2215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 782.76
@@ -2170,7 +2259,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2395,11 +2485,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2420,6 +2519,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2461,7 +2564,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2659,6 +2763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 7587149975106239275, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7831111279264902313, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_Name
       value: Reverse Gravity Portal (1)
@@ -2703,7 +2811,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7831111279264902319, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2761,11 +2870,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2823,11 +2941,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3195,6 +3322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 653.32996
@@ -3235,7 +3366,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3371,6 +3503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 153.7
@@ -3411,7 +3547,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3712,10 +3849,6 @@ PrefabInstance:
       value: Checkpoint Crystal
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -799.2
       objectReference: {fileID: 0}
@@ -3860,6 +3993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 226
@@ -3900,7 +4037,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3921,6 +4059,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3962,7 +4104,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4061,6 +4204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 392.27
@@ -4101,7 +4248,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4204,6 +4352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (07)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 398.76
@@ -4244,7 +4396,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4262,21 +4415,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1254439069}
     m_Modifications:
+    - target: {fileID: 4881334876295575743, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299021388460169548, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.49
+      objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (5)
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -481.07
+      value: -480.06
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4419,6 +4576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.22425
@@ -4459,7 +4620,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4517,11 +4679,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4539,6 +4710,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.66
+      objectReference: {fileID: 0}
     - target: {fileID: 4271641312316549483, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
       propertyPath: m_Name
       value: Cube Portal
@@ -4583,7 +4762,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5202498811798912491, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4271641312316549485, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4690,6 +4874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 413.92
@@ -4730,7 +4918,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4788,11 +4977,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4928,11 +5126,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4953,6 +5160,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4994,7 +5205,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5051,16 +5263,12 @@ PrefabInstance:
       value: Checkpoint Crystal (8)
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -183.60004
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.3
+      value: 13.65
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5116,6 +5324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 768.49
@@ -5156,7 +5368,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5396,6 +5609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.66
@@ -5436,7 +5653,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5561,8 +5779,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
     - target: {fileID: 1519570603569616111, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519570603569616111, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5033532069551765024, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5570,6 +5792,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982189548865156854, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587149975106239275, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7831111278986586733, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
@@ -5620,7 +5846,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7831111279264902319, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5695,6 +5922,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 4033989601187345879, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033989601187345879, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623314, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: mesh
       value: 
@@ -5773,6 +6008,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451605110470908435, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -5856,6 +6095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 691.2699
@@ -5896,7 +6139,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6035,11 +6279,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6527,6 +6780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 152.91426
@@ -6567,7 +6824,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6625,11 +6883,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6687,11 +6954,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6712,6 +6988,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6753,7 +7033,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6774,6 +7055,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6815,7 +7100,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7277,6 +7563,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 1132405882072665006, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132405882072665006, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4331572580809951969, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
       propertyPath: m_Name
       value: Yellow Pad (1)
@@ -7339,6 +7633,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1747928591}
     m_Modifications:
+    - target: {fileID: 3149870562128099068, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5222700603774725459, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
       propertyPath: m_Name
       value: Normal Gravity Portal (2)
@@ -7387,7 +7685,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5222700603774725549, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7662,11 +7961,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7810,11 +8118,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7943,6 +8260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 179.35
@@ -7983,7 +8304,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8206,11 +8528,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (19)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8231,6 +8562,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8272,7 +8607,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8293,6 +8629,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8334,7 +8674,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8352,6 +8693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1205826098817044431, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1360889956772589013, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
       propertyPath: m_Name
       value: Ship Portal
@@ -8396,7 +8741,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.59
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1360889956772589016, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8506,11 +8860,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8531,10 +8894,6 @@ PrefabInstance:
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8598,6 +8957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 742.04
@@ -8638,7 +9001,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8661,16 +9025,12 @@ PrefabInstance:
       value: Checkpoint Crystal (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -690.9
+      value: -690.49
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.74
+      value: 16.34
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8678,23 +9038,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -8762,11 +9122,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8787,10 +9156,6 @@ PrefabInstance:
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8971,11 +9336,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8996,6 +9370,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9037,7 +9415,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9095,11 +9474,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9195,11 +9583,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9257,11 +9654,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9279,9 +9685,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 3167636944753164457, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167636944753164457, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4456791962388314770, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
       propertyPath: m_Name
       value: NormalAndSmallSpike
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724536129671241605, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101687356482235799, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9323,7 +9741,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2756147757761184078, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+    - {fileID: 8419971734063504994, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9341,6 +9761,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 1132405882072665006, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132405882072665006, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4331572580809951969, guid: 04e8ae02e605a2c43994370af9076e50, type: 3}
       propertyPath: m_Name
       value: Yellow Pad
@@ -9489,6 +9917,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 7587149975106239275, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7831111279264902313, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
       propertyPath: m_Name
       value: Reverse Gravity Portal
@@ -9533,7 +9965,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7831111279264902319, guid: acac0161c2d8ef940ae1ec2ffa392d28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9591,11 +10024,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (33)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10045,6 +10483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 429.37
@@ -10085,7 +10527,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10196,11 +10639,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10258,11 +10710,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10283,6 +10744,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10324,7 +10789,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10387,6 +10853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 509.7
@@ -10427,7 +10897,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10448,6 +10919,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10489,7 +10964,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10630,11 +11106,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10780,11 +11265,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11032,11 +11526,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11057,6 +11560,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11098,7 +11605,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11156,11 +11664,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (31)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11218,11 +11735,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (19)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11495,6 +12021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 624.0699
@@ -11535,7 +12065,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11556,6 +12087,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11597,7 +12132,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11655,16 +12191,12 @@ PrefabInstance:
       value: Checkpoint Crystal (7)
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -347.30002
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04000008
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11720,6 +12252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (02)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 418.8
@@ -11760,7 +12296,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12003,11 +12540,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12065,11 +12611,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12087,6 +12642,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778129517845729839, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4271641312316549483, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
       propertyPath: m_Name
       value: Cube Portal
@@ -12131,7 +12694,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5202498811798912491, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4271641312316549485, guid: f0b678b414d4528468e3bfdcfbfe64d3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12351,6 +12919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 696
@@ -12391,7 +12963,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12528,6 +13101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 702.6199
@@ -12568,7 +13145,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12589,6 +13167,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12630,7 +13212,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12721,11 +13304,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12788,11 +13380,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12850,11 +13451,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12912,11 +13522,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12939,16 +13558,12 @@ PrefabInstance:
       value: Checkpoint Crystal (6)
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -435.40002
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.6
+      value: 16.26
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12956,23 +13571,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -13003,6 +13618,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13044,7 +13663,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13192,6 +13812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 753.65
@@ -13232,7 +13856,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13253,6 +13878,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13294,7 +13923,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13315,6 +13945,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13356,7 +13990,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13533,11 +14168,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13658,6 +14302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 187.27
@@ -13698,7 +14346,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13782,6 +14431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 690
@@ -13822,7 +14475,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13880,11 +14534,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13959,6 +14622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 702
@@ -13999,7 +14666,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14020,6 +14688,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14061,7 +14733,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14617,6 +15290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 98.25
@@ -14657,7 +15334,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14683,6 +15361,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14724,7 +15406,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14881,6 +15564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 178
@@ -14921,7 +15608,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14942,6 +15630,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14983,7 +15675,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15038,6 +15731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 172.35
@@ -15078,7 +15775,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15136,11 +15834,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15256,6 +15963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (08)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 412.61
@@ -15296,7 +16007,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15412,11 +16124,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15437,6 +16158,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15478,7 +16203,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15499,6 +16225,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15540,7 +16270,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15679,11 +16410,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15807,6 +16547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 471.33
@@ -15847,7 +16591,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15947,6 +16692,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1747928591}
     m_Modifications:
+    - target: {fileID: 3149870562128099068, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5222700603774725459, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
       propertyPath: m_Name
       value: Normal Gravity Portal (1)
@@ -15995,7 +16744,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5222700603774725549, guid: 3dbbd65edee46cd4bb29eb26d8425151, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16016,6 +16766,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (05)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16057,7 +16811,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16078,6 +16833,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16119,7 +16878,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16359,6 +17119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 236.86
@@ -16399,7 +17163,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16467,11 +17232,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16534,11 +17308,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16559,6 +17342,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16600,7 +17387,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16621,10 +17409,6 @@ PrefabInstance:
     - target: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_Name
       value: Checkpoint Crystal (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8042654931457894505, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16688,6 +17472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 665.5499
@@ -16728,7 +17516,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16836,6 +17625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 172.69
@@ -16876,7 +17669,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16894,6 +17688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 1205826098817044431, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1360889956772589013, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
       propertyPath: m_Name
       value: Ship Portal
@@ -16938,7 +17736,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9996957
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.02467018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847405455639060491, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.827
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1360889956772589016, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17070,6 +17901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squished Spike (09)
       objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 405.44
@@ -17110,7 +17945,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17173,11 +18009,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17235,11 +18080,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17265,6 +18119,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17306,7 +18164,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17364,11 +18223,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17389,6 +18257,10 @@ PrefabInstance:
     - target: {fileID: 8612285296902319722, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_Name
       value: Squished Spike (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612285296902319723, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8993454764953892048, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17430,7 +18302,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813125650360332172, guid: ed3cad534f305fc4a8e57e754da22fe1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17488,11 +18361,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17612,11 +18494,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374912874106273346, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374912874106273347, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
       propertyPath: m_Name
       value: Normal Spike (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5142545646073806757, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17989,7 +18880,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7090354113920787818, guid: 2cb3bedef627e044795811f351909b07, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090354113920787818, guid: 2cb3bedef627e044795811f351909b07, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8047799823233492109, guid: 2cb3bedef627e044795811f351909b07, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18002,9 +18902,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1436842472}
     m_Modifications:
+    - target: {fileID: 3167636944753164457, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167636944753164457, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4456791962388314770, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
       propertyPath: m_Name
       value: Spike1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724536129671241605, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101687356482235799, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18046,7 +18958,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2756147757761184078, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+    - {fileID: 8419971734063504994, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18059,8 +18973,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 79062322784263029, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 634973440171799641, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: editorData.vertexPathUpToDate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019443717022097279, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1239834044361765714, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
@@ -18243,13 +19165,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 163.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3411478982947766870, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411478982947766870, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3563673638668307874, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3818043533935821911, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.50001335
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534051468224, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_IsActive
@@ -18257,7 +19187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534106744813, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 47
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534290055316, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18265,11 +19195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534634605427, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534882865200, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3818043534953698432, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18307,6 +19237,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 244072688}
+    - target: {fileID: 5155017993631018642, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 98a074648c7298a4486a457d0cba525e, type: 3}
     - target: {fileID: 5755878689078528094, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: baseFloor
       value: 
@@ -18559,6 +19493,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8600083101058916390, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8649185820981675671, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18571,10 +19509,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 80.90001
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3411478982947766864, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6329176731041872512, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     - {fileID: 3353624547428462285, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+    - {fileID: 1167287667950926431, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+    - {fileID: 5809358238784222520, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1450525745523801441, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       insertIndex: -1
@@ -18699,7 +19640,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSpike
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7828805391525319516, guid: 7b636d7cdc1ad6b4180097dcffe47193, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828805391525319516, guid: 7b636d7cdc1ad6b4180097dcffe47193, type: 3}
+      propertyPath: outlineMode
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7021104992710120123, guid: 7b636d7cdc1ad6b4180097dcffe47193, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using GD3D.Level;
 using GD3D.Player;
+using UnityEditor;
 
 namespace GD3D
 {
@@ -27,22 +28,21 @@ namespace GD3D
         //-- Static variables
         private static bool s_subscribedToEvents;
 
-        //-- File
-        public static SaveFile SaveFile = new SaveFile();
-        public static SaveFile.LevelSaveData CurrentLevelData = null;
+        ////-- File
+        //public static PlayerData PlayerData = new PlayerData();
+        //public static PlayerData.LevelSaveData CurrentLevelData = null;
 
         /// <summary>
         /// Returns whether we are allowed to save or not. Currently saving is only disabled when playing in WebGL.
         /// </summary>
         public static bool CanSave => Application.platform != RuntimePlatform.WebGLPlayer;
 
-        private void Awake()
+        private void Start()
         {
             if (Instance == null)
             {
                 // Set the instance
                 Instance = this;
-
                 transform.SetParent(null);
 
                 DontDestroyOnLoad(gameObject);
@@ -80,14 +80,17 @@ namespace GD3D
                 // This bool makes sure we only subscribe once
                 s_subscribedToEvents = true;
             }
+
+            SetMixerVolume(Geekplay.Instance.PlayerData.MusicVolume, "Music Volume");
+            SetMixerVolume(Geekplay.Instance.PlayerData.SFXVolume, "SFX Volume");
         }
 
-        private void Start()
+       /* private void Start()
         {
             // Must call this in start because otherwise it won't work idk
-            SetMixerVolume(SaveFile.MusicVolume, "Music Volume");
-            SetMixerVolume(SaveFile.SFXVolume, "SFX Volume");
-        }
+            SetMixerVolume(PlayerData.MusicVolume, "Music Volume");
+            SetMixerVolume(PlayerData.SFXVolume, "SFX Volume");
+        }*/
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
         {
@@ -117,7 +120,7 @@ namespace GD3D
             if (levelData != null)
             {
                 // Get the level data for this level using the level name and cache it in a static variable so any script can reach it
-                CurrentLevelData = SaveFile.GetLevelData(levelData.LevelName);
+                Geekplay.Instance.CurrentLevelData = Geekplay.Instance.PlayerData.GetLevelData(levelData.LevelName);
             }
         }
 
@@ -128,17 +131,21 @@ namespace GD3D
         public static void Save()
         {
             // Return if we are in WebGL since saving files is not allowed there
-            if (!CanSave)
-            {
-                return;
-            }
+            //if (!CanSave)
+            //{
+            //    return;
+            //}
 
-            // Convert save file to json
-            string jsonText = JsonUtility.ToJson(SaveFile);
+            //// Convert save file to json
+            //string jsonText = JsonUtility.ToJson(PlayerData);
 
-            // Write the json into a file
-            File.WriteAllText(_saveFilePath, jsonText);
+            //// Write the json into a file
+            //File.WriteAllText(_saveFilePath, jsonText);
+            //Geekplay.Instance.PlayerData = PlayerData;
+            Debug.Log(JsonUtility.ToJson(Geekplay.Instance.PlayerData));
+            Geekplay.Instance.Save();   
         }
+
 
         /// <summary>
         /// Sets this <see cref="SaveData"/> current file data to the save file.
@@ -146,56 +153,58 @@ namespace GD3D
         public static void Load()
         {
             // Return if we are in WebGL since loading files is not allowed there
-            if (!CanSave)
-            {
-                return;
-            }
+            //            if (!CanSave)
+            //            {
+            //                return;
+            //            }
 
-            // Return if the file doesn't exist
-            if (!File.Exists(_saveFilePath))
-            {
-                return;
-            }
+            //            // Return if the file doesn't exist
+            //            if (!File.Exists(_saveFilePath))
+            //            {
+            //                return;
+            //            }
 
-            // Read the text from the file
-            string jsonText = File.ReadAllText(_saveFilePath);
+            //            // Read the text from the file
+            //string jsonText = File.ReadAllText(_saveFilePath);
 
             // Try to convert the JSON text into a SaveFile object
-            try
-            {
-                SaveFile = JsonUtility.FromJson<SaveFile>(jsonText);
-            }
-            // If it fails, throw error only in editor, otherwise return
-            catch (Exception)
-            {
-#if UNITY_EDITOR
-                throw;
-#else
-                return;
-#endif
-            }
+//            try
+//            {
+//                PlayerData = JsonUtility.FromJson<PlayerData>(jsonText);
+//            }
+//            // If it fails, throw error only in editor, otherwise return
+//            catch (Exception)
+//            {
+//#if UNITY_EDITOR
+//                throw;
+//#else
+//                return;
+//#endif
+//            }
+
+            //PlayerData = Geekplay.Instance.PlayerData;
 
             // Fix some saved values that are illegal
-            if (string.IsNullOrEmpty(SaveFile.PlayerName)) SaveFile.PlayerName = SaveFile.DEFAULT_PLAYER_NAME;
-            if (SaveFile.PlayerName.Length > SaveFile.PLAYER_NAME_MAX_LENGTH) SaveFile.PlayerName = SaveFile.PlayerName.Substring(0, SaveFile.PLAYER_NAME_MAX_LENGTH);
+            if (string.IsNullOrEmpty(Geekplay.Instance.PlayerData.PlayerName)) Geekplay.Instance.PlayerData.PlayerName = PlayerData.DEFAULT_PLAYER_NAME;
+            if (Geekplay.Instance.PlayerData.PlayerName.Length > PlayerData.PLAYER_NAME_MAX_LENGTH) Geekplay.Instance.PlayerData.PlayerName = Geekplay.Instance.PlayerData.PlayerName.Substring(0, PlayerData.PLAYER_NAME_MAX_LENGTH);
 
-            if (SaveFile.StarsCollected < 0) SaveFile.StarsCollected = 0;
-            if (SaveFile.CoinsCollected < 0) SaveFile.CoinsCollected = 0;
+            if (Geekplay.Instance.PlayerData.StarsCollected < 0) Geekplay.Instance.PlayerData.StarsCollected = 0;
+            if (Geekplay.Instance.PlayerData.CoinsCollected < 0) Geekplay.Instance.PlayerData.CoinsCollected = 0;
 
-            SaveFile.SFXVolume = Mathf.Clamp01(SaveFile.SFXVolume);
-            SaveFile.MusicVolume = Mathf.Clamp01(SaveFile.MusicVolume);
+            Geekplay.Instance.PlayerData.SFXVolume = Mathf.Clamp01(Geekplay.Instance.PlayerData.SFXVolume);
+            Geekplay.Instance.PlayerData.MusicVolume = Mathf.Clamp01(Geekplay.Instance.PlayerData.MusicVolume);
 
             // Clamp all icon data indexes between 0 and their index max length from the PlayerIcons script
             if (PlayerIcons.MeshDataDictionary != null)
             {
-                foreach (var icon in SaveFile.IconData)
+                foreach (var icon in Geekplay.Instance.PlayerData.IconData)
                 {
                     icon.Index = Mathf.Clamp(icon.Index, 0, PlayerIcons.GetIndexMaxLength(icon.Gamemode));
                 }
             }
 
             // Fix some saved values in each level that could be illegal
-            foreach (var level in SaveFile.LevelData)
+            foreach (var level in Geekplay.Instance.PlayerData.LevelData)
             {
                 level.NormalPercent = Mathf.Clamp01(level.NormalPercent);
                 level.PracticePercent = Mathf.Clamp01(level.PracticePercent);
@@ -205,6 +214,8 @@ namespace GD3D
 
                 if (level.GottenCoins.Length != 3) level.GottenCoins = new bool[] { false, false, false };
             }
+
+
         }
 
         /// <summary>
@@ -226,7 +237,7 @@ namespace GD3D
 
     /// <summary>
     /// Class that contains data for a players save file. <para/>
-    /// Use <see cref="SaveData.SaveFile"/> to access the global save file.
+    /// Use <see cref="SaveData.PlayerData"/> to access the global save file.
     /// </summary>
     [Serializable]
     public class SaveFile
@@ -310,7 +321,6 @@ namespace GD3D
                 myDictionary.shipIndex.Add(index);
             }
 
-            SaveData.Save();
         }
 
 

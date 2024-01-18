@@ -8,27 +8,45 @@ using TMPro;
 using GD3D.Player;
 using GD3D.Easing;
 using GD3D.CustomInput;
-using QuickOutline;
-using Outline = QuickOutline.Outline;
 using System.Linq;
 using UnityEngine.Events;
 using System.Security.Cryptography;
+using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 namespace GD3D.UI
 {
     /// <summary>
     /// The icon kit select screen.
     /// </summary>
+    /// 
+    [Serializable]
+    public class CubeCost
+    {
+        public enum Unit
+        {
+            Gold,
+            Diamond
+        }
+
+        public Unit unit;
+        public int cost;
+    }
     public class IconKit : MonoBehaviour
     {
         [SerializeField] private Image templateCategoryButton;
         [SerializeField] private IconButtonData[] iconButtonData;
 
+
+        public List<CubeCost> costList;
+        public Sprite GoldIcon;
+        public Sprite DiamondIcon;
+
         private Gamemode _categoryOpen;
         private Dictionary<Gamemode, IconButtonData> _iconButtonDataDictionary = new Dictionary<Gamemode, IconButtonData>();
         private Dictionary<Gamemode, Image> _iconCategoryButtons = new Dictionary<Gamemode, Image>();
         private Dictionary<Gamemode, Transform> _iconButtonParents = new Dictionary<Gamemode, Transform>();
-        private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
+        public List<GameObject> CubeButtons;
+        //private Dictionary<Gamemode, GameObject> _iconButtonTemplates = new Dictionary<Gamemode, GameObject>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtons = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconModels = new Dictionary<Gamemode, List<GameObject>>();
         private Dictionary<Gamemode, List<GameObject>> _iconButtonsSelected = new Dictionary<Gamemode, List<GameObject>>();
@@ -38,10 +56,12 @@ namespace GD3D.UI
 
         [Space]
         [SerializeField] private int goldCoin;
+        [SerializeField] private int diamondCoin;
 
         [SerializeField] private TMP_Text starsText;
         [SerializeField] private TMP_Text coinsText;
-        [SerializeField] private TMP_Text goldcoinText;
+        [SerializeField] private TMP_Text goldCoinText;
+        [SerializeField] private TMP_Text diamondCoinText;
 
         [Header("Colors")]
         [SerializeField] private PlayerColors playerColors;
@@ -72,7 +92,7 @@ namespace GD3D.UI
         private Vector3 _targetRot;
         private Vector3 _startRot;
 
-        private SaveFile _savefile;
+        private PlayerData _savefile;
         private UnityEngine.Camera _cam;
 
         private Key _quitKey;
@@ -86,6 +106,8 @@ namespace GD3D.UI
         [SerializeField] private GameObject PlayerChoosePanel;
         [SerializeField] private GameObject ColorChoosePanel;
 
+        [Space]
+        [SerializeField] private Button getGoldByReward;
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -93,6 +115,23 @@ namespace GD3D.UI
 
         private void Start()
         {
+            getGoldByReward.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
+
+            });
+
+            GoldShop.Instance.GetGoldByReward.onClick.AddListener(() =>
+            {
+                Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
+
+            });
+
+            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", GetGold);
+            Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeCoin);
+
+            GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
+
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.iconKit;
 
@@ -103,7 +142,7 @@ namespace GD3D.UI
             _cam = Helpers.Camera;
 
             // Cache the current save file class
-            _savefile = SaveData.SaveFile;
+            _savefile = Geekplay.Instance.PlayerData;
 
             // Set color picker colors to the colors stored in the save file
             colorPicker1.SetColor(_savefile.PlayerColor1);
@@ -122,15 +161,15 @@ namespace GD3D.UI
 
             starsText.text = _savefile.StarsCollected.ToString();
             coinsText.text = _savefile.CoinsCollected.ToString();
-
+            diamondCoinText.text = _savefile.DiamondCoinsCollected.ToString();
             // Set start variables
             _startRot = modelParent.localRotation.eulerAngles;
             _targetRot = _startRot;
 
             _startSpinSpeed = spinSpeed;
 
-            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
-            goldcoinText.text = goldCoin.ToString();
+            goldCoin = Geekplay.Instance.PlayerData.GoldCoinsCollected;
+            goldCoinText.text = goldCoin.ToString();
 
             //-- Create all the icon buttons for every gamemode
 
@@ -139,7 +178,7 @@ namespace GD3D.UI
             {
                 _iconButtonDataDictionary.Add(buttonData.Gamemode, buttonData);
                 _iconButtonParents.Add(buttonData.Gamemode, buttonData.Parent);
-                _iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
+                //_iconButtonTemplates.Add(buttonData.Gamemode, buttonData.TemplateButton);
                 _iconButtons.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconModels.Add(buttonData.Gamemode, new List<GameObject>());
                 _iconButtonsSelected.Add(buttonData.Gamemode, new List<GameObject>());
@@ -160,93 +199,104 @@ namespace GD3D.UI
             UpdateIconCategory();
 
             // Loop through every gamemodes icon data
-            foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
-            {
-                GameObject buttonTemplate = _iconButtonTemplates[iconData.Gamemode];
-                GameObject templateModel = _iconButtonDataDictionary[iconData.Gamemode].TemplateModel.gameObject;
+            //foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
+            //{
+                //GameObject buttonTemplate = _iconButtonTemplates[Gamemode.cube];
+                GameObject templateModel = _iconButtonDataDictionary[Gamemode.cube].TemplateModel.gameObject;
 
                 // Create an integer which will be used to keep track of our current index in the next foreach loop
-                int index = 0;
 
-                int cost = 0;
+                int costIndex = 0;
                 // Loop through all mesh data in the icon data
-                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in iconData.Meshes)
+                foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
                 {
                     // Create a clone of the template button
-                    GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[iconData.Gamemode]);
+                    //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
 
-                    TextMeshProUGUI costText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+                    TextMeshProUGUI costText = CubeButtons[costIndex].GetComponentInChildren<TextMeshProUGUI>();
 
-                    if(cost != 0 && !SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, index))
+                    Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
+
+                    //if (iconData.Gamemode == Gamemode.cube)
+                    //{
+                        if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, costIndex))
+                        {
+                            costText.gameObject.SetActive(true);
+                            costText.text = costList[costIndex].cost.ToString();
+                            if (costList[costIndex].unit == CubeCost.Unit.Gold)
+                            {
+                                costText.gameObject.GetComponentInChildren<Image>().sprite = GoldIcon;
+                            }
+                            else
+                            {
+                                costText.gameObject.GetComponentInChildren<Image>().sprite = DiamondIcon;
+                            }
+                        }
+                        else
+                        {
+                            costText.gameObject.SetActive(false);
+                        }
+
+                        buttonCost.Cost = costList[costIndex].cost;
+
+                    //}
+
+                    int thisIndex = costIndex;
+
+                    CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        costText.gameObject.SetActive(true);
-                        costText.text = cost.ToString();
-                    }
-                    else
-                    {
-                        costText.gameObject.SetActive(false);
-                    }
-
-
-                    Buyable buttonCost = newButton.GetComponent<Buyable>();
-                    buttonCost.Cost = cost;
-
-                    int thisIndex = index;
-
-                    newButton.GetComponent<Button>().onClick.AddListener(() =>
-                    {
-                        if (!SaveData.SaveFile.IsBuyedIconIndex(iconData.Gamemode, thisIndex))
+                        if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
                         {
                             if (!buttonCost.TryBuyForGold(goldCoin)) return;
 
-                            SaveData.SaveFile.SaveBuyedIconIndex(iconData.Gamemode, thisIndex);
+                            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
+
+                            Geekplay.Instance.Save();
 
                             goldCoin = buttonCost.buyForFold(goldCoin);
-                            goldcoinText.text = goldCoin.ToString();
+                            goldCoinText.text = goldCoin.ToString();
                             costText.enabled = false;
                         }
+                        _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
+                        UpdateIconSelection(Gamemode.cube);
 
-                        _savefile.SetEquippedIcon(iconData.Gamemode, thisIndex);
-
-                        UpdateIconSelection();
                     });
-
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
 
-                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[iconData.Gamemode][index].Mesh;
+                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[Gamemode.cube][costIndex].Mesh;
 
-                    _iconModels[iconData.Gamemode].Add(iconModel);
+                    _iconModels[Gamemode.cube].Add(iconModel);
 
                     // Get the "Selected" image on the button
-                    GameObject selectedObj = newButton.transform.Find("Selected").gameObject;
+                    GameObject selectedObj = CubeButtons[costIndex].transform.Find("Selected").gameObject;
 
                     // Set the mesh for the button
-                    MeshFilter meshFilter = newButton.GetComponentInChildren<MeshFilter>();
+                    MeshFilter meshFilter = CubeButtons[costIndex].GetComponentInChildren<MeshFilter>();
 
                     meshFilter.mesh = meshData.Mesh;
 
                     // Add the newly created button and selected image to the dictionary
-                    _iconButtons[iconData.Gamemode].Add(newButton);
-                    _iconButtonsSelected[iconData.Gamemode].Add(selectedObj);
+                    _iconButtons[Gamemode.cube].Add(CubeButtons[costIndex]);
+                    _iconButtonsSelected[Gamemode.cube].Add(selectedObj);
 
-                    index++;
-                    cost += 5;
+                    costIndex++;
                 }
 
-
+                costIndex = 0;
                 templateModel.SetActive(false);
 
                 // Destroy template button
-                Destroy(_iconButtonTemplates[iconData.Gamemode]);
+                //Destroy(_iconButtonTemplates[Gamemode.cube]);
 
 
                 _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
                 _colorChoose.onClick.AddListener(ShowColorChoose);
-            }
 
-            UpdateIconSelection();
+            //}
+
+            UpdateIconSelection(Gamemode.cube);
 
             // Destroy template category button
             Destroy(templateCategoryButton.gameObject);
@@ -256,7 +306,7 @@ namespace GD3D.UI
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
             // Loop through all icon models and add an outline to them since QuickOutline apparently only works if it's added and can't be reset manually
-            foreach (var pair in _iconModels)
+           /* foreach (var pair in _iconModels)
             {
                 foreach (GameObject obj in pair.Value)
                 {
@@ -264,13 +314,26 @@ namespace GD3D.UI
                     outline.OutlineWidth = 10;
                     outline.OutlineColor = Color.black;
                 }
-            }
+            }*/
         }
 
-        public void ChangeGoldCoin()
+
+        public void kiti(string kitiName)
         {
-            goldCoin = SaveData.SaveFile.GoldCoinsCollected;
-            goldcoinText.text = goldCoin.ToString();
+            Geekplay.Instance.RealBuyItem(kitiName);
+        }
+        private void GetGold()
+        {
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += 5000;
+        }
+
+        public void ChangeCoin()
+        {
+            goldCoin = Geekplay.Instance.PlayerData.GoldCoinsCollected;
+            goldCoinText.text = goldCoin.ToString();
+
+            diamondCoin = Geekplay.Instance.PlayerData.DiamondCoinsCollected;
+            diamondCoinText.text = diamondCoin.ToString();
         }
         private void ShowColorChoose()
         {
@@ -299,84 +362,84 @@ namespace GD3D.UI
             }
 
             // Detect if the mouse was pressed down
-            if (Input.GetMouseButtonDown(0) && !_doMouseRotation)
-            {
-                // Send a ray from the mouse position
-                Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+            //if (Input.GetMouseButtonDown(0) && !_doMouseRotation)
+            //{
+            //    // Send a ray from the mouse position
+            //    Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
 
-                // Check if the ray hit the modelLayer
-                if (Physics.Raycast(ray, Mathf.Infinity, modelLayer))
-                {
-                    CancelInvoke(nameof(StopMouseSpin));
-                    
-                    // If so, then we begin doing mouse rotation
-                    _doMouseRotation = true;
+            //    // Check if the ray hit the modelLayer
+            //    if (Physics.Raycast(ray, Mathf.Infinity, modelLayer))
+            //    {
+            //        CancelInvoke(nameof(StopMouseSpin));
 
-                    // Stop the current stopMouseSpinEase (if it exists)
-                    if (EasingManager.TryRemoveEaseObject(_stopMouseSpinEaseID))
-                    {
-                        _stopMouseSpinEaseID = null;
-                    }
+            //        // If so, then we begin doing mouse rotation
+            //        _doMouseRotation = true;
 
-                    // Stop the current spinSpeedEase (if it exists)
-                    if (EasingManager.TryRemoveEaseObject(_spinSpeedEaseID))
-                    {
-                        _spinSpeedEaseID = null;
-                    }
-                }
-            }
-            // Detect if the mouse button was released
-            else if (Input.GetMouseButtonUp(0) && _doMouseRotation)
-            {
-                _doMouseRotation = false;
+            //        // Stop the current stopMouseSpinEase (if it exists)
+            //        if (EasingManager.TryRemoveEaseObject(_stopMouseSpinEaseID))
+            //        {
+            //            _stopMouseSpinEaseID = null;
+            //        }
 
-                EaseObject ease = new EaseObject(1);
+            //        // Stop the current spinSpeedEase (if it exists)
+            //        if (EasingManager.TryRemoveEaseObject(_spinSpeedEaseID))
+            //        {
+            //            _spinSpeedEaseID = null;
+            //        }
+            //    }
+            //}
+            //// Detect if the mouse button was released
+            //else if (Input.GetMouseButtonUp(0) && _doMouseRotation)
+            //{
+            //    _doMouseRotation = false;
 
-                ease.OnUpdate = (obj) =>
-                {
-                    spinSpeed = obj.GetValue(0, _startSpinSpeed);
-                };
+            //    EaseObject ease = new EaseObject(1);
 
-                _spinSpeedEaseID = ease.ID;
+            //    ease.OnUpdate = (obj) =>
+            //    {
+            //        spinSpeed = obj.GetValue(0, _startSpinSpeed);
+            //    };
 
-                // If so, then stop doing mouse rotation
-                Invoke(nameof(StopMouseSpin), 0.5f);
-            }
+            //    _spinSpeedEaseID = ease.ID;
 
-            if (_doMouseRotation)
-            {
-                _targetRot.z += -Input.GetAxis("Mouse X") * mouseSpinSpeed * Time.deltaTime;
-                _targetRot.x += Input.GetAxis("Mouse Y") * mouseSpinSpeed * Time.deltaTime;
+            //    // If so, then stop doing mouse rotation
+            //    Invoke(nameof(StopMouseSpin), 0.5f);
+            //}
 
-                _targetRot.z %= 360;
-                _targetRot.x %= 360;
-            }
-            else
-            {
-                _targetRot.z += spinSpeed * Time.deltaTime;
-                _targetRot.z %= 360;
-            }
+            //if (_doMouseRotation)
+            //{
+            //    _targetRot.z += -Input.GetAxis("Mouse X") * mouseSpinSpeed * Time.deltaTime;
+            //    _targetRot.x += Input.GetAxis("Mouse Y") * mouseSpinSpeed * Time.deltaTime;
+
+            //    _targetRot.z %= 360;
+            //    _targetRot.x %= 360;
+            //}
+            //else
+            //{
+            _targetRot.z += spinSpeed * Time.deltaTime;
+            _targetRot.z %= 360;
+            //}
 
             modelParent.localRotation = Quaternion.Euler(_targetRot);
         }
 
-        private void StopMouseSpin()
-        {
-            EaseObject ease = stopMouseSpinEase.CreateEase();
+        //private void StopMouseSpin()
+        //{
+        //    EaseObject ease = stopMouseSpinEase.CreateEase();
 
-            float startX = _targetRot.x;
-            float startY = _targetRot.y;
+        //    float startX = _targetRot.x;
+        //    float startY = _targetRot.y;
 
-            // Set on update
-            ease.OnUpdate = (obj) =>
-            {
-                _targetRot.x = obj.GetValue(startX, _startRot.x);
-                _targetRot.y = obj.GetValue(startY, _startRot.y);
-            };
+        //    // Set on update
+        //    ease.OnUpdate = (obj) =>
+        //    {
+        //        _targetRot.x = obj.GetValue(startX, _startRot.x);
+        //        _targetRot.y = obj.GetValue(startY, _startRot.y);
+        //    };
 
-            // Set ID
-            _stopMouseSpinEaseID = ease.ID;
-        }
+        //    // Set ID
+        //    _stopMouseSpinEaseID = ease.ID;
+        //}
 
         private void OnEaseObjectRemove(long id)
         {
@@ -401,7 +464,7 @@ namespace GD3D.UI
                 bool isSelectedCategory = _categoryOpen == iconData.Gamemode;
 
                 _iconCategoryButtons[iconData.Gamemode].sprite = isSelectedCategory ? buttonData.OnSprite : buttonData.OffSprite;
-                _iconButtonParents[iconData.Gamemode].gameObject.SetActive(isSelectedCategory);
+                _iconButtonParents[iconData.Gamemode].gameObject.SetActive(isSelectedCategory); 
 
                 int index = 0;
 
@@ -428,6 +491,31 @@ namespace GD3D.UI
 
                     index++;
                 }
+            }
+
+            foreach (var pair in _iconModels)
+            {
+                foreach (GameObject obj in pair.Value)
+                {
+                    obj.SetActive(false);
+                }
+            }
+
+            // Update mesh for the model on our currently open category
+            _iconModels[_categoryOpen][PlayerIcons.GetIconIndex(_categoryOpen)].SetActive(true);
+        }
+
+        private void UpdateIconSelection(Gamemode gamemode)
+        {
+            int index = 0;
+
+            foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
+            {
+                bool isEquipped = _savefile.GetEquippedIconIndex(gamemode) == index;
+
+                _iconButtonsSelected[gamemode][index].SetActive(isEquipped);
+
+                index++;
             }
 
             foreach (var pair in _iconModels)
@@ -511,6 +599,11 @@ namespace GD3D.UI
             }
 
             Transition.TransitionToScene(index);
+
+            if(index == 0)
+            {
+                Geekplay.Instance.ShowInterstitialAd();
+            }
         }
 
         [Serializable]

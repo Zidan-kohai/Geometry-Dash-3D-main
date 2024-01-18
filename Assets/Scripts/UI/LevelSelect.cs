@@ -117,7 +117,7 @@ namespace GD3D.UI
                 {
                     // Get the level data
                     LevelData levelData = levels[i];
-                    levelData.IsOpen = SaveData.SaveFile.GetLevelData(levelData.LevelName).isOpen;
+                    levelData.IsOpen = Geekplay.Instance.PlayerData.GetLevelData(levelData.LevelName).isOpen;
                     // Create a new level
                     LevelSelectOption newLevel = Instantiate(levelTemplate, levelPos, levelTransform.rotation, levelTransform.parent).GetComponent<LevelSelectOption>();
                     _levelTransforms[i] = newLevel.transform;
@@ -396,9 +396,9 @@ namespace GD3D.UI
             // Update the level stats screen with data from the JSON save file if we are in range
             if (s_scrollIndex < _length - 1)
             {
-                SaveFile.LevelSaveData levelSave = null;
+                PlayerData.LevelSaveData levelSave = null;
                 string levelName = levels[s_scrollIndex].LevelName;
-                levelSave = SaveData.SaveFile.LevelData.FirstOrDefault((levelData) => levelData.Name == levelName);
+                levelSave = Geekplay.Instance.PlayerData.LevelData.FirstOrDefault((levelData) => levelData.Name == levelName);
 
                 // Set the name
                 levelStatsNameText.text = levelName;

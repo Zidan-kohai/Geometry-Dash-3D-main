@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using QuickOutline;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
@@ -161,18 +160,18 @@ namespace GD3D.Player
                 meshFilter.mesh = newMesh;
 
                 // Remove and add back the outline component since it's stupid and only refreshes if you do this stupid stupid stupid
-                if (updateOutline && meshFilter.TryGetComponent(out Outline outline))
-                {
-                    Destroy(outline);
+               // if (updateOutline && meshFilter.TryGetComponent(out Outline outline))
+             //   {
+              //      Destroy(outline);
 
-                    Helpers.TimerEndOfFrame(this, () =>
-                    {
-                        outline = meshFilter.gameObject.AddComponent<Outline>();
+            //        Helpers.TimerEndOfFrame(this, () =>
+            //        {
+                       // outline = meshFilter.gameObject.AddComponent<Outline>();
 
-                        outline.OutlineColor = Color.black;
-                        outline.OutlineWidth = 10;
-                    });
-                }
+   //                     outline.OutlineColor = Color.black;
+     //                   outline.OutlineWidth = 10;
+           //         });
+           //     }
             }
         }
 

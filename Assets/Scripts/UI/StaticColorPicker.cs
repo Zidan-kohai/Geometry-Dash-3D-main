@@ -41,11 +41,11 @@ namespace GD3D
             switch(whitchColorChange)
             {
                 case WhitchColor.Color1:
-                    if (SaveData.SaveFile.BuyedColor1.Contains(image.color))
+                    if (Geekplay.Instance.PlayerData.BuyedColor1.Contains(image.color))
                         buyable.buyed();
                     break;
                 case WhitchColor.Color2:
-                    if (SaveData.SaveFile.BuyedColor2.Contains(image.color))
+                    if (Geekplay.Instance.PlayerData.BuyedColor2.Contains(image.color))
                         buyable.buyed();
                     break;
             }
@@ -63,24 +63,25 @@ namespace GD3D
                     break;
             }
 
-            if (!buyable.TryBuyForGold(SaveData.SaveFile.GoldCoinsCollected) && !buyable.IsBuyed) return;
 
             if (!buyable.IsBuyed)
             {
-                buyable.buyForFold(SaveData.SaveFile.GoldCoinsCollected);
-                
-                switch(whitchColorChange)
-                {
-                    case WhitchColor.Color1:
-                        SaveData.SaveFile.BuyedColor1.Add(image.color);
-                        break;
-                    case WhitchColor.Color2:
-                        SaveData.SaveFile.BuyedColor2.Add(image.color);
-                        break;
-                }
+                if (!buyable.TryBuyForGold(Geekplay.Instance.PlayerData.GoldCoinsCollected)) return;
 
-                SaveData.Save();
+                buyable.buyForFold(Geekplay.Instance.PlayerData.GoldCoinsCollected);
             }
+
+            switch (whitchColorChange)
+            {
+                case WhitchColor.Color1:
+                    Geekplay.Instance.PlayerData.BuyedColor1.Add(image.color);
+                    break;
+                case WhitchColor.Color2:
+                    Geekplay.Instance.PlayerData.BuyedColor2.Add(image.color);
+                    break;
+            }
+
+            SaveData.Save();
 
             if (whitchColorChange == WhitchColor.Color1)
             {
@@ -94,7 +95,7 @@ namespace GD3D
             }
 
 
-            iconKit.ChangeGoldCoin();
+            iconKit.ChangeCoin();
         }
 
 

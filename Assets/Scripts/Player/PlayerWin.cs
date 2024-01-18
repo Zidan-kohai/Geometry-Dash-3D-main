@@ -59,9 +59,12 @@ namespace GD3D.Player
             //obj.RemoveAfterTime(1);
 
             // Play death sound
-            SoundManager.PlaySound("Player Explode", 1);
+            //SoundManager.PlaySound("Player Explode", 1);
 
             // Invoke on death event
+
+            SoundManager.Instance.PlayWinClip();
+
             player.InvokeWinEvent();
         }
     }

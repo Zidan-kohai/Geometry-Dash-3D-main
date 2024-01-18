@@ -415,24 +415,5 @@ namespace GD3D.GDCamera
             _shakeLength = length;
             _shakeLengthTimer = length;
         }
-
-#if UNITY_EDITOR
-        // Draw gizmos only in the editor
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-
-            Vector3 position = transform.position;
-
-            Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, Vector3.one);
-            Gizmos.matrix = matrix;
-
-            position.y += limitYMin;
-            Gizmos.DrawLine(position - new Vector3(10, 0, 0), position + new Vector3(10, 0, 0));
-
-            position.y = transform.position.y + limitYMax;
-            Gizmos.DrawLine(position - new Vector3(10, 0, 0), position + new Vector3(10, 0, 0));
-        }
-#endif
     }
 }

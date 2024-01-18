@@ -26,7 +26,7 @@ namespace GD3D.Player
         [SerializeField] private TMP_Text attemptText;
         private int _currentAttempt = 1;
         public int CurrentAttemp => _currentAttempt;
-
+            
         [Header("Lose Menu")]
         [SerializeField] private GameObject loseMenu;
         [SerializeField] private EaseSettings respawnMenuEaseSettings;
@@ -62,6 +62,9 @@ namespace GD3D.Player
         [SerializeField] private Button winQuitButton;
         [SerializeField] private Button winNextLevelButton;
 
+        private int goldReward = 0;
+        private int diamondReward = 0;
+
         private UIClickable[] _respawnMenuUIClickables;
 
         private long? _respawnSizeEaseID = null;
@@ -82,8 +85,9 @@ namespace GD3D.Player
 
         //-- Other
         private Coroutine _currentRespawnCoroutine;
-        private SaveFile _saveFile;
+        private PlayerData _saveFile;
         private PlayerPracticeMode _practiceMode;
+        private int gameCount;
 
         /// <summary>
         /// Start is called before the first frame update.
@@ -91,9 +95,10 @@ namespace GD3D.Player
         public override void Start()
         {
             base.Start();
-            _currentAttempt = SaveData.CurrentLevelData.TotalAttempts + 1;
+            loseDiamondText.text = $"{0}";
+            _currentAttempt = Geekplay.Instance.CurrentLevelData.TotalAttempts + 1;
             // Set the save file
-            _saveFile = SaveData.SaveFile;
+            _saveFile = Geekplay.Instance.PlayerData;
 
             attemptText.text = $"Attempt  {_currentAttempt}";
             loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
@@ -107,7 +112,9 @@ namespace GD3D.Player
 
             loseRestartButton.onClick.AddListener(Respawn);
             loseQuitButton.onClick.AddListener(QuitToMenu);
-            loseReviveButton.onClick.AddListener(Revive);
+            loseReviveButton.onClick.AddListener(BeforeRevive);
+
+            Geekplay.Instance.SubscribeOnReward("Revive", Revive);
 
             winRestartButton.onClick.AddListener(Respawn);
             winQuitButton.onClick.AddListener(QuitToMenu);
@@ -155,6 +162,8 @@ namespace GD3D.Player
             PlayerMain.Instance.OnDeath += ShowLoseMenu;
             // Destroy the newly created object because we have no use out of it anymore
             Destroy(obj);
+
+            gameCount = 0;
         }
 
         private void OnEaseObjectRemove(long id)
@@ -173,11 +182,13 @@ namespace GD3D.Player
         }
 
         #region Respawn Menu
+
         /// <summary>
         /// Makes the respawn menu appear with a scale easing.
         /// </summary>
         private void ShowLoseMenu()
         {
+
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
 
@@ -190,11 +201,32 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            loseGoldText.text = (PlayerMain.TimesJumped * 10).ToString();
-            loseDiamondText.text = "0";
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 100).ToString();
+                    break;
+                case 5:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 150).ToString();
+                    break;
+                case 6:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 200).ToString();
+                    break;
+                case 7:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 250).ToString();
+                    break;
+                case 8:
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 300).ToString();
+                    loseDiamondText.text = Convert.ToInt32(ProgressBar.Percent * 10).ToString();
+                    break;
+                case 9:
+                    loseDiamondText.text = Convert.ToInt32(ProgressBar.Percent * 10).ToString();
+                    loseGoldText.text = (Convert.ToInt32(ProgressBar.Percent * 100) * 350).ToString();
+                    break;
+            }
 
-            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + Convert.ToInt32(loseGoldText.text);
-            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + Convert.ToInt32(loseDiamondText.text);
+            goldReward = Convert.ToInt32(loseGoldText.text);
+            diamondReward = Convert.ToInt32(loseDiamondText.text);
 
             loseMenuProgressBar.normalizedValue = ProgressBar.Percent;
             loseMenuProgressPercent.text = ProgressBar.PercentString;
@@ -217,10 +249,42 @@ namespace GD3D.Player
 
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
+
+            StartCoroutine(ShowADV());
+
+
+            if (gameCount >= 3)
+            {
+                Geekplay.Instance.RateGameFunc();
+            }
         }
 
         private void ShowWinMenu()
         {
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+                    break;
+                case 5:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 200);
+                    break;
+                case 6:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 300);
+                    break;
+                case 7:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 400);
+                    break;
+                case 8:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 500);
+                    break;
+                case 9:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 600);
+                    break;
+            }
+
+            Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
+
             // Disable the pause menu so you can't pause
             PauseMenu.CanPause = false;
 
@@ -233,11 +297,51 @@ namespace GD3D.Player
             TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
             winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
 
-            winGoldText.text =$"{50 * (SceneManager.GetActiveScene().buildIndex - 3)}";
-            winDiamondText.text = $"0";
+            
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    winGoldText.text = $"{12500}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 12500;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 5:
+                    winGoldText.text = $"{18000}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 18000;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 6:
+                    winGoldText.text = $"{24000}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 24000;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 7:
+                    winGoldText.text = $"{30000}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 30000;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += 0;
+                    break;
+                case 8:
+                    winGoldText.text = $"{40000}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 40000;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += (int)ProgressBar.Percent * 10;
+                    break;
+                case 9:
+                    winGoldText.text = $"{50000}";
+                    winDiamondText.text = $"0";
+                    Geekplay.Instance.PlayerData.GoldCoinsCollected += 50000;
+                    Geekplay.Instance.PlayerData.DiamondCoinsCollected += (int)ProgressBar.Percent * 10;
+                    break;
+            }
 
-            SaveData.SaveFile.GoldCoinsCollected = SaveData.SaveFile.GoldCoinsCollected + 50 * (SceneManager.GetActiveScene().buildIndex - 3);
-            SaveData.SaveFile.DiamondCoinsCollected = SaveData.SaveFile.DiamondCoinsCollected + 0;
+            goldReward = Convert.ToInt32(winGoldText.text);
+            diamondReward = Convert.ToInt32(winDiamondText.text);
+
+            SaveData.Save();
 
             // Enable win menu
             winMenu.SetActive(true);
@@ -257,6 +361,21 @@ namespace GD3D.Player
 
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
+
+            StartCoroutine(ShowADV());
+
+
+            if (gameCount >= 3)
+            {
+                Geekplay.Instance.RateGameFunc();
+            }
+        }
+
+        IEnumerator ShowADV()
+        {
+            yield return new WaitForSeconds(2);
+
+            Geekplay.Instance.ShowInterstitialAd();
         }
 
         /// <summary>
@@ -265,8 +384,38 @@ namespace GD3D.Player
         public void QuitToMenu()
         {
             _currentAttempt++;
-            SaveData.CurrentLevelData.TotalAttempts++;
+            Geekplay.Instance.CurrentLevelData.TotalAttempts++;
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += diamondReward;
+
+
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+                    break;
+                case 5:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 200);
+                    break;
+                case 6:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 300);
+                    break;
+                case 7:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 400);
+                    break;
+                case 8:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 500);
+                    break;
+                case 9:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 600);
+                    break;
+            }
+
+
             SaveData.Save();
+
+
+            Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
             Transition.TransitionToLastActiveMenu();
         }
@@ -324,7 +473,8 @@ namespace GD3D.Player
         private void nextScene()
         {
             _currentAttempt++;
-            SaveData.CurrentLevelData.TotalAttempts++;
+            Geekplay.Instance.CurrentLevelData.TotalAttempts++;
+
             SaveData.Save();
 
             Transition.TransitionToNextScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -336,7 +486,7 @@ namespace GD3D.Player
         {
             // Increase attempt count
             _currentAttempt++;
-            SaveData.CurrentLevelData.TotalAttempts++;
+            Geekplay.Instance.CurrentLevelData.TotalAttempts++;
 
             // Disable the mesh
             player.Mesh.ToggleCurrentMesh(false);
@@ -375,14 +525,43 @@ namespace GD3D.Player
         /// Respawns the player.
         /// </summary>
         /// 
+
         #region Respawn
         public void Respawn()
         {
+            switch (SceneManager.GetActiveScene().buildIndex)
+            {
+                case 4:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 100);
+                    break;
+                case 5:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 200);
+                    break;
+                case 6:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 300);
+                    break;
+                case 7:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 400);
+                    break;
+                case 8:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 500);
+                    break;
+                case 9:
+                    Geekplay.Instance.PlayerData.LeaderboardPointds += Convert.ToInt32(ProgressBar.Percent * 600);
+                    break;
+            }
+
+            Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
+
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 
             _currentAttempt++;
-            SaveData.CurrentLevelData.TotalAttempts++;
+            Geekplay.Instance.CurrentLevelData.TotalAttempts++;
+
+            Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
+            Geekplay.Instance.PlayerData.DiamondCoinsCollected += diamondReward;
+
             SaveData.Save();
             // Disable the respawn menu and new best popups
             loseMenu.SetActive(false);
@@ -410,6 +589,7 @@ namespace GD3D.Player
             // Set attempt text
             attemptText.text = $"Attempt  {_currentAttempt}";
             // Reset jumps and time because they are static
+
             PlayerMain.TimesJumped = 0;
             PlayerMain.TimeSpentPlaying = 0;
 
@@ -419,6 +599,13 @@ namespace GD3D.Player
 
             // Ignore input for this moment so the player won't instantly jump when respawning
             player.IgnoreInput();
+
+            gameCount++;
+        }
+
+        public void BeforeRevive()
+        {
+            Geekplay.Instance.ShowRewardedAd("Revive");
         }
 
         public void Revive()
@@ -454,9 +641,11 @@ namespace GD3D.Player
         }
 
         #endregion
+
         /// <summary>
         /// Makes the player flash on/off and spawn respawn rings 3 times.
         /// </summary>
+        
         private IEnumerator RespawnCouroutine()
         {
             // Make the player flash on/off and spawn respawn rings every time the player is turned on

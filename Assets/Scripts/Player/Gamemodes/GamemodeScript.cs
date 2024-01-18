@@ -169,9 +169,9 @@ namespace GD3D.Player
         {
             PlayerMain.TimesJumped++;
 
-            if (SaveData.CurrentLevelData != null)
+            if (Geekplay.Instance.CurrentLevelData != null)
             {
-                SaveData.CurrentLevelData.TotalJumps++;
+                Geekplay.Instance.CurrentLevelData.TotalJumps++;
             }
         }
 
