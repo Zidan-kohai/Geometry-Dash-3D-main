@@ -135,6 +135,10 @@ namespace GD3D.UI
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.iconKit;
 
+
+            _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
+            _colorChoose.onClick.AddListener(ShowColorChoose);
+
             // Get the quit key
             _quitKey = PlayerInput.GetKey("Escape");
 
@@ -213,6 +217,8 @@ namespace GD3D.UI
                     // Create a clone of the template button
                     //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
 
+                    Debug.Log("SpawnCube");
+
                     TextMeshProUGUI costText = CubeButtons[costIndex].GetComponentInChildren<TextMeshProUGUI>();
 
                     Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
@@ -267,7 +273,7 @@ namespace GD3D.UI
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
 
-                    iconModel.GetComponent<MeshFilter>().mesh = PlayerIcons.MeshDataDictionary[iconData.Gamemode][costIndex].Mesh;
+                    iconModel.GetComponent<MeshFilter>().mesh = playerIcons.GetGamemodeIconData[(int)iconData.Gamemode].Meshes[costIndex].Mesh;
 
                     _iconModels[iconData.Gamemode].Add(iconModel);
 
@@ -293,8 +299,7 @@ namespace GD3D.UI
                 //Destroy(_iconButtonTemplates[Gamemode.cube]);
 
 
-                _playerChoose.onClick.AddListener(ShowPlayerChoosePanel);
-                _colorChoose.onClick.AddListener(ShowColorChoose);
+                
 
             }
 

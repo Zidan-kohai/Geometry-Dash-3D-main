@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8100388417609413791}
   - component: {fileID: 8528255910183302013}
   - component: {fileID: 8265219892670943158}
-  - component: {fileID: 2938576155522524943}
   m_Layer: 3
   m_Name: Cube Mesh
   m_TagString: Untagged
@@ -85,24 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2938576155522524943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156881054928147421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 658498da2c818c145844096baf63cb0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &2078462698650963886
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,7 +4992,6 @@ GameObject:
   - component: {fileID: 3220376882576718270}
   - component: {fileID: 1954219341626111515}
   - component: {fileID: 4393894114387722961}
-  - component: {fileID: 2880829432294875909}
   m_Layer: 0
   m_Name: Ship Mesh
   m_TagString: Untagged
@@ -5086,24 +5066,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2880829432294875909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880829432294875908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 658498da2c818c145844096baf63cb0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5889445912722643029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5115,7 +5077,6 @@ GameObject:
   - component: {fileID: 6552829224179581679}
   - component: {fileID: 7881168382585392458}
   - component: {fileID: 5385038150409795968}
-  - component: {fileID: 5889445912722643030}
   m_Layer: 3
   m_Name: Cube Mesh
   m_TagString: Untagged
@@ -5189,24 +5150,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5889445912722643030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5889445912722643029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 658498da2c818c145844096baf63cb0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8008437826582876192
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,6 +15211,27 @@ MonoBehaviour:
     - Mesh: {fileID: -3682261829456598217, guid: 4cd53045d2331594bbf68e8f95fd886c, type: 3}
     - Mesh: {fileID: 2412229111325651135, guid: 33ec78e3232c5824f999a4b84c94b89c, type: 3}
     - Mesh: {fileID: -3438924795872436342, guid: ce0c249885182454c929ac6bf8214799, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 2acfd0e3e8e55aa4193e3ed37d3f81b2, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 4af88f382e703e34e8c26983a1bca1aa, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: ee3a8934e697b4b4094a645ad54df1dd, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 2d97215a8cb8cbb4eb38eeb9029c1e7a, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: d745d49d544243a4f921a029b682f022, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: d745d49d544243a4f921a029b682f022, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: a4b4c95c7bdc03a49b67bdb01394a949, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 9a341a87e3707e44382ce323194b473f, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: b891ce2793f89e344942048a6040aea3, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 91f727c6b319307438d9bda53d1e06e5, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 087b9bb6412fdc94e8f49185d65d3aae, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 9e385a773f675464480f3c5a5fa7d224, type: 3}
+    - Mesh: {fileID: -5495902117074765545, guid: 2e8aa5dd959295a49bae5739ef35ed5d, type: 3}
   - Gamemode: 1
     Meshes:
     - Mesh: {fileID: -2532674419269209151, guid: 0b43c84022c68a84a84339ec7367ebec, type: 3}
@@ -15434,6 +15398,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   poolSize: 2
+  immortalityTime: 0
   deathEffect: {fileID: 2840160538278776768, guid: 3c6a50d65690dbf48bf9d14647c38a9f, type: 3}
 --- !u!114 &8224552817121300477
 MonoBehaviour:
@@ -15464,6 +15429,9 @@ MonoBehaviour:
   loseMenuProgressPercent: {fileID: 0}
   loseMenuJumpText: {fileID: 0}
   loseMenuTimeText: {fileID: 0}
+  loseGoldText: {fileID: 0}
+  loseDiamondText: {fileID: 0}
+  loseReviveButton: {fileID: 0}
   loseRestartButton: {fileID: 0}
   loseQuitButton: {fileID: 0}
   winMenu: {fileID: 0}
@@ -15471,8 +15439,8 @@ MonoBehaviour:
   winMenuAttemptText: {fileID: 0}
   winMenuJumpText: {fileID: 0}
   winMenuTimeText: {fileID: 0}
-  goldText: {fileID: 0}
-  diamondText: {fileID: 0}
+  winGoldText: {fileID: 0}
+  winDiamondText: {fileID: 0}
   winRestartButton: {fileID: 0}
   winQuitButton: {fileID: 0}
   winNextLevelButton: {fileID: 0}
@@ -15561,6 +15529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBtwAutoCheckpoint: 1
   checkpointCrystal: {fileID: 8042654931457894504, guid: 42bea17a823fceb488d54abf1c47d39a, type: 3}
+  _checkPointLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &8224552817121300475
 Rigidbody:
   m_ObjectHideFlags: 0
