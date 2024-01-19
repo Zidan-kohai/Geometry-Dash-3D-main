@@ -150,6 +150,7 @@ namespace GD3D.UI
             if (LevelData.cost > Geekplay.Instance.PlayerData.GoldCoinsCollected)
             {
                 GoldShop.Instance.LacksMoney.SetActive(true);
+                GoldShop.Instance.OnOpenShop();
                 return;
             }
 
@@ -166,6 +167,7 @@ namespace GD3D.UI
             if (LevelData.cost > Geekplay.Instance.PlayerData.DiamondCoinsCollected)
             {
                 GoldShop.Instance.LacksMoney.SetActive(true);
+                GoldShop.Instance.OnOpenShop();
                 return;
             }
 

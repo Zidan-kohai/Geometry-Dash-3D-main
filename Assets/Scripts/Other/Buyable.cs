@@ -40,6 +40,7 @@ namespace GD3D
             if (Coin < cost)
             {
                 GoldShop.Instance.LacksMoney.SetActive(true);
+                GoldShop.Instance.OnOpenShop();
                 return false;
             }
 

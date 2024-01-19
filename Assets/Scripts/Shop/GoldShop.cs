@@ -83,11 +83,13 @@ namespace GD3D
 
         public void OnOpenShop()
         {
+            Debug.Log("Gold Shopp Open");
             OpenShop?.Invoke();
         }
 
         public void OnCloseShop()
         {
+            Debug.Log("Gold Shopp Close");
             CloseShop?.Invoke();
         }
     }

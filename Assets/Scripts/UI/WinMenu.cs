@@ -23,12 +23,12 @@ namespace GD3D
         }
         private IEnumerator ShowMenu()
         {
-            ShowButton(doubleAwardButton);
+            StartCoroutine(ShowButton(doubleAwardButton));
 
             yield return new WaitForSeconds(3);
 
-            ShowButton(restartButton);
-            ShowButton(ExitButton);
+            StartCoroutine(ShowButton(restartButton));
+            StartCoroutine(ShowButton(ExitButton));
         }
 
         private IEnumerator ShowButton(GameObject gameObject)

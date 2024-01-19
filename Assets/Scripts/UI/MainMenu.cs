@@ -43,17 +43,25 @@ namespace GD3D.UI
         private void Awake()
         {
             // Set the starting color as the active color for the darkness overlay
-            _darknessOverlayActiveColor = darknessOverlay.color;
 
             // Set the size of both menus to 0
             //quitMenu.localScale = Vector3.zero;
             //infoMenu.localScale = Vector3.zero;
 
             // Make the darkness overlay disappear
+            
+
+        }
+
+        private void Start()
+        {
+
+            _darknessOverlayActiveColor = darknessOverlay.color;
+
             darknessOverlay.color = Color.clear;
             darknessOverlay.raycastTarget = false;
 
-            if(Geekplay.Instance.PlayerData.IsbyedKiti1)
+            if (Geekplay.Instance.PlayerData.IsbyedKiti1)
             {
                 kiti1Button.interactable = false;
                 kiti1Button.gameObject.GetComponent<Animator>().enabled = false;
@@ -96,10 +104,21 @@ namespace GD3D.UI
                 kiti3Buyed.gameObject.SetActive(true);
             });
 
-        }
 
-        private void Start()
-        {
+            Debug.Log($"Main Menu Start GoldShop Instance = {GoldShop.Instance}");
+
+            GoldShop.Instance.OpenShop.AddListener(() =>
+            {
+                Debug.Log("Main Menu Shop Open");
+                MenuHolder.SetActive(false);
+            });
+
+            GoldShop.Instance.CloseShop.AddListener(() =>
+            {
+                Debug.Log("Main Menu Shop Close");
+                MenuHolder.SetActive(true);
+            });
+
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.mainMenu;
 
@@ -130,16 +149,6 @@ namespace GD3D.UI
                 Geekplay.Instance.RealBuyItem("kiti3");
             });*/
 
-
-            GoldShop.Instance.OpenShop.AddListener(() =>
-            {
-                MenuHolder.SetActive(false);
-            });
-
-            GoldShop.Instance.CloseShop.AddListener(() =>
-            {
-                MenuHolder.SetActive(true);
-            });
         }
 
         public void Kiti(string kitiName)

@@ -10,9 +10,11 @@ namespace GD3D
         [SerializeField] private GameObject restartButton;
         [SerializeField] private GameObject ExitButton;
 
-
+        public static int loseCount = 0;
         private void OnEnable()
         {
+            if (loseCount != 0) return;
+
             reviveButton.transform.localScale = Vector3.zero;
             restartButton.transform.localScale = Vector3.zero;
             ExitButton.transform.localScale = Vector3.zero;
@@ -43,25 +45,5 @@ namespace GD3D
                 time -= deltatime;
             }
         }
-
-        //private void OnEnable()
-        //{
-        //    reviveButton.SetActive(false);
-        //    restartButton.SetActive(false); 
-        //    ExitButton.SetActive(false);
-
-        //    StartCoroutine(ShowMenu());
-        //}
-        //private IEnumerator ShowMenu()
-        //{
-        //    yield return new WaitForSeconds(0.2f);
-
-        //    reviveButton.SetActive (true);
-
-        //    yield return new WaitForSeconds(3);
-
-        //    restartButton.SetActive(true);
-        //    ExitButton.SetActive(true);
-        //}
     }
 }
