@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657803, g: 0.49641252, b: 0.574816, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641186, b: 0.5748154, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -589,6 +589,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1395858999}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: ScrollLeft
@@ -838,7 +850,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 53773707}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &53773707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,6 +1433,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1682756666}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: Next
@@ -1575,7 +1611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 82407644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &82407644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,7 +2305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 148476948}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &148476948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,7 +3155,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 172916749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &172916749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3231,16 +3303,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177477744}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.5, y: -65}
+  m_AnchoredPosition: {x: -160.66537, y: -65}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177477746
@@ -4024,7 +4096,7 @@ MonoBehaviour:
   m_text: Color
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: db1df995047e65349b5872383841a97d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4676,17 +4748,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274989459}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 921460168}
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 72.027596}
+  m_AnchoredPosition: {x: 110, y: -70.46769}
   m_SizeDelta: {x: 220, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &274989461
@@ -4770,7 +4842,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 274989461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &275568899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,16 +4880,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275568899}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.5, y: -65}
+  m_AnchoredPosition: {x: -160.66537, y: -65}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275568901
@@ -4873,16 +4957,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281703463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 158.9, y: -248.4}
+  m_AnchoredPosition: {x: 243.89996, y: -248.4}
   m_SizeDelta: {x: 53.568, y: 54.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281703465
@@ -4943,7 +5027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 281703467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &281703467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5173,7 +5269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 294277199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &294277199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5313,7 +5421,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 294737014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &294737014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5825,7 +5945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 340304909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &340304909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5980,7 +6112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348546859}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348546859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6135,7 +6279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 355401180}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &355401180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6468,7 +6624,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 361026621}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &361026621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7054,7 +7222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391576376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &391576376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7418,7 +7598,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 407041139}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &407041139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7573,7 +7765,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 421883095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &421883095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8444,7 +8648,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466842604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &466842604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8599,7 +8815,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 468335604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &468335604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8751,16 +8979,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481793917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.5, y: -25}
+  m_AnchoredPosition: {x: -160.66537, y: -25}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481793919
@@ -8917,7 +9145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 490166682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &490166682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9072,7 +9312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 491493582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &491493582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9405,7 +9657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 507414563}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &507414563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10167,7 +10431,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 567866998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &567866998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10365,16 +10641,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596556158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: -69.5}
+  m_AnchoredPosition: {x: -293.16528, y: -69.5}
   m_SizeDelta: {x: 200, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596556160
@@ -10501,16 +10777,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623292124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225.35834, y: -248.4}
+  m_AnchoredPosition: {x: 310.35828, y: -248.4}
   m_SizeDelta: {x: 53.568, y: 54.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623292126
@@ -10571,7 +10847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 623292128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &623292128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10635,16 +10923,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633974562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: -30}
+  m_AnchoredPosition: {x: -293.16528, y: -30}
   m_SizeDelta: {x: 200, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633974564
@@ -10935,7 +11223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642148609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642148609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11130,7 +11430,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 651542304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &651542304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11765,23 +12077,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1844452853}
-  - {fileID: 1526162196}
-  - {fileID: 1731849856}
-  - {fileID: 633974563}
-  - {fileID: 177477745}
-  - {fileID: 1973365725}
-  - {fileID: 275568900}
-  - {fileID: 596556159}
-  - {fileID: 481793918}
-  - {fileID: 2029990810}
-  - {fileID: 281703464}
-  - {fileID: 623292125}
-  - {fileID: 835616644}
-  - {fileID: 274989460}
-  - {fileID: 1393967424}
-  - {fileID: 1226703250}
-  - {fileID: 1646328109}
+  - {fileID: 1372694819}
   m_Father: {fileID: 824876461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11909,6 +12205,9 @@ MonoBehaviour:
   getGoldByReward: {fileID: 1226703251}
   kiti4Button: {fileID: 1646328111}
   kiti4Buyed: {fileID: 1443479475}
+  iconKitHolder: {fileID: 0}
+  worldCanvasHolder: {fileID: 0}
+  modelHolder: {fileID: 0}
 --- !u!1 &707301049
 GameObject:
   m_ObjectHideFlags: 0
@@ -12331,7 +12630,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 742551401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &742551401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12862,6 +13173,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1535573477}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: ScrollRight
@@ -13118,7 +13441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 766048353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &766048353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13585,7 +13920,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 778153226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &778153226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13815,7 +14162,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 785513679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &785513679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13970,7 +14329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 787083042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &787083042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14026,6 +14397,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8138587181028059005, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138587181028059005, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
@@ -14076,8 +14451,136 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 809268316}
+    - targetCorrespondingSourceObject: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 809268318}
   m_SourcePrefab: {fileID: 100100000, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+--- !u!1 &809268315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8138587181028059004, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+  m_PrefabInstance: {fileID: 809268314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &809268316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809268315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b567a0879ee650445a9311d1cab48af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainAudio: {fileID: 809268317}
+  DeathClip: {fileID: 0}
+  WinClip: {fileID: 0}
+  buttonClickClip: {fileID: 809268318}
+--- !u!82 &809268317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8138587181028059005, guid: 72ebce3d99f7386469dbfc69417ebf32, type: 3}
+  m_PrefabInstance: {fileID: 809268314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &809268318
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809268315}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 693462f1dc349a64ab756efe8690d010, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &820464736
 GameObject:
   m_ObjectHideFlags: 0
@@ -14194,7 +14697,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 820464741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &820464741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14363,18 +14878,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835616643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 144010407}
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -55}
-  m_SizeDelta: {x: -400, y: 100}
+  m_AnchoredPosition: {x: -18.582684, y: -55}
+  m_SizeDelta: {x: -607.1653, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835616645
 MonoBehaviour:
@@ -14910,7 +15425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 849962631}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &849962631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15178,7 +15705,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 890262396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &890262396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15370,7 +15909,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 991
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -15457,7 +15996,7 @@ MonoBehaviour:
   m_text: Skine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: db1df995047e65349b5872383841a97d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15907,7 +16446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 961289875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &961289875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16315,7 +16866,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 988302826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &988302826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17250,7 +17813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1058351441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1058351441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17955,7 +18530,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1086032007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1086032007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18166,7 +18753,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1090387523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1090387523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18480,7 +19079,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1103581337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1103581337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18769,7 +19380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121549562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1121549562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19170,7 +19793,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1189430143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1189430143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19520,17 +20155,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226703249}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1491407504}
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -100}
+  m_AnchoredPosition: {x: -147.16537, y: -100}
   m_SizeDelta: {x: 294.3307, y: 88.6947}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1226703251
@@ -19576,7 +20211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1226703252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1226703252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20015,7 +20662,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282179846}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1282179846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20245,7 +20904,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1293422644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1293422644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20501,7 +21172,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362352127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1362352127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20852,6 +21535,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366182491}
   m_CullTransparentMesh: 1
+--- !u!1 &1372694818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372694819}
+  m_Layer: 5
+  m_Name: IconKitHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1372694819
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372694818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1844452853}
+  - {fileID: 1526162196}
+  - {fileID: 1731849856}
+  - {fileID: 633974563}
+  - {fileID: 177477745}
+  - {fileID: 1973365725}
+  - {fileID: 275568900}
+  - {fileID: 596556159}
+  - {fileID: 481793918}
+  - {fileID: 2029990810}
+  - {fileID: 281703464}
+  - {fileID: 623292125}
+  - {fileID: 835616644}
+  - {fileID: 274989460}
+  - {fileID: 1393967424}
+  - {fileID: 1226703250}
+  - {fileID: 1646328109}
+  m_Father: {fileID: 699386636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 18.582672, y: 142.4953}
+  m_SizeDelta: {x: 1527.1653, y: 435.0094}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1386835065
 GameObject:
   m_ObjectHideFlags: 0
@@ -21056,17 +21791,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393967423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 226228916}
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: -37.5094}
+  m_AnchoredPosition: {x: 110, y: -180.00473}
   m_SizeDelta: {x: 220, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1393967425
@@ -21150,7 +21885,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1393967425}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1395858997
 GameObject:
   m_ObjectHideFlags: 0
@@ -21537,7 +22284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1416555897}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1416555901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21651,6 +22410,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1395858999}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: ScrollRight
@@ -22645,7 +23416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491076511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1491076511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22746,7 +23529,7 @@ MonoBehaviour:
   m_text: Get 5000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: db1df995047e65349b5872383841a97d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23408,7 +24191,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1524090146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1524090146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23474,16 +24269,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526162195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48, y: -45}
+  m_AnchoredPosition: {x: 133, y: -45}
   m_SizeDelta: {x: 62, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526162197
@@ -23545,6 +24340,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 699386637}
         m_TargetAssemblyTypeName: GD3D.UI.IconKit, Assembly-CSharp
         m_MethodName: GotoScene
@@ -23711,7 +24518,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530019232}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1530019232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24428,7 +25247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585981944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1585981944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24543,89 +25374,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599277559}
   m_CullTransparentMesh: 1
---- !u!1 &1608619912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1608619914}
-  - component: {fileID: 1608619913}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!20 &1608619913
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608619912}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.68235296, g: 0.68235296, b: 0.68235296, a: 1}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0.2
-    y: 0
-    width: 0.6
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 3
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 32
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1608619914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608619912}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612072216
 GameObject:
   m_ObjectHideFlags: 0
@@ -24742,7 +25490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1612072221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1612072221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24897,7 +25657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1613183445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1613183445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25052,7 +25824,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1617438263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1617438263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25207,7 +25991,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1626709517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1626709517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25461,11 +26257,11 @@ RectTransform:
   - {fileID: 185856750}
   - {fileID: 857459245}
   - {fileID: 1443479476}
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -385.30502, y: 255.75311}
+  m_AnchoredPosition: {x: -403.8877, y: 113.25783}
   m_SizeDelta: {x: 188.3885, y: 169.0753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646328110
@@ -25527,6 +26323,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 699386637}
         m_TargetAssemblyTypeName: GD3D.UI.IconKit, GD3D
         m_MethodName: kiti
@@ -26018,7 +26826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1673163120}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1673163120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26248,7 +27068,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1678423071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1678423071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26467,6 +27299,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1535573477}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: ScrollLeft
@@ -26857,7 +27701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1709524066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1709524066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27186,16 +28042,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731849855}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -38.5, y: -25}
+  m_AnchoredPosition: {x: -160.66537, y: -25}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731849857
@@ -27352,7 +28208,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1736944181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1736944181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27475,7 +28343,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1761637792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1761637792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27900,7 +28780,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777505846}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1777505846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28442,7 +29334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807744584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1807744584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28579,6 +29483,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 728679801}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: Next
@@ -28709,16 +29625,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844452852}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67.5, y: -67.5}
+  m_AnchoredPosition: {x: 152.5, y: -67.5}
   m_SizeDelta: {x: 135, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844452854
@@ -28875,7 +29791,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1845776519}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1845776519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29947,7 +30875,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1884212209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1884212209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30102,7 +31042,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1900165904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1900165904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30701,16 +31653,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973365724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: -69.5}
+  m_AnchoredPosition: {x: -293.16528, y: -69.5}
   m_SizeDelta: {x: 200, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973365726
@@ -31042,6 +31994,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1682756666}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: back
@@ -31265,6 +32229,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 728679801}
         m_TargetAssemblyTypeName: GD3D.ShopScroll, GD3D
         m_MethodName: back
@@ -31340,16 +32316,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029990809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699386636}
+  m_Father: {fileID: 1372694819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: -25}
+  m_AnchoredPosition: {x: -293.16528, y: -25}
   m_SizeDelta: {x: 200, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029990811
@@ -31699,7 +32675,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076432460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2076432460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31988,7 +32976,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2079921365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2079921365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32646,7 +33646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2132670724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2132670724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32801,7 +33813,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2137567958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 809268316}
+        m_TargetAssemblyTypeName: GD3D.SoundManager, GD3D
+        m_MethodName: PlayButtonClickAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2137567958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32912,7 +33936,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7196955535233710392, guid: a3082666883968040b04fcd7ab32efd1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33083,7 +34108,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 915594858}
-  - {fileID: 1608619914}
   - {fileID: 2140752145}
   - {fileID: 824876461}
   - {fileID: 681515214}

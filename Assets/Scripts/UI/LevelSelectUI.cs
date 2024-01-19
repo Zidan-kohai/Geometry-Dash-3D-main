@@ -11,6 +11,8 @@ namespace GD3D
 
         [SerializeField] private Button getGoldByReward1;
 
+        [SerializeField] private GameObject UIHolder;
+
         private void Start()
         {
             goldCoinText.text = Geekplay.Instance.PlayerData.GoldCoinsCollected.ToString();
@@ -30,6 +32,17 @@ namespace GD3D
             Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeCoin);
 
             GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
+
+            GoldShop.Instance.OpenShop.AddListener(() =>
+            {
+                UIHolder.SetActive(false);
+            });
+
+            GoldShop.Instance.CloseShop.AddListener(() =>
+            {
+                UIHolder.SetActive(true);
+            });
+
         }
 
         private void GetGold()

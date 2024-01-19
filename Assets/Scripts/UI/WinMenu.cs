@@ -15,36 +15,36 @@ namespace GD3D
 
         private void OnEnable()
         {
-            //doubleAwardButton.transform.localScale = Vector3.zero;
-            //restartButton.transform.localScale = Vector3.zero;
-            //ExitButton.transform.localScale = Vector3.zero;
+            doubleAwardButton.transform.localScale = Vector3.zero;
+            restartButton.transform.localScale = Vector3.zero;
+            ExitButton.transform.localScale = Vector3.zero;
 
-            //ShowMenu();
+            StartCoroutine(ShowMenu());
         }
-        //private IEnumerator ShowMenu()
-        //{
-        //    //ShowButton(doubleAwardButton);
+        private IEnumerator ShowMenu()
+        {
+            ShowButton(doubleAwardButton);
 
-        //    //yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(3);
 
-        //    //ShowButton(restartButton);
-        //    //ShowButton(ExitButton);
-        //}
+            ShowButton(restartButton);
+            ShowButton(ExitButton);
+        }
 
-        //private IEnumerator ShowButton(GameObject gameObject)
-        //{
-        //    float time = 1f;
-        //    float deltatime = 0.1f;
-        //    float delta = 0.1f;
+        private IEnumerator ShowButton(GameObject gameObject)
+        {
+            float time = 1f;
+            float deltatime = 0.1f;
+            float delta = 0.1f;
 
-        //    while (time > 0)
-        //    {
-        //        gameObject.transform.localScale += new Vector3(delta, delta, delta);
+            while (time > 0)
+            {
+                gameObject.transform.localScale += new Vector3(delta, delta, delta);
 
-        //        yield return new WaitForSeconds(deltatime);
-        //        time -= deltatime;
-        //    }
-        //}
+                yield return new WaitForSeconds(deltatime);
+                time -= deltatime;
+            }
+        }
 
     }
 }

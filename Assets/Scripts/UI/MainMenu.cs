@@ -18,7 +18,7 @@ namespace GD3D.UI
         [Space]
         [SerializeField] private Transform infoMenu;
         [SerializeField] private Transform quitMenu;
-
+        [SerializeField] private GameObject MenuHolder;
         [Space]
         [SerializeField] private Image darknessOverlay;
         private Color _darknessOverlayActiveColor;
@@ -95,6 +95,7 @@ namespace GD3D.UI
                 kiti3Button.gameObject.GetComponent<Animator>().enabled = false;
                 kiti3Buyed.gameObject.SetActive(true);
             });
+
         }
 
         private void Start()
@@ -128,6 +129,17 @@ namespace GD3D.UI
             {
                 Geekplay.Instance.RealBuyItem("kiti3");
             });*/
+
+
+            GoldShop.Instance.OpenShop.AddListener(() =>
+            {
+                MenuHolder.SetActive(false);
+            });
+
+            GoldShop.Instance.CloseShop.AddListener(() =>
+            {
+                MenuHolder.SetActive(true);
+            });
         }
 
         public void Kiti(string kitiName)

@@ -95,9 +95,6 @@ public class PlayerData
 
     }
 
-
-
-
     private void TryCreateDictionary(Gamemode gamemode)
     {
         // Check if our dictionary is null

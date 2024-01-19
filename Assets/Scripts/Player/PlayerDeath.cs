@@ -19,8 +19,8 @@ namespace GD3D.Player
         [SerializeField] private int poolSize = 2;
         private ObjectPool<PoolObject> _pool;
 
-        [SerializeField] private float immortalityTime;
-        private bool deathable = false;
+        [SerializeField] private float immortalityTime = 3f;
+        private bool deathable = true;
 
 
         [Space]
@@ -34,7 +34,7 @@ namespace GD3D.Player
         public override void Start()
         {
             base.Start();
-
+            immortalityTime = 3f;
             // Setup the deathEffect obj by creating a copy and setting the copy
             GameObject obj = Instantiate(deathEffect.gameObject, transform.position, Quaternion.identity);
             obj.name = deathEffect.gameObject.name;
@@ -103,10 +103,10 @@ namespace GD3D.Player
         {
             base.Update();
 
-            // Detect if the player is touching deadly stuff
             if (!deathable) return;
 
 
+            // Detect if the player is touching deadly stuff
             _touchingDeath = Physics.OverlapBox(transform.position, transform.localScale / 2 + (Vector3.one / 15), transform.rotation, deathLayer).Length >= 1;
 
             // Die if we are touching death stuff

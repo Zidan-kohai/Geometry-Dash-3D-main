@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,9 @@ namespace GD3D
 
         [Header("Win")]
         public AudioSource WinClip;
-        
+
+        [Header("Button Click")]
+        public AudioSource buttonClickClip;
 
         private void Awake()
         {
@@ -39,6 +42,11 @@ namespace GD3D
         public void PlayMainAudio()
         {
             mainAudio.UnPause();
+        }
+
+        public void PlayButtonClickAudio()
+        {
+            buttonClickClip.Play();
         }
     }
 }

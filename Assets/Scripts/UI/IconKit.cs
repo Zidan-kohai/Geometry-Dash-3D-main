@@ -112,6 +112,12 @@ namespace GD3D.UI
         [Space]
         [SerializeField] private Button kiti4Button;
         [SerializeField] private GameObject kiti4Buyed;
+
+
+        [SerializeField] private GameObject iconKitHolder;
+        [SerializeField] private GameObject worldCanvasHolder;
+        [SerializeField] private GameObject modelHolder;
+
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -324,15 +330,29 @@ namespace GD3D.UI
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
             // Loop through all icon models and add an outline to them since QuickOutline apparently only works if it's added and can't be reset manually
-           /* foreach (var pair in _iconModels)
+            /* foreach (var pair in _iconModels)
+             {
+                 foreach (GameObject obj in pair.Value)
+                 {
+                     Outline outline = obj.AddComponent<Outline>();
+                     outline.OutlineWidth = 10;
+                     outline.OutlineColor = Color.black;
+                 }
+             }*/
+
+            GoldShop.Instance.OpenShop.AddListener(() =>
             {
-                foreach (GameObject obj in pair.Value)
-                {
-                    Outline outline = obj.AddComponent<Outline>();
-                    outline.OutlineWidth = 10;
-                    outline.OutlineColor = Color.black;
-                }
-            }*/
+                iconKitHolder.SetActive(false);
+                worldCanvasHolder.SetActive(false);
+                modelHolder.SetActive(false);
+            });
+
+            GoldShop.Instance.CloseShop.AddListener(() =>
+            {
+                iconKitHolder.SetActive(true);
+                worldCanvasHolder.SetActive(true);
+                modelHolder.SetActive(true);
+            });
         }
 
 

@@ -551,6 +551,9 @@ namespace GD3D.Player
         #region Respawn
         public void Respawn()
         {
+            loseReviveButton.gameObject.SetActive(true);
+            _practiceMode.Checkpoints.Clear();
+
             switch (SceneManager.GetActiveScene().buildIndex)
             {
                 case 4:
@@ -635,6 +638,9 @@ namespace GD3D.Player
 
         public void Revive()
         {
+
+            loseReviveButton.gameObject.SetActive(false);
+
             // Enable the pause menu so you can pause again
             PauseMenu.CanPause = true;
 

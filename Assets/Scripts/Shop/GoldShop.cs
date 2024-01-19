@@ -16,7 +16,10 @@ namespace GD3D
         public GameObject LacksMoney;
         public GameObject Shop;
 
-        private void Start()
+        public UnityEvent OpenShop;
+        public UnityEvent CloseShop;
+
+        private void Awake()
         {
             if(Instance != null)
             {
@@ -75,6 +78,17 @@ namespace GD3D
         {
             Geekplay.Instance.PlayerData.IsbyedKiti4 = true;
             //дать все цвета и наборы
+        }
+
+
+        public void OnOpenShop()
+        {
+            OpenShop?.Invoke();
+        }
+
+        public void OnCloseShop()
+        {
+            CloseShop?.Invoke();
         }
     }
 }
