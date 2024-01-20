@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,10 +7,6 @@ using TMPro;
 using GD3D.Player;
 using GD3D.Easing;
 using GD3D.CustomInput;
-using System.Linq;
-using UnityEngine.Events;
-using System.Security.Cryptography;
-using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 namespace GD3D.UI
 {
@@ -242,71 +237,20 @@ namespace GD3D.UI
             //Loop through every gamemodes icon data
             foreach (PlayerIcons.GamemodeIconData iconData in playerIcons.GetGamemodeIconData)
             {
+                if (iconData.Gamemode == Gamemode.ship) break;
+
                 GameObject buttonTemplate = _iconButtonTemplates[iconData.Gamemode];
                 GameObject templateModel = _iconButtonDataDictionary[iconData.Gamemode].TemplateModel.gameObject;
 
                 // Create an integer which will be used to keep track of our current index in the next foreach loop
 
-                int costIndex = 0;
+                int costIndex = -1;
                 // Loop through all mesh data in the icon data
                 foreach (PlayerIcons.GamemodeIconData.MeshData meshData in iconData.Meshes)
                 {
-                    // Create a clone of the template button
-                    //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
 
-                    Debug.Log("SpawnCube");
+                    costIndex++;
 
-                    TextMeshProUGUI costText = CubeButtons[costIndex].GetComponentInChildren<TextMeshProUGUI>();
-
-                    Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
-
-                    if (iconData.Gamemode == Gamemode.cube)
-                    {
-                        if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, costIndex))
-                        {
-                            if (costText == null) return;
-                            
-                            if (costList[costIndex].unit == CubeCost.Unit.Gold)
-                            {
-                                costText.gameObject.GetComponentInChildren<Image>().sprite = GoldIcon;
-                            }
-                            else
-                            {
-                                costText.gameObject.GetComponentInChildren<Image>().sprite = DiamondIcon;
-                            }
-                        }
-                        else if(costText != null)
-                        {
-                            costText.gameObject.SetActive(false);
-                        }
-
-                        buttonCost.Cost = costList[costIndex].cost;
-
-                        int thisIndex = costIndex;
-
-                        CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
-                        {
-                            if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
-                            {
-                                if (!buttonCost.TryBuyForGold(goldCoin)) return;
-
-                                Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
-
-                                Geekplay.Instance.Save();
-
-                                goldCoin = buttonCost.buyForFold(goldCoin);
-                                goldCoinText.text = goldCoin.ToString();
-                                costText.enabled = false;
-                            }
-                            _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
-
-                            UpdateIconSelection(Gamemode.cube);
-
-                        });
-                    }
-
-
-                    
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
 
@@ -326,7 +270,74 @@ namespace GD3D.UI
                     _iconButtons[iconData.Gamemode].Add(CubeButtons[costIndex]);
                     _iconButtonsSelected[iconData.Gamemode].Add(selectedObj);
 
-                    costIndex++;
+
+
+                    // Create a clone of the template button
+                    //GameObject newButton = Instantiate(buttonTemplate, _iconButtonParents[Gamemode.cube]);
+
+                    
+
+                    TextMeshProUGUI costText = CubeButtons[costIndex].GetComponentInChildren<TextMeshProUGUI>(true);
+
+                    Debug.Log($"{costIndex}: {costText}");
+
+
+                    Buyable buttonCost = CubeButtons[costIndex].GetComponent<Buyable>();
+
+                    if (iconData.Gamemode == Gamemode.cube)
+                    {
+
+                        buttonCost.Cost = costList[costIndex].cost;
+                        int thisIndex = costIndex;
+
+                        CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
+                        {
+                            if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
+                            {
+                                if (costList[thisIndex].unit == CubeCost.Unit.Gold)
+                                {
+                                    if (!buttonCost.TryBuy(goldCoin)) return;
+                                    goldCoin = buttonCost.buyForGold(goldCoin);
+                                    goldCoinText.text = goldCoin.ToString();
+                                }
+                                else if (costList[thisIndex].unit == CubeCost.Unit.Diamond)
+                                {
+                                    if (!buttonCost.TryBuy(diamondCoin)) return;
+                                    goldCoin = buttonCost.buyForDiamond(goldCoin);
+                                    diamondCoinText.text = diamondCoin.ToString();
+                                }
+
+                                Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
+
+                                Geekplay.Instance.Save();
+
+                                costText.enabled = false;
+                            }
+                            _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
+
+                            UpdateIconSelection(Gamemode.cube);
+
+                        });
+
+                        if (costList[costIndex].cost != 0 && !Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, costIndex))
+                        {
+                            if (costText == null) continue;
+                            
+                            if (costList[costIndex].unit == CubeCost.Unit.Gold)
+                            {
+                                costText.gameObject.GetComponentInChildren<Image>().sprite = GoldIcon;
+                            }
+                            else
+                            {
+                                costText.gameObject.GetComponentInChildren<Image>().sprite = DiamondIcon;
+                            }
+                        }
+                        else if(costText != null)
+                        {
+                            costText.gameObject.SetActive(false);
+                        }
+                        
+                    }
                 }
 
                 costIndex = 0;
@@ -335,8 +346,6 @@ namespace GD3D.UI
                 // Destroy template button
                 //Destroy(_iconButtonTemplates[Gamemode.cube]);
 
-
-                
 
             }
 

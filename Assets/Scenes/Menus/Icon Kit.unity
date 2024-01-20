@@ -931,6 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 553003563}
   IsBuyed: 0
 --- !u!1 &57708710
@@ -1549,6 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 456197621}
   IsBuyed: 0
 --- !u!114 &82407642
@@ -2245,6 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1501029790}
   IsBuyed: 0
 --- !u!114 &148476946
@@ -2459,7 +2462,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159806042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2888,7 +2891,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161754321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3093,6 +3096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 457217391}
   IsBuyed: 0
 --- !u!114 &172916747
@@ -5207,6 +5211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1874510711}
   IsBuyed: 0
 --- !u!114 &294277197
@@ -5485,6 +5490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 0}
   IsBuyed: 0
 --- !u!1 &303993333
@@ -5576,7 +5582,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304565351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 50, y: 50, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5637,7 +5643,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304565351}
-  m_Mesh: {fileID: -5495902117074765545, guid: 007a6e84a91e0d542a2aa071f3008cef, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!1001 &305661273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5883,6 +5889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 772568356}
   IsBuyed: 0
 --- !u!114 &340304907
@@ -6052,6 +6059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1881519655}
   IsBuyed: 0
 --- !u!114 &348546857
@@ -6217,6 +6225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 707301051}
   IsBuyed: 0
 --- !u!114 &355401178
@@ -6357,7 +6366,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360404589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6392,7 +6401,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6416,7 +6425,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6564,6 +6573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 843069109}
   IsBuyed: 0
 --- !u!114 &361026619
@@ -6702,7 +6712,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362171958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6737,7 +6747,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6761,7 +6771,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6880,7 +6890,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378346375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7160,6 +7170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1561912536}
   IsBuyed: 0
 --- !u!114 &391576374
@@ -7538,6 +7549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1667158988}
   IsBuyed: 0
 --- !u!114 &407041137
@@ -7703,6 +7715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 269653235}
   IsBuyed: 0
 --- !u!114 &421883093
@@ -8586,6 +8599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1085408908}
   IsBuyed: 0
 --- !u!114 &466842602
@@ -8755,6 +8769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 976284350}
   IsBuyed: 0
 --- !u!114 &468335602
@@ -9083,6 +9098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 574255298}
   IsBuyed: 0
 --- !u!114 &490166680
@@ -9252,6 +9268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 378346377}
   IsBuyed: 0
 --- !u!114 &491493580
@@ -9390,7 +9407,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502204457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9597,6 +9614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1868579876}
   IsBuyed: 0
 --- !u!114 &507414561
@@ -10369,6 +10387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 32971297}
   IsBuyed: 0
 --- !u!114 &567866996
@@ -11161,6 +11180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 392046622}
   IsBuyed: 0
 --- !u!114 &642148607
@@ -11368,6 +11388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 848040689}
   IsBuyed: 0
 --- !u!114 &651542302
@@ -12568,6 +12589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 2057745550}
   IsBuyed: 0
 --- !u!114 &742551399
@@ -12690,89 +12712,45 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.size
-      value: 25
+      propertyPath: gamemodeIconData.Array.data[2].Gamemode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[4].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 2acfd0e3e8e55aa4193e3ed37d3f81b2, type: 3}
+      propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[5].Mesh
+      propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.data[0].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 4af88f382e703e34e8c26983a1bca1aa, type: 3}
+      objectReference: {fileID: -2532674419269209151, guid: 0b43c84022c68a84a84339ec7367ebec, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[6].Mesh
+      propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.data[1].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: ee3a8934e697b4b4094a645ad54df1dd, type: 3}
+      objectReference: {fileID: 7771681601715929034, guid: b6451b7a209ec364293272ea5b8bdf65, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[7].Mesh
+      propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.data[2].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 2d97215a8cb8cbb4eb38eeb9029c1e7a, type: 3}
+      objectReference: {fileID: 2927968814190601404, guid: 5fe28a4f603433c4995ae98c1e11c834, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[8].Mesh
+      propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.data[3].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[9].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: d745d49d544243a4f921a029b682f022, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[10].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[11].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[12].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[13].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[14].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: d745d49d544243a4f921a029b682f022, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[15].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[16].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[17].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[18].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: a4b4c95c7bdc03a49b67bdb01394a949, type: 3}
-    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
-      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[19].Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 9a341a87e3707e44382ce323194b473f, type: 3}
+      objectReference: {fileID: 944696844918605244, guid: cf9aece9a4d0eba4e93ffa2f3cc70940, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[20].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: b891ce2793f89e344942048a6040aea3, type: 3}
+      objectReference: {fileID: -5495902117074765545, guid: 91f727c6b319307438d9bda53d1e06e5, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[21].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 91f727c6b319307438d9bda53d1e06e5, type: 3}
+      objectReference: {fileID: -5495902117074765545, guid: 087b9bb6412fdc94e8f49185d65d3aae, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[22].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 087b9bb6412fdc94e8f49185d65d3aae, type: 3}
+      objectReference: {fileID: -5495902117074765545, guid: 9e385a773f675464480f3c5a5fa7d224, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[23].Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 9e385a773f675464480f3c5a5fa7d224, type: 3}
+      objectReference: {fileID: -5495902117074765545, guid: 2e8aa5dd959295a49bae5739ef35ed5d, type: 3}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[24].Mesh
       value: 
@@ -12939,7 +12917,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745885343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12974,7 +12952,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12998,7 +12976,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13381,6 +13359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1067211891}
   IsBuyed: 0
 --- !u!114 &766048351
@@ -13519,7 +13498,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769309993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13858,6 +13837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1045449113}
   IsBuyed: 0
 --- !u!114 &778153224
@@ -14100,6 +14080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1222435040}
   IsBuyed: 0
 --- !u!114 &785513677
@@ -14269,6 +14250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 988960449}
   IsBuyed: 0
 --- !u!114 &787083040
@@ -14635,6 +14617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1268844899}
   IsBuyed: 0
 --- !u!114 &820464739
@@ -15024,7 +15007,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843069107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15363,6 +15346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 5822889}
   IsBuyed: 0
 --- !u!114 &849962629
@@ -15643,6 +15627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1864147600}
   IsBuyed: 0
 --- !u!114 &890262394
@@ -15843,7 +15828,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902815269}
-  m_Mesh: {fileID: -5495902117074765545, guid: 007a6e84a91e0d542a2aa071f3008cef, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!1 &915594855
 GameObject:
   m_ObjectHideFlags: 0
@@ -16384,6 +16369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 451318100}
   IsBuyed: 0
 --- !u!114 &961289873
@@ -16599,7 +16585,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976284348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16634,7 +16620,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16658,7 +16644,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16804,6 +16790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1015017519}
   IsBuyed: 0
 --- !u!114 &988302824
@@ -16944,7 +16931,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988960447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16979,7 +16966,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17003,7 +16990,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17753,6 +17740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 745885345}
   IsBuyed: 0
 --- !u!114 &1058351439
@@ -17966,7 +17954,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067211889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18468,6 +18456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 57708712}
   IsBuyed: 0
 --- !u!114 &1086032005
@@ -19019,6 +19008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 769309995}
   IsBuyed: 0
 --- !u!114 &1103581335
@@ -19318,6 +19308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1694853683}
   IsBuyed: 0
 --- !u!114 &1121549560
@@ -19733,6 +19724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1363549319}
   IsBuyed: 0
 --- !u!114 &1189430141
@@ -20602,6 +20594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 362171960}
   IsBuyed: 0
 --- !u!114 &1282179844
@@ -20844,6 +20837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 360404591}
   IsBuyed: 0
 --- !u!114 &1293422642
@@ -21110,6 +21104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 676800774}
   IsBuyed: 0
 --- !u!114 &1362352125
@@ -21250,7 +21245,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363549317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21285,7 +21280,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21309,7 +21304,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -21614,7 +21609,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386835065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22310,6 +22305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 0}
   IsBuyed: 0
 --- !u!1 &1436867855
@@ -22876,7 +22872,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454423463}
-  m_Mesh: {fileID: -5495902117074765545, guid: 007a6e84a91e0d542a2aa071f3008cef, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1459168042
 GameObject:
   m_ObjectHideFlags: 0
@@ -23356,6 +23352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1386835067}
   IsBuyed: 0
 --- !u!114 &1491076509
@@ -23705,7 +23702,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501029788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24131,6 +24128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 502204459}
   IsBuyed: 0
 --- !u!114 &1524090144
@@ -24458,6 +24456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 159806044}
   IsBuyed: 0
 --- !u!114 &1530019230
@@ -25185,6 +25184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 263300331}
   IsBuyed: 0
 --- !u!114 &1585981942
@@ -25430,6 +25430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 161754323}
   IsBuyed: 0
 --- !u!114 &1612072219
@@ -25595,6 +25596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1105186417}
   IsBuyed: 0
 --- !u!114 &1613183443
@@ -25762,6 +25764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 2081115819}
   IsBuyed: 0
 --- !u!114 &1617438261
@@ -25929,6 +25932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1366182493}
   IsBuyed: 0
 --- !u!114 &1626709515
@@ -26069,7 +26073,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638452333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26104,7 +26108,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26128,7 +26132,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26559,7 +26563,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667158986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26594,7 +26598,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26618,7 +26622,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26766,6 +26770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1796405250}
   IsBuyed: 0
 --- !u!114 &1673163118
@@ -27006,6 +27011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1807362607}
   IsBuyed: 0
 --- !u!114 &1678423069
@@ -27639,6 +27645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1877705102}
   IsBuyed: 0
 --- !u!114 &1709524064
@@ -27955,7 +27962,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730953073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 50, y: 50, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28016,7 +28023,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730953073}
-  m_Mesh: {fileID: -5495902117074765545, guid: 007a6e84a91e0d542a2aa071f3008cef, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1731849855
 GameObject:
   m_ObjectHideFlags: 0
@@ -28146,6 +28153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1416326139}
   IsBuyed: 0
 --- !u!114 &1736944179
@@ -28424,6 +28432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1463263085}
   IsBuyed: 0
 --- !u!1001 &1768329827
@@ -28718,6 +28727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 653981985}
   IsBuyed: 0
 --- !u!114 &1777505844
@@ -28858,7 +28868,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796405248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29272,6 +29282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 2079665092}
   IsBuyed: 0
 --- !u!114 &1807744582
@@ -29729,6 +29740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 556069819}
   IsBuyed: 0
 --- !u!114 &1845776517
@@ -30162,7 +30174,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868579874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30197,7 +30209,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30221,7 +30233,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30608,7 +30620,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881519653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30643,7 +30655,7 @@ MonoBehaviour:
   m_text: free
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
-  m_sharedMaterial: {fileID: -1387330398587359388, guid: 607c4ecd4acf690488f2b1058f346e83, type: 2}
+  m_sharedMaterial: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30667,7 +30679,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.7
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30813,6 +30825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1158482622}
   IsBuyed: 0
 --- !u!114 &1884212207
@@ -30980,6 +30993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1905144472}
   IsBuyed: 0
 --- !u!114 &1900165902
@@ -32615,6 +32629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 0
+  UseText: 0
   textMeshPro: {fileID: 1638452335}
   IsBuyed: 0
 --- !u!114 &2076432458
@@ -32914,6 +32929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 59172386}
   IsBuyed: 0
 --- !u!114 &2079921363
@@ -33584,6 +33600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 1459168044}
   IsBuyed: 0
 --- !u!114 &2132670722
@@ -33751,6 +33768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 2000
+  UseText: 1
   textMeshPro: {fileID: 993068840}
   IsBuyed: 0
 --- !u!114 &2137567956

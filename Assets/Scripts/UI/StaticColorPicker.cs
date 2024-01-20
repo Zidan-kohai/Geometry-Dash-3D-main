@@ -66,9 +66,9 @@ namespace GD3D
 
             if (!buyable.IsBuyed)
             {
-                if (!buyable.TryBuyForGold(Geekplay.Instance.PlayerData.GoldCoinsCollected)) return;
+                if (!buyable.TryBuy(Geekplay.Instance.PlayerData.GoldCoinsCollected)) return;
 
-                buyable.buyForFold(Geekplay.Instance.PlayerData.GoldCoinsCollected);
+                buyable.buyForGold(Geekplay.Instance.PlayerData.GoldCoinsCollected);
             }
 
             switch (whitchColorChange)

@@ -15220,11 +15220,6 @@ MonoBehaviour:
     - Mesh: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
     - Mesh: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
     - Mesh: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
-    - Mesh: {fileID: -5495902117074765545, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
-    - Mesh: {fileID: -5495902117074765545, guid: d745d49d544243a4f921a029b682f022, type: 3}
-    - Mesh: {fileID: -5495902117074765545, guid: bd9c5f13289b86145870c55e7ee0ba3a, type: 3}
-    - Mesh: {fileID: -5495902117074765545, guid: 4e8b793b3061f514bba53200d8507845, type: 3}
-    - Mesh: {fileID: -5495902117074765545, guid: fff3c1e3abd8cfa4da43ebee5c722f97, type: 3}
     - Mesh: {fileID: -5495902117074765545, guid: a4b4c95c7bdc03a49b67bdb01394a949, type: 3}
     - Mesh: {fileID: -5495902117074765545, guid: 9a341a87e3707e44382ce323194b473f, type: 3}
     - Mesh: {fileID: -5495902117074765545, guid: b891ce2793f89e344942048a6040aea3, type: 3}
@@ -15436,14 +15431,13 @@ MonoBehaviour:
   loseQuitButton: {fileID: 0}
   winMenu: {fileID: 0}
   winMenuLevelName: {fileID: 0}
-  winMenuAttemptText: {fileID: 0}
   winMenuJumpText: {fileID: 0}
   winMenuTimeText: {fileID: 0}
   winGoldText: {fileID: 0}
   winDiamondText: {fileID: 0}
   winRestartButton: {fileID: 0}
   winQuitButton: {fileID: 0}
-  winNextLevelButton: {fileID: 0}
+  doubleAwardButton: {fileID: 0}
   newBestPopup: {fileID: 0}
   newBestPercentText: {fileID: 0}
   newBestShowEaseSettings:

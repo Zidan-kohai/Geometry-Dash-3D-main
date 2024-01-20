@@ -24,14 +24,11 @@ namespace GD3D.Player
 
         public void TryCreateDictionary()
         {
-            if (MeshDataDictionary == null)
-            {
-                MeshDataDictionary = new Dictionary<Gamemode, GamemodeIconData.MeshData[]>();
+            MeshDataDictionary = new Dictionary<Gamemode, GamemodeIconData.MeshData[]>();
 
-                foreach (GamemodeIconData iconData in gamemodeIconData)
-                {
-                    MeshDataDictionary.Add(iconData.Gamemode, iconData.Meshes);
-                }
+            foreach (GamemodeIconData iconData in gamemodeIconData)
+            {
+                MeshDataDictionary.Add(iconData.Gamemode, iconData.Meshes);
             }
         }
 
