@@ -20472,6 +20472,22 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034962934361931322, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 9034962934361931323, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 9034962934361931323, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 9034962934361931323, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9048419584246106982, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 80.90001

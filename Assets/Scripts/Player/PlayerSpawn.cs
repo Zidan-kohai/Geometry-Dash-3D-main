@@ -103,6 +103,7 @@ namespace GD3D.Player
             // Set the save file
             _saveFile = Geekplay.Instance.PlayerData;
 
+            Debug.Log(Geekplay.Instance.language);
 
             if (Geekplay.Instance.language == "en")
             {
@@ -118,7 +119,7 @@ namespace GD3D.Player
                 loseMenuAttemptText.text = $"Girişims  {_currentAttempt}";
             }
 
-            if(Geekplay.Instance.mobile)
+            if(Geekplay.Instance.mobile && SpikeText!= null && ReverseText != null)
             {
                 if (Geekplay.Instance.language == "en")
                 {
@@ -127,7 +128,7 @@ namespace GD3D.Player
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    SpikeText.text = "кликни по экрану чтобы пригнуть";
+                    SpikeText.text = "кликни по экрану чтобы, пригнуть";
                     ReverseText.text = "зажми экран чтобы лететь";
                 }
                 else if (Geekplay.Instance.language == "tu")
@@ -136,7 +137,7 @@ namespace GD3D.Player
                     ReverseText.text = "uçmak için ekrana basın";
                 }
             }
-            else
+            else if(SpikeText != null && ReverseText != null)
             {
                 if (Geekplay.Instance.language == "en")
                 {
@@ -145,7 +146,7 @@ namespace GD3D.Player
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    SpikeText.text = "перепрыгны на пробел";
+                    SpikeText.text = "перепрыгни на пробел";
                     ReverseText.text = "зажми пробел чтобы лететь";
                 }
                 else if (Geekplay.Instance.language == "tu")

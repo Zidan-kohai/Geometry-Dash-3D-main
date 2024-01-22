@@ -16617,6 +16617,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Attempt Text
       objectReference: {fileID: 0}
+    - target: {fileID: 7286042981292387250, guid: a6403dacd87f88a4688eff17cb3c7546, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 7286042981292387251, guid: a6403dacd87f88a4688eff17cb3c7546, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 7286042981292387251, guid: a6403dacd87f88a4688eff17cb3c7546, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 85172564730248128, guid: 40181b1941cc3f345808d9ee6190dc66, type: 2}
+    - target: {fileID: 7286042981292387251, guid: a6403dacd87f88a4688eff17cb3c7546, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7286042981292387261, guid: a6403dacd87f88a4688eff17cb3c7546, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
