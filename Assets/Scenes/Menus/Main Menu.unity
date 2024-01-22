@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 616932281}
   m_Layer: 5
   m_Name: Main Menu
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2640,35 +2640,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 620478929}
+      objectReference: {fileID: 621367532}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 621367532}
+      objectReference: {fileID: 620478929}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OnCloseShop
       objectReference: {fileID: 0}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: GD3D.GoldShop, GD3D
       objectReference: {fileID: 0}
     - target: {fileID: 4018642326903178991, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: GD3D.GoldShop, GD3D
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4099764306265387707, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_AnchorMax.x

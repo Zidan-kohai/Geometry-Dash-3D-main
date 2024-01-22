@@ -301,15 +301,48 @@ namespace GD3D.UI
                         {
                             if(!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
                             {
-                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "купить";
+                                if (Geekplay.Instance.language == "ru")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "купить";
+                                }
+                                else if (Geekplay.Instance.language == "en")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Buy";
+                                }
+                                else if (Geekplay.Instance.language == "tu")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Satin almak";
+                                }
                             }
                             else if (PlayerIcons.GetIconIndex(Gamemode.cube) == thisIndex)
                             {
-                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надето";
+                                if (Geekplay.Instance.language == "ru")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надето";
+                                }
+                                else if (Geekplay.Instance.language == "en")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                                }
+                                else if (Geekplay.Instance.language == "tu")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                                }
                             }
                             else
                             {
-                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надеть";
+                                if (Geekplay.Instance.language == "ru")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надеть";
+                                }
+                                else if (Geekplay.Instance.language == "en")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                                }
+                                else if (Geekplay.Instance.language == "tu")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                                }
                             }
 
                             BuySkine.onClick.RemoveAllListeners();
@@ -340,7 +373,18 @@ namespace GD3D.UI
                                         diamondCoinText.text = diamondCoin.ToString();
                                     }
 
-                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+                                    if (Geekplay.Instance.language == "ru")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+                                    }
+                                    else if (Geekplay.Instance.language == "en")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                                    }
+                                    else if (Geekplay.Instance.language == "tu")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                                    }
 
                                     Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
 
@@ -355,12 +399,33 @@ namespace GD3D.UI
                             }
                             else if(PlayerIcons.GetIconIndex(Gamemode.cube) != thisIndex)
                             {
-
-                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надеть";
+                                if (Geekplay.Instance.language == "ru")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надеть";
+                                }
+                                else if (Geekplay.Instance.language == "en")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                                }
+                                else if (Geekplay.Instance.language == "tu")
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                                }
 
                                 BuySkine.onClick.AddListener(() =>
                                 {
-                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+                                    if (Geekplay.Instance.language == "ru")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+                                    }
+                                    else if (Geekplay.Instance.language == "en")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                                    }
+                                    else if (Geekplay.Instance.language == "tu")
+                                    {
+                                        BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                                    }
 
                                     _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
@@ -400,8 +465,19 @@ namespace GD3D.UI
                 // Destroy template button
                 //Destroy(_iconButtonTemplates[Gamemode.cube]);
 
-                
-                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надето";
+
+                if (Geekplay.Instance.language == "ru")
+                {
+                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+                }
+                else if (Geekplay.Instance.language == "en")
+                {
+                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "put on";
+                }
+                else if (Geekplay.Instance.language == "tu")
+                {
+                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "giymek";
+                }
 
 
             }

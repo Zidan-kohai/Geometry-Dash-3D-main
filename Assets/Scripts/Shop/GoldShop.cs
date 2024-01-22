@@ -1,3 +1,4 @@
+using GD3D.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,9 +20,12 @@ namespace GD3D
         public UnityEvent OpenShop;
         public UnityEvent CloseShop;
 
+        //public GameObject mainMenu;
+
         private void Awake()
         {
-            if(Instance != null)
+            //mainMenu = GameObject.FindGameObjectWithTag("Menu");
+            if (Instance != null)
             {
                 Destroy(gameObject);
                 return;
@@ -89,8 +93,8 @@ namespace GD3D
 
         public void OnCloseShop()
         {
-            Debug.Log("Gold Shopp Close");
             CloseShop?.Invoke();
+            //mainMenu.SetActive(true);
         }
     }
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pulse Antenna
+  - Menu
   layers:
   - Default
   - TransparentFX
