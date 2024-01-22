@@ -149,24 +149,6 @@ namespace GD3D.UI
             GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
 
 
-            GoldShop.Instance.OpenShop.AddListener(() =>
-            {
-                Debug.Log("Icon Menu Shop Open");
-
-                iconKitHolder.SetActive(false);
-                worldCanvasHolder.SetActive(false);
-                modelHolder.SetActive(false);
-            });
-
-            GoldShop.Instance.CloseShop.AddListener(() =>
-            {
-                Debug.Log("Icon Menu Shop Close");
-
-                iconKitHolder.SetActive(true);
-                worldCanvasHolder.SetActive(true);
-                modelHolder.SetActive(true);
-            });
-
 
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.iconKit;

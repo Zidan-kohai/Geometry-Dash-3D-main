@@ -8450,6 +8450,7 @@ MonoBehaviour:
     ru: "\u0446\u0432\u0435\u0442\u0430"
     en: Color
     tu: Renk
+  TextsNoneUI: []
 --- !u!1 &451318098
 GameObject:
   m_ObjectHideFlags: 0
@@ -12679,7 +12680,7 @@ GameObject:
   - component: {fileID: 699386637}
   m_Layer: 5
   m_Name: Icon Kit
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25327,7 +25328,7 @@ GameObject:
   - component: {fileID: 1512207145}
   m_Layer: 0
   m_Name: Model Parent
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35034,7 +35035,7 @@ GameObject:
   - component: {fileID: 2092085071}
   m_Layer: 5
   m_Name: World Canvas
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

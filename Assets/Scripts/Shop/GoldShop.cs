@@ -17,14 +17,8 @@ namespace GD3D
         public GameObject LacksMoney;
         public GameObject Shop;
 
-        public UnityEvent OpenShop;
-        public UnityEvent CloseShop;
-
-        //public GameObject mainMenu;
-
         private void Awake()
         {
-            //mainMenu = GameObject.FindGameObjectWithTag("Menu");
             if (Instance != null)
             {
                 Destroy(gameObject);
@@ -82,19 +76,6 @@ namespace GD3D
         {
             Geekplay.Instance.PlayerData.IsbyedKiti4 = true;
             //дать все цвета и наборы
-        }
-
-
-        public void OnOpenShop()
-        {
-            Debug.Log("Gold Shopp Open");
-            OpenShop?.Invoke();
-        }
-
-        public void OnCloseShop()
-        {
-            CloseShop?.Invoke();
-            //mainMenu.SetActive(true);
         }
     }
 }

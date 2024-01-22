@@ -147,7 +147,7 @@ namespace GD3D.Player
                 else if (Geekplay.Instance.language == "ru")
                 {
                     SpikeText.text = "перепрыгни на пробел";
-                    ReverseText.text = "зажми пробел чтобы лететь";
+                    ReverseText.text = "зажми пробел чтобы, лететь";
                 }
                 else if (Geekplay.Instance.language == "tu")
                 {

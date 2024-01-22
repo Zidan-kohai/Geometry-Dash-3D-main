@@ -33,15 +33,7 @@ namespace GD3D
 
             GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
 
-            GoldShop.Instance.OpenShop.AddListener(() =>
-            {
-                UIHolder.SetActive(false);
-            });
-
-            GoldShop.Instance.CloseShop.AddListener(() =>
-            {
-                UIHolder.SetActive(true);
-            });
+            
 
         }
 

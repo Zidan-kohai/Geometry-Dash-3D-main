@@ -107,17 +107,6 @@ namespace GD3D.UI
 
             Debug.Log($"Main Menu Start GoldShop Instance = {GoldShop.Instance}");
 
-            GoldShop.Instance.OpenShop.AddListener(() =>
-            {
-                Debug.Log("Main Menu Shop Open");
-                MenuHolder.SetActive(false);
-            });
-
-            GoldShop.Instance.CloseShop.AddListener(() =>
-            {
-                Debug.Log("Main Menu Shop Close");
-                MenuHolder.SetActive(true);
-            });
 
             // Set the last active menu scene index
             MenuData.LastActiveMenuSceneIndex = (int)Transition.SceneIndex.mainMenu;
@@ -149,10 +138,6 @@ namespace GD3D.UI
                 Geekplay.Instance.RealBuyItem("kiti3");
             });*/
 
-            shopButton.onClick.AddListener(() =>
-            {
-                GoldShop.Instance.OnOpenShop();
-            });
 
         }
 
