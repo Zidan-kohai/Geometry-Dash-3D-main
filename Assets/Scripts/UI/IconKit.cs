@@ -113,6 +113,8 @@ namespace GD3D.UI
         [SerializeField] private GameObject worldCanvasHolder;
         [SerializeField] private GameObject modelHolder;
 
+        [SerializeField] private List<GameObject> skineModels;
+        [SerializeField] private Button BuySkine;
         private void Awake()
         {
             playerIcons.TryCreateDictionary();
@@ -120,6 +122,8 @@ namespace GD3D.UI
 
         private void Start()
         {
+            Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, 0);
+
             getGoldByReward.onClick.AddListener(() =>
             {
                 Geekplay.Instance.ShowRewardedAd("GetFiveGoldCoin");
@@ -253,6 +257,7 @@ namespace GD3D.UI
 
                     // Create new model
                     GameObject iconModel = Instantiate(templateModel, templateModel.transform.parent);
+                    skineModels.Add(iconModel);
 
                     iconModel.GetComponent<MeshFilter>().mesh = playerIcons.GetGamemodeIconData[(int)iconData.Gamemode].Meshes[costIndex].Mesh;
 
@@ -292,30 +297,75 @@ namespace GD3D.UI
 
                         CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
                         {
+                            if(!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
+                            {
+                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "купить";
+                            }
+                            else if (PlayerIcons.GetIconIndex(Gamemode.cube) == thisIndex)
+                            {
+                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надето";
+                            }
+                            else
+                            {
+                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надеть";
+                            }
+
+                            BuySkine.onClick.RemoveAllListeners();
+
+                            for (int i = 0; i < skineModels.Count; i++) 
+                            {
+                                skineModels[i].gameObject.SetActive(false);
+                                if(i == thisIndex)
+                                {
+                                    skineModels[i].SetActive(true);
+                                }
+                            }
+
                             if (!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
                             {
-                                if (costList[thisIndex].unit == CubeCost.Unit.Gold)
+                                BuySkine.onClick.AddListener(() =>
                                 {
-                                    if (!buttonCost.TryBuy(goldCoin)) return;
-                                    goldCoin = buttonCost.buyForGold(goldCoin);
-                                    goldCoinText.text = goldCoin.ToString();
-                                }
-                                else if (costList[thisIndex].unit == CubeCost.Unit.Diamond)
-                                {
-                                    if (!buttonCost.TryBuy(diamondCoin)) return;
-                                    goldCoin = buttonCost.buyForDiamond(goldCoin);
-                                    diamondCoinText.text = diamondCoin.ToString();
-                                }
+                                    if (costList[thisIndex].unit == CubeCost.Unit.Gold)
+                                    {
+                                        if (!buttonCost.TryBuy(goldCoin)) return;
+                                        goldCoin = buttonCost.buyForGold(goldCoin);
+                                        goldCoinText.text = goldCoin.ToString();
+                                    }
+                                    else if (costList[thisIndex].unit == CubeCost.Unit.Diamond)
+                                    {
+                                        if (!buttonCost.TryBuy(diamondCoin)) return;
+                                        goldCoin = buttonCost.buyForDiamond(goldCoin);
+                                        diamondCoinText.text = diamondCoin.ToString();
+                                    }
 
-                                Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
 
-                                Geekplay.Instance.Save();
+                                    Geekplay.Instance.PlayerData.SaveBuyedIconIndex(Gamemode.cube, thisIndex);
 
-                                costText.enabled = false;
+                                    Geekplay.Instance.Save();
+
+                                    costText.enabled = false;
+
+                                    _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
+
+                                    UpdateIconSelection(Gamemode.cube);
+                                });
                             }
-                            _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
+                            else if(PlayerIcons.GetIconIndex(Gamemode.cube) != thisIndex)
+                            {
 
-                            UpdateIconSelection(Gamemode.cube);
+                                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надеть";
+
+                                BuySkine.onClick.AddListener(() =>
+                                {
+                                    BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "Надето";
+
+                                    _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
+
+                                    UpdateIconSelection(Gamemode.cube);
+                                });
+                            }
+                            
 
                         });
 
@@ -340,11 +390,16 @@ namespace GD3D.UI
                     }
                 }
 
+                iconButtonData[0].TemplateModel.gameObject.SetActive(false);
+
                 costIndex = 0;
                 templateModel.SetActive(false);
 
                 // Destroy template button
                 //Destroy(_iconButtonTemplates[Gamemode.cube]);
+
+                
+                BuySkine.GetComponentInChildren<TextMeshProUGUI>().text = "надето";
 
 
             }

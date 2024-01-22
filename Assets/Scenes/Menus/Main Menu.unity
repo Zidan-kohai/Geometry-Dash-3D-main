@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.4964143, b: 0.57481766, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641395, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2399,6 +2399,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 3509336717497581774, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509336717497581774, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.6000366
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509336717497581774, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3527873281079309007, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2531,6 +2543,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 5045242980832639552, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 81.228424
+      objectReference: {fileID: 0}
     - target: {fileID: 5234571324145043359, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.8514896
@@ -2708,8 +2724,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 675
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 7334000034816965948, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2791,6 +2827,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 8392480622039850967, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392480622039850967, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392480622039850967, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8469112835716809775, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2803,6 +2851,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 8909477582613679079, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 84.612946
+      objectReference: {fileID: 0}
     - target: {fileID: 8909477582613679079, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 4
@@ -2846,14 +2898,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2022920341916844556, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1442346362}
   m_SourcePrefab: {fileID: 100100000, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
 --- !u!114 &621367532 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6761285876530048736, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
   m_PrefabInstance: {fileID: 621367531}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1442346357}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab77f71e84f5ad245818cfedf5a3b64f, type: 3}
@@ -4853,6 +4908,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386252977}
   m_CullTransparentMesh: 1
+--- !u!1 &1442346357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2022920341916844556, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+  m_PrefabInstance: {fileID: 621367531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1442346362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442346357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1001 &1531916806
 PrefabInstance:
   m_ObjectHideFlags: 0
