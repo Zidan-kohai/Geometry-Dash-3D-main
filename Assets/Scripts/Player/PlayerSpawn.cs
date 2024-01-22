@@ -108,15 +108,12 @@ namespace GD3D.Player
             if (Geekplay.Instance.language == "en")
             {
                 attemptText.text = $"Attempt  {_currentAttempt}";
-                loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
             }else if (Geekplay.Instance.language == "ru")
             {
                 attemptText.text = $"попытка  {_currentAttempt}";
-                loseMenuAttemptText.text = $"попытка {_currentAttempt}";
             }else if (Geekplay.Instance.language == "tu")
             {
                 attemptText.text = $"Girişim  {_currentAttempt}";
-                loseMenuAttemptText.text = $"Girişims  {_currentAttempt}";
             }
 
             if(Geekplay.Instance.mobile && SpikeText!= null && ReverseText != null)
@@ -706,7 +703,18 @@ namespace GD3D.Player
             player.InvokeRespawnEvent(inPracticeMode && checkpoint != null, checkpoint);
 
             // Set attempt text
-            attemptText.text = $"Attempt  {_currentAttempt}";
+            if (Geekplay.Instance.language == "en")
+            {
+                attemptText.text = $"Attempt  {_currentAttempt}";
+            }
+            else if (Geekplay.Instance.language == "ru")
+            {
+                attemptText.text = $"попытка  {_currentAttempt}";
+            }
+            else if (Geekplay.Instance.language == "tu")
+            {
+                attemptText.text = $"Girişim  {_currentAttempt}";
+            }
             // Reset jumps and time because they are static
 
             PlayerMain.TimesJumped = 0;
