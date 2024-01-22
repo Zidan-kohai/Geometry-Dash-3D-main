@@ -1,9 +1,6 @@
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 using GD3D.Audio;
 
@@ -41,9 +38,8 @@ namespace GD3D.UI
         [SerializeField] private GameObject isGiveDiamond;
         private void Start()
         {
-            _levelName = LevelData.LevelName;
+            _levelName = LevelData.LevelName;            
 
-            levelNameText.text = _levelName;
             starAmountText.text = LevelData.StartAwarded.ToString();
             DifficultyFace.sprite = LevelData.DifficultyFace;
 
@@ -75,8 +71,26 @@ namespace GD3D.UI
             }
             else if(LevelData.LevelBuildIndex == 6 || LevelData.LevelBuildIndex == 7)
             {
-                buttonOpen1Text.text = "Open by viewing ads";
-                buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
+                if (Geekplay.Instance.language == "en")
+                {
+                    buttonOpen1Text.text = "Open by viewing ads";
+                    buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
+
+                }
+                else if (Geekplay.Instance.language == "ru")
+                {
+                    buttonOpen1Text.text = "открыть за рекламу";
+                    buttonOpen2Text.text = $"открыть за {LevelData.cost} золото";
+
+                    levelNameText.text = _levelName;
+                }
+                else if (Geekplay.Instance.language == "tu")
+                {
+                    buttonOpen1Text.text = "Reklamlari görüntüleyerek açin";
+                    buttonOpen2Text.text = $"{LevelData.cost} Altınla Açıldı";
+                }
+
+
                 VideoIcon.SetActive(true);
 
                 if (LevelData.LevelBuildIndex == 6)
@@ -96,8 +110,22 @@ namespace GD3D.UI
             }
             else if (LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
             {
-                buttonOpen1Text.text = "Open by In app";
-                buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
+
+                if (Geekplay.Instance.language == "en")
+                {
+                    buttonOpen1Text.text = "Open by In app";
+                    buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
+                }
+                else if (Geekplay.Instance.language == "ru")
+                {
+                    buttonOpen1Text.text = "купить уровень за яны";
+                    buttonOpen2Text.text = $"открыть за {LevelData.cost} алмаз";
+                }
+                else if (Geekplay.Instance.language == "tu")
+                {
+                    buttonOpen1Text.text = "Uygulamada aç";
+                    buttonOpen2Text.text = $"{LevelData.cost} Diamond tarafından açıldı";
+                }
 
                 buttonOpen2.onClick.AddListener(OpenLevelByDiamond);
                 
@@ -113,6 +141,95 @@ namespace GD3D.UI
                 }
             }
 
+
+
+            switch (LevelData.LevelBuildIndex)
+            {
+                case 4:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "Стерео безумие";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "Stereo Çılgınlığı";
+                    }
+                    break;
+                case 5:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "Назад в путь";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "İz arkasında";
+                    }
+                    break;
+                case 6:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "Поляргейст";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "Polargeist";
+                    }
+                    break;
+                case 7:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "Высыхание";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "Kurutma";
+                    }
+                    break;
+                case 8:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "База за базой";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "Tabandan Sonra Taban";
+                    }
+                    break;
+                case 9:
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        levelNameText.text = _levelName;
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        levelNameText.text = "Не могу отпустить";
+                    }
+                    else if (Geekplay.Instance.language == "tu")
+                    {
+                        levelNameText.text = "Bırakamıyorum";
+                    }
+                    break;
+            }
 
             if(LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
             {

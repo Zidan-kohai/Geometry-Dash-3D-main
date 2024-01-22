@@ -39,7 +39,7 @@ namespace GD3D.UI
         [SerializeField] private GameObject kiti3Buyed;
 
         private Key _quitKey;
-
+        [SerializeField] private Button shopButton;
         private void Awake()
         {
             // Set the starting color as the active color for the darkness overlay
@@ -148,6 +148,11 @@ namespace GD3D.UI
             {
                 Geekplay.Instance.RealBuyItem("kiti3");
             });*/
+
+            shopButton.onClick.AddListener(() =>
+            {
+                GoldShop.Instance.OnOpenShop();
+            });
 
         }
 

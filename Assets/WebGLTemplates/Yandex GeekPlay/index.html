@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Genshin Test</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+
+    <!-- Yandex Games SDK -->
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+
+  </head>
+  <body>
+    <div id="unity-container" style = "position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
+      <canvas id="unity-canvas" style = "position: absolute; width: 100%; height: 100%;"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+
+    </div>
+
+    <script>
+      var player;
+      var ysdk;
+      var payments;
+      var lb;
+
+      function consumePurchase(purchase) {
+          if (purchase === "Mora1000")
+          {
+            myGameInstance.SendMessage('Init', 'SetPurchasedItem');
+          }
+      }
+      
+      function initPlayer() {
+        ysdk.getPayments({ signed: true }).then(_payments => {
+              // Покупки доступны.
+              payments = _payments;
+          }).catch(err => {
+              // Покупки недоступны. Включите монетизацию в консоли разработчика.
+              // Убедитесь, что на вкладке Покупки консоли разработчика присутствует таблица
+              // хотя бы с одним внутриигровым товаром и надписью «Покупки разрешены».
+          });
+
+      ysdk.getPlayer().then(_player => {
+            player = _player;
+            load();
+            loadingBar.style.display = "none";
+            //return player;
+        });
+      }
+  
+      function load() {
+        player.getData().then(_date => {
+                const myJSON = JSON.stringify(_date);
+                myGameInstance.SendMessage('Init', 'SetPlayerData', myJSON);
+            });
+        }
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      //var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Build.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Build.data.unityweb",
+        frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
+        codeUrl: buildUrl + "/Build.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "GeeKid",
+        productName: "GenshinTest",
+        productVersion: "1.1",
+        showBanner: unityShowBanner,
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      }
+
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+
+      loadingBar.style.display = "block";
+
+      var myGameInstance = null;
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+
+      script.onload = () => {
+        YaGames
+            .init()
+            .then(_ysdk => {
+              console.log('Yandex SDK initialized');
+              window.ysdk = _ysdk;
+              ysdk = _ysdk;
+
+              ysdk.getPayments({ signed: true }).then(_payments => {
+              // Покупки доступны.
+                payments = _payments;
+              }).catch(err => {
+                  // Покупки недоступны. Включите монетизацию в консоли разработчика.
+                  // Убедитесь, что на вкладке Покупки консоли разработчика присутствует таблица
+                  // хотя бы с одним внутриигровым товаром и надписью «Покупки разрешены».
+              });
+
+              ysdk.getLeaderboards().then(_lb => lb = _lb);
+
+
+              ysdk.getPlayer().then(_player => {
+                  player = _player;
+                  createUnityInstance(canvas, config, (progress) => {
+                  progressBarFull.style.width = 100 * progress + "%";
+                }).then((unityInstance) => {
+                      load();
+                      myGameInstance = unityInstance;
+                      myGameInstance.SendMessage('Init', 'AfterPlatformChange');
+                      loadingBar.style.display = "none";
+                      //getLang();
+                      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
+                      {
+                        myGameInstance.SendMessage('Init', 'ItIsMobile');
+                      }   
+                      payments.getPurchases().then(purchases => purchases.forEach(consumePurchase));
+                      }).catch((message) => {
+                    alert(message);
+                  });
+              });
+              //loadingBar.style.display = "none";
+            });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

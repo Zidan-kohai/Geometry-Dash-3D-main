@@ -2074,18 +2074,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 621367532}
-        m_TargetAssemblyTypeName: GD3D.GoldShop, GD3D
-        m_MethodName: OnOpenShop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &567728647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,6 +2329,7 @@ MonoBehaviour:
   kiti1Buyed: {fileID: 1169121690}
   kiti2Buyed: {fileID: 1063321076}
   kiti3Buyed: {fileID: 1362767584}
+  shopButton: {fileID: 567728646}
 --- !u!1 &620478929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5264797591261247311, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
@@ -5223,7 +5212,7 @@ MonoBehaviour:
     en: 12 yan
     tu: 12 yan
   - text: {fileID: 1239819191}
-    ru: "\u041B\u0438\u0434\u0435\u0440\u0438"
+    ru: "\u041B\u0438\u0434\u0435\u0440\u044B"
     en: Leaderbord
     tu: "Liderler S\u0131ralamas\u0131"
   - text: {fileID: 522135159}
@@ -5239,7 +5228,7 @@ MonoBehaviour:
     en: 3 yan
     tu: 3 yan
   - text: {fileID: 303745370}
-    ru: "\u041B\u0438\u0434\u0435\u0440\u0438"
+    ru: "\u041B\u0438\u0434\u0435\u0440\u044B"
     en: Leaderbord
     tu: "Liderler Siralamas\u0131"
   - text: {fileID: 199335337}
@@ -5274,6 +5263,7 @@ MonoBehaviour:
     ru: "15 \u044F\u043D "
     en: 15 yan
     tu: 15 yan
+  TextsNoneUI: []
 --- !u!114 &1486952859 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8646210796281755545, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}

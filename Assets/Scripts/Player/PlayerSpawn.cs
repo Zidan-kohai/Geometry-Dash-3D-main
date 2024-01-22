@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -88,6 +88,10 @@ namespace GD3D.Player
         private PlayerPracticeMode _practiceMode;
         private int gameCount;
 
+
+        [SerializeField] private TextMeshPro SpikeText;
+        [SerializeField] private TextMeshPro ReverseText;
+
         /// <summary>
         /// Start is called before the first frame update.
         /// </summary>
@@ -99,14 +103,63 @@ namespace GD3D.Player
             // Set the save file
             _saveFile = Geekplay.Instance.PlayerData;
 
-            attemptText.text = $"Attempt  {_currentAttempt}";
-            loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
+
+            if (Geekplay.Instance.language == "en")
+            {
+                attemptText.text = $"Attempt  {_currentAttempt}";
+                loseMenuAttemptText.text = $"Attempt  {_currentAttempt}";
+            }else if (Geekplay.Instance.language == "ru")
+            {
+                attemptText.text = $"попытка  {_currentAttempt}";
+                loseMenuAttemptText.text = $"попытка {_currentAttempt}";
+            }else if (Geekplay.Instance.language == "tu")
+            {
+                attemptText.text = $"Girişim  {_currentAttempt}";
+                loseMenuAttemptText.text = $"Girişims  {_currentAttempt}";
+            }
+
+            if(Geekplay.Instance.mobile)
+            {
+                if (Geekplay.Instance.language == "en")
+                {
+                    SpikeText.text = "Click to jump";
+                    ReverseText.text = "press the screen to fly";
+                }
+                else if (Geekplay.Instance.language == "ru")
+                {
+                    SpikeText.text = "кликни по экрану чтобы пригнуть";
+                    ReverseText.text = "зажми экран чтобы лететь";
+                }
+                else if (Geekplay.Instance.language == "tu")
+                {
+                    SpikeText.text = "Atlamak için tıklayın";
+                    ReverseText.text = "uçmak için ekrana basın";
+                }
+            }
+            else
+            {
+                if (Geekplay.Instance.language == "en")
+                {
+                    SpikeText.text = "jump over the space";
+                    ReverseText.text = "press the space to fly";
+                }
+                else if (Geekplay.Instance.language == "ru")
+                {
+                    SpikeText.text = "перепрыгны на пробел";
+                    ReverseText.text = "зажми пробел чтобы лететь";
+                }
+                else if (Geekplay.Instance.language == "tu")
+                {
+                    SpikeText.text = "uzaya atladı";
+                    ReverseText.text = "uçmak için boşluk tuşuna basın";
+                }
+            }
 
             // Setup respawn menu
             _respawnMenuTransform = loseMenu.transform;
             _respawnMenuStartSize = _respawnMenuTransform.localScale;
 
-            loseMenuLevelName.text = LevelData.Instance.LevelName;
+            //loseMenuLevelName.text = LevelData.Instance.LevelName;
 
             loseRestartButton.onClick.AddListener(Respawn);
             loseQuitButton.onClick.AddListener(QuitToMenu);
@@ -214,12 +267,30 @@ namespace GD3D.Player
             // Set objects on the respawn menu
             loseMenuAttemptText.text = attemptText.text;
 
-            loseMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
+            if(Geekplay.Instance.language == "en")
+            {
+                loseMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
-            // Use TimeSpan here to format the text to look nice :)
-            TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-            loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                loseMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            }
+            else if (Geekplay.Instance.language == "ru")
+            {
+                loseMenuJumpText.text = $"Прыжки: {PlayerMain.TimesJumped}";
 
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                loseMenuTimeText.text = $"Время: {time.ToString("mm':'ss")}";
+            }
+            else if (Geekplay.Instance.language == "tu")
+            {
+                loseMenuJumpText.text = $"Atlar: {PlayerMain.TimesJumped}";
+
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                loseMenuTimeText.text = $"Zaman: {time.ToString("mm':'ss")}";
+            }
             switch (SceneManager.GetActiveScene().buildIndex)
             {
                 case 4:
@@ -309,13 +380,33 @@ namespace GD3D.Player
 
             // Set objects on the respawn menu
 
-            winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
-            // Use TimeSpan here to format the text to look nice :)
-            TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
-            winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            if (Geekplay.Instance.language == "en")
+            {
+                winMenuJumpText.text = $"Jumps: {PlayerMain.TimesJumped}";
 
-            
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                winMenuTimeText.text = $"Time: {time.ToString("mm':'ss")}";
+            }
+            else if (Geekplay.Instance.language == "ru")
+            {
+                winMenuJumpText.text = $"Прыжки: {PlayerMain.TimesJumped}";
+
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                winMenuTimeText.text = $"Время: {time.ToString("mm':'ss")}";
+            }
+            else if (Geekplay.Instance.language == "tu")
+            {
+                winMenuJumpText.text = $"Atlar: {PlayerMain.TimesJumped}";
+
+                // Use TimeSpan here to format the text to look nice :)
+                TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
+                winMenuTimeText.text = $"Zaman: {time.ToString("mm':'ss")}";
+            }
+
+
             switch (SceneManager.GetActiveScene().buildIndex)
             {
                 case 4:
