@@ -271,6 +271,8 @@ namespace GD3D.UI
 
                     meshFilter.mesh = meshData.Mesh;
 
+                    meshFilter.gameObject.SetActive(false);
+
                     // Add the newly created button and selected image to the dictionary
                     _iconButtons[iconData.Gamemode].Add(CubeButtons[costIndex]);
                     _iconButtonsSelected[iconData.Gamemode].Add(selectedObj);
