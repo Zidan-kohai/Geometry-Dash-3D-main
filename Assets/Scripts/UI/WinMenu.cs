@@ -34,8 +34,8 @@ namespace GD3D
         private IEnumerator ShowButton(GameObject gameObject)
         {
             float time = 1f;
-            float deltatime = 0.1f;
-            float delta = 0.1f;
+            float deltatime = 0.02f;
+            float delta = 0.02f;
 
             while (time > 0)
             {
