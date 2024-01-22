@@ -125,7 +125,7 @@ namespace GD3D.Player
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    SpikeText.text = "кликни по экрану чтобы, пригнуть";
+                    SpikeText.text = "кликни по экрану, чтобы пригнуть";
                     ReverseText.text = "зажми экран чтобы лететь";
                 }
                 else if (Geekplay.Instance.language == "tu")
