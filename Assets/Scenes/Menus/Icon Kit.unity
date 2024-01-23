@@ -4056,7 +4056,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &275592081
 MonoBehaviour:
@@ -5108,7 +5108,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &325495339
 MonoBehaviour:
@@ -5613,7 +5613,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &357154482
 MonoBehaviour:
@@ -7629,7 +7629,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 1
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &446084578
 MonoBehaviour:
@@ -8661,7 +8661,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &480529406
 MonoBehaviour:
@@ -14017,7 +14017,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &760060884
 MonoBehaviour:
@@ -15613,7 +15613,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &819650324
 MonoBehaviour:
@@ -15949,7 +15949,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &824847712
 MonoBehaviour:
@@ -17332,7 +17332,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &890396126
 MonoBehaviour:
@@ -18113,7 +18113,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &919561223
 MonoBehaviour:
@@ -21652,7 +21652,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1159267094
 MonoBehaviour:
@@ -22325,7 +22325,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1212357327
 MonoBehaviour:
@@ -23729,7 +23729,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1312299995
 MonoBehaviour:
@@ -27898,7 +27898,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1563080842
 MonoBehaviour:
@@ -28353,7 +28353,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1584645245
 MonoBehaviour:
@@ -28521,7 +28521,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 1
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1594378611
 MonoBehaviour:
@@ -29565,7 +29565,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1638743431
 MonoBehaviour:
@@ -34219,7 +34219,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1876698264
 MonoBehaviour:
@@ -35554,7 +35554,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &1955810065
 MonoBehaviour:
@@ -37735,7 +37735,7 @@ MonoBehaviour:
   buyable: {fileID: 0}
   isOpened: 0
   image: {fileID: 0}
-  whitchColorChange: 0
+  whitchColorChange: 1
   iconKit: {fileID: 699386637}
 --- !u!114 &2122910813
 MonoBehaviour:
