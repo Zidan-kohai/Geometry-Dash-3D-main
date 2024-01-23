@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 6909122205820442079}
   - component: {fileID: 7237117873101412251}
   - component: {fileID: 3236918360153563066}
-  - component: {fileID: 6149208522153701280}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -258,21 +257,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6149208522153701280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72871994013643188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1 &280300768634673021
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +759,6 @@ GameObject:
   - component: {fileID: 637544031492735747}
   - component: {fileID: 637544031492735744}
   - component: {fileID: 637544031492735745}
-  - component: {fileID: 637544031492735750}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -885,21 +868,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &637544031492735750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637544031492735748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1 &637544031561066315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,7 +1933,6 @@ GameObject:
   - component: {fileID: 637544032666143465}
   - component: {fileID: 637544032666143470}
   - component: {fileID: 637544032666143471}
-  - component: {fileID: 637544032666143468}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -2075,21 +2042,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &637544032666143468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637544032666143458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1 &756491194773929262
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,7 +3587,6 @@ GameObject:
   - component: {fileID: 1604246075802318929}
   - component: {fileID: 7715396560870387872}
   - component: {fileID: 4816332677020398966}
-  - component: {fileID: 4775823590621146264}
   m_Layer: 5
   m_Name: double Awad Button
   m_TagString: Untagged
@@ -3745,21 +3696,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4775823590621146264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5965635111091753215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1 &6023191933276988603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4363,7 +4299,6 @@ GameObject:
   - component: {fileID: 6982649669818402406}
   - component: {fileID: 456260524641193268}
   - component: {fileID: 8804532391363225562}
-  - component: {fileID: 7052937766937631906}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -4473,21 +4408,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7052937766937631906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667353069319162242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1 &7837739736398946922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,7 +4919,6 @@ GameObject:
   - component: {fileID: 3319451525825983351}
   - component: {fileID: 1754052429186121695}
   - component: {fileID: 3550885147913416110}
-  - component: {fileID: 2508228730758866300}
   m_Layer: 5
   m_Name: Revive Button
   m_TagString: Untagged
@@ -5109,21 +5028,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2508228730758866300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8288311024422795097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2945b46416fa41043afd2ae9002e9db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modifySize: {fileID: 0}
-  isUnscaled: 0
-  multiplier: 1
 --- !u!1001 &446483286958777285
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -311,8 +311,8 @@ namespace GD3D.UI
 
             Color col = s_scrollIndex < _length - 1 ? levels[s_scrollIndex].LevelBackgroundColor : comingSoonBackgroundColor;
 
-            LevelColors.AddEase(LevelColors.ColorType.background, col, new EaseObject(0.1f));
-            LevelColors.AddEase(LevelColors.ColorType.ground, col, new EaseObject(0.1f));
+            LevelColors.AddEase(LevelColors.ColorType.background, col);
+            LevelColors.AddEase(LevelColors.ColorType.ground, col);
         }
 
         #region Easing

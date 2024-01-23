@@ -221,7 +221,7 @@ namespace GD3D.Level
         /// Will remove and replace the old easing if one already exists for the given color <paramref name="type"/>.
         /// Example: a type of <see cref="ColorType.background"/> will change the background color over time.
         /// </summary>
-        public static void AddEase(ColorType type, Color color, EaseObject obj)
+        public static void AddEase(ColorType type, Color color)
         {
             // Get the current color
             //Color currentColor = GetCurrentColor(type);
@@ -250,6 +250,38 @@ namespace GD3D.Level
             //    // Remove the old easing in the dictionary
             //    EasingManager.RemoveEaseObject(oldId);
             //}
+        }
+
+        public static void AddEase(ColorType type, Color color, EaseObject obj)
+        {
+            // Get the current color
+            Color currentColor = GetCurrentColor(type);
+
+            //// Set the easing on update method to change color over time
+            obj.OnUpdate = (obj) =>
+            {
+                Color newColor = obj.EaseColor(currentColor, color);
+
+            };
+
+            ChangeColor(type, color);
+            //Check if an easing does NOT exist for the color type
+
+            if (!Instance._colorDataEasings.ContainsKey(type))
+            {
+                // Add the new easing to the dictionary
+                Instance._colorDataEasings.Add(type, obj.ID);
+            }
+            else
+            {
+                long oldId = Instance._colorDataEasings[type];
+
+                // Replace the old easing in the dictionary
+                Instance._colorDataEasings[type] = obj.ID;
+
+                // Remove the old easing in the dictionary
+                EasingManager.RemoveEaseObject(oldId);
+            }
         }
 
         /// <summary>
