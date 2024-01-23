@@ -12,8 +12,8 @@ namespace GD3D
 
         void Start()
         {
-            LevelColors.AddEase(LevelColors.ColorType.background, col, new EaseObject(0.3f));
-            LevelColors.AddEase(LevelColors.ColorType.ground, col, new EaseObject(0.3f));
+            LevelColors.AddEase(LevelColors.ColorType.background, col);
+            LevelColors.AddEase(LevelColors.ColorType.ground, col);
         }
     }
 }

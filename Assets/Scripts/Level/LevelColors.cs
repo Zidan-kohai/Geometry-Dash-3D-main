@@ -70,6 +70,9 @@ namespace GD3D.Level
             }
 
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
+
+            StopAllEasings();
+            OnRespawn(false, null);
         }
 
         private void Update()
@@ -341,13 +344,13 @@ namespace GD3D.Level
         /// </summary>
         public static MaterialColorData GetColorData(ColorType type)
         {
-            #if UNITY_EDITOR
-            // Throw error if the given color type doesn't exist
-            if (!Instance._colorDataDictionary.ContainsKey(type))
-            {
-                throw new NullReferenceException($"The color type of \"{type}\" does not exist.");
-            }
-            #endif
+            //#if UNITY_EDITOR
+            //// Throw error if the given color type doesn't exist
+            //if (!Instance._colorDataDictionary.ContainsKey(type))
+            //{
+            //    throw new NullReferenceException($"The color type of \"{type}\" does not exist.");
+            //}
+            //#endif
 
             // Return the color data
             return Instance._colorDataDictionary[type];

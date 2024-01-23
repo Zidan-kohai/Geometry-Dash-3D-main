@@ -127,8 +127,7 @@ namespace GD3D
 
             foreach (Renderer rend in obstaclleRenderers)
             {
-                LevelColors.GetColorData(LevelColors.ColorType.ground)
-                    .RenderMaterialData.Add(
+                LevelColors.GetColorData(LevelColors.ColorType.ground).RenderMaterialData.Add(
                         new LevelColors.RendererMaterialData(rend, 0, true)
                 );
             }

@@ -1541,7 +1541,7 @@ MonoBehaviour:
     purchaseEvent:
       m_PersistentCalls:
         m_Calls: []
-  Platform: 1
+  Platform: 0
   gameArterPrefab: {fileID: 0}
   leaderboardBtn: {fileID: 0}
 --- !u!1 &357787073
@@ -2467,10 +2467,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Out Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 2071404278850324397, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_text
+      value: +500
+      objectReference: {fileID: 0}
     - target: {fileID: 2301111936255957259, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 2527525651527221530, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_text
+      value: +100
+      objectReference: {fileID: 0}
     - target: {fileID: 2876442009510803296, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2602,6 +2610,10 @@ PrefabInstance:
     - target: {fileID: 3554850188156153004, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653397543484485371, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_text
+      value: +250
       objectReference: {fileID: 0}
     - target: {fileID: 3898945287772719235, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2831,6 +2843,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6416749948896338008, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_text
+      value: +1500
+      objectReference: {fileID: 0}
     - target: {fileID: 6575364278221423101, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
       propertyPath: m_fontSize
       value: 14
@@ -3047,6 +3063,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1227646322}
+    - target: {fileID: 9222833576752826386, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
+      propertyPath: m_text
+      value: +1000
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6098684561863144416, guid: 7e7ad41a5bb190744a715169dd3aed28, type: 3}
     m_RemovedGameObjects: []

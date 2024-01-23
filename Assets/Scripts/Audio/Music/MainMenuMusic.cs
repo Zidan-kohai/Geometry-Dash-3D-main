@@ -46,7 +46,7 @@ namespace GD3D.Audio
         public static void StopInstance()
         {
             // Destroy the instance
-            Destroy(Instance.gameObject);
+            Destroy(Instance.gameObject);   
 
             // Reset instance so a new one can s
             Instance = null;
