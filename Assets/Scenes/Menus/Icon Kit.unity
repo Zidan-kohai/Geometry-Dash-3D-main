@@ -7413,9 +7413,9 @@ MonoBehaviour:
     en: Buyed
     tu: "Sat\u0131n al\u0131nd\u0131"
   - text: {fileID: 185856751}
-    ru: "25 \u044F\u043D"
-    en: 25 yan
-    tu: 25 yan
+    ru: "25 \u042F\u043D"
+    en: 25 Yan
+    tu: 25 Yan
   - text: {fileID: 1491407505}
     ru: "\u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C 5000"
     en: Get 5000
@@ -12087,6 +12087,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: gamemodeIconData.Array.data[0].Meshes.Array.data[8].Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: 14f91d8b83f424b45a90a0d1c6246e63, type: 3}
+    - target: {fileID: 8126286057765112488, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: gamemodeIconData.Array.data[2].Meshes.Array.data[0].Mesh
       value: 
       objectReference: {fileID: -2532674419269209151, guid: 0b43c84022c68a84a84339ec7367ebec, type: 3}
@@ -15049,7 +15053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &845600991
 RectTransform:
   m_ObjectHideFlags: 0

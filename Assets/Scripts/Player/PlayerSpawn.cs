@@ -731,7 +731,7 @@ namespace GD3D.Player
             gameCount++;
 
 
-            SoundManager.Instance.PlayMainAudio();
+            SoundManager.Instance.ResetMainAudio();
         }
 
         public void BeforeRevive()

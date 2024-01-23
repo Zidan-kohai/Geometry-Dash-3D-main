@@ -113,17 +113,17 @@ namespace GD3D.UI
 
                 if (Geekplay.Instance.language == "en")
                 {
-                    buttonOpen1Text.text = "Open by 20 yan";
+                    buttonOpen1Text.text = "Open by 20 Yan";
                     buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    buttonOpen1Text.text = "купить уровень 20 ян";
+                    buttonOpen1Text.text = "купить уровень 20 Ян";
                     buttonOpen2Text.text = $"открыть за {LevelData.cost} алмаз";
                 }
                 else if (Geekplay.Instance.language == "tu")
                 {
-                    buttonOpen1Text.text = "Saat 20'ye kadar açılıyor";
+                    buttonOpen1Text.text = "Saat 20 Yan kadar açılıyor";
                     buttonOpen2Text.text = $"{LevelData.cost} Diamond tarafından açıldı";
                 }
 

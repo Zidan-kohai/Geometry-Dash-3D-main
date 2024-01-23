@@ -44,6 +44,11 @@ namespace GD3D
             mainAudio.UnPause();
         }
 
+        public void ResetMainAudio()
+        {
+            mainAudio.Stop();
+            mainAudio.Play();
+        }
         public void PlayButtonClickAudio()
         {
             buttonClickClip.Play();

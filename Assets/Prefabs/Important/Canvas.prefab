@@ -4331,7 +4331,7 @@ MonoBehaviour:
     en: Your Reward
     tu: "\xD6d\xFCl\xFCn\xFCz"
   - text: {fileID: 7536751622517652830}
-    ru: "\u0422\u044B \u043F\u043E\u0431\u0435\u0434\u0438\u043B"
+    ru: "\u0422\u044B \u043F\u043E\u0431\u0435\u0434\u0438\u043B!"
     en: You Win!
     tu: "Sen kazand\u0131n!"
   - text: {fileID: 9203123712456706862}

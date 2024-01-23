@@ -5256,29 +5256,29 @@ MonoBehaviour:
     en: Get 5000
     tu: 5000 al
   - text: {fileID: 2048486146}
-    ru: "12 \u044F\u043D"
-    en: 12 yan
-    tu: 12 yan
+    ru: "12 \u042F\u043D"
+    en: 12 Yan
+    tu: 12 Yan
   - text: {fileID: 928065840}
     ru: "\u041B\u0423\u0427\u0428\u0418\u0419"
     en: BEST
     tu: "EN \u0130Y\u0130"
   - text: {fileID: 1439247298}
-    ru: "8 \u044F\u043D"
-    en: '8 yan '
-    tu: 8 yan
+    ru: "8 \u042F\u043D"
+    en: '8 Yan '
+    tu: 8 Yan
   - text: {fileID: 1527255281}
-    ru: "5 \u044F\u043D"
-    en: 5 yan
-    tu: 5 yan
+    ru: "5 \u042F\u043D"
+    en: 5 Yan
+    tu: 5 Yan
   - text: {fileID: 925379317}
-    ru: "3 \u044F\u043D"
-    en: 3 yan
-    tu: 3 yan
+    ru: "3 \u042F\u043D"
+    en: 3 Yan
+    tu: 3 Yan
   - text: {fileID: 832459417}
-    ru: "15 \u044F\u043D"
-    en: 15 yan
-    tu: 15 yan
+    ru: "15 \u042F\u043D"
+    en: 15 Yan
+    tu: 15 Yan
   - text: {fileID: 1886112957}
     ru: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u0430\u0433\u0430\u0437\u0438\u043D"
     en: Open Shop
@@ -5288,29 +5288,29 @@ MonoBehaviour:
     en: BEST
     tu: "EN \u0130Y\u0130"
   - text: {fileID: 795115741}
-    ru: "8 \u044F\u043D"
-    en: 8 yan
-    tu: 8 yan
+    ru: "8 \u042F\u043D"
+    en: 8 Yan
+    tu: 8 Yan
   - text: {fileID: 1306497095}
-    ru: "12 \u044F\u043D"
-    en: 12 yan
-    tu: 12 yan
+    ru: "12 \u042F\u043D"
+    en: 12 Yan
+    tu: 12 Yan
   - text: {fileID: 1239819191}
     ru: "\u041B\u0438\u0434\u0435\u0440\u044B"
     en: Leaderbord
     tu: "Liderler S\u0131ralamas\u0131"
   - text: {fileID: 522135159}
-    ru: "5 \u044F\u043D"
-    en: 5 yan
-    tu: 5 yan
+    ru: "5 \u042F\u043D"
+    en: 5 Yan
+    tu: 5 Yan
   - text: {fileID: 1060214365}
     ru: "\u043A\u0443\u043F\u043B\u0435\u043D\u043E"
     en: BUYED
     tu: SATIN ALINDI
   - text: {fileID: 1210152883}
-    ru: "3 \u044F\u043D"
-    en: 3 yan
-    tu: 3 yan
+    ru: "3 \u042F\u043D"
+    en: 3 Yan
+    tu: 3 Yan
   - text: {fileID: 303745370}
     ru: "\u041B\u0438\u0434\u0435\u0440\u044B"
     en: Leaderbord
@@ -5320,17 +5320,17 @@ MonoBehaviour:
     en: BUYED
     tu: SATIN ALINDI
   - text: {fileID: 1729795368}
-    ru: "5 \u044F\u043D"
-    en: 5 yan
-    tu: 5 yan
+    ru: "5 \u042F\u043D"
+    en: 5 Yan
+    tu: 5 Yan
   - text: {fileID: 1828956289}
     ru: "\u043A\u0443\u043F\u043B\u0435\u043D\u043E"
     en: BUYED
     tu: SATIN ALINDI
   - text: {fileID: 1687278769}
-    ru: "5 \u044F\u043D"
-    en: 5 yan
-    tu: 5 yan
+    ru: "5 \u042F\u043D"
+    en: 5 Yan
+    tu: 5 Yan
   - text: {fileID: 2075457400}
     ru: "\u041F\u0440\u0435\u043C\u0438\u0443\u043C"
     en: Premiun
@@ -5344,9 +5344,9 @@ MonoBehaviour:
     en: SALE
     tu: "SATI\u015E"
   - text: {fileID: 696569512}
-    ru: "15 \u044F\u043D "
-    en: 15 yan
-    tu: 15 yan
+    ru: "15 \u042F\u043D "
+    en: 15 Yan
+    tu: 15 Yan
   TextsNoneUI: []
 --- !u!114 &1486952859 stripped
 MonoBehaviour:

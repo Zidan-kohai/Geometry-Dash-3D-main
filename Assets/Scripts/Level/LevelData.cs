@@ -58,6 +58,7 @@ namespace GD3D.Level
             if (_player != null)
             {
                 _player.OnDeath += OnDeath;
+                _player.OnWin += OnDeath;
                 //_player.OnDeath += SaveLevelData;
             }
         }
