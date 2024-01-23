@@ -8,6 +8,7 @@ using GD3D.Easing;
 using GD3D.Level;
 using GD3D.UI;
 using UnityEngine.SceneManagement;
+using Codice.CM.Common.Tree.Partial;
 
 namespace GD3D.Player
 {
@@ -338,8 +339,6 @@ namespace GD3D.Player
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
 
-            StartCoroutine(ShowADV());
-
 
             if (gameCount >= 3)
             {
@@ -469,21 +468,12 @@ namespace GD3D.Player
             // Set ease ID
             _respawnSizeEaseID = ease.ID;
 
-            StartCoroutine(ShowADV());
-
-
             if (gameCount >= 3)
             {
                 Geekplay.Instance.RateGameFunc();
             }
         }
 
-        IEnumerator ShowADV()
-        {
-            yield return new WaitForSeconds(2);
-
-            Geekplay.Instance.ShowInterstitialAd();
-        }
 
         /// <summary>
         /// Transitions to the main menu.
@@ -527,7 +517,11 @@ namespace GD3D.Player
 
             Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
-            Transition.TransitionToLastActiveMenu();
+            Transition.TransitionToLastActiveMenu(()=>
+            {
+                Debug.Log("TransitionToLastActiveMenu From Player Spawns");
+                StartCoroutine(ShowADV());
+            });
 
         }
         #endregion
@@ -575,7 +569,14 @@ namespace GD3D.Player
             });
         }
         #endregion
-
+        IEnumerator ShowADV()
+        {
+            Debug.Log("ShowADV");
+            yield return new WaitForSeconds(0.3f);
+            Debug.Log("ShowADV");
+            Geekplay.Instance.ShowInterstitialAd();
+            Debug.Log("ShowADV");
+        }
 
         ///<summary>
         ///is called on win for next scene

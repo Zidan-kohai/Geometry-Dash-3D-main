@@ -281,6 +281,8 @@ namespace GD3D.UI
 
                         CubeButtons[costIndex].GetComponent<Button>().onClick.AddListener(() =>
                         {
+                            UpdateIconSelection(Gamemode.cube, thisIndex);
+
                             if(!Geekplay.Instance.PlayerData.IsBuyedIconIndex(Gamemode.cube, thisIndex))
                             {
                                 if (Geekplay.Instance.language == "ru")
@@ -376,7 +378,7 @@ namespace GD3D.UI
 
                                     _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
-                                    UpdateIconSelection(Gamemode.cube);
+                                    UpdateIconSelection(Gamemode.cube, thisIndex);
                                 });
                             }
                             else if(PlayerIcons.GetIconIndex(Gamemode.cube) != thisIndex)
@@ -411,7 +413,7 @@ namespace GD3D.UI
 
                                     _savefile.SetEquippedIcon(Gamemode.cube, thisIndex);
 
-                                    UpdateIconSelection(Gamemode.cube);
+                                    UpdateIconSelection(Gamemode.cube, thisIndex);
                                 });
                             }
                             
@@ -673,13 +675,13 @@ namespace GD3D.UI
             // Update mesh for the model on our currently open category
             _iconModels[_categoryOpen][PlayerIcons.GetIconIndex(_categoryOpen)].SetActive(true);
         }
-
         private void UpdateIconSelection(Gamemode gamemode)
         {
             int index = 0;
 
             foreach (PlayerIcons.GamemodeIconData.MeshData meshData in playerIcons.GetGamemodeIconData[0].Meshes)
             {
+
                 bool isEquipped = _savefile.GetEquippedIconIndex(gamemode) == index;
 
                 _iconButtonsSelected[gamemode][index].SetActive(isEquipped);
@@ -697,6 +699,30 @@ namespace GD3D.UI
 
             // Update mesh for the model on our currently open category
             _iconModels[_categoryOpen][PlayerIcons.GetIconIndex(_categoryOpen)].SetActive(true);
+        }
+        private void UpdateIconSelection(Gamemode gamemode, int selectedModelIndex)
+        {
+
+            for (int i = 0; i < _iconButtonsSelected[gamemode].Count; i++)
+            {
+                _iconButtonsSelected[gamemode][i].SetActive(false);
+
+                if (i == selectedModelIndex)
+                {
+                    _iconButtonsSelected[gamemode][i].SetActive(true);
+                }
+            }
+
+            foreach (var pair in _iconModels)
+            {
+                foreach (GameObject obj in pair.Value)
+                {
+                    obj.SetActive(false);
+                }
+            }
+
+            // Update mesh for the model on our currently open category
+            _iconModels[_categoryOpen][selectedModelIndex].SetActive(true);
         }
 
 

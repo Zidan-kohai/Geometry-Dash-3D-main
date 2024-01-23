@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using GD3D.Easing;
+using System;
 
 namespace GD3D.UI
 {
@@ -95,7 +96,7 @@ namespace GD3D.UI
         /// Also plays the quit to menu sound.
         /// </summary>
         /// <returns>The newly created <see cref="EaseObject"/>.</returns>
-        public static EaseObject TransitionToLastActiveMenu()
+        public static EaseObject TransitionToLastActiveMenu(Action action = null)
         {
             EaseObject ease = TransitionToScene(MenuData.LastActiveMenuSceneIndex);
 
@@ -103,13 +104,15 @@ namespace GD3D.UI
             ease.SetOnComplete((obj) =>
             {
                 Time.timeScale = 1;
+                action?.Invoke();
             });
-
+            
             // Play quit to menu sound effect
             //Audio.SoundManager.PlaySound("Quit To Menu", 1);
 
             return ease;
         }
+
 
         public static EaseObject TransitionToNextScene(int index)
         {
@@ -144,6 +147,7 @@ namespace GD3D.UI
             {
                 operation.allowSceneActivation = true;
             });
+
 
             return ease;
         }
