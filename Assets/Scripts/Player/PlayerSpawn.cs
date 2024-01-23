@@ -520,7 +520,7 @@ namespace GD3D.Player
             Transition.TransitionToLastActiveMenu(()=>
             {
                 Debug.Log("TransitionToLastActiveMenu From Player Spawns");
-                StartCoroutine(ShowADV());
+                Geekplay.Instance.RunCoroutine(ShowADV());
             });
 
         }
@@ -572,7 +572,7 @@ namespace GD3D.Player
         IEnumerator ShowADV()
         {
             Debug.Log("ShowADV");
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0.3f);
             Debug.Log("ShowADV");
             Geekplay.Instance.ShowInterstitialAd();
             Debug.Log("ShowADV");

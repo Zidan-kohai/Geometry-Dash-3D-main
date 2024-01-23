@@ -67,6 +67,11 @@ public class Geekplay : MonoBehaviour
 
     //РЕКЛАМА
 
+
+    public void RunCoroutine(IEnumerator enumerator)
+    {
+        StartCoroutine(enumerator);
+    }
     public void SubscribeOnReward(string idOrTags , UnityAction action)
     {
         for(int i = 0; i < rewardsList.Length; i++)
