@@ -72,9 +72,15 @@ namespace GD3D.Level
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
             StopAllEasings();
-            OnRespawn(false, null);
+            StartCoroutine(ChangeLevelColor());
         }
 
+        IEnumerator ChangeLevelColor()
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            OnRespawn(false, null);
+        }
 
         private void Update()
         {
