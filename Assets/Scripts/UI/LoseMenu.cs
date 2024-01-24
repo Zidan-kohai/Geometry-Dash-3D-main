@@ -12,6 +12,9 @@ namespace GD3D
         public static int loseCount = 0;
         private void OnEnable()
         {
+            restartButton.transform.localScale = Vector3.one;
+            ExitButton.transform.localScale = Vector3.one;
+
             if (loseCount != 0) return;
 
             reviveButton.transform.localScale = Vector3.zero;

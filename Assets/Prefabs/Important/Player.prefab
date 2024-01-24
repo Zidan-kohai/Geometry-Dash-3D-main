@@ -15179,6 +15179,7 @@ MonoBehaviour:
   - Gamemode: 0
     MeshFilters:
     - {fileID: 7881168382585392458}
+    - {fileID: 8528255910183302013}
     MeshObject: {fileID: 5889445912722643029}
     MeshHitbox: {fileID: 8224552816875580083}
     MeshTrail: {fileID: 7881168382585392458}
@@ -15452,6 +15453,8 @@ MonoBehaviour:
       Type: 11
       EaseRate: 0
     CompleteMode: 0
+  SpikeText: {fileID: 0}
+  ReverseText: {fileID: 0}
 --- !u!114 &8224552817121300478
 MonoBehaviour:
   m_ObjectHideFlags: 0
