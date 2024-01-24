@@ -31,7 +31,7 @@ namespace GD3D.UI
         [Header("Scrolling")]
         [SerializeField] private EaseSettings scrollEase;
         [SerializeField] private float minimumMouseMoveDistance;
-        private Transform[] _levelTransforms;
+        private GameObject[] _levels;
         private int _length;
 
         [Header("Level Stats Menu")]
@@ -81,7 +81,6 @@ namespace GD3D.UI
         private void Start()
         {
             _levelOffset = GetScrollOffsetPos();
-
             // Set the level color to the first levels color
             Color col = levels[s_scrollIndex].LevelBackgroundColor;
             LevelColors.ChangeColor(LevelColors.ColorType.background, col);
@@ -97,7 +96,7 @@ namespace GD3D.UI
 
             // Create new arrays which we will fill later
             _dots = new Image[levels.Length];
-            _levelTransforms = new Transform[levels.Length];
+            _levels = new GameObject[levels.Length];
 
             RectTransform dotRect = (RectTransform)dotTransform;
             float spacePerDot = (dotRect.rect.width + dotSpacing) * _scaleFactor;
@@ -119,8 +118,12 @@ namespace GD3D.UI
                     LevelData levelData = levels[i];
                     levelData.IsOpen = Geekplay.Instance.PlayerData.GetLevelData(levelData.LevelName).isOpen;
                     // Create a new level
-                    LevelSelectOption newLevel = Instantiate(levelTemplate, levelPos, levelTransform.rotation, levelTransform.parent).GetComponent<LevelSelectOption>();
-                    _levelTransforms[i] = newLevel.transform;
+                    LevelSelectOption newLevel = Instantiate(levelTemplate, levelTemplate.transform.position, levelTransform.rotation, levelTransform.parent).GetComponent<LevelSelectOption>();
+                    _levels[i] = newLevel.gameObject;
+
+                    if(i != 0)
+                        newLevel.gameObject.SetActive(false);
+
 
                     newLevel.gameObject.name = levelData.LevelName;
 
@@ -187,70 +190,70 @@ namespace GD3D.UI
         private void Update()
         {
             // Set the press point when the mouse is pressed
-            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-            {
-                _pressPoint = Input.mousePosition;
+            //if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            //{
+            //    _pressPoint = Input.mousePosition;
 
-                _oldScrollIndex = s_scrollIndex;
+            //    _oldScrollIndex = s_scrollIndex;
 
-                CancelScrollEasing();
-            }
+            //    CancelScrollEasing();
+            //}
 
-            // Scroll according to the mouse when it's held down and out of a specific range
-            if (Input.GetMouseButton(0) && _pressPoint.HasValue)
-            {
-                float distance = Vector2.Distance(_pressPoint.Value, Input.mousePosition);
+            //// Scroll according to the mouse when it's held down and out of a specific range
+            //if (Input.GetMouseButton(0) && _pressPoint.HasValue)
+            //{
+            //    float distance = Vector2.Distance(_pressPoint.Value, Input.mousePosition);
 
-                _outOfDistance = distance >= minimumMouseMoveDistance * _scaleFactor;
+            //    _outOfDistance = distance >= minimumMouseMoveDistance * _scaleFactor;
 
-                if (_outOfDistance)
-                {
-                    // Move the padding by the screen mouse delta divided by the scale factor
-                    _levelOffset += (Input.mousePosition.x - _oldMouseX) / _scaleFactor;
+            //    if (_outOfDistance)
+            //    {
+            //        // Move the padding by the screen mouse delta divided by the scale factor
+            //        _levelOffset += (Input.mousePosition.x - _oldMouseX) / _scaleFactor;
 
-                    // Set the scroll index by converting the level offset into an index integer
-                    s_scrollIndex = Mathf.RoundToInt(_levelOffset / -(float)Screen.width);
-                    UpdateScrollIndex(0);
-                }
-            }
+            //        // Set the scroll index by converting the level offset into an index integer
+            //        s_scrollIndex = Mathf.RoundToInt(_levelOffset / -(float)Screen.width);
+            //        UpdateScrollIndex(0);
+            //    }
+            //}
 
-            // Snap the scroll when the mouse is let go
-            if (Input.GetMouseButtonUp(0) && _pressPoint.HasValue && _outOfDistance)
-            {
-                // Check if the scroll index hasn't changed at all
-                if (_oldScrollIndex == s_scrollIndex)
-                {
-                    // Scroll left/rigth depending on where we pressed and where the mouse is currently on the X axis
-                    if (_pressPoint.Value.x < Input.mousePosition.x)
-                    {
-                        ScrollLeft();
-                    }
-                    else
-                    {
-                        ScrollRight();
-                    }
-                }
-                else
-                {
-                    Scroll(_oldScrollIndex, s_scrollIndex);
-                }
+            //// Snap the scroll when the mouse is let go
+            //if (Input.GetMouseButtonUp(0) && _pressPoint.HasValue && _outOfDistance)
+            //{
+            //    // Check if the scroll index hasn't changed at all
+            //    if (_oldScrollIndex == s_scrollIndex)
+            //    {
+            //        // Scroll left/rigth depending on where we pressed and where the mouse is currently on the X axis
+            //        if (_pressPoint.Value.x < Input.mousePosition.x)
+            //        {
+            //            ScrollLeft();
+            //        }
+            //        else
+            //        {
+            //            ScrollRight();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Scroll(_oldScrollIndex, s_scrollIndex);
+            //    }
 
-                _outOfDistance = false;
-                _pressPoint = null;
-            }
+            //    _outOfDistance = false;
+            //    _pressPoint = null;
+            //}
 
             // Update position of all levels and the 2 coming soon screens
-            for (int i = 0; i < _levelTransforms.Length; i++)
-            {
-                // First coming soon screen will be chosen if the index is -1
-                Transform level = i == -1 ? _comingSoonStartScreen : _levelTransforms[i];
+            //for (int i = 0; i < _levelTransforms.Length; i++)
+            //{
+            //    // First coming soon screen will be chosen if the index is -1
+            //    Transform level = i == -1 ? _comingSoonStartScreen : _levelTransforms[i];
 
-                Vector3 pos = level.position;
+            //    Vector3 pos = level.position;
 
-                pos.x = GetScrollPos(i) + _levelOffset;
+            //    pos.x = GetScrollPos(i) + _levelOffset;
 
-                level.position = pos;
-            }
+            //    level.position = pos;
+            //}
 
             _oldMouseX = Input.mousePosition.x;
 
@@ -266,11 +269,27 @@ namespace GD3D.UI
         /// </summary>
         public void ScrollLeft()
         {
-            int oldIndex = s_scrollIndex;
+            //int oldIndex = s_scrollIndex;
+
+            //UpdateScrollIndex(-1);
+
+            //Scroll(oldIndex, s_scrollIndex);
+
+
+            if (s_scrollIndex == 0)
+                return;
 
             UpdateScrollIndex(-1);
 
-            Scroll(oldIndex, s_scrollIndex);
+            for (int i = 0; i < _levels.Length; i++)
+            {
+                _levels[i].SetActive(false);
+
+                if (i == s_scrollIndex)
+                {
+                    _levels[i].SetActive(true);
+                }    
+            }
         }
 
         /// <summary>
@@ -278,11 +297,26 @@ namespace GD3D.UI
         /// </summary>
         public void ScrollRight()
         {
-            int oldIndex = s_scrollIndex;
+            //int oldIndex = s_scrollIndex;
+
+            //UpdateScrollIndex(1);
+
+            //Scroll(oldIndex, s_scrollIndex);
+
+            if (s_scrollIndex == _levels.Length - 1)
+                return;
 
             UpdateScrollIndex(1);
 
-            Scroll(oldIndex, s_scrollIndex);
+            for (int i = 0; i < _levels.Length; i++)
+            {
+                _levels[i].SetActive(false);
+
+                if (i == s_scrollIndex)
+                {
+                    _levels[i].SetActive(true);
+                }
+            }
         }
 
         /// <summary>
@@ -293,14 +327,14 @@ namespace GD3D.UI
             s_scrollIndex += amount;
 
             // Clamp the scroll index between 0 and the levels length so it doesn't go out of range
-            if (s_scrollIndex < 0)
-            {
-                s_scrollIndex += _length;
-            }
-            else if (s_scrollIndex > _length - 1)
-            {
-                s_scrollIndex -= _length;
-            }
+            //if (s_scrollIndex < 0)
+            //{
+            //    s_scrollIndex += _length;
+            //}
+            //else if (s_scrollIndex > _length - 1)
+            //{
+            //    s_scrollIndex -= _length;
+            //}
             //s_scrollIndex = Mathf.Clamp(s_scrollIndex, 0, levels.Length - 1);
 
             // Deactivate the currently active dot and set the new active dot
