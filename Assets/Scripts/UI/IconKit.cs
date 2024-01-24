@@ -191,7 +191,9 @@ namespace GD3D.UI
             _startSpinSpeed = spinSpeed;
 
             goldCoin = Geekplay.Instance.PlayerData.GoldCoinsCollected;
+            diamondCoin = Geekplay.Instance.PlayerData.DiamondCoinsCollected;
             goldCoinText.text = goldCoin.ToString();
+            diamondCoinText.text = diamondCoin.ToString();
 
             //-- Create all the icon buttons for every gamemode
 
@@ -353,7 +355,7 @@ namespace GD3D.UI
                                     else if (costList[thisIndex].unit == CubeCost.Unit.Diamond)
                                     {
                                         if (!buttonCost.TryBuy(diamondCoin)) return;
-                                        goldCoin = buttonCost.buyForDiamond(goldCoin);
+                                        diamondCoin = buttonCost.buyForDiamond(diamondCoin);
                                         diamondCoinText.text = diamondCoin.ToString();
                                     }
 

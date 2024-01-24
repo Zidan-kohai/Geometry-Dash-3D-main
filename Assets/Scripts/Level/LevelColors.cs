@@ -75,6 +75,7 @@ namespace GD3D.Level
             OnRespawn(false, null);
         }
 
+
         private void Update()
         {
             // Change the color in the main menu
