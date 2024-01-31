@@ -111,7 +111,7 @@ namespace GD3D.Player
             _cam = Helpers.Camera.transform;
 
             // Subscribe to events
-            player.OnRespawn += (a, b) => Cancel3DOffsetEase();
+            player.OnRespawn += (a, b, c) => Cancel3DOffsetEase();
             player.OnRespawn += OnRespawn;
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
 
@@ -370,7 +370,7 @@ namespace GD3D.Player
         /// <summary>
         /// Is called when the player respawns
         /// </summary>
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Check if we are not in practice mode
             if (!inPracticeMode)

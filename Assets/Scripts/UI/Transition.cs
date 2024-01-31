@@ -134,7 +134,7 @@ namespace GD3D.UI
         /// Transitions to black and then changes the scene.
         /// </summary>
         /// <returns>The newly created <see cref="EaseObject"/>.</returns>
-        public static EaseObject TransitionToScene(int sceneIndex)
+        public static EaseObject TransitionToScene(int sceneIndex, Action action = null)
         {
             EaseObject ease = TransitionIn();
 
@@ -146,6 +146,7 @@ namespace GD3D.UI
             ease.SetOnComplete((obj) =>
             {
                 operation.allowSceneActivation = true;
+                action?.Invoke();
             });
 
 

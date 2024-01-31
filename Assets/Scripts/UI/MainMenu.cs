@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 using GD3D.Easing;
 using GD3D.CustomInput;
+using TMPro;
 
 namespace GD3D.UI
 {
@@ -37,9 +38,11 @@ namespace GD3D.UI
         [SerializeField] private GameObject kiti1Buyed;
         [SerializeField] private GameObject kiti2Buyed;
         [SerializeField] private GameObject kiti3Buyed;
-
+        
         private Key _quitKey;
         [SerializeField] private Button shopButton;
+
+        [SerializeField] private TextMeshProUGUI pointsteText;
         private void Awake()
         {
             // Set the starting color as the active color for the darkness overlay
@@ -104,6 +107,20 @@ namespace GD3D.UI
                 kiti3Buyed.gameObject.SetActive(true);
             });
 
+            if (Geekplay.Instance.language == "en")
+            {
+                pointsteText.text = $"Your points: {Geekplay.Instance.PlayerData.LeaderboardPointds}";
+            }
+            else if (Geekplay.Instance.language == "ru")
+            {
+                pointsteText.text = $"Твои очки: {Geekplay.Instance.PlayerData.LeaderboardPointds}";
+            }
+            else if (Geekplay.Instance.language == "tr")
+            {
+                pointsteText.text = $"Puanlariniz: {Geekplay.Instance.PlayerData.LeaderboardPointds}";
+            }
+
+            Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
             Debug.Log($"Main Menu Start GoldShop Instance = {GoldShop.Instance}");
 

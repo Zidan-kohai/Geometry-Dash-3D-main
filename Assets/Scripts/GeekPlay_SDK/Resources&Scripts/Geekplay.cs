@@ -64,10 +64,18 @@ public class Geekplay : MonoBehaviour
     private bool canAd;
     string colorDebug = "yellow"; //Цвет Дебага
 
+    public bool canReward;
 
-    //РЕКЛАМА
 
-
+    //ЗНАЧЕНИЯ ЛИДЕРБОРДА
+    public string[] l;
+    public string[] lN;
+    public int leaderNumber;
+    public int leaderNumberN;
+    public LeaderboardInGame leaderboardInGame;
+    public float remainingTimeUntilUpdateLeaderboard;
+    public float timeToUpdateLeaderboard = 60;
+    public string lastLeaderText;
     public void RunCoroutine(IEnumerator enumerator)
     {
         StartCoroutine(enumerator);
@@ -94,9 +102,12 @@ public class Geekplay : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         GameReady();
+
+        ShowInterstitialAd();
     }
     public void OnRewarded() //ВОЗНАГРАЖДЕНИЕ ПОСЛЕ ПРОСМОТРА РЕКЛАМЫ
     {
@@ -116,7 +127,30 @@ public class Geekplay : MonoBehaviour
         cor = AdOff();
         StartCoroutine(cor);
     }
+    public void GetLeaders(string value)
+    {
+        l[leaderNumber] = value;
 
+        if (leaderNumber < 9)
+        {
+            leaderNumber += 1;
+            Utils.GetLeaderboard("score", leaderNumber);
+        }
+
+        leaderboardInGame.SetText();
+    }
+    public void GetLeadersName(string value)
+    {
+        lN[leaderNumberN] = value;
+
+        if (leaderNumberN < 9)
+        {
+            leaderNumberN += 1;
+            Utils.GetLeaderboard("name", leaderNumberN);
+        }
+
+        leaderboardInGame.SetText();
+    }
     IEnumerator AdOff() //ТАЙМЕР С ВЫКЛЮЧЕНИЕМ РЕКЛАМЫ
     {
         canAd = false;
@@ -174,8 +208,26 @@ public class Geekplay : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P)) 
+        {
+            PlayerData = new PlayerData();
+        }
+
+        remainingTimeUntilUpdateLeaderboard -= Time.deltaTime;
+    }
+
+    IEnumerator CanReward()
+    {
+        yield return new WaitForSeconds(90);
+        canReward = true;
+    }
+
     public void ShowRewardedAd(string idOrTag) //РЕКЛАМА С ВОЗНАГРАЖДЕНИЕМ - ПОКАЗАТЬ
     {
+        canReward = false;
+        StartCoroutine(CanReward());
         switch (Platform)
         {
             case Platform.Editor:
@@ -544,6 +596,9 @@ public class Geekplay : MonoBehaviour
         {
             AfterPlatformChange();
         }
+
+        canReward = true;
+
     }
 
     //ЗАГРУЗКА РЕКЛАМЫ
@@ -643,10 +698,22 @@ public class Geekplay : MonoBehaviour
 
     public void CheckBuysOnStart(string idOrTag) //проверить покупки на старте
     {
+        purchasedTag = idOrTag;
         Utils.CheckBuyItem(idOrTag);
     }
 
-
+    public void SetPurchasedItem() //начислить уже купленные предметы на старте
+    {
+            for (int i = 0; i < purchasesList.Length; i++)
+            {
+                if (PlayerData.lastBuy == purchasesList[i].itemName)
+                {
+                    purchasesList[i].purchaseEvent.Invoke();
+                    PlayerData.lastBuy = "";
+                    Save();
+                }
+            }
+    }
 
     //СОБЫТИЯ ДЛЯ GAMEDISTRIBUTION
     public void OnPreloadRewardedVideo(int loaded)

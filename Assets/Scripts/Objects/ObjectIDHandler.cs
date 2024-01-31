@@ -65,7 +65,7 @@ namespace GD3D.Objects
             ActivatedTriggers.Clear();
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Check if we are in practice mode
             if (inPracticeMode)

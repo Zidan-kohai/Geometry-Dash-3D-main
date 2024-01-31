@@ -137,7 +137,7 @@ namespace GD3D
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Stop the easings
             EasingManager.TryRemoveEaseObject(_floorEaseID);

@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 637544030727726259}
   - component: {fileID: 637544030727726256}
   - component: {fileID: 637544030727726257}
+  - component: {fileID: 2500235337186407779}
   m_Layer: 5
   m_Name: Level Canvas
   m_TagString: Untagged
@@ -634,6 +635,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2500235337186407779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637544030727726262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5f45d29ad65491bb35450a5a8a4da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards:
+  - {fileID: 5965635111091753215}
+  - {fileID: 8288311024422795097}
 --- !u!1 &637544031035744028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,7 +4266,7 @@ MonoBehaviour:
     en: Attempt 1
     tu: Mesaj 1
   - text: {fileID: 7607777644917270973}
-    ru: "C \u043D\u0430\u0447\u0430\u043B\u0430"
+    ru: "\u0417\u0430\u043D\u043E\u0432\u043E"
     en: Restart
     tu: "Tekrar ba\u015Flat"
   - text: {fileID: 9016946182246341639}
@@ -4279,7 +4295,7 @@ MonoBehaviour:
     en: Menu
     tu: "Men\xFC"
   - text: {fileID: 411259082284752990}
-    ru: "\u0421 \u041D\u0430\u0447\u0430\u043B\u0430"
+    ru: "\u0417\u0430\u043D\u043E\u0432\u043E"
     en: Restart
     tu: "Tekrar ba\u015Flat"
   - text: {fileID: 3884918644497035985}

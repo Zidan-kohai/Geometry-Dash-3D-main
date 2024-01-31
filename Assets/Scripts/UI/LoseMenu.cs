@@ -27,7 +27,7 @@ namespace GD3D
         {
             StartCoroutine(ShowButton(reviveButton));
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
 
             StartCoroutine(ShowButton(restartButton));
             StartCoroutine(ShowButton(ExitButton));
@@ -35,8 +35,8 @@ namespace GD3D
 
         private IEnumerator ShowButton(GameObject gameObject)
         {
-            float time = 1f;
-            float deltatime = 0.02f;
+            float time = 0.5f;
+            float deltatime = 0.01f;
             float delta = 0.02f;
 
             while (time > 0)

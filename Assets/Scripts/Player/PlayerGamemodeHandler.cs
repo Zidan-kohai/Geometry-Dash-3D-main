@@ -118,7 +118,7 @@ namespace GD3D.Player
         /// <summary>
         /// Called when the player respawns
         /// </summary>
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             _activeGamemodeScript.OnRespawn(inPracticeMode, checkpoint);
 

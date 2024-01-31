@@ -20,6 +20,11 @@ namespace GD3D
             {
                 buyed();
             }
+
+            Geekplay.Instance.SubscribeOnPurchase("kiti4", () =>
+            {
+                buyed();
+            });
         }
         public int Cost 
         { 

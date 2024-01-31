@@ -91,12 +91,24 @@ namespace GD3D.Player
 
         [SerializeField] private TextMeshPro SpikeText;
         [SerializeField] private TextMeshPro ReverseText;
+        [SerializeField] private TextMeshPro FlyText;
 
+
+        private bool isRewardedClicked;
         /// <summary>
         /// Start is called before the first frame update.
         /// </summary>
         public override void Start()
         {
+            Geekplay.Instance.SubscribeOnReward("Revive", () =>
+            {
+                isRewardedClicked = true;
+            });
+            Geekplay.Instance.SubscribeOnReward("doubleAward", () =>
+            {
+                isRewardedClicked = true;
+            });
+
             base.Start();
             loseDiamondText.text = $"{0}";
             _currentAttempt = Geekplay.Instance.CurrentLevelData.TotalAttempts + 1;
@@ -111,45 +123,51 @@ namespace GD3D.Player
             }else if (Geekplay.Instance.language == "ru")
             {
                 attemptText.text = $"попытка  {_currentAttempt}";
-            }else if (Geekplay.Instance.language == "tu")
+            }else if (Geekplay.Instance.language == "tr")
             {
-                attemptText.text = $"Girişim  {_currentAttempt}";
+                attemptText.text = $"Girisim  {_currentAttempt}";
             }
 
-            if(Geekplay.Instance.mobile && SpikeText!= null && ReverseText != null)
+            if(Geekplay.Instance.mobile && SpikeText!= null && ReverseText != null && FlyText != null)
             {
                 if (Geekplay.Instance.language == "en")
                 {
-                    SpikeText.text = "Click to jump";
-                    ReverseText.text = "press the screen to fly";
+                    SpikeText.text = "Tap - jump";
+                    ReverseText.text = "press screen - fly";
+                    FlyText.text = "hold the screen - up, release the screen - down";
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    SpikeText.text = "кликни по экрану, чтобы пригнуть";
-                    ReverseText.text = "зажми экран чтобы лететь";
+                    SpikeText.text = "клик по экрану - прыжок";
+                    ReverseText.text = "зажать экран - лететь";
+                    FlyText.text = "зажать экран - вверх, отпустить экран - вниз";
                 }
-                else if (Geekplay.Instance.language == "tu")
+                else if (Geekplay.Instance.language == "tr")
                 {
-                    SpikeText.text = "Atlamak için tıklayın";
-                    ReverseText.text = "uçmak için ekrana basın";
+                    SpikeText.text = "Dokun - atla";
+                    ReverseText.text = "ekrana basin - uçun";
+                    FlyText.text = "ekrani yukari doğru tutun, ekrani aşaği doğru birakin";
                 }
             }
-            else if(SpikeText != null && ReverseText != null)
+            else if(SpikeText != null && ReverseText != null && FlyText != null)
             {
                 if (Geekplay.Instance.language == "en")
                 {
-                    SpikeText.text = "jump over the space";
-                    ReverseText.text = "press the space to fly";
+                    SpikeText.text = "Space - jump";
+                    ReverseText.text = "press space - fly";
+                    FlyText.text = "hold spacebar - up release space - down";
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    SpikeText.text = "перепрыгни на пробел";
-                    ReverseText.text = "зажми пробел чтобы, лететь";
+                    SpikeText.text = "Пробел - прыжок";
+                    ReverseText.text = "зажать пробел - лететь";
+                    FlyText.text = "Держать пробел - вверх отпустить пробел - вниз";
                 }
-                else if (Geekplay.Instance.language == "tu")
+                else if (Geekplay.Instance.language == "tr")
                 {
-                    SpikeText.text = "uzaya atladı";
-                    ReverseText.text = "uçmak için boşluk tuşuna basın";
+                    SpikeText.text = "Uzay - atlama";
+                    ReverseText.text = "uzaya basin - uçun";
+                    FlyText.text = "bosluk çubugunu basili tutun alani serbest birak - asagi";
                 }
             }
 
@@ -256,7 +274,7 @@ namespace GD3D.Player
         /// </summary>
         private void ShowLoseMenu()
         {
-
+            isRewardedClicked = false;
             SoundManager.Instance.StopMainAudio();
 
             // Disable the pause menu so you can't pause
@@ -281,7 +299,7 @@ namespace GD3D.Player
                 TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
                 loseMenuTimeText.text = $"Время: {time.ToString("mm':'ss")}";
             }
-            else if (Geekplay.Instance.language == "tu")
+            else if (Geekplay.Instance.language == "tr")
             {
                 loseMenuJumpText.text = $"Atlar: {PlayerMain.TimesJumped}";
 
@@ -343,10 +361,13 @@ namespace GD3D.Player
             {
                 Geekplay.Instance.RateGameFunc();
             }
+
+            Geekplay.Instance.RunCoroutine(ShowADV());
         }
 
         private void ShowWinMenu()
         {
+            isRewardedClicked = false;
             switch (SceneManager.GetActiveScene().buildIndex)
             {
                 case 4:
@@ -393,7 +414,7 @@ namespace GD3D.Player
                 TimeSpan time = TimeSpan.FromSeconds(PlayerMain.TimeSpentPlaying);
                 winMenuTimeText.text = $"Время: {time.ToString("mm':'ss")}";
             }
-            else if (Geekplay.Instance.language == "tu")
+            else if (Geekplay.Instance.language == "tr")
             {
                 winMenuJumpText.text = $"Atlar: {PlayerMain.TimesJumped}";
 
@@ -471,6 +492,8 @@ namespace GD3D.Player
             {
                 Geekplay.Instance.RateGameFunc();
             }
+
+            Geekplay.Instance.RunCoroutine(ShowADV());
         }
 
 
@@ -479,6 +502,7 @@ namespace GD3D.Player
         /// </summary>
         public void QuitToMenu()
         {
+            LoseMenu.loseCount = 0;
             _currentAttempt++;
             Geekplay.Instance.CurrentLevelData.TotalAttempts++;
             Geekplay.Instance.PlayerData.GoldCoinsCollected += goldReward;
@@ -516,10 +540,10 @@ namespace GD3D.Player
 
             Geekplay.Instance.Leaderboard("Points", Geekplay.Instance.PlayerData.LeaderboardPointds);
 
-            Transition.TransitionToLastActiveMenu(()=>
+            Transition.TransitionToScene(0,()=>
             {
                 Debug.Log("TransitionToLastActiveMenu From Player Spawns");
-                Geekplay.Instance.RunCoroutine(ShowADV());
+                //Geekplay.Instance.RunCoroutine(ShowADV());
             });
 
         }
@@ -536,7 +560,7 @@ namespace GD3D.Player
             newBestPercentText.text = ProgressBar.PercentString;
 
             // Enable new best popuo
-            newBestPopup.SetActive(true);
+            //newBestPopup.SetActive(true);
 
             // Try remove ease object
             EasingManager.TryRemoveEaseObject(_newBestSizeEaseID);
@@ -570,11 +594,12 @@ namespace GD3D.Player
         #endregion
         IEnumerator ShowADV()
         {
-            Debug.Log("ShowADV");
-            yield return new WaitForSecondsRealtime(0.3f);
-            Debug.Log("ShowADV");
-            Geekplay.Instance.ShowInterstitialAd();
-            Debug.Log("ShowADV");
+            yield return new WaitForSecondsRealtime(0.5f);
+            if (!isRewardedClicked)
+            {
+                Geekplay.Instance.ShowInterstitialAd();
+                Debug.Log("ShowADV");
+            }
         }
 
         ///<summary>
@@ -700,7 +725,7 @@ namespace GD3D.Player
             }
 
             // Invoke respawn event
-            player.InvokeRespawnEvent(inPracticeMode && checkpoint != null, checkpoint);
+            player.InvokeRespawnEvent(inPracticeMode && checkpoint != null, checkpoint, false);
 
             // Set attempt text
             if (Geekplay.Instance.language == "en")
@@ -711,7 +736,7 @@ namespace GD3D.Player
             {
                 attemptText.text = $"попытка  {_currentAttempt}";
             }
-            else if (Geekplay.Instance.language == "tu")
+            else if (Geekplay.Instance.language == "tr")
             {
                 attemptText.text = $"Girişim  {_currentAttempt}";
             }
@@ -728,7 +753,6 @@ namespace GD3D.Player
             player.IgnoreInput();
 
             gameCount++;
-
 
             SoundManager.Instance.ResetMainAudio();
         }
@@ -762,7 +786,7 @@ namespace GD3D.Player
 
 
             // Invoke respawn event
-            player.InvokeRespawnEvent(true, checkpoint);
+            player.InvokeRespawnEvent(true, checkpoint,true);
 
 
             // Start the respawn coroutine

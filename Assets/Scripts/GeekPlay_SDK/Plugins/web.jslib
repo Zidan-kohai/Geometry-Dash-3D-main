@@ -148,6 +148,38 @@ var plugin = {
   		    // Выбрасывает исключение USER_NOT_AUTHORIZED для неавторизованных пользователей.
   		  })
 	  },
+
+    GetLeaderboard: function (type, number) {
+      type = UTF8ToString(type);
+      console.log(type);
+
+          ysdk.getLeaderboards()
+      .then(lb => {
+        // Получение 10 топов
+        lb.getLeaderboardEntries('Points', { quantityTop: 10 })
+          .then(res => {
+            console.log(res);
+            if (res.entries.length <= number)
+            {
+              console.log("NULL");
+              return;
+            }
+            else if (type == "score")
+            {
+              console.log("SCORE");              
+              console.log(String(res.entries[number].score));
+              myGameInstance.SendMessage('Init', 'GetLeaders', String(res.entries[number].score));
+              //return String(res.entries[number].score);
+            }
+            else if (type == "name")
+            {
+              console.log("NAME");
+              myGameInstance.SendMessage('Init', 'GetLeadersName', String(res.entries[number].player.publicName));
+              //return UTF8ToString(res.entries[number].player.publicName);
+            }
+          });
+      });
+    },
   /////YANDEX//////
 
 

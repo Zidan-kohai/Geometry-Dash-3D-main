@@ -119,7 +119,7 @@ namespace GD3D.Player
             HaveTrail = false;
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Set if trail is enabled or not based on the checkpoint data
             if (inPracticeMode)

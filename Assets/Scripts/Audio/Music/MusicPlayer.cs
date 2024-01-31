@@ -214,7 +214,7 @@ namespace GD3D.Audio
             }
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Only play the music if we are not in practice mode
             if (!InPracticeMode)

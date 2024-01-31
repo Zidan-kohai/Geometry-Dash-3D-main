@@ -9907,7 +9907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraStartOffset: {x: 0, y: -1, z: 0}
-  offset: {x: 6, y: 3.5, z: -10}
+  offset: {x: 9, y: 3.5, z: -10}
   rotation: {x: 15, y: 0, z: 0}
   Target: {fileID: 0}
   limitYMin: -3.5
@@ -14947,6 +14947,7 @@ MonoBehaviour:
   mainAudio: {fileID: 3795971454604070981}
   DeathClip: {fileID: 2857797825532305286}
   WinClip: {fileID: 9022220969330215216}
+  buttonClickClip: {fileID: 0}
 --- !u!82 &3795971454604070981
 AudioSource:
   m_ObjectHideFlags: 0

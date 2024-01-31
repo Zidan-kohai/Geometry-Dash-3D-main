@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GD3D.Audio;
 using GD3D.ObjectPooling;
 
 namespace GD3D.Player
@@ -14,6 +13,7 @@ namespace GD3D.Player
         [Header("Main")]
         [SerializeField] private LayerMask deathLayer;
         private bool _touchingDeath;
+        private int deathCount;
 
         [Header("Death Effect Pooling")]
         [SerializeField] private int poolSize = 2;
@@ -87,7 +87,7 @@ namespace GD3D.Player
 
             player.OnRespawn += OnRespawn;
 
-            StartCoroutine("CanDeath");
+            StartCoroutine(CanDeath(immortalityTime));
         }
 
 
@@ -112,7 +112,13 @@ namespace GD3D.Player
             // Die if we are touching death stuff
             if (_touchingDeath)
             {
-                Die();
+                deathCount++;
+                deathable = false;
+                StartCoroutine(CanDeath(1f));
+                if(deathCount == 3)
+                {
+                    Die();
+                }
             }
 
 #if UNITY_EDITOR
@@ -126,16 +132,23 @@ namespace GD3D.Player
         }
 
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
+            if (!giveImmortal)
+            {
+                deathCount = 0;
+                return;
+            }
+
+
             deathable = false;
             _touchingDeath = false;
 
-            StartCoroutine("CanDeath");
+            StartCoroutine(CanDeath(immortalityTime));
         }
 
 
-        IEnumerator CanDeath()
+        IEnumerator CanDeath(float immortalityTime)
         {
             yield return new WaitForSeconds(immortalityTime);
 

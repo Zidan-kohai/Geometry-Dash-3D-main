@@ -1,7 +1,4 @@
-using GD3D.Easing;
 using GD3D.Level;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GD3D

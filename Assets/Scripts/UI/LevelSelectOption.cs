@@ -36,6 +36,11 @@ namespace GD3D.UI
         [SerializeField] private TMP_Text normalProgressText;
         [SerializeField] private TMP_Text practiceProgressText;
         [SerializeField] private GameObject isGiveDiamond;
+        [SerializeField] private TextMeshProUGUI PointsCountGiveText;
+
+        [SerializeField] private EnableRewards enableRewards;
+
+        [SerializeField] private LevelSelectUI levelSelectUI;
         private void Start()
         {
             _levelName = LevelData.LevelName;            
@@ -64,7 +69,40 @@ namespace GD3D.UI
                 practiceProgressText.text = ProgressBar.ToPercent(levelSave.PracticePercent);
             }
 
-            if(LevelData.IsOpen || LevelData.LevelBuildIndex == 4 || LevelData.LevelBuildIndex == 5)
+
+            if (Geekplay.Instance.language == "en")
+            {
+                PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex  - 3} tournament points";
+            }
+            else if (Geekplay.Instance.language == "ru")
+            {
+                PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex - 3} турнирных очка";
+            }
+            else if (Geekplay.Instance.language == "tr")
+            {
+                PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex - 3} turnuva puanları";
+            }
+
+
+
+            if (LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
+            {
+                if (Geekplay.Instance.language == "en")
+                {
+                    PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex - 3} tournament points";
+                }
+                else if (Geekplay.Instance.language == "ru")
+                {
+                    PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex - 3} турнирных очков";
+                }
+                else if (Geekplay.Instance.language == "tr")
+                {
+                    PointsCountGiveText.text = $"1% - {LevelData.LevelBuildIndex - 3} turnuva puanları";
+                }
+            }
+
+
+            if (LevelData.IsOpen || LevelData.LevelBuildIndex == 4 || LevelData.LevelBuildIndex == 5)
             {
                 openButtonPanel.gameObject.SetActive(false);
                 LevelData.IsOpen = true;
@@ -73,21 +111,20 @@ namespace GD3D.UI
             {
                 if (Geekplay.Instance.language == "en")
                 {
-                    buttonOpen1Text.text = "Open by viewing ads";
+                    buttonOpen1Text.text = "Open";
                     buttonOpen2Text.text = $"Open by {LevelData.cost} Gold";
-
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    buttonOpen1Text.text = "открыть за рекламу";
-                    buttonOpen2Text.text = $"открыть за {LevelData.cost} золото";
+                    buttonOpen1Text.text = "Открыть";
+                    buttonOpen2Text.text = $"открыть за {LevelData.cost} золота";
 
                     levelNameText.text = _levelName;
                 }
-                else if (Geekplay.Instance.language == "tu")
+                else if (Geekplay.Instance.language == "tr")
                 {
-                    buttonOpen1Text.text = "Reklamlari görüntüleyerek açin";
-                    buttonOpen2Text.text = $"{LevelData.cost} Altınla Açıldı";
+                    buttonOpen1Text.text = "Açin";
+                    buttonOpen2Text.text = $"{LevelData.cost} Altınla Açildi";
                 }
 
 
@@ -95,7 +132,6 @@ namespace GD3D.UI
 
                 if (LevelData.LevelBuildIndex == 6)
                 {
-
                     buttonOpen1.onClick.AddListener(BeforeOpenLevel3ByShowReward);
                     Geekplay.Instance.SubscribeOnReward("OpenLevel3", OpenLevelByShowReward);
                 }
@@ -106,6 +142,8 @@ namespace GD3D.UI
                     Geekplay.Instance.SubscribeOnReward("OpenLevel4", OpenLevelByShowReward);
                 }
 
+                enableRewards.addRewardsButton(buttonOpen1.gameObject);
+
                 buttonOpen2.onClick.AddListener(OpenLevelByGold);
             }
             else if (LevelData.LevelBuildIndex == 8 || LevelData.LevelBuildIndex == 9)
@@ -113,29 +151,53 @@ namespace GD3D.UI
 
                 if (Geekplay.Instance.language == "en")
                 {
-                    buttonOpen1Text.text = "Open by 20 Yan";
-                    buttonOpen2Text.text = $"Open by {LevelData.cost} Diamond";
+                    buttonOpen1Text.text = "Open by 50 Yan";
+                    buttonOpen2Text.text = $"Open by {LevelData.cost} diamond";
                 }
                 else if (Geekplay.Instance.language == "ru")
                 {
-                    buttonOpen1Text.text = "купить уровень 20 Ян";
-                    buttonOpen2Text.text = $"открыть за {LevelData.cost} алмаз";
+                    buttonOpen1Text.text = "Открыть за 50 Ян";
+                    buttonOpen2Text.text = $"открыть за {LevelData.cost} алмазов";
                 }
-                else if (Geekplay.Instance.language == "tu")
+                else if (Geekplay.Instance.language == "tr")
                 {
-                    buttonOpen1Text.text = "Saat 20 Yan kadar açılıyor";
-                    buttonOpen2Text.text = $"{LevelData.cost} Diamond tarafından açıldı";
+                    buttonOpen1Text.text = "Saat 50 Yan kadar açilıyor";
+                    buttonOpen2Text.text = $"{LevelData.cost} Diamond tarafindan açildı";
                 }
 
                 buttonOpen2.onClick.AddListener(OpenLevelByDiamond);
                 
                 if(LevelData.LevelBuildIndex == 8)
                 {
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        buttonOpen1Text.text = "Open by 50 Yan";
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        buttonOpen1Text.text = "Открыть за 50 Ян";
+                    }
+                    else if (Geekplay.Instance.language == "tr")
+                    {
+                        buttonOpen1Text.text = "Saat 50 Yan kadar açiliyor";
+                    }
                     buttonOpen1.onClick.AddListener(OpenLevel5ByInApp);
                     Geekplay.Instance.SubscribeOnPurchase("openLevel5",OpenLevelByInApp);
                 }
                 else
                 {
+                    if (Geekplay.Instance.language == "en")
+                    {
+                        buttonOpen1Text.text = "Open by 100 Yan";
+                    }
+                    else if (Geekplay.Instance.language == "ru")
+                    {
+                        buttonOpen1Text.text = "Открыть за 100 Ян";
+                    }
+                    else if (Geekplay.Instance.language == "tr")
+                    {
+                        buttonOpen1Text.text = "Saat 100 Yan kadar açiliyor";
+                    }
                     buttonOpen1.onClick.AddListener(OpenLevel6ByInApp);
                     Geekplay.Instance.SubscribeOnPurchase("openLevel6", OpenLevelByInApp);
                 }
@@ -154,9 +216,9 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "Стерео безумие";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
-                        levelNameText.text = "Stereo Çılgınlığı";
+                        levelNameText.text = "Stereo Çilginliğı";
                     }
                     break;
                 case 5:
@@ -168,9 +230,9 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "Снова в путь";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
-                        levelNameText.text = "İz arkasında";
+                        levelNameText.text = "Iz arkasinda";
                     }
                     break;
                 case 6:
@@ -182,7 +244,7 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "Полярность";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
                         levelNameText.text = "Polargeist";
                     }
@@ -196,7 +258,7 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "Засуха";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
                         levelNameText.text = "Kurutma";
                     }
@@ -210,7 +272,7 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "База за базой";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
                         levelNameText.text = "Tabandan Sonra Taban";
                     }
@@ -224,9 +286,9 @@ namespace GD3D.UI
                     {
                         levelNameText.text = "Не могу отпустить";
                     }
-                    else if (Geekplay.Instance.language == "tu")
+                    else if (Geekplay.Instance.language == "tr")
                     {
-                        levelNameText.text = "Bırakamıyorum";
+                        levelNameText.text = "Birakamiyorum";
                     }
                     break;
             }
@@ -276,6 +338,7 @@ namespace GD3D.UI
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
+            levelSelectUI.ChangeCoin();
         }
 
         public void OpenLevelByDiamond()
@@ -292,6 +355,7 @@ namespace GD3D.UI
             SaveData.Save();
 
             openButtonPanel.SetActive(false);
+            levelSelectUI.ChangeCoin();
         }
 
         public void BeforeOpenLevel3ByShowReward()

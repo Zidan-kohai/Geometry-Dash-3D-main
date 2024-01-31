@@ -64,7 +64,7 @@ namespace GD3D.Objects
         /// <summary>
         /// Override this to do stuff when the player dies
         /// </summary>
-        protected virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        protected virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             /*
             // Execute this one frame later using this epic timer thingy I wrote :D

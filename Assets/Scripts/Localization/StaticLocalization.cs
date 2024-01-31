@@ -27,7 +27,7 @@ namespace GD3D
                     item.text.text = item.en;
                 }
             }
-            else if (Geekplay.Instance.language == "tu")
+            else if (Geekplay.Instance.language == "tr")
             {
                 foreach (var item in Texts)
                 {
@@ -49,7 +49,7 @@ namespace GD3D
                     item.text.text = item.en;
                 }
             }
-            else if (Geekplay.Instance.language == "tu")
+            else if (Geekplay.Instance.language == "tr")
             {
                 foreach (var item in TextsNoneUI)
                 {

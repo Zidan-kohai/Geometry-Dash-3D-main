@@ -66,7 +66,7 @@ namespace GD3D.Objects
         /// <summary>
         /// Override this to do stuff when the player dies
         /// </summary>
-        public virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        public virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             _isActivated = idHandler.IsActivated(this);
         }

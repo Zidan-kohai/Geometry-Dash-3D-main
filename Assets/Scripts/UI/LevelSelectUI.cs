@@ -32,9 +32,6 @@ namespace GD3D
             Geekplay.Instance.SubscribeOnReward("GetFiveGoldCoin", ChangeCoin);
 
             GoldShop.Instance.GetPurchase.AddListener(ChangeCoin);
-
-            
-
         }
 
         private void GetGold()

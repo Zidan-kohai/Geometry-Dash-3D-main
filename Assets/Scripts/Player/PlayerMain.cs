@@ -53,7 +53,7 @@ namespace GD3D.Player
         //-- Events
         public Action OnDeath;
         public Action OnWin;
-        public Action<bool, Checkpoint> OnRespawn;
+        public Action<bool, Checkpoint, bool> OnRespawn;
         public Action<PressMode> OnClick;
         public Action<Portal> OnEnterPortal;
 
@@ -285,7 +285,7 @@ namespace GD3D.Player
         /// <summary>
         /// Invokes the OnRespawn event cuz player.OnRespawn?.Invoke() won't work outside of this script.
         /// </summary>
-        public void InvokeRespawnEvent(bool inPracticeMode, Checkpoint checkpoint)
+        public void InvokeRespawnEvent(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             player.IsDead = false;
             
@@ -307,7 +307,7 @@ namespace GD3D.Player
                 transform.rotation = checkpoint.PlayerRotation;
             }
 
-            OnRespawn?.Invoke(inPracticeMode, checkpoint);
+            OnRespawn?.Invoke(inPracticeMode, checkpoint, giveImmortal);
         }
     }
 }

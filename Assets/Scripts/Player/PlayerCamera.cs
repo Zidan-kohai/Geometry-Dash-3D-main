@@ -72,7 +72,7 @@ namespace GD3D.Player
             SetCamTarget(null);
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Make the camera follow the player
             SetCamTarget(transform);

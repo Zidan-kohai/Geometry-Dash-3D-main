@@ -82,7 +82,7 @@ namespace GD3D.Level
                 if (_oldPercentString != ProgressBar.PercentString)
                 {
                     // Make the player spawn script do the NEW BEST popup animation
-                    _player.Spawn.ShowNewBest();
+                    //_player.Spawn.ShowNewBest();
                 }
             }
             // Set practice percent in practice mode

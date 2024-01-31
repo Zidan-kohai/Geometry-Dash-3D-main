@@ -100,14 +100,14 @@ namespace GD3D.GDCamera
             // Subscribe to events
             if (_player != null)
             {
-                _player.OnRespawn += (a, b) => StopAllEasings();
+                _player.OnRespawn += (a, b, c) => StopAllEasings();
                 _player.OnRespawn += OnRespawn;
             }
 
             EasingManager.Instance.OnEaseObjectRemove += OnEaseObjectRemove;
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Check if we are not in practice mode
             if (!inPracticeMode)

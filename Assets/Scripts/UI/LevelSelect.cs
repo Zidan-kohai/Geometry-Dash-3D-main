@@ -149,6 +149,18 @@ namespace GD3D.UI
 
                 newDot.color = dotInactiveColor;
                 _dots[i] = newDot;
+
+            }
+
+
+            for (int i = 0; i < _levels.Length; i++)
+            {
+                _levels[i].SetActive(false);
+
+                if (i == s_scrollIndex)
+                {
+                    _levels[i].SetActive(true);
+                }
             }
 
             // Set the active dot color
@@ -276,8 +288,8 @@ namespace GD3D.UI
             //Scroll(oldIndex, s_scrollIndex);
 
 
-            if (s_scrollIndex == 0)
-                return;
+            //if (s_scrollIndex == 0)
+            //    return;
 
             UpdateScrollIndex(-1);
 
@@ -303,8 +315,8 @@ namespace GD3D.UI
 
             //Scroll(oldIndex, s_scrollIndex);
 
-            if (s_scrollIndex == _levels.Length - 1)
-                return;
+            //if (s_scrollIndex == _levels.Length - 1)
+            //    return;
 
             UpdateScrollIndex(1);
 
@@ -327,15 +339,15 @@ namespace GD3D.UI
             s_scrollIndex += amount;
 
             // Clamp the scroll index between 0 and the levels length so it doesn't go out of range
-            //if (s_scrollIndex < 0)
-            //{
-            //    s_scrollIndex += _length;
-            //}
-            //else if (s_scrollIndex > _length - 1)
-            //{
-            //    s_scrollIndex -= _length;
-            //}
-            //s_scrollIndex = Mathf.Clamp(s_scrollIndex, 0, levels.Length - 1);
+            if (s_scrollIndex < 0)
+            {
+                s_scrollIndex += _length;
+            }
+            else if (s_scrollIndex > _length - 1)
+            {
+                s_scrollIndex -= _length;
+            }
+            s_scrollIndex = Mathf.Clamp(s_scrollIndex, 0, levels.Length - 1);
 
             // Deactivate the currently active dot and set the new active dot
             _activeDot.color = dotInactiveColor;

@@ -182,7 +182,7 @@ namespace GD3D.Objects
         /// <summary>
         /// Override this to decide what happens when the player dies
         /// </summary>
-        public virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        public virtual void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Set CantHitOrbs to false
             if (CantHitOrbs)

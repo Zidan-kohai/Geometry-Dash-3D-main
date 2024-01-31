@@ -43,6 +43,9 @@ public class Utils : MonoBehaviour
 
     [DllImport("__Internal")]
     public static extern void GameReady();
+
+    [DllImport("__Internal")]
+    public static extern void GetLeaderboard(string type, int number);
     //МЕТОДЫ YANDEX//
 
     //МЕТОДЫ ВК//

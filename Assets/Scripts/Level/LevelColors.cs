@@ -65,7 +65,7 @@ namespace GD3D.Level
             // Subcribe to events
             if (player != null)
             {
-                player.OnRespawn += (a, b) => StopAllEasings();
+                player.OnRespawn += (a, b,c) => StopAllEasings();
                 player.OnRespawn += OnRespawn;
             }
 
@@ -79,7 +79,7 @@ namespace GD3D.Level
         {
             yield return new WaitForSeconds(0.1f);
 
-            OnRespawn(false, null);
+            OnRespawn(false, null, false);
         }
 
         private void Update()
@@ -144,7 +144,7 @@ namespace GD3D.Level
             return colorDictionary;
         }
 
-        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint)
+        private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             // Reset colors if not in practice mode
             if (!inPracticeMode)
