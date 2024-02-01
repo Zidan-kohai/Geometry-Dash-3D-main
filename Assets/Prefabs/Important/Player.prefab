@@ -15401,7 +15401,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  healthCount: 3
+  healthCount: 5
 --- !u!114 &8224552817121300477
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5711,6 +5711,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c3980a30f105624d9a29cdcafef6d06, type: 3}
+--- !u!1 &937857105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2711681386292568538, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &938987541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7633,6 +7638,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1240390473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7937328954365756991, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1263882781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15675,6 +15685,14 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: healthCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: health.Array.data[0]
       value: 
       objectReference: {fileID: 792990931}
@@ -15686,6 +15704,14 @@ PrefabInstance:
       propertyPath: health.Array.data[2]
       value: 
       objectReference: {fileID: 1782869181}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[3]
+      value: 
+      objectReference: {fileID: 1240390473}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[4]
+      value: 
+      objectReference: {fileID: 937857105}
     - target: {fileID: 8224552817121300471, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: m_Enabled
       value: 1

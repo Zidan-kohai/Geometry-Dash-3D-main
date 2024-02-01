@@ -1179,6 +1179,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dee81cafda8fd1428424da92c947227, type: 3}
+--- !u!1 &120884637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2711681386292568538, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &120884638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7937328954365756991, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &134858734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1064029752223576695, guid: 7b636d7cdc1ad6b4180097dcffe47193, type: 3}
@@ -15499,7 +15509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: health.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: health.Array.data[0]
@@ -15513,6 +15523,14 @@ PrefabInstance:
       propertyPath: health.Array.data[2]
       value: 
       objectReference: {fileID: 589445945}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[3]
+      value: 
+      objectReference: {fileID: 120884638}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[4]
+      value: 
+      objectReference: {fileID: 120884637}
     - target: {fileID: 8224552817121300473, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: pathCreator
       value: 

@@ -13419,6 +13419,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4745763097346008313, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
   m_PrefabInstance: {fileID: 1566079194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1569808905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1838800622056183342, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 3573296165556998462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1569808906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5909397913154892235, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 3573296165556998462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1570997541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20111,8 +20121,12 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: healthCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: health.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: health.Array.data[0]
@@ -20129,11 +20143,11 @@ PrefabInstance:
     - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: health.Array.data[3]
       value: 
-      objectReference: {fileID: 1322407633}
+      objectReference: {fileID: 1569808906}
     - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: health.Array.data[4]
       value: 
-      objectReference: {fileID: 1322407632}
+      objectReference: {fileID: 1569808905}
     - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: health.Array.data[5]
       value: 

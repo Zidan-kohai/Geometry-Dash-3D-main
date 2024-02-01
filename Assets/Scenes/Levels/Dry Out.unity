@@ -2851,6 +2851,16 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7771810098326838995, guid: f62c58ee480f612499f1f66a8e199ffe, type: 3}
   m_PrefabInstance: {fileID: 453941582}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &457218637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2711681386292568538, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &457218638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7937328954365756991, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &458801194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16116,7 +16126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: health.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: health.Array.data[0]
@@ -16130,6 +16140,14 @@ PrefabInstance:
       propertyPath: health.Array.data[2]
       value: 
       objectReference: {fileID: 1275451301}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[3]
+      value: 
+      objectReference: {fileID: 457218638}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[4]
+      value: 
+      objectReference: {fileID: 457218637}
     - target: {fileID: 8224552817121300473, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: pathCreator
       value: 
