@@ -1379,6 +1379,8 @@ MonoBehaviour:
       g: 0.9529412
       b: 0.9686275
     isPlayButtonTapped: 0
+    isFirstLevelButtonTapped: 0
+    isSecondLevelButtonTapped: 0
     myDictionary:
       gamemode: 0000000001000000
       cubeIndex: 
@@ -5634,7 +5636,7 @@ MonoBehaviour:
     ru: "\u0421\u043A\u0438\u043D\u044B"
     en: Skins
     tu: Kaplamalar
-  - text: {fileID: 1504193024}
+  - text: {fileID: 765450842}
     ru: "\u0418\u0433\u0440\u0430\u0442\u044C"
     en: Play
     tu: Oynamak
