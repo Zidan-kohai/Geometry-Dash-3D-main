@@ -15395,7 +15395,13 @@ MonoBehaviour:
     m_Bits: 128
   poolSize: 2
   immortalityTime: 0
+  deathable: 1
   deathEffect: {fileID: 2840160538278776768, guid: 3c6a50d65690dbf48bf9d14647c38a9f, type: 3}
+  health:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healthCount: 3
 --- !u!114 &8224552817121300477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15455,6 +15461,7 @@ MonoBehaviour:
     CompleteMode: 0
   SpikeText: {fileID: 0}
   ReverseText: {fileID: 0}
+  FlyText: {fileID: 0}
 --- !u!114 &8224552817121300478
 MonoBehaviour:
   m_ObjectHideFlags: 0

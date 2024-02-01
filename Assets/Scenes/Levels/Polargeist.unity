@@ -2699,6 +2699,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7771810098326838993, guid: f62c58ee480f612499f1f66a8e199ffe, type: 3}
   m_PrefabInstance: {fileID: 188485548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &589445945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4514491938435277596, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &589445946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4640907934119206814, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &589445947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 72627324652099794, guid: e5cc73030294a614b8c1bd41bc5610aa, type: 3}
+  m_PrefabInstance: {fileID: 212135190665953090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &604680119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4094594255735623319, guid: ce32ebd7c1bf6a14983d3e549dcca8b2, type: 3}
@@ -15302,6 +15317,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[0]
+      value: 
+      objectReference: {fileID: 589445947}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[1]
+      value: 
+      objectReference: {fileID: 589445946}
+    - target: {fileID: 8224552817121300470, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
+      propertyPath: health.Array.data[2]
+      value: 
+      objectReference: {fileID: 589445945}
     - target: {fileID: 8224552817121300473, guid: 8c7c70afcb68ac746ae9f20aaee27b3f, type: 3}
       propertyPath: pathCreator
       value: 

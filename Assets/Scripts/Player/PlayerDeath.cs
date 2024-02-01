@@ -20,7 +20,7 @@ namespace GD3D.Player
         private ObjectPool<PoolObject> _pool;
 
         [SerializeField] private float immortalityTime = 3f;
-        private bool deathable = true;
+        [SerializeField] private bool deathable = true;
 
 
         [Space]
@@ -30,6 +30,10 @@ namespace GD3D.Player
         // This is mainly here so we can later update the death effect colors when the player dies in the main menu
         private HashSet<ParticleSystemRenderer> _particleRenderers = new HashSet<ParticleSystemRenderer>();
         private HashSet<MaterialColorer> _materialColorers = new HashSet<MaterialColorer>();
+
+
+        [SerializeField] private List<GameObject> health;
+        [SerializeField] private int healthCount;
 
         public override void Start()
         {
@@ -115,10 +119,12 @@ namespace GD3D.Player
                 deathCount++;
                 deathable = false;
                 StartCoroutine(CanDeath(1f));
-                if(deathCount == 3)
+                if(deathCount >= 3)
                 {
                     Die();
                 }
+                healthCount--;
+                ChangeHeathVisual(healthCount);
             }
 
 #if UNITY_EDITOR
@@ -131,19 +137,37 @@ namespace GD3D.Player
 #endif
         }
 
+        public void ChangeHeathVisual(int healthCount)
+        {
+            for (int i = 0; i < health.Count; i++)
+            {
+                if (i < healthCount)
+                    health[i].SetActive(true);
+                else
+                {
+                    health[i].SetActive(false);
+                }
+            }
+        }
 
         private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
             if (!giveImmortal)
             {
+                healthCount = health.Count;
                 deathCount = 0;
+                ChangeHeathVisual(healthCount);
                 return;
+            }
+            else
+            {
+                healthCount = 1;
+                ChangeHeathVisual(healthCount);
             }
 
 
             deathable = false;
             _touchingDeath = false;
-
             StartCoroutine(CanDeath(immortalityTime));
         }
 

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using GD3D.Easing;
 using GD3D.CustomInput;
 using TMPro;
+using GameAnalyticsSDK;
 
 namespace GD3D.UI
 {
@@ -41,6 +42,7 @@ namespace GD3D.UI
         
         private Key _quitKey;
         [SerializeField] private Button shopButton;
+        [SerializeField] private Button playButton; 
 
         [SerializeField] private TextMeshProUGUI pointsteText;
         private void Awake()
@@ -58,6 +60,15 @@ namespace GD3D.UI
 
         private void Start()
         {
+            playButton.onClick.AddListener(() =>
+            {
+                if(!Geekplay.Instance.PlayerData.isPlayButtonTapped)
+                {
+                    Geekplay.Instance.PlayerData.isPlayButtonTapped = true;
+                    Analytics.Instance.SendEvent("Click_Menu_Button");
+                    Geekplay.Instance.Save();
+                }
+            });
 
             _darknessOverlayActiveColor = darknessOverlay.color;
 

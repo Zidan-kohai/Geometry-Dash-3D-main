@@ -34,6 +34,10 @@ public class PlayerData
     public ColorNoAlpha PlayerColor1 = PlayerColors.DefaultColor1;
     public ColorNoAlpha PlayerColor2 = PlayerColors.DefaultColor2;
 
+    public bool isPlayButtonTapped = false;
+    public bool isFirstLevelButtonTapped = false;
+    public bool isSecondLevelButtonTapped = false;
+
     #region Saving Icons
     private Dictionary<Gamemode, int> _equippedIconIndex = null;
 

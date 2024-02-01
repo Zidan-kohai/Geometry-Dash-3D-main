@@ -11283,6 +11283,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4745763097346008313, guid: a02e04fbdad898f4180ac7e265e78711, type: 3}
   m_PrefabInstance: {fileID: 1308007520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322407631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 181228967513052392, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 3573296165556998462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322407632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8953923087156078698, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 3573296165556998462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322407633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4406612378084241190, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+  m_PrefabInstance: {fileID: 3573296165556998462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1323620922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20011,6 +20026,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[0]
+      value: 
+      objectReference: {fileID: 1322407633}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[1]
+      value: 
+      objectReference: {fileID: 1322407632}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[2]
+      value: 
+      objectReference: {fileID: 1322407631}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[3]
+      value: 
+      objectReference: {fileID: 1322407633}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[4]
+      value: 
+      objectReference: {fileID: 1322407632}
+    - target: {fileID: 6107262553681131398, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
+      propertyPath: health.Array.data[5]
+      value: 
+      objectReference: {fileID: 1322407631}
     - target: {fileID: 6107262553681131401, guid: 370eaf9f6e844854b934593b6ce38c11, type: 3}
       propertyPath: pathCreator
       value: 

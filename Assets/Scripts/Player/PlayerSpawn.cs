@@ -8,6 +8,8 @@ using GD3D.Easing;
 using GD3D.Level;
 using GD3D.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace GD3D.Player
 {
@@ -95,9 +97,14 @@ namespace GD3D.Player
 
 
         private bool isRewardedClicked;
+
+
         /// <summary>
         /// Start is called before the first frame update.
         /// </summary>
+        /// 
+
+        
         public override void Start()
         {
             Geekplay.Instance.SubscribeOnReward("Revive", () =>
@@ -269,6 +276,7 @@ namespace GD3D.Player
 
         #region Respawn Menu
 
+
         /// <summary>
         /// Makes the respawn menu appear with a scale easing.
         /// </summary>
@@ -363,6 +371,9 @@ namespace GD3D.Player
             }
 
             Geekplay.Instance.RunCoroutine(ShowADV());
+
+
+            Analytics.Instance.SendEvent($"Lose_Level_{SceneManager.GetActiveScene().buildIndex - 3}_Mobile={Geekplay.Instance.mobile}_Percent={Convert.ToInt32(ProgressBar.Percent * 100)}");
         }
 
         private void ShowWinMenu()
@@ -494,6 +505,8 @@ namespace GD3D.Player
             }
 
             Geekplay.Instance.RunCoroutine(ShowADV());
+
+            Analytics.Instance.SendEvent($"Win_Level_{SceneManager.GetActiveScene().buildIndex - 3}_Mobile={Geekplay.Instance.mobile}");
         }
 
 

@@ -314,6 +314,18 @@ namespace GD3D.UI
                 return;
             }
 
+            if(!Geekplay.Instance.PlayerData.isFirstLevelButtonTapped)
+            {
+                Geekplay.Instance.PlayerData.isFirstLevelButtonTapped = true;
+                Analytics.Instance.SendEvent("First_Level_Button_Clicked");
+                Geekplay.Instance.Save();
+            }
+            if (!Geekplay.Instance.PlayerData.isSecondLevelButtonTapped)
+            {
+                Geekplay.Instance.PlayerData.isSecondLevelButtonTapped = true;
+                Analytics.Instance.SendEvent("Second_Level_Button_Clicked");
+                Geekplay.Instance.Save();
+            }
             Transition.TransitionToScene(LevelData.LevelBuildIndex);
 
             // Stop the music
