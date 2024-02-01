@@ -119,11 +119,12 @@ namespace GD3D.Player
                 deathCount++;
                 deathable = false;
                 StartCoroutine(CanDeath(1f));
-                if(deathCount >= 3)
+                healthCount--;
+
+                if (healthCount <= 0)
                 {
                     Die();
                 }
-                healthCount--;
                 ChangeHeathVisual(healthCount);
             }
 
@@ -152,17 +153,13 @@ namespace GD3D.Player
 
         private void OnRespawn(bool inPracticeMode, Checkpoint checkpoint, bool giveImmortal)
         {
+            healthCount = health.Count;
+            ChangeHeathVisual(healthCount);
+
             if (!giveImmortal)
             {
-                healthCount = health.Count;
                 deathCount = 0;
-                ChangeHeathVisual(healthCount);
                 return;
-            }
-            else
-            {
-                healthCount = 1;
-                ChangeHeathVisual(healthCount);
             }
 
 
